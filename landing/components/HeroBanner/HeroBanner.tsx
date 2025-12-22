@@ -10,9 +10,6 @@ const HeroBanner = (data: Hero) => {
   const { heading, subHeading, text, link } = data;
   const { label } = link || {};
 
-  console.log({ data });
-  console.log("HeroBanner", { heading, subHeading, text, link });
-
   return (
     <section className={clsx(styles.heroBannerRoot)}>
       <div className={sharedStyles.container}>

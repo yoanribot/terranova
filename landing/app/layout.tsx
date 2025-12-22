@@ -4,10 +4,10 @@ import "./globals.css";
 import "leaflet/dist/leaflet.css";
 import Header from "@/components/Header/Header";
 import Footer from "@/components/Footer/Footer";
-import { siteConfig } from "./config/data";
 
 import { config } from "@fortawesome/fontawesome-svg-core";
 import "@fortawesome/fontawesome-svg-core/styles.css";
+import { getMetadata } from "@/lib/strapi";
 config.autoAddCss = false;
 
 const geistSans = Geist({
@@ -20,9 +20,11 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
+const { title, description } = await getMetadata();
+
 export const metadata: Metadata = {
-  title: siteConfig.siteTitle,
-  description: siteConfig.siteDescription,
+  title: title || "Terra Nova",
+  description: description || "Bienvenidos a Terra Nova",
 };
 
 export default function RootLayout({

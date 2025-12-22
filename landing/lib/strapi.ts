@@ -1,7 +1,22 @@
-import { HomepageData } from "@/types/data";
+import { HomepageData, Metadata } from "@/types/data";
 import qs from "qs";
 
 const BASE_STRAPI_URL = "http://localhost:1337";
+
+const METADATA = {
+  populate: {
+    sections: {
+      on: {
+        "layout.hero-section": {
+          populate: {
+            image: { fields: ["url", "alternativeText"] },
+            link: { populate: true },
+          },
+        },
+      },
+    },
+  },
+};
 
 const QUERY_HOME_PAGE = {
   populate: {
@@ -18,6 +33,14 @@ const QUERY_HOME_PAGE = {
   },
 };
 
+export async function getMetadata(): Promise<Metadata> {
+  const query = qs.stringify(METADATA);
+
+  const response = await getStrapiData(`/api/home-page?${query}`);
+
+  return response?.data;
+}
+
 export async function getHomepage(): Promise<HomepageData> {
   const query = qs.stringify(QUERY_HOME_PAGE);
 
@@ -28,7 +51,6 @@ export async function getHomepage(): Promise<HomepageData> {
 
 export const getStrapiData = async (url: string) => {
   try {
-    console.log("getStrapiData .....", `${BASE_STRAPI_URL}${url}`);
     const response = await fetch(`${BASE_STRAPI_URL}${url}`);
 
     if (!response) {

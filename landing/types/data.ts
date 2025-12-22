@@ -1,5 +1,10 @@
+export type Metadata = {
+  title: string;
+  description: string;
+};
+
 export type HomepageData = {
-  sections: Array<any>;
+  sections: Array<unknown>;
 };
 
 export type Hero = {
