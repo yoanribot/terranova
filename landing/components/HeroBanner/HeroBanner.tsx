@@ -5,13 +5,21 @@ import styles from "./HeroBanner.module.css";
 import sharedStyles from "@/app/shared.module.css";
 import { Button } from "../ui/button";
 import { Hero } from "@/types/data";
+import { API_BASE_URL } from "@/lib/constants";
 
 const HeroBanner = (data: Hero) => {
-  const { heading, subHeading, text, link } = data;
+  const { heading, subHeading, text, link, image } = data;
   const { label } = link || {};
 
+  const backgroundImage = image?.url
+    ? `${API_BASE_URL}${image.url}`
+    : "/herobanner-bg.jpeg";
+
   return (
-    <section className={clsx(styles.heroBannerRoot)}>
+    <section
+      className={clsx(styles.heroBannerRoot)}
+      style={{ backgroundImage: `url(${backgroundImage})` }}
+    >
       <div className={sharedStyles.container}>
         <div className={clsx(styles.content)}>
           <h1 className="font-bold text-4xl sm:text-6xl max-w-3xl mb-6">

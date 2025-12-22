@@ -12,6 +12,10 @@ export type Hero = {
   subHeading: string;
   text: string;
   link: Link;
+  image?: {
+    url: string;
+    alternativeText?: string;
+  };
 };
 
 export type Link = {

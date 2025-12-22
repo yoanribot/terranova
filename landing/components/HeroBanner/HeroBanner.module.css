@@ -8,7 +8,6 @@
 
 .heroBannerRoot {
   min-height: 80vh;
-  background-image: url("/herobanner-bg.jpeg");
   background-size: cover;
   background-position: center;
   padding-top: 70px;
