@@ -1,0 +1,18 @@
+{
+  "collectionName": "components_layout_services",
+  "info": {
+    "displayName": "Services"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "services": {
+      "type": "component",
+      "component": "component.card",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}

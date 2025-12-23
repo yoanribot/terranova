@@ -16,7 +16,7 @@ const OurTeam = () => {
             key={item.title}
             title={item.title}
             description={item.description}
-            image={item.image}
+            imagePath={item.image}
           />
         ))}
       </section>

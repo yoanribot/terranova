@@ -18,6 +18,16 @@ export type Hero = {
   };
 };
 
+export type Services = {
+  title: string;
+  text: string;
+  tags: Link;
+  image?: {
+    url: string;
+    alternativeText?: string;
+  };
+};
+
 export type Link = {
   href: string;
   isExternal: boolean;

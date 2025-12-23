@@ -28,6 +28,15 @@ const QUERY_HOME_PAGE = {
             link: { populate: true },
           },
         },
+        "layout.services": {
+          populate: {
+            services: {
+              populate: {
+                image: { fields: ["url", "alternativeText"] },
+              },
+            },
+          },
+        },
       },
     },
   },

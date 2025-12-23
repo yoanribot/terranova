@@ -20,7 +20,8 @@
     "sections": {
       "type": "dynamiczone",
       "components": [
-        "layout.hero-section"
+        "layout.hero-section",
+        "layout.services"
       ]
     }
   }
