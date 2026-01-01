@@ -2,19 +2,21 @@ import styles from "./Footer.module.css";
 import sharedStyles from "@/app/shared.module.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
-  faFacebook,
-  faWhatsapp,
-  faXTwitter,
-  faInstagram,
-} from "@fortawesome/free-brands-svg-icons";
-import {
   faEnvelope,
   faPhone,
   faMapMarkerAlt,
 } from "@fortawesome/free-solid-svg-icons";
+import { Link } from "@/types/data";
+import { getSocialIconFromLabel } from "@/lib/utils";
 
-const Footer = () => {
+type Props = {
+  socials: Array<Link>;
+};
+
+const Footer = ({ socials }: Props) => {
   const currentYear = new Date().getFullYear();
+
+  console.log({ socials });
 
   return (
     <footer className={styles.footerRoot}>
@@ -61,38 +63,21 @@ const Footer = () => {
           <div className={styles.footerSection}>
             <h4 className={styles.footerSubtitle}>Síguenos</h4>
             <div className={styles.socialLinks}>
-              <a
-                href="https://facebook.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className={styles.socialLink}
-              >
-                <FontAwesomeIcon icon={faFacebook} size="lg" />
-              </a>
-              <a
-                href="https://wa.me/1234567890"
-                target="_blank"
-                rel="noopener noreferrer"
-                className={styles.socialLink}
-              >
-                <FontAwesomeIcon icon={faWhatsapp} size="lg" />
-              </a>
-              <a
-                href="https://twitter.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className={styles.socialLink}
-              >
-                <FontAwesomeIcon icon={faXTwitter} size="lg" />
-              </a>
-              <a
-                href="https://instagram.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className={styles.socialLink}
-              >
-                <FontAwesomeIcon icon={faInstagram} size="lg" />
-              </a>
+              {socials.map((social, index) => (
+                <a
+                  key={index}
+                  href={social.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={styles.socialLink}
+                  aria-label={social.label}
+                >
+                  <FontAwesomeIcon
+                    icon={getSocialIconFromLabel(social.label)}
+                    size="lg"
+                  />
+                </a>
+              ))}
             </div>
           </div>
         </div>

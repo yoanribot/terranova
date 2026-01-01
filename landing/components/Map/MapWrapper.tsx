@@ -14,8 +14,6 @@ export default function MapWrapper({
 }) {
   const { title, address, phoneMain, location, schedules } = locationData;
 
-  console.log({ location, phoneMain, address, title });
-
   return (
     <Map
       title={title}

@@ -7,10 +7,9 @@ const METADATA = {
   populate: {
     sections: {
       on: {
-        "layout.hero-section": {
+        "layout.socials": {
           populate: {
-            image: { fields: ["url", "alternativeText"] },
-            link: { populate: true },
+            socials: { populate: true },
           },
         },
       },
@@ -61,6 +60,8 @@ export async function getMetadata(): Promise<Metadata> {
   const query = qs.stringify(METADATA);
 
   const response = await getStrapiData(`/api/home-page?${query}`);
+
+  console.log({ response });
 
   return response?.data;
 }

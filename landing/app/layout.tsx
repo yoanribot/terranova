@@ -20,7 +20,8 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-const { title, description } = await getMetadata();
+const { title, description, sections } = await getMetadata();
+const socials = sections?.[0].socials || [];
 
 export const metadata: Metadata = {
   title: title || "Terra Nova",
@@ -42,7 +43,7 @@ export default function RootLayout({
       >
         <Header />
         <main>{children}</main>
-        <Footer />
+        <Footer socials={socials} />
       </body>
     </html>
   );

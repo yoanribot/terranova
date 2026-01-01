@@ -1,6 +1,5 @@
 import sharedStyles from "@/app/shared.module.css";
 import SectionTitle from "../shared/SectionTitle/SectionTitle";
-import { siteConfig } from "@/app/config/data";
 import { MapContainer, Marker, Popup, TileLayer } from "react-leaflet";
 import L, { LatLngExpression } from "leaflet";
 import styles from "./Map.module.css";

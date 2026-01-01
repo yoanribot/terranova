@@ -1,6 +1,7 @@
 export type Metadata = {
   title: string;
   description: string;
+  sections: Array<SocialSection>;
 };
 
 export type HomepageData = {
@@ -46,6 +47,10 @@ export type ServiceSection = {
 export type TeamSection = {
   title: string;
   members: Member[];
+};
+
+export type SocialSection = {
+  socials: Link[];
 };
 
 export type LocationSection = {
