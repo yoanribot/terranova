@@ -1,0 +1,32 @@
+{
+  "collectionName": "components_layout_locations",
+  "info": {
+    "displayName": "Location"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "address": {
+      "type": "string"
+    },
+    "phoneMain": {
+      "type": "string"
+    },
+    "phoneSecondary": {
+      "type": "string"
+    },
+    "schedules": {
+      "type": "component",
+      "component": "component.schedules",
+      "repeatable": true
+    },
+    "location": {
+      "type": "component",
+      "component": "component.location",
+      "repeatable": false
+    }
+  },
+  "config": {}
+}

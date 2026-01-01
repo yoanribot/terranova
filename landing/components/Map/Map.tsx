@@ -2,8 +2,9 @@ import sharedStyles from "@/app/shared.module.css";
 import SectionTitle from "../shared/SectionTitle/SectionTitle";
 import { siteConfig } from "@/app/config/data";
 import { MapContainer, Marker, Popup, TileLayer } from "react-leaflet";
-import L from "leaflet";
+import L, { LatLngExpression } from "leaflet";
 import styles from "./Map.module.css";
+import { LocationSection } from "@/types/data";
 
 // Fix Leaflet default marker icon issue
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
@@ -19,8 +20,19 @@ const config = {
   zoom: 30,
 };
 
-const Map = () => {
-  const { title, location, phone, address } = siteConfig.teamMembers.contactUs;
+type MapSectionProps = LocationSection;
+
+const Map = ({
+  title,
+  location,
+  phoneMain,
+  address,
+  schedules,
+}: MapSectionProps) => {
+  const _location: LatLngExpression = [
+    parseFloat(location.latitude),
+    parseFloat(location.longitude),
+  ];
 
   return (
     <section className={sharedStyles.container}>
@@ -29,7 +41,7 @@ const Map = () => {
       <section className="flex flex-col md:flex-row gap-12">
         <div className={styles.mapContainer}>
           <MapContainer
-            center={location}
+            center={_location}
             zoom={config.zoom}
             scrollWheelZoom={false}
             style={{ height: "100%", width: "100%" }}
@@ -38,7 +50,7 @@ const Map = () => {
               attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
               url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
             />
-            <Marker position={location}>
+            <Marker position={_location}>
               <Popup>
                 Direccion <br /> {address}
               </Popup>
@@ -53,13 +65,13 @@ const Map = () => {
               <strong>Direccion:</strong> {address}
             </li>
             <li className="mt-4">
-              <strong>Telefono:</strong> {phone}
+              <strong>Telefono:</strong> {phoneMain}
             </li>
             <li className="mt-4">
               <strong>Horario de apertura:</strong>
             </li>
             <ul>
-              {siteConfig.teamMembers.contactUs.openHours.map((slot) => (
+              {schedules.map((slot) => (
                 <li key={slot.day}>
                   <span className="font-semibold">{slot.day}:</span>{" "}
                   {slot.availability ?? (

@@ -30,6 +30,28 @@ export interface ComponentLink extends Struct.ComponentSchema {
   };
 }
 
+export interface ComponentLocation extends Struct.ComponentSchema {
+  collectionName: 'components_component_locations';
+  info: {
+    displayName: 'location';
+  };
+  attributes: {
+    latitude: Schema.Attribute.String;
+    longitude: Schema.Attribute.String;
+  };
+}
+
+export interface ComponentSchedules extends Struct.ComponentSchema {
+  collectionName: 'components_component_schedules';
+  info: {
+    displayName: 'schedules';
+  };
+  attributes: {
+    availability: Schema.Attribute.String;
+    day: Schema.Attribute.String;
+  };
+}
+
 export interface ComponentTags extends Struct.ComponentSchema {
   collectionName: 'components_component_tags';
   info: {
@@ -55,6 +77,21 @@ export interface LayoutHeroSection extends Struct.ComponentSchema {
   };
 }
 
+export interface LayoutLocation extends Struct.ComponentSchema {
+  collectionName: 'components_layout_locations';
+  info: {
+    displayName: 'Location';
+  };
+  attributes: {
+    address: Schema.Attribute.String;
+    location: Schema.Attribute.Component<'component.location', false>;
+    phoneMain: Schema.Attribute.String;
+    phoneSecondary: Schema.Attribute.String;
+    schedules: Schema.Attribute.Component<'component.schedules', true>;
+    title: Schema.Attribute.String;
+  };
+}
+
 export interface LayoutServices extends Struct.ComponentSchema {
   collectionName: 'components_layout_services';
   info: {
@@ -66,14 +103,40 @@ export interface LayoutServices extends Struct.ComponentSchema {
   };
 }
 
+export interface LayoutSocials extends Struct.ComponentSchema {
+  collectionName: 'components_layout_socials';
+  info: {
+    displayName: 'Socials';
+  };
+  attributes: {
+    socials: Schema.Attribute.Component<'component.link', true>;
+  };
+}
+
+export interface LayoutTeam extends Struct.ComponentSchema {
+  collectionName: 'components_layout_teams';
+  info: {
+    displayName: 'Team';
+  };
+  attributes: {
+    members: Schema.Attribute.Component<'component.card', true>;
+    title: Schema.Attribute.String;
+  };
+}
+
 declare module '@strapi/strapi' {
   export module Public {
     export interface ComponentSchemas {
       'component.card': ComponentCard;
       'component.link': ComponentLink;
+      'component.location': ComponentLocation;
+      'component.schedules': ComponentSchedules;
       'component.tags': ComponentTags;
       'layout.hero-section': LayoutHeroSection;
+      'layout.location': LayoutLocation;
       'layout.services': LayoutServices;
+      'layout.socials': LayoutSocials;
+      'layout.team': LayoutTeam;
     }
   }
 }

@@ -37,6 +37,21 @@ const QUERY_HOME_PAGE = {
             },
           },
         },
+        "layout.team": {
+          populate: {
+            members: {
+              populate: {
+                image: { fields: ["url", "alternativeText"] },
+              },
+            },
+          },
+        },
+        "layout.location": {
+          populate: {
+            schedules: { populate: true },
+            location: { populate: true },
+          },
+        },
       },
     },
   },

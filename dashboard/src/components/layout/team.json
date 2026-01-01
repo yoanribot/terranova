@@ -1,0 +1,18 @@
+{
+  "collectionName": "components_layout_teams",
+  "info": {
+    "displayName": "Team"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "members": {
+      "type": "component",
+      "component": "component.card",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}

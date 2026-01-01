@@ -1,24 +1,29 @@
-import { siteConfig } from "@/app/config/data";
 import sharedStyles from "@/app/shared.module.css";
 import SectionTitle from "../shared/SectionTitle/SectionTitle";
 import Card from "../shared/Card/Card";
+import { Member } from "@/types/data";
+import { API_BASE_URL } from "@/lib/constants";
 
-const { title, items } = siteConfig.teamMembers;
-
-const OurTeam = () => {
+const OurTeam = ({ title, members }: { title: string; members: Member[] }) => {
   return (
     <section className={sharedStyles.container}>
       <SectionTitle title={title} />
 
-      <section className="flex gap-6 flex-wrap">
-        {items.map((item) => (
-          <Card
-            key={item.title}
-            title={item.title}
-            description={item.description}
-            imagePath={item.image}
-          />
-        ))}
+      <section className="flex gap-6 flex-wrap justify-center">
+        {members.map((member) => {
+          const imagePath = member.image?.url
+            ? `${API_BASE_URL}${member.image.url}`
+            : "/team/default-team-member.jpg";
+
+          return (
+            <Card
+              key={member.title}
+              title={member.title}
+              description={member.text}
+              imagePath={imagePath}
+            />
+          );
+        })}
       </section>
     </section>
   );

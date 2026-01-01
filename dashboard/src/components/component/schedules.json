@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_component_schedules",
+  "info": {
+    "displayName": "schedules"
+  },
+  "options": {},
+  "attributes": {
+    "day": {
+      "type": "string"
+    },
+    "availability": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}
