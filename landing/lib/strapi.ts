@@ -1,7 +1,8 @@
 import { HomepageData, Metadata } from "@/types/data";
 import qs from "qs";
 
-const STRAPI_BASE_URL = process.env.STRAPI_BASE_URL || "http://localhost:1337";
+const STRAPI_BASE_URL =
+  process.env.NEXT_PUBLIC_STRAPI_BASE_URL || "http://localhost:1337";
 
 const METADATA = {
   populate: {
