@@ -1,7 +1,7 @@
 import { HomepageData, Metadata } from "@/types/data";
 import qs from "qs";
 
-const BASE_STRAPI_URL = "http://localhost:1337";
+const STRAPI_BASE_URL = process.env.STRAPI_BASE_URL || "http://localhost:1337";
 
 const METADATA = {
   populate: {
@@ -76,7 +76,7 @@ export async function getHomepage(): Promise<HomepageData> {
 
 export const getStrapiData = async (url: string) => {
   try {
-    const response = await fetch(`${BASE_STRAPI_URL}${url}`);
+    const response = await fetch(`${STRAPI_BASE_URL}${url}`);
 
     if (!response) {
       throw new Error("Failed to fetch data from Strapi");
