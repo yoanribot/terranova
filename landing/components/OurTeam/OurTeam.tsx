@@ -2,7 +2,6 @@ import sharedStyles from "@/app/shared.module.css";
 import SectionTitle from "../shared/SectionTitle/SectionTitle";
 import Card from "../shared/Card/Card";
 import { Member } from "@/types/data";
-import { API_BASE_URL } from "@/lib/constants";
 
 const OurTeam = ({ title, members }: { title: string; members: Member[] }) => {
   return (
@@ -12,7 +11,7 @@ const OurTeam = ({ title, members }: { title: string; members: Member[] }) => {
       <section className="flex gap-6 flex-wrap justify-center">
         {members.map((member) => {
           const imagePath = member.image?.url
-            ? `${API_BASE_URL}${member.image.url}`
+            ? member.image.url
             : "/team/default-team-member.jpg";
 
           return (

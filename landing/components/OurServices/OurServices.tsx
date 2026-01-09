@@ -2,7 +2,6 @@ import sharedStyles from "@/app/shared.module.css";
 import SectionTitle from "../shared/SectionTitle/SectionTitle";
 import Card from "../shared/Card/Card";
 import { Service } from "@/types/data";
-import { API_BASE_URL } from "@/lib/constants";
 
 const OurServices = ({
   title,
@@ -18,7 +17,7 @@ const OurServices = ({
       <section className="flex gap-6 flex-wrap justify-center">
         {services.map((service) => {
           const imagePath = service.image?.url
-            ? `${API_BASE_URL}${service.image.url}`
+            ? service.image.url
             : "/services/estetica-dental-servicio.jpg";
 
           return (
