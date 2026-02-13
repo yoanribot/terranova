@@ -5,12 +5,13 @@ import styles from "./HeroBanner.module.css";
 import sharedStyles from "@/app/shared.module.css";
 import { Button } from "../ui/button";
 import { Hero } from "@/types/data";
+import { getStrapiMedia } from "@/lib/utils";
 
 const HeroBanner = (data: Hero) => {
   const { heading, subHeading, text, link, image } = data;
   const { label } = link || {};
 
-  const backgroundImage = image?.url ? image.url : "/herobanner-bg.jpeg";
+  const backgroundImage = getStrapiMedia(image?.url);
 
   return (
     <section

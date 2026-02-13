@@ -1,3 +1,4 @@
+import { getStrapiMedia } from "@/lib/utils";
 import styles from "./Card.module.css";
 
 interface CardProps {
@@ -11,8 +12,13 @@ const Card = ({ imagePath, title, description, alt }: CardProps) => {
   return (
     <div className={styles.card}>
       <div className={styles.imageWrapper}>
-        <img src={imagePath} alt={alt || title} className={styles.image} />
+        <img
+          src={getStrapiMedia(imagePath)}
+          alt={alt || title}
+          className={styles.image}
+        />
       </div>
+
       <div className={styles.content}>
         <h3 className={styles.title}>{title}</h3>
         <p className={styles.description}>{description}</p>
