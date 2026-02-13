@@ -3,7 +3,7 @@ import SectionTitle from "../shared/SectionTitle/SectionTitle";
 import styles from "./Map.module.css";
 import { LocationSection } from "@/types/data";
 
-type MapSectionProps = LocationSection;
+type MapSectionProps = Omit<LocationSection, "email">;
 
 const Map = ({ title, phoneMain, address, schedules }: MapSectionProps) => {
   return (
