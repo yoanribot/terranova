@@ -84,6 +84,7 @@ export interface LayoutLocation extends Struct.ComponentSchema {
   };
   attributes: {
     address: Schema.Attribute.String;
+    email: Schema.Attribute.String;
     location: Schema.Attribute.Component<'component.location', false>;
     phoneMain: Schema.Attribute.String;
     phoneSecondary: Schema.Attribute.String;

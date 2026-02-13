@@ -58,6 +58,7 @@ export type LocationSection = {
   phoneMain: string;
   phoneSecondary?: string;
   address: string;
+  email: string;
   location: {
     latitude: string;
     longitude: string;

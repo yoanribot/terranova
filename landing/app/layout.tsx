@@ -6,7 +6,9 @@ import Footer from "@/components/Footer/Footer";
 
 import { config } from "@fortawesome/fontawesome-svg-core";
 import "@fortawesome/fontawesome-svg-core/styles.css";
-import { getMetadata } from "@/lib/strapi";
+import { getHomepage, getMetadata } from "@/lib/strapi";
+import { LocationSection } from "@/types/data";
+import GoogleAnalytics from "@/components/GoogleAnalytics/GoogleAnalytics";
 config.autoAddCss = false;
 
 const geistSans = Geist({
@@ -20,7 +22,9 @@ const geistMono = Geist_Mono({
 });
 
 const { title, description, sections } = await getMetadata();
+const data = await getHomepage();
 const socials = sections?.[0].socials || [];
+const locationData = data?.sections?.[2] as LocationSection;
 
 export const metadata: Metadata = {
   title: title || "Terra Nova",
@@ -34,6 +38,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="es">
+      {/* GOOGLE ANALYTICS */}
+      {process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS && (
+        <GoogleAnalytics ga_id={process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS} />
+      )}
+
       <head>
         <link rel="icon" href="/favicon.ico" />
       </head>
@@ -42,7 +51,7 @@ export default function RootLayout({
       >
         <Header />
         <main>{children}</main>
-        <Footer socials={socials} />
+        <Footer socials={socials} location={locationData} />
       </body>
     </html>
   );

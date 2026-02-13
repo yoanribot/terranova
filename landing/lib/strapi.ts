@@ -72,6 +72,8 @@ export async function getHomepage(): Promise<HomepageData> {
 
   const response = await getStrapiData(`/api/home-page?${query}`);
 
+  console.log({ response });
+
   return response?.data;
 }
 

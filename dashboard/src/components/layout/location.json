@@ -17,6 +17,9 @@
     "phoneSecondary": {
       "type": "string"
     },
+    "email": {
+      "type": "string"
+    },
     "schedules": {
       "type": "component",
       "component": "component.schedules",

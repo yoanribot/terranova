@@ -44,6 +44,17 @@ You can start editing the page by modifying `app/page.tsx`. The page auto-update
 
 This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
+## Deploy
+
+Strapi content transfer
+
+- Create a transfer token from you project dashboard EX: https://genuine-friends-a5c147ac89.strapiapp.com/admin/settings/transfer-tokens/2
+
+```bash
+cd dashboard
+pnpm strapi transfer
+```
+
 ## Learn More
 
 To learn more about Next.js, take a look at the following resources:

@@ -9,7 +9,6 @@ import clsx from "clsx";
 const navigationLinks = [
   { id: "services", href: "#services", label: "Servicios" },
   { id: "team", href: "#team", label: "Nuestro Equipo" },
-  // { id: "testimonials", href: "#testimonials", label: "Testimonios" },
   { id: "map", href: "#map", label: "Nuestra Ubicación" },
   { id: "contact", href: "#footer", label: "Contacto" },
 ];
@@ -79,34 +78,11 @@ const Header = () => {
           }`}
         >
           <nav className={styles.mobileNav}>
-            <Link
-              href="#services"
-              onClick={() => setIsOpen(false)}
-              className={styles.navLink}
-            >
-              Servicios
-            </Link>
-            <Link
-              href="#about"
-              onClick={() => setIsOpen(false)}
-              className={styles.navLink}
-            >
-              Nosotros
-            </Link>
-            <Link
-              href="#testimonials"
-              onClick={() => setIsOpen(false)}
-              className={styles.navLink}
-            >
-              Testimonios
-            </Link>
-            <Link
-              href="#contact"
-              onClick={() => setIsOpen(false)}
-              className={styles.navLink}
-            >
-              Contacto
-            </Link>
+            {navigationLinks.map((link) => (
+              <Link key={link.id} href={link.href} className={styles.navLink}>
+                {link.label}
+              </Link>
+            ))}
           </nav>
         </div>
       </div>

@@ -6,17 +6,18 @@ import {
   faPhone,
   faMapMarkerAlt,
 } from "@fortawesome/free-solid-svg-icons";
-import { Link } from "@/types/data";
+import { Link, LocationSection } from "@/types/data";
 import { getSocialIconFromLabel } from "@/lib/utils";
 
 type Props = {
   socials: Array<Link>;
+  location: LocationSection;
 };
 
-const Footer = ({ socials }: Props) => {
+const Footer = ({ socials, location }: Props) => {
   const currentYear = new Date().getFullYear();
 
-  console.log({ socials });
+  console.log({ socials, location });
 
   return (
     <footer id="footer" className={styles.footerRoot}>
@@ -40,21 +41,31 @@ const Footer = ({ socials }: Props) => {
                   icon={faPhone}
                   className={styles.contactIcon}
                 />
-                <span>+1 234 567 890</span>
+                <span>{location.phoneMain}</span>
               </li>
+
+              {location.phoneSecondary && (
+                <li className={styles.contactItem}>
+                  <FontAwesomeIcon
+                    icon={faPhone}
+                    className={styles.contactIcon}
+                  />
+                  <span>{location.phoneSecondary}</span>
+                </li>
+              )}
               <li className={styles.contactItem}>
                 <FontAwesomeIcon
                   icon={faEnvelope}
                   className={styles.contactIcon}
                 />
-                <span>info@terranova.com</span>
+                <span>{location.email}</span>
               </li>
               <li className={styles.contactItem}>
                 <FontAwesomeIcon
                   icon={faMapMarkerAlt}
                   className={styles.contactIcon}
                 />
-                <span>Calle Principal 123, Ciudad</span>
+                <span>{location.address}</span>
               </li>
             </ul>
           </div>
