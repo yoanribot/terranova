@@ -1,5 +1,3 @@
-import { LatLngExpression } from "leaflet";
-
 export const siteConfig = {
   siteTitle: "Terranova clinica dental",
   siteDescription:
@@ -82,7 +80,7 @@ export const siteConfig = {
     ],
     contactUs: {
       title: "Donde y como encontrarnos",
-      location: [40.44483, -3.61544] as LatLngExpression,
+      location: [40.44483, -3.61544],
       phone: "+34 659 376 232",
       address: "C. Alcalá, 573, San Blas-Canillejas, 28022 Madrid, Spain",
       openHours: [

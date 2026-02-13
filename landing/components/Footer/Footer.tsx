@@ -19,7 +19,7 @@ const Footer = ({ socials }: Props) => {
   console.log({ socials });
 
   return (
-    <footer className={styles.footerRoot}>
+    <footer id="footer" className={styles.footerRoot}>
       <div className={sharedStyles.container}>
         <div className={styles.footerContent}>
           {/* Company Info */}

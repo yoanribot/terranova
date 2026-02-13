@@ -11,7 +11,7 @@ const OurServices = ({
   services: Service[];
 }) => {
   return (
-    <section className={sharedStyles.container}>
+    <section id="services" className={sharedStyles.container}>
       <SectionTitle title={title} />
 
       <section className="flex gap-6 flex-wrap justify-center">

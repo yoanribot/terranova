@@ -1,12 +1,7 @@
 "use client";
 
 import { LocationSection } from "@/types/data";
-import dynamic from "next/dynamic";
-
-const Map = dynamic(() => import("./Map"), {
-  ssr: false,
-});
-
+import Map from "./Map";
 export default function MapWrapper({
   locationData,
 }: {
@@ -15,12 +10,14 @@ export default function MapWrapper({
   const { title, address, phoneMain, location, schedules } = locationData;
 
   return (
-    <Map
-      title={title}
-      location={location}
-      phoneMain={phoneMain}
-      address={address}
-      schedules={schedules}
-    />
+    <section id="map">
+      <Map
+        title={title}
+        location={location}
+        phoneMain={phoneMain}
+        address={address}
+        schedules={schedules}
+      />
+    </section>
   );
 }

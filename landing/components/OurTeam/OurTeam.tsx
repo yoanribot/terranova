@@ -8,7 +8,7 @@ const OurTeam = ({ title, members }: { title: string; members: Member[] }) => {
     <section className={sharedStyles.container}>
       <SectionTitle title={title} />
 
-      <section className="flex gap-6 flex-wrap justify-center">
+      <section id="team" className="flex gap-6 flex-wrap justify-center">
         {members.map((member) => {
           const imagePath = member.image?.url
             ? member.image.url

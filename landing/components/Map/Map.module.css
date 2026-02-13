@@ -1,8 +1,4 @@
 .mapContainer {
   height: 50vh;
-  flex-grow: 1;
-
-  @media (min-width: 640px) {
-    flex-grow: 3;
-  }
+  flex: 1;
 }
