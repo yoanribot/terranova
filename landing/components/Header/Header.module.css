@@ -5,7 +5,7 @@
   right: 0;
   z-index: 99999999;
   background-color: rgba(255, 255, 255, 0.8);
-  backdrop-filter: blur(12px);
+  backdrop-filter: blur(6px);
   border-bottom: 1px solid rgb(229, 231, 235);
 }
 
