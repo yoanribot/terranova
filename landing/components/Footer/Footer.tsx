@@ -10,11 +10,12 @@ import { Link, LocationSection } from "@/types/data";
 import { getSocialIconFromLabel } from "@/lib/utils";
 
 type Props = {
+  title: string;
   socials: Array<Link>;
   location: LocationSection;
 };
 
-const Footer = ({ socials, location }: Props) => {
+const Footer = ({ title, socials, location }: Props) => {
   const currentYear = new Date().getFullYear();
 
   console.log({ socials, location });
@@ -25,7 +26,7 @@ const Footer = ({ socials, location }: Props) => {
         <div className={styles.footerContent}>
           {/* Company Info */}
           <div className={styles.footerSection}>
-            <h3 className={styles.footerTitle}>Terranova Dentista</h3>
+            <h3 className={styles.footerTitle}>{title}</h3>
             <p className={styles.footerDescription}>
               Tu salud dental es nuestra prioridad. Ofrecemos servicios dentales
               de calidad con tecnología de vanguardia.

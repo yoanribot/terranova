@@ -13,7 +13,7 @@ const navigationLinks = [
   { id: "contact", href: "#footer", label: "Contacto" },
 ];
 
-const Header = () => {
+const Header = ({ title }: { title?: string }) => {
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
 
@@ -35,7 +35,7 @@ const Header = () => {
             href="/"
             className={clsx(styles.logo, { [styles.logoScrolled]: isScrolled })}
           >
-            <div className={styles.logoText}>Terranova</div>
+            <div className={styles.logoText}>{title || "Terranova"}</div>
           </Link>
 
           {/* Desktop Navigation */}

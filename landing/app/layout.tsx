@@ -43,9 +43,9 @@ export default function RootLayout({
       </head>
 
       <body className={`${dmSerif.className} antialiased`}>
-        <Header />
+        <Header title={title} />
         <main>{children}</main>
-        <Footer socials={socials} location={locationData} />
+        <Footer title={title} socials={socials} location={locationData} />
       </body>
     </html>
   );
