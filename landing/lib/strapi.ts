@@ -1,4 +1,4 @@
-import { HomepageData, Metadata } from "@/types/data";
+import { BlogData as BlogData, HomepageData, Metadata } from "@/types/data";
 import qs from "qs";
 
 const STRAPI_BASE_URL =
@@ -15,6 +15,18 @@ const METADATA = {
         },
       },
     },
+  },
+};
+
+const QUERY_BLOGS = {
+  filters: {
+    slug: {
+      $eq: "implantes-dentales",
+    },
+  },
+  populate: {
+    images: { fields: ["url", "alternativeText"] },
+    backgroundImage: { fields: ["url", "alternativeText"] },
   },
 };
 
@@ -72,6 +84,16 @@ export async function getHomepage(): Promise<HomepageData> {
   const query = qs.stringify(QUERY_HOME_PAGE);
 
   const response = await getStrapiData(`/api/home-page?${query}`);
+
+  console.log({ response });
+
+  return response?.data;
+}
+
+export async function getBlogs(): Promise<BlogData> {
+  const query = qs.stringify(QUERY_BLOGS);
+
+  const response = await getStrapiData(`/api/blogs?${query}`);
 
   console.log({ response });
 

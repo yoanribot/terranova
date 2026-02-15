@@ -6,7 +6,7 @@ interface CardProps {
   imagePath: string;
   title: string;
   description: string;
-  tags: { text: string }[];
+  tags?: { text: string }[];
   alt?: string;
 }
 
@@ -25,7 +25,7 @@ const Card = ({ imagePath, title, description, tags, alt }: CardProps) => {
         <h3 className={styles.title}>{title}</h3>
         <p className={styles.description}>{description}</p>
 
-        {Boolean(tags?.length) && (
+        {!!tags?.length && (
           <ul className="flex gap-2">
             {tags.map((tag, index) => (
               <li key={index}>

@@ -8,6 +8,10 @@ export type HomepageData = {
   sections: Array<unknown>;
 };
 
+export type BlogData = {
+  sections: Array<unknown>;
+};
+
 export type Hero = {
   heading: string;
   subHeading: string;

@@ -2,15 +2,19 @@
   @media (min-width: 640px) {
     width: 40vw;
     max-width: 500px;
-    margin-top: 70px;
   }
 }
 
 .heroBannerRoot {
-  min-height: 90vh;
+  min-height: 100vh;
   background-size: cover;
-  background-position: center;
+  background-position: left;
   padding-top: 70px;
+
+  @media (min-width: 640px) {
+    min-height: 80vh;
+    background-position: center;
+  }
 }
 
 .description {
