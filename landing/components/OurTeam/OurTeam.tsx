@@ -5,10 +5,10 @@ import { Member } from "@/types/data";
 
 const OurTeam = ({ title, members }: { title: string; members: Member[] }) => {
   return (
-    <section className={sharedStyles.container}>
+    <section id="team" className={sharedStyles.container}>
       <SectionTitle title={title} />
 
-      <section id="team" className="flex gap-6 flex-wrap justify-center">
+      <div className="flex gap-6 flex-wrap justify-center">
         {members.map((member) => {
           const imagePath = member.image?.url
             ? member.image.url
@@ -23,7 +23,7 @@ const OurTeam = ({ title, members }: { title: string; members: Member[] }) => {
             />
           );
         })}
-      </section>
+      </div>
     </section>
   );
 };
