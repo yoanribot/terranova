@@ -22,7 +22,9 @@ export type Hero = {
 export type Service = {
   title: string;
   text: string;
-  tags: Link;
+  tags: {
+    text: string;
+  }[];
   image?: {
     url: string;
     alternativeText?: string;
@@ -32,7 +34,9 @@ export type Service = {
 export type Member = {
   title: string;
   text: string;
-  tags: Link;
+  tags: {
+    text: string;
+  }[];
   image?: {
     url: string;
     alternativeText?: string;

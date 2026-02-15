@@ -20,6 +20,7 @@ const OurTeam = ({ title, members }: { title: string; members: Member[] }) => {
               title={member.title}
               description={member.text}
               imagePath={imagePath}
+              tags={member.tags}
             />
           );
         })}

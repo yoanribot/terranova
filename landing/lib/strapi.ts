@@ -41,6 +41,7 @@ const QUERY_HOME_PAGE = {
           populate: {
             members: {
               populate: {
+                tags: { fields: ["text"] },
                 image: { fields: ["url", "alternativeText"] },
               },
             },

@@ -4,8 +4,6 @@ import OurTeam from "@/components/OurTeam/OurTeam";
 import {
   Hero,
   LocationSection,
-  Member,
-  Service,
   ServiceSection,
   TeamSection,
 } from "@/types/data";
@@ -26,13 +24,10 @@ export default async function Home() {
 
       <OurServices
         title={servicesData?.title}
-        services={servicesData?.services as Service[]}
+        services={servicesData?.services}
       />
 
-      <OurTeam
-        title={teamData?.title}
-        members={teamData?.members as Member[]}
-      />
+      <OurTeam title={teamData?.title} members={teamData?.members} />
 
       <MapWrapper locationData={locationData} />
 
