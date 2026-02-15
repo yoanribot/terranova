@@ -8,6 +8,7 @@ export interface ComponentCard extends Struct.ComponentSchema {
   attributes: {
     image: Schema.Attribute.Media<'images' | 'files'> &
       Schema.Attribute.Required;
+    slug: Schema.Attribute.String;
     tags: Schema.Attribute.Component<'component.tags', true>;
     text: Schema.Attribute.Text;
     title: Schema.Attribute.String & Schema.Attribute.Required;
@@ -62,6 +63,18 @@ export interface ComponentTags extends Struct.ComponentSchema {
   };
 }
 
+export interface LayoutAboutUs extends Struct.ComponentSchema {
+  collectionName: 'components_layout_about_uses';
+  info: {
+    displayName: 'About Us';
+  };
+  attributes: {
+    image: Schema.Attribute.Media<'images' | 'files'>;
+    text: Schema.Attribute.Text;
+    title: Schema.Attribute.String;
+  };
+}
+
 export interface LayoutHeroSection extends Struct.ComponentSchema {
   collectionName: 'components_layout_hero_sections';
   info: {
@@ -84,6 +97,7 @@ export interface LayoutLocation extends Struct.ComponentSchema {
   };
   attributes: {
     address: Schema.Attribute.String;
+    description: Schema.Attribute.String;
     email: Schema.Attribute.String;
     location: Schema.Attribute.Component<'component.location', false>;
     phoneMain: Schema.Attribute.String;
@@ -133,6 +147,7 @@ declare module '@strapi/strapi' {
       'component.location': ComponentLocation;
       'component.schedules': ComponentSchedules;
       'component.tags': ComponentTags;
+      'layout.about-us': LayoutAboutUs;
       'layout.hero-section': LayoutHeroSection;
       'layout.location': LayoutLocation;
       'layout.services': LayoutServices;

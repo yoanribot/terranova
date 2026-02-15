@@ -1,3 +1,5 @@
+import { BlocksContent } from "@strapi/blocks-react-renderer";
+
 export type Metadata = {
   title: string;
   description: string;
@@ -9,7 +11,16 @@ export type HomepageData = {
 };
 
 export type BlogData = {
-  sections: Array<unknown>;
+  title: string;
+  content: BlocksContent;
+  backgroundImage?: {
+    url: string;
+    alternativeText?: string;
+  };
+  images?: {
+    url: string;
+    alternativeText?: string;
+  }[];
 };
 
 export type Hero = {
@@ -26,6 +37,7 @@ export type Hero = {
 export type Service = {
   title: string;
   text: string;
+  slug: string;
   tags: {
     text: string;
   }[];
@@ -57,12 +69,22 @@ export type TeamSection = {
   members: Member[];
 };
 
+export type AboutUsData = {
+  title: string;
+  text: string;
+  image?: {
+    url: string;
+    alternativeText?: string;
+  };
+};
+
 export type SocialSection = {
   socials: Link[];
 };
 
 export type LocationSection = {
   title: string;
+  description: string;
   phoneMain: string;
   phoneSecondary?: string;
   address: string;

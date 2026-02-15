@@ -24,7 +24,8 @@
         "layout.services",
         "layout.location",
         "layout.socials",
-        "layout.team"
+        "layout.team",
+        "layout.about-us"
       ]
     }
   }

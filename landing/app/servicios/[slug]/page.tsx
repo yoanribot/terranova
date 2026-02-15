@@ -1,6 +1,10 @@
 import { getBlogs } from "@/lib/strapi";
 import styles from "./servicios.module.css";
-
+import { BlogData } from "@/types/data";
+import BlockRendererClient from "@/components/shared/BlockRender/BlockRendererClient";
+import { getStrapiMedia } from "@/lib/utils";
+import { RichTextRenderer } from "@/components/shared/BlockRender/RichText";
+import { RichTextDocument } from "@/types/RichText";
 type Props = {
   params: { slug: string };
 };
@@ -9,11 +13,29 @@ export default async function Page({ params }: Props) {
   const { slug } = await params;
   const data = await getBlogs();
 
+  if (!data || !data.length) {
+    return <div>No se encontraron datos para el servicio solicitado.</div>;
+  }
+
+  const { title, content, backgroundImage, images } = data[0] as BlogData;
+  const bgImage = getStrapiMedia(backgroundImage?.url);
+
   console.log({ slug, data });
 
   return (
     <section className={styles.pageContent}>
-      <h1>Servicio: {slug}</h1>
+      <div
+        style={{ backgroundImage: `url(${bgImage})` }}
+        className="h-96 p-2 bg-cover bg-center flex items-center justify-center xs:mb-20"
+      >
+        <h1 className="text-6xl text-center my-32">{title}</h1>
+      </div>
+
+      <div className="mb-60 p-6">
+        {/* <BlockRendererClient content={content} /> */}
+
+        <RichTextRenderer content={content as RichTextDocument} />
+      </div>
     </section>
   );
 }

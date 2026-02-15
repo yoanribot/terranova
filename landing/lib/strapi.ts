@@ -40,6 +40,11 @@ const QUERY_HOME_PAGE = {
             link: { populate: true },
           },
         },
+        "layout.about-us": {
+          populate: {
+            image: { fields: ["url", "alternativeText"] },
+          },
+        },
         "layout.services": {
           populate: {
             services: {
@@ -75,8 +80,6 @@ export async function getMetadata(): Promise<Metadata> {
 
   const response = await getStrapiData(`/api/home-page?${query}`);
 
-  console.log({ response });
-
   return response?.data;
 }
 
@@ -85,17 +88,13 @@ export async function getHomepage(): Promise<HomepageData> {
 
   const response = await getStrapiData(`/api/home-page?${query}`);
 
-  console.log({ response });
-
   return response?.data;
 }
 
-export async function getBlogs(): Promise<BlogData> {
+export async function getBlogs(): Promise<BlogData[]> {
   const query = qs.stringify(QUERY_BLOGS);
 
   const response = await getStrapiData(`/api/blogs?${query}`);
-
-  console.log({ response });
 
   return response?.data;
 }

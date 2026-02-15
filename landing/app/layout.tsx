@@ -18,8 +18,9 @@ const dmSerif = DM_Serif_Text({
 
 const { title, description, sections } = await getMetadata();
 const data = await getHomepage();
+console.log({ data });
 const socials = sections?.[0].socials || [];
-const locationData = data?.sections?.[2] as LocationSection;
+const locationData = data?.sections?.[3] as LocationSection;
 
 export const metadata: Metadata = {
   title: title || "Terra Nova",

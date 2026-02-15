@@ -15,10 +15,17 @@ type Props = {
   location: LocationSection;
 };
 
+const termsConditionsLinks = [
+  { label: "Datos Legales", slug: "datos-legales" },
+  {
+    label: "Política de privacidad y cookies",
+    slug: "politica-privacidad-cookies",
+  },
+  { label: "Aviso legal", slug: "aviso-legal" },
+];
+
 const Footer = ({ title, socials, location }: Props) => {
   const currentYear = new Date().getFullYear();
-
-  console.log({ socials, location });
 
   return (
     <footer id="footer" className={styles.footerRoot}>
@@ -27,10 +34,16 @@ const Footer = ({ title, socials, location }: Props) => {
           {/* Company Info */}
           <div className={styles.footerSection}>
             <h3 className={styles.footerTitle}>{title}</h3>
-            <p className={styles.footerDescription}>
-              Tu salud dental es nuestra prioridad. Ofrecemos servicios dentales
-              de calidad con tecnología de vanguardia.
-            </p>
+
+            <ul className={styles.footerList}>
+              {termsConditionsLinks.map(({ label, slug }, index) => (
+                <li key={index} className={styles.footerListItem}>
+                  <a href={`/terminos/${slug}`} className={styles.footerLink}>
+                    {label}
+                  </a>
+                </li>
+              ))}
+            </ul>
           </div>
 
           {/* Contact Info */}
@@ -59,7 +72,7 @@ const Footer = ({ title, socials, location }: Props) => {
                   icon={faEnvelope}
                   className={styles.contactIcon}
                 />
-                <span>{location.email}</span>
+                <a href={`mailto:${location.email}`}>{location.email}</a>
               </li>
               <li className={styles.contactItem}>
                 <FontAwesomeIcon

@@ -8,36 +8,46 @@ interface CardProps {
   description: string;
   tags?: { text: string }[];
   alt?: string;
+  slug?: string;
 }
 
-const Card = ({ imagePath, title, description, tags, alt }: CardProps) => {
+const Card = ({
+  imagePath,
+  title,
+  description,
+  tags,
+  alt,
+  slug,
+}: CardProps) => {
   return (
-    <div className={styles.card}>
-      <div className={styles.imageWrapper}>
-        <img
-          src={getStrapiMedia(imagePath)}
-          alt={alt || title}
-          className={styles.image}
-        />
-      </div>
+    <a href={slug ? `/servicios/${slug}` : "#"}>
+      <div className={styles.card}>
+        <div className={styles.imageWrapper}>
+          <img
+            src={getStrapiMedia(imagePath)}
+            alt={alt || title}
+            className={styles.image}
+          />
+        </div>
 
-      <div className={styles.content}>
-        <h3 className={styles.title}>{title}</h3>
-        <p className={styles.description}>{description}</p>
+        <div className={styles.content}>
+          <h3 className={styles.title}>{title}</h3>
+          <p className={styles.description}>{description}</p>
 
-        {!!tags?.length && (
-          <ul className="flex gap-2">
-            {tags.map((tag, index) => (
-              <li key={index}>
-                <Badge variant="link" className={styles.tag}>
-                  {tag.text}
-                </Badge>
-              </li>
-            ))}
-          </ul>
-        )}
+          {!!tags?.length && (
+            <ul className="flex gap-2">
+              {tags.map((tag, index) => (
+                <li key={index}>
+                  <Badge variant="link" className={styles.tag}>
+                    {tag.text}
+                  </Badge>
+                </li>
+              ))}
+            </ul>
+          )}
+        </div>
       </div>
-    </div>
+    </a>
   );
 };
 

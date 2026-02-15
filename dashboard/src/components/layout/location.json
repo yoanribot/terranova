@@ -11,6 +11,9 @@
     "address": {
       "type": "string"
     },
+    "description": {
+      "type": "string"
+    },
     "phoneMain": {
       "type": "string"
     },

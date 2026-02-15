@@ -10,6 +10,8 @@ const OurServices = ({
   title: string;
   services: Service[];
 }) => {
+  console.log({ services });
+
   return (
     <section id="services" className={sharedStyles.container}>
       <SectionTitle title={title} />
@@ -26,6 +28,7 @@ const OurServices = ({
               title={service.title}
               description={service.text}
               imagePath={imagePath}
+              slug={service.slug}
             />
           );
         })}

@@ -5,7 +5,14 @@ import { LocationSection } from "@/types/data";
 
 type MapSectionProps = Omit<LocationSection, "email">;
 
-const Map = ({ title, phoneMain, address, schedules }: MapSectionProps) => {
+const Map = ({
+  title,
+  phoneMain,
+  phoneSecondary,
+  address,
+  description,
+  schedules,
+}: MapSectionProps) => {
   return (
     <section className={sharedStyles.container}>
       <SectionTitle title={title} />
@@ -31,7 +38,13 @@ const Map = ({ title, phoneMain, address, schedules }: MapSectionProps) => {
               <strong>Direccion:</strong> {address}
             </li>
             <li className="mt-4">
+              <strong>Informacion extra:</strong> {description}
+            </li>
+            <li className="mt-4">
               <strong>Telefono:</strong> {phoneMain}
+            </li>
+            <li className="mt-4">
+              <strong>Telefono secundario:</strong> {phoneSecondary}
             </li>
             <li className="mt-4">
               <strong>Horario de apertura:</strong>

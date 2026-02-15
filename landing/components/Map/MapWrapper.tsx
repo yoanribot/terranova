@@ -7,7 +7,15 @@ export default function MapWrapper({
 }: {
   locationData: LocationSection;
 }) {
-  const { title, address, phoneMain, location, schedules } = locationData;
+  const {
+    title,
+    address,
+    description,
+    phoneMain,
+    phoneSecondary,
+    location,
+    schedules,
+  } = locationData;
 
   return (
     <section id="map">
@@ -15,7 +23,9 @@ export default function MapWrapper({
         title={title}
         location={location}
         phoneMain={phoneMain}
+        phoneSecondary={phoneSecondary}
         address={address}
+        description={description}
         schedules={schedules}
       />
     </section>
