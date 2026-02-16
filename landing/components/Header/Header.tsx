@@ -7,7 +7,7 @@ import sharedStyles from "@/app/shared.module.css";
 import clsx from "clsx";
 
 const navigationLinks = [
-  { id: "services", href: "#services", label: "Servicios" },
+  { id: "services", href: "#services", label: "Tratamientos" },
   { id: "team", href: "#team", label: "Nuestro Equipo" },
   { id: "map", href: "#map", label: "Nuestra Ubicación" },
   { id: "contact", href: "#footer", label: "Contacto" },
@@ -35,7 +35,8 @@ const Header = ({ title }: { title?: string }) => {
             href="/"
             className={clsx(styles.logo, { [styles.logoScrolled]: isScrolled })}
           >
-            <div className={styles.logoText}>{title || "Terranova"}</div>
+            <img src="/logo.svg" className="h-8" alt="Logo" />
+            <h1 className={styles.logoText}>{title || "Terranova"}</h1>
           </Link>
 
           {/* Desktop Navigation */}

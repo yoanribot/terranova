@@ -70,7 +70,7 @@ export interface LayoutAboutUs extends Struct.ComponentSchema {
   };
   attributes: {
     image: Schema.Attribute.Media<'images' | 'files'>;
-    text: Schema.Attribute.Text;
+    text: Schema.Attribute.Blocks;
     title: Schema.Attribute.String;
   };
 }

@@ -30,6 +30,18 @@ const QUERY_BLOGS = {
   },
 };
 
+const QUERY_BLOG_BY_SLUG = (slug: string) => ({
+  filters: {
+    slug: {
+      $eq: slug,
+    },
+  },
+  populate: {
+    images: { fields: ["url", "alternativeText"] },
+    backgroundImage: { fields: ["url", "alternativeText"] },
+  },
+});
+
 const QUERY_HOME_PAGE = {
   populate: {
     sections: {
@@ -88,6 +100,8 @@ export async function getHomepage(): Promise<HomepageData> {
 
   const response = await getStrapiData(`/api/home-page?${query}`);
 
+  console.log({ response });
+
   return response?.data;
 }
 
@@ -99,9 +113,19 @@ export async function getBlogs(): Promise<BlogData[]> {
   return response?.data;
 }
 
+export async function getBlogBySlug(slug: string): Promise<BlogData[]> {
+  const query = qs.stringify(QUERY_BLOG_BY_SLUG(slug));
+
+  const response = await getStrapiData(`/api/blogs?${query}`);
+
+  return response?.data;
+}
+
 export const getStrapiData = async (url: string) => {
   try {
-    const response = await fetch(`${STRAPI_BASE_URL}${url}`);
+    const response = await fetch(`${STRAPI_BASE_URL}${url}`, {
+      cache: "no-store",
+    });
 
     if (!response) {
       throw new Error("Failed to fetch data from Strapi");

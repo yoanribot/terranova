@@ -14,7 +14,7 @@
 
   @media (min-width: 640px) {
     min-height: 80vh;
-    background-position: center;
+    background-position: 25% 75%;
   }
 }
 

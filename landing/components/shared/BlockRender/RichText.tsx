@@ -30,7 +30,7 @@ const BlockRenderer: React.FC<{ node: BlockNode }> = ({ node }) => {
   switch (node.type) {
     case "paragraph":
       return (
-        <p className="mb-4 text-base leading-relaxed text-gray-700">
+        <p className="mb-4 text-lg leading-relaxed text-gray-700">
           {node.children.map((child, i) => (
             <InlineRenderer key={i} node={child} />
           ))}

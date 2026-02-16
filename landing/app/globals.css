@@ -127,3 +127,7 @@ html {
   scroll-behavior: smooth;
   scroll-padding-top: 30px;
 }
+
+body {
+  background-color: #e5e3e0;
+}

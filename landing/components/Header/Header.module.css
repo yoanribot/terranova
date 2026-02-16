@@ -13,15 +13,15 @@
   display: flex;
   align-items: center;
   gap: 0.5rem;
-  transition: scale .5s ease;
+  transition: scale .7s ease;
 }
 
 .logoScrolled {
-  scale: .7 ;
+  scale: .8 ;
 }
 
 .logoText {
-  font-size: 1.8rem;
+  font-size: 1.2rem;
   font-weight: bold;
   color: rgb(109, 90, 90);
 }

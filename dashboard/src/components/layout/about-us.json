@@ -9,7 +9,7 @@
       "type": "string"
     },
     "text": {
-      "type": "text"
+      "type": "blocks"
     },
     "image": {
       "type": "media",

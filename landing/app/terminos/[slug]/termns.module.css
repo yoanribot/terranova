@@ -1,0 +1,6 @@
+.pageContent {
+  @media (min-width: 640px) {
+    max-width: 1200px;
+    margin: auto;
+  }
+}

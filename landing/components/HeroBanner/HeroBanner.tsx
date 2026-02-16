@@ -20,7 +20,7 @@ const HeroBanner = (data: Hero) => {
     >
       <div className={sharedStyles.container}>
         <div className={clsx(styles.content)}>
-          <h1 className="font-bold text-4xl sm:text-6xl max-w-3xl mb-6">
+          <h1 className="font-bold text-4xl sm:text-6xl max-w-3xl mt-16 mb-6 ">
             {heading}
           </h1>
           <h3 className="font-bold text-1xl sm:text-2xl  max-w-3xl mb-6">
@@ -28,9 +28,11 @@ const HeroBanner = (data: Hero) => {
           </h3>
           <p className="max-w-3xl mb-6">{text}</p>
 
-          <Button className="mt-10 cursor-pointer transition-all duration-300 hover:scale-105 hover:-translate-y-1 hover:brightness-110">
-            {label}
-          </Button>
+          {label && (
+            <Button className="mt-10 cursor-pointer transition-all duration-300 hover:scale-105 hover:-translate-y-1 hover:brightness-110">
+              {label}
+            </Button>
+          )}
         </div>
       </div>
     </section>

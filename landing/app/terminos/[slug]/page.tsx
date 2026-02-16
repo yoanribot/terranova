@@ -1,10 +1,9 @@
 import { getBlogBySlug, getBlogs } from "@/lib/strapi";
-import styles from "./servicios.module.css";
+import styles from "./termns.module.css";
 import { BlogData } from "@/types/data";
 import BlockRendererClient from "@/components/shared/BlockRender/BlockRendererClient";
 import { getStrapiMedia } from "@/lib/utils";
 import { RichTextRenderer } from "@/components/shared/BlockRender/RichText";
-import Carousel from "@/components/shared/Carousel";
 import { RichTextDocument } from "@/types/RichText";
 type Props = {
   params: { slug: string };
@@ -18,7 +17,7 @@ export default async function Page({ params }: Props) {
     return <div>No se encontraron datos para el servicio solicitado.</div>;
   }
 
-  const { title, content, backgroundImage, images } = data[0] as BlogData;
+  const { title, content, backgroundImage } = data[0] as BlogData;
   const bgImage = getStrapiMedia(backgroundImage?.url);
 
   console.log({ slug, data });
@@ -36,13 +35,6 @@ export default async function Page({ params }: Props) {
         {/* <BlockRendererClient content={content} /> */}
         <RichTextRenderer content={content as RichTextDocument} />
       </div>
-
-      {images && images.length > 0 && (
-        <section>
-          <h3 className="text-xl mb-6 text-center">Imagenes relacionadas:</h3>
-          <Carousel images={images} />
-        </section>
-      )}
     </section>
   );
 }

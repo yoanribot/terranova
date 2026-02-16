@@ -20,7 +20,7 @@
 .footerTitle {
   font-size: 1.5rem;
   font-weight: bold;
-  color: #60a5fa;
+  color: var(--highlight-primary);
   margin: 0;
 }
 
@@ -55,7 +55,7 @@
 }
 
 .footerLink:hover {
-  color: #60a5fa;
+  color: var(--highlight-primary);
 }
 
 .contactItem {
@@ -67,7 +67,7 @@
 }
 
 .contactIcon {
-  color: #60a5fa;
+  color: var(--highlight-primary);
   width: 1rem;
 }
 
@@ -78,6 +78,7 @@
 }
 
 .socialLink {
+  border: 1px solid var(--highlight-primary);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -91,7 +92,7 @@
 }
 
 .socialLink:hover {
-  background-color: #60a5fa;
+  background-color: var(--highlight-primary);
   transform: translateY(-2px);
 }
 
