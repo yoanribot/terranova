@@ -1,7 +1,6 @@
-import { getBlogBySlug, getBlogs } from "@/lib/strapi";
+import { getBlogBySlug } from "@/lib/strapi";
 import styles from "./termns.module.css";
 import { BlogData } from "@/types/data";
-import BlockRendererClient from "@/components/shared/BlockRender/BlockRendererClient";
 import { getStrapiMedia } from "@/lib/utils";
 import { RichTextRenderer } from "@/components/shared/BlockRender/RichText";
 import { RichTextDocument } from "@/types/RichText";
@@ -13,16 +12,12 @@ export default async function Page({ params }: Props) {
   const { slug } = await params;
   const data = await getBlogBySlug(slug);
 
-  console.log({ data });
-
-  if (!data || !data.length) {
+  if (!data?.[0]) {
     return <div>No se encontraron datos para el servicio solicitado.</div>;
   }
 
-  const { title, content, backgroundImage } = data[0] as BlogData;
+  const { title, content, backgroundImage } = data[0] || {};
   const bgImage = getStrapiMedia(backgroundImage?.url);
-
-  console.log({ slug, data });
 
   return (
     <section className={styles.pageContent}>

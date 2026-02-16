@@ -10,8 +10,6 @@ const OurServices = ({
   title: string;
   services: Service[];
 }) => {
-  console.log({ services });
-
   return (
     <section id="services" className={sharedStyles.container}>
       <SectionTitle title={title} />

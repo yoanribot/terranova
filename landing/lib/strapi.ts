@@ -100,8 +100,6 @@ export async function getHomepage(): Promise<HomepageData> {
 
   const response = await getStrapiData(`/api/home-page?${query}`);
 
-  console.log({ response });
-
   return response?.data;
 }
 
@@ -118,16 +116,12 @@ export async function getBlogBySlug(slug: string): Promise<BlogData[]> {
 
   const response = await getStrapiData(`/api/blogs?${query}`);
 
-  console.log({ query, response });
-
   return response?.data;
 }
 
 export const getStrapiData = async (url: string) => {
   try {
-    const response = await fetch(`${STRAPI_BASE_URL}${url}`, {
-      cache: "no-store",
-    });
+    const response = await fetch(`${STRAPI_BASE_URL}${url}`);
 
     if (!response) {
       throw new Error("Failed to fetch data from Strapi");

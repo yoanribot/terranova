@@ -14,14 +14,12 @@ export default async function Page({ params }: Props) {
   const { slug } = await params;
   const data = await getBlogBySlug(slug);
 
-  if (!data || !data.length) {
+  if (!data?.[0]) {
     return <div>No se encontraron datos para el servicio solicitado.</div>;
   }
 
-  const { title, content, backgroundImage, images } = data[0] as BlogData;
+  const { title, content, backgroundImage, images } = data[0] || {};
   const bgImage = getStrapiMedia(backgroundImage?.url);
-
-  console.log({ slug, data });
 
   return (
     <section className={styles.pageContent}>

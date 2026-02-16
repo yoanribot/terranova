@@ -15,8 +15,6 @@ import AboutUs from "@/components/AboutUs/AboutUs";
 export default async function Home() {
   const data = await getHomepage();
 
-  console.log({ data });
-
   const heroData = data?.sections?.[0] as Hero;
   const aboutUsData = data?.sections?.[1] as AboutUsData;
   const servicesData = data?.sections?.[2] as ServiceSection;
