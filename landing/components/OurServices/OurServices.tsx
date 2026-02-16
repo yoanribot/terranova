@@ -17,7 +17,7 @@ const OurServices = ({
       <SectionTitle title={title} />
 
       <section className="flex gap-6 flex-wrap justify-center">
-        {services.map((service) => {
+        {services?.map((service) => {
           const imagePath = service.image?.url
             ? service.image.url
             : "/services/estetica-dental-servicio.jpg";

@@ -13,6 +13,8 @@ export default async function Page({ params }: Props) {
   const { slug } = await params;
   const data = await getBlogBySlug(slug);
 
+  console.log({ data });
+
   if (!data || !data.length) {
     return <div>No se encontraron datos para el servicio solicitado.</div>;
   }

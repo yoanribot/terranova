@@ -19,28 +19,28 @@ export default async function Home() {
 
   const heroData = data?.sections?.[0] as Hero;
   const aboutUsData = data?.sections?.[1] as AboutUsData;
-  const servicesData = data?.sections?.[1] as ServiceSection;
+  const servicesData = data?.sections?.[2] as ServiceSection;
   const locationData = data?.sections?.[3] as LocationSection;
   const teamData = data?.sections?.[4] as TeamSection;
 
   return (
     <>
-      {/* <HeroBanner {...heroData} />
+      <HeroBanner {...heroData} />
 
       <AboutUs
         title={aboutUsData?.title}
         text={aboutUsData?.text}
         image={aboutUsData?.image}
-      /> */}
+      />
 
       <OurServices
         title={servicesData?.title}
         services={servicesData?.services}
       />
-      {/*
+
       <OurTeam title={teamData?.title} members={teamData?.members} />
 
-      <MapWrapper locationData={locationData} /> */}
+      <MapWrapper locationData={locationData} />
 
       {/* <Testimonials />
       <ContactForm /> */}

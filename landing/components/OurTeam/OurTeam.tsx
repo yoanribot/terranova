@@ -9,7 +9,7 @@ const OurTeam = ({ title, members }: { title: string; members: Member[] }) => {
       <SectionTitle title={title} />
 
       <div className="flex gap-6 flex-wrap justify-center">
-        {members.map((member) => {
+        {members?.map((member) => {
           const imagePath = member.image?.url
             ? member.image.url
             : "/team/default-team-member.jpg";

@@ -1,4 +1,5 @@
 import { BlocksContent } from "@strapi/blocks-react-renderer";
+import { RichTextDocument } from "./RichText";
 
 export type Metadata = {
   title: string;
@@ -71,7 +72,7 @@ export type TeamSection = {
 
 export type AboutUsData = {
   title: string;
-  text: string;
+  text: RichTextDocument;
   image?: {
     url: string;
     alternativeText?: string;

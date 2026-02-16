@@ -15,7 +15,7 @@ export const RichTextRenderer: React.FC<Props> = ({ content, className }) => {
           : "prose prose-neutral max-w-none"
       }
     >
-      {content.map((node, index) => (
+      {content?.map((node, index) => (
         <BlockRenderer key={index} node={node} />
       ))}
     </div>

@@ -50,7 +50,7 @@ const Map = ({
               <strong>Horario de apertura:</strong>
             </li>
             <ul>
-              {schedules.map((slot) => (
+              {schedules?.map((slot) => (
                 <li key={slot.day}>
                   <span className="font-semibold">{slot.day}:</span>{" "}
                   {slot.availability ?? (

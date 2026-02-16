@@ -118,6 +118,8 @@ export async function getBlogBySlug(slug: string): Promise<BlogData[]> {
 
   const response = await getStrapiData(`/api/blogs?${query}`);
 
+  console.log({ query, response });
+
   return response?.data;
 }
 
