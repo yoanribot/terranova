@@ -110,7 +110,7 @@ const Footer = ({ title, socials, location }: Props) => {
         {/* Copyright */}
         <div className={styles.footerBottom}>
           <p className={styles.copyright}>
-            © {currentYear} Terranova Dentista. Todos los derechos reservados.
+            © {currentYear} {title}. Todos los derechos reservados.
           </p>
         </div>
       </div>
