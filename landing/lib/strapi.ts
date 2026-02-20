@@ -1,4 +1,4 @@
-import { BlogData as BlogData, HomepageData, Metadata } from "@/types/data";
+import { BlogData, HomepageData, Metadata } from "@/types/data";
 import qs from "qs";
 
 const STRAPI_BASE_URL =
