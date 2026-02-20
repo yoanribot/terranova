@@ -4,6 +4,7 @@ import { getStrapiMedia } from "@/lib/utils";
 import { RichTextRenderer } from "@/components/shared/BlockRender/RichText";
 import Carousel from "@/components/shared/Carousel";
 import { RichTextDocument } from "@/types/RichText";
+import { BlogData } from "@/types/data";
 
 type DynamicPageProps = {
   params: Promise<{ slug: string }>;
@@ -47,7 +48,10 @@ export default async function Page({ params }: DynamicPageProps) {
 
 export async function generateStaticParams() {
   const blogs = await getBlogs();
-  const filteredBlogs = blogs.filter((blog) => blog.slug);
+  const filteredBlogs = blogs.filter(
+    (blog): blog is BlogData & { slug: string } =>
+      Boolean((blog as { slug?: string } | null)?.slug),
+  );
 
   return filteredBlogs.map((blog) => ({
     slug: blog.slug,
