@@ -12,14 +12,13 @@ type DynamicPageProps = {
 
 export default async function Page({ params }: DynamicPageProps) {
   const { slug } = await params;
-  const blog = await getBlogBySlug(slug);
-  const blogData = blog?.[0] || null;
+  const data = await getBlogBySlug(slug);
 
-  if (!blogData) {
+  if (!data?.[0]) {
     return <div>No se encontraron datos para el servicio solicitado.</div>;
   }
 
-  const { title, content, backgroundImage, images } = blogData;
+  const { title, content, backgroundImage, images } = data[0] || {};
   const bgImage = getStrapiMedia(backgroundImage?.url);
 
   return (
