@@ -1,14 +1,14 @@
-import { getBlogBySlug } from "@/lib/strapi";
+import { getBlogBySlug, getBlogs } from "@/lib/strapi";
 import styles from "./termns.module.css";
-import { BlogData } from "@/types/data";
 import { getStrapiMedia } from "@/lib/utils";
 import { RichTextRenderer } from "@/components/shared/BlockRender/RichText";
 import { RichTextDocument } from "@/types/RichText";
-type Props = {
+
+type DynamicPageProps = {
   params: { slug: string };
 };
 
-export default async function Page({ params }: Props) {
+export default async function Page({ params }: DynamicPageProps) {
   const { slug } = await params;
   const data = await getBlogBySlug(slug);
 
@@ -34,4 +34,12 @@ export default async function Page({ params }: Props) {
       </div>
     </section>
   );
+}
+
+export async function generateStaticParams() {
+  const blogs = await getBlogs();
+
+  return blogs.map((blog) => ({
+    slug: blog.slug,
+  }));
 }

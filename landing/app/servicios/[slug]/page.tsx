@@ -1,24 +1,24 @@
 import { getBlogBySlug, getBlogs } from "@/lib/strapi";
 import styles from "./servicios.module.css";
-import { BlogData } from "@/types/data";
-import BlockRendererClient from "@/components/shared/BlockRender/BlockRendererClient";
 import { getStrapiMedia } from "@/lib/utils";
 import { RichTextRenderer } from "@/components/shared/BlockRender/RichText";
 import Carousel from "@/components/shared/Carousel";
 import { RichTextDocument } from "@/types/RichText";
-type Props = {
-  params: { slug: string };
+
+type DynamicPageProps = {
+  params: Promise<{ slug: string }>;
 };
 
-export default async function Page({ params }: Props) {
+export default async function Page({ params }: DynamicPageProps) {
   const { slug } = await params;
-  const data = await getBlogBySlug(slug);
+  const blog = await getBlogBySlug(slug);
+  const blogData = blog?.[0] || null;
 
-  if (!data?.[0]) {
+  if (!blogData) {
     return <div>No se encontraron datos para el servicio solicitado.</div>;
   }
 
-  const { title, content, backgroundImage, images } = data[0] || {};
+  const { title, content, backgroundImage, images } = blogData;
   const bgImage = getStrapiMedia(backgroundImage?.url);
 
   return (
@@ -43,4 +43,12 @@ export default async function Page({ params }: Props) {
       )}
     </section>
   );
+}
+
+export async function generateStaticParams() {
+  const blogs = await getBlogs();
+
+  return blogs.map((blog) => ({
+    slug: blog.slug,
+  }));
 }
