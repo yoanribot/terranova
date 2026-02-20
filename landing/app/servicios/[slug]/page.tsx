@@ -47,8 +47,9 @@ export default async function Page({ params }: DynamicPageProps) {
 
 export async function generateStaticParams() {
   const blogs = await getBlogs();
+  const filteredBlogs = blogs.filter((blog) => blog.slug);
 
-  return blogs.map((blog) => ({
+  return filteredBlogs.map((blog) => ({
     slug: blog.slug,
   }));
 }
