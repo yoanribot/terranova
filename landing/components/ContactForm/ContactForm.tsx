@@ -1,12 +1,19 @@
+"use client";
+
 import { Button } from "@/components/ui/button";
+import { zodResolver } from "@hookform/resolvers/zod";
+import { Controller, useForm } from "react-hook-form";
 import { Checkbox } from "@/components/ui/checkbox";
+import { z } from "zod";
+import { Send } from "lucide-react";
+
 import {
   Field,
   FieldDescription,
+  FieldError,
   FieldGroup,
   FieldLabel,
   FieldLegend,
-  FieldSeparator,
   FieldSet,
 } from "@/components/ui/field";
 import { Input } from "@/components/ui/input";
@@ -26,10 +33,55 @@ const time = [
   { label: "Tarde", value: "afternoon" },
 ];
 
+const formSchema = z.object({
+  name: z
+    .string()
+    .nonempty("El nombre es obligatorio.")
+    .max(32, "El nombre debe tener como máximo 32 caracteres."),
+  lastname: z
+    .string()
+    .nonempty("El apellido es obligatorio.")
+    .max(50, "El apellido debe tener como máximo 50 caracteres."),
+  phone: z
+    .string()
+    .nonempty("El teléfono es obligatorio.")
+    .min(7, "El teléfono debe tener al menos 7 caracteres."),
+  email: z
+    .string()
+    .email("El correo electrónico no es válido.")
+    .max(100, "El correo electrónico debe tener como máximo 100 caracteres."),
+  message: z
+    .string()
+    .nonempty("El mensaje es obligatorio.")
+    .min(10, "El mensaje debe tener al menos 10 caracteres.")
+    .max(500, "El mensaje debe tener como máximo 500 caracteres."),
+});
+
 export function ContactForm() {
+  const form = useForm<z.infer<typeof formSchema>>({
+    resolver: zodResolver(formSchema),
+    mode: "onBlur",
+    reValidateMode: "onChange",
+    defaultValues: {
+      name: "",
+      lastname: "",
+      phone: "",
+      email: "",
+      message: "",
+    },
+  });
+
+  function onSubmit(data: z.infer<typeof formSchema>) {
+    console.log("Form data:", data);
+  }
+
   return (
-    <div className="w-full my-10 py-10">
-      <form className="w-full  bg-white max-w-3xl m-auto shadow-md px-20 py-10 rounded-lg">
+    <div id="contact" className="w-full my-10 py-10">
+      <form
+        onSubmit={form.handleSubmit(onSubmit)}
+        noValidate
+        className="w-full  bg-white max-w-3xl m-auto shadow-md px-5 md:px-20 py-10 md:rounded-lg"
+      >
         <FieldGroup>
           <FieldSet>
             <FieldLegend>
@@ -42,34 +94,96 @@ export function ContactForm() {
 
             <FieldGroup>
               {/* Name and Lastname */}
-              <div className="flex gap-3">
-                <Field>
-                  <FieldLabel htmlFor="name">Nombre</FieldLabel>
-                  <Input id="name" required />
-                </Field>
+              <div className="md:flex gap-3">
+                <Controller
+                  name="name"
+                  control={form.control}
+                  render={({ field, fieldState }) => (
+                    <Field data-invalid={fieldState.invalid}>
+                      <FieldLabel htmlFor="name">Nombre</FieldLabel>
 
-                <Field>
-                  <FieldLabel htmlFor="lastname">Apellidos</FieldLabel>
-                  <Input id="lastname" required />
-                </Field>
+                      <Input
+                        {...field}
+                        id="name"
+                        aria-invalid={fieldState.invalid}
+                        required
+                        autoComplete="off"
+                      />
+
+                      {fieldState.invalid && (
+                        <FieldError errors={[fieldState.error]} />
+                      )}
+                    </Field>
+                  )}
+                />
+
+                <Controller
+                  name="lastname"
+                  control={form.control}
+                  render={({ field, fieldState }) => (
+                    <Field data-invalid={fieldState.invalid}>
+                      <FieldLabel htmlFor="lastname">Apellidos</FieldLabel>
+
+                      <Input
+                        {...field}
+                        id="lastname"
+                        aria-invalid={fieldState.invalid}
+                        required
+                        autoComplete="off"
+                      />
+
+                      {fieldState.invalid && (
+                        <FieldError errors={[fieldState.error]} />
+                      )}
+                    </Field>
+                  )}
+                />
               </div>
 
               {/* Phone and Email */}
-              <div className="flex gap-3">
-                <Field>
-                  <FieldLabel htmlFor="phone">Teléfono</FieldLabel>
-                  <Input id="phone" placeholder="+33 5678 9012 3456" required />
-                </Field>
+              <div className="md:flex gap-3">
+                <Controller
+                  name="phone"
+                  control={form.control}
+                  render={({ field, fieldState }) => (
+                    <Field data-invalid={fieldState.invalid} className="mb-6">
+                      <FieldLabel htmlFor="phone">Teléfono</FieldLabel>
+                      <Input
+                        {...field}
+                        id="phone"
+                        aria-invalid={fieldState.invalid}
+                        required
+                        autoComplete="off"
+                      />
 
-                <Field>
-                  <FieldLabel htmlFor="email">Email</FieldLabel>
-                  <Input
-                    id="email"
-                    placeholder="example@example.com"
-                    required
-                    type="email"
-                  />
-                </Field>
+                      {fieldState.invalid && (
+                        <FieldError errors={[fieldState.error]} />
+                      )}
+                    </Field>
+                  )}
+                />
+
+                <Controller
+                  name="email"
+                  control={form.control}
+                  render={({ field, fieldState }) => (
+                    <Field data-invalid={fieldState.invalid}>
+                      <FieldLabel htmlFor="email">Email</FieldLabel>
+                      <Input
+                        {...field}
+                        id="email"
+                        aria-invalid={fieldState.invalid}
+                        placeholder="example@example.com"
+                        required
+                        type="email"
+                      />
+
+                      {fieldState.invalid && (
+                        <FieldError errors={[fieldState.error]} />
+                      )}
+                    </Field>
+                  )}
+                />
               </div>
 
               {/* Availability */}
@@ -95,7 +209,7 @@ export function ContactForm() {
                 </FieldGroup>
 
                 <FieldGroup className="flex-1">
-                  <p> Dia </p>
+                  <p> Dias </p>
                   <Field orientation="horizontal">
                     <ul>
                       {days.map((item) => (
@@ -119,19 +233,34 @@ export function ContactForm() {
 
           <FieldSet>
             <FieldGroup>
-              <Field>
-                <FieldLabel htmlFor="message">Contenido</FieldLabel>
-                <Textarea
-                  id="message"
-                  placeholder="Comentanos cual seria el proposito de la cita"
-                  className="resize-none h-50"
-                />
-              </Field>
+              <Controller
+                name="message"
+                control={form.control}
+                render={({ field, fieldState }) => (
+                  <Field data-invalid={fieldState.invalid}>
+                    <FieldLabel htmlFor="message">Contenido</FieldLabel>
+                    <Textarea
+                      {...field}
+                      id="message"
+                      required
+                      aria-invalid={fieldState.invalid}
+                      placeholder="Comentanos cual seria el proposito de la cita"
+                      className="resize-none h-50"
+                    />
+                    {fieldState.invalid && (
+                      <FieldError errors={[fieldState.error]} />
+                    )}
+                  </Field>
+                )}
+              />
             </FieldGroup>
           </FieldSet>
 
           <Field orientation="horizontal">
-            <Button type="submit">Enviar</Button>
+            <Button type="submit">
+              <Send className="mr-2" />
+              Enviar
+            </Button>
           </Field>
         </FieldGroup>
       </form>
