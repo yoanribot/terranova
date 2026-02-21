@@ -77,7 +77,7 @@ export async function POST(request: NextRequest) {
   const mail = {
     from: recipients[0], // Use the first recipient as the "from" address for better deliverability
     to: recipients,
-    subject: "Terranova - Nuevo mensaje de contacto",
+    subject: "WEB Terranova - Nuevo mensaje de contacto",
     text: `Name: ${name} ${lastname}\nEmail: ${email}\nPhone: ${phone}\nHorarios: ${time?.join(", ") ?? "No indicado"}\nDias: ${day?.join(", ") ?? "No indicado"}\nMessage: ${message}`,
     html: `
       <p>Name: ${safeName} ${safeLastname}</p>
