@@ -9,12 +9,12 @@
 .heroBannerRoot {
   min-height: 100vh;
   background-size: cover;
-  background-position: left;
+  background-position: 50%;
   padding-top: 70px;
 
   @media (min-width: 640px) {
     min-height: 80vh;
-    background-position: 25% 75%;
+    background-position: 100% 75%;
   }
 }
 
