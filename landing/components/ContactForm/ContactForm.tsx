@@ -3,6 +3,7 @@
 import { Button } from "@/components/ui/button";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { Controller, useForm } from "react-hook-form";
+import { useState } from "react";
 import { Checkbox } from "@/components/ui/checkbox";
 import { z } from "zod";
 import { Send } from "lucide-react";
@@ -55,9 +56,15 @@ const formSchema = z.object({
     .nonempty("El mensaje es obligatorio.")
     .min(10, "El mensaje debe tener al menos 10 caracteres.")
     .max(500, "El mensaje debe tener como máximo 500 caracteres."),
+  time: z.array(z.string()).optional(),
+  day: z.array(z.string()).optional(),
 });
 
 export function ContactForm() {
+  const [status, setStatus] = useState<
+    "idle" | "sending" | "success" | "error"
+  >("idle");
+
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
     mode: "onBlur",
@@ -68,13 +75,34 @@ export function ContactForm() {
       phone: "",
       email: "",
       message: "",
+      time: [],
+      day: [],
     },
   });
 
-  function onSubmit(data: z.infer<typeof formSchema>) {
-    console.log("Form data:", data);
-  }
+  async function onSubmit(data: z.infer<typeof formSchema>) {
+    setStatus("sending");
 
+    try {
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(data),
+      });
+
+      if (!response.ok) {
+        throw new Error("Failed to send");
+      }
+
+      setStatus("success");
+      form.reset();
+    } catch (error) {
+      console.error("Contact form error", error);
+      setStatus("error");
+    }
+  }
   return (
     <div id="contact" className="w-full my-10 py-10">
       <form
@@ -190,42 +218,72 @@ export function ContactForm() {
               <div className="flex gap-3">
                 <FieldGroup className="flex-1">
                   <p> Horarios </p>
-                  <Field orientation="horizontal">
-                    <ul>
-                      {time.map((item) => (
-                        <li key={item.value} className="flex gap-2 mb-1">
-                          <Checkbox
-                            id={item.value}
-                            name="time"
-                            className="self-center"
-                          />
-                          <FieldLabel htmlFor={item.value}>
-                            {item.label}
-                          </FieldLabel>
-                        </li>
-                      ))}
-                    </ul>
-                  </Field>
+                  <Controller
+                    name="time"
+                    control={form.control}
+                    render={({ field }) => (
+                      <Field orientation="horizontal">
+                        <ul>
+                          {time.map((item) => (
+                            <li key={item.value} className="flex gap-2 mb-1">
+                              <Checkbox
+                                id={item.value}
+                                checked={field.value?.includes(item.label)}
+                                onCheckedChange={(checked) => {
+                                  const current = field.value ?? [];
+                                  const next = checked
+                                    ? [...current, item.label]
+                                    : current.filter(
+                                        (value) => value !== item.label,
+                                      );
+                                  field.onChange(next);
+                                }}
+                                className="self-center"
+                              />
+                              <FieldLabel htmlFor={item.value}>
+                                {item.label}
+                              </FieldLabel>
+                            </li>
+                          ))}
+                        </ul>
+                      </Field>
+                    )}
+                  />
                 </FieldGroup>
 
                 <FieldGroup className="flex-1">
                   <p> Dias </p>
-                  <Field orientation="horizontal">
-                    <ul>
-                      {days.map((item) => (
-                        <li key={item.value} className="flex gap-2 mb-1">
-                          <Checkbox
-                            id={item.value}
-                            name="day"
-                            className="self-center"
-                          />
-                          <FieldLabel htmlFor={item.value}>
-                            {item.label}
-                          </FieldLabel>
-                        </li>
-                      ))}
-                    </ul>
-                  </Field>
+                  <Controller
+                    name="day"
+                    control={form.control}
+                    render={({ field }) => (
+                      <Field orientation="horizontal">
+                        <ul>
+                          {days.map((item) => (
+                            <li key={item.value} className="flex gap-2 mb-1">
+                              <Checkbox
+                                id={item.value}
+                                checked={field.value?.includes(item.label)}
+                                onCheckedChange={(checked) => {
+                                  const current = field.value ?? [];
+                                  const next = checked
+                                    ? [...current, item.label]
+                                    : current.filter(
+                                        (value) => value !== item.label,
+                                      );
+                                  field.onChange(next);
+                                }}
+                                className="self-center"
+                              />
+                              <FieldLabel htmlFor={item.value}>
+                                {item.label}
+                              </FieldLabel>
+                            </li>
+                          ))}
+                        </ul>
+                      </Field>
+                    )}
+                  />
                 </FieldGroup>
               </div>
             </FieldGroup>
@@ -257,10 +315,20 @@ export function ContactForm() {
           </FieldSet>
 
           <Field orientation="horizontal">
-            <Button type="submit">
+            <Button type="submit" disabled={status === "sending"}>
               <Send className="mr-2" />
-              Enviar
+              {status === "sending" ? "Enviando" : "Enviar"}
             </Button>
+            {status === "success" && (
+              <p className="text-sm text-green-700" role="status">
+                Mensaje enviado correctamente.
+              </p>
+            )}
+            {status === "error" && (
+              <p className="text-sm text-red-700" role="alert">
+                No se pudo enviar el mensaje. Intentalo de nuevo.
+              </p>
+            )}
           </Field>
         </FieldGroup>
       </form>
