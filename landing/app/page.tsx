@@ -37,7 +37,7 @@ export default async function Home() {
         services={servicesData?.services}
       />
 
-      <OurTeam title={teamData?.title} members={teamData?.members} />
+      {/* <OurTeam title={teamData?.title} members={teamData?.members} /> */}
 
       <MapWrapper locationData={locationData} />
 
