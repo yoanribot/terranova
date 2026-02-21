@@ -1,7 +1,6 @@
 import { clsx, type ClassValue } from "clsx";
 import { twMerge } from "tailwind-merge";
 import {
-  faSteam,
   faFacebook,
   faWhatsapp,
   faXTwitter,
@@ -9,6 +8,7 @@ import {
   faLinkedin,
   faYoutube,
 } from "@fortawesome/free-brands-svg-icons";
+import { faMessage } from "@fortawesome/free-regular-svg-icons";
 import { IconProp } from "@fortawesome/fontawesome-svg-core";
 
 export function cn(...inputs: ClassValue[]) {
@@ -39,7 +39,7 @@ export function getSocialIconFromLabel(label: string) {
     case "youtube":
       return SOCIAL_ICONS_MAP.youtube;
     default:
-      return faSteam;
+      return faMessage;
   }
 }
 

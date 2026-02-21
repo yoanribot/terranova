@@ -216,7 +216,7 @@ export function ContactForm() {
 
               {/* Availability */}
               <div className="flex gap-3">
-                <FieldGroup className="flex-1">
+                <FieldGroup className="flex-1 gap-3">
                   <p> Horarios </p>
                   <Controller
                     name="time"
@@ -238,7 +238,7 @@ export function ContactForm() {
                                       );
                                   field.onChange(next);
                                 }}
-                                className="self-center"
+                                className="self-center w-6 h-6"
                               />
                               <FieldLabel htmlFor={item.value}>
                                 {item.label}
@@ -251,7 +251,7 @@ export function ContactForm() {
                   />
                 </FieldGroup>
 
-                <FieldGroup className="flex-1">
+                <FieldGroup className="flex-1 gap-3">
                   <p> Dias </p>
                   <Controller
                     name="day"
@@ -273,7 +273,7 @@ export function ContactForm() {
                                       );
                                   field.onChange(next);
                                 }}
-                                className="self-center"
+                                className="self-center w-6 h-6"
                               />
                               <FieldLabel htmlFor={item.value}>
                                 {item.label}

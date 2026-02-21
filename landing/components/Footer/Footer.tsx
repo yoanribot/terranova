@@ -96,6 +96,7 @@ const Footer = ({ title, socials, location }: Props) => {
                   rel="noopener noreferrer"
                   className={styles.socialLink}
                   aria-label={social.label}
+                  title={social.label}
                 >
                   <FontAwesomeIcon
                     icon={getSocialIconFromLabel(social.label)}
