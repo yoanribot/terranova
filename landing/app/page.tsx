@@ -11,6 +11,7 @@ import {
 import { getHomepage } from "@/lib/strapi";
 import MapWrapper from "@/components/Map/MapWrapper";
 import AboutUs from "@/components/AboutUs/AboutUs";
+import { ContactForm } from "@/components/ContactForm/ContactForm";
 
 export default async function Home() {
   const data = await getHomepage();
@@ -40,8 +41,9 @@ export default async function Home() {
 
       <MapWrapper locationData={locationData} />
 
-      {/* <Testimonials />
-      <ContactForm /> */}
+      <ContactForm />
+
+      {/* <Testimonials />*/}
     </>
   );
 }

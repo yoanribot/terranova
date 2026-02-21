@@ -12,6 +12,7 @@ export type HomepageData = {
 };
 
 export type BlogData = {
+  slug: string;
   title: string;
   content: BlocksContent;
   backgroundImage?: {

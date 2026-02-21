@@ -7,10 +7,10 @@ import sharedStyles from "@/app/shared.module.css";
 import clsx from "clsx";
 
 const navigationLinks = [
-  { id: "services", href: "#services", label: "Tratamientos" },
-  { id: "team", href: "#team", label: "Nuestro Equipo" },
-  { id: "map", href: "#map", label: "Nuestra Ubicación" },
-  { id: "contact", href: "#footer", label: "Contacto" },
+  { id: "services", href: "/#services", label: "Tratamientos" },
+  { id: "team", href: "/#team", label: "Nuestro Equipo" },
+  { id: "map", href: "/#map", label: "Nuestra Ubicación" },
+  { id: "contact", href: "/#contact", label: "Contacto" },
 ];
 
 const Header = ({ title }: { title?: string }) => {
