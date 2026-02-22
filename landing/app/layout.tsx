@@ -10,6 +10,10 @@ import "@fortawesome/fontawesome-svg-core/styles.css";
 import { getHomepage, getMetadata } from "@/lib/strapi";
 import { LocationSection } from "@/types/data";
 import GoogleAnalytics from "@/components/GoogleAnalytics/GoogleAnalytics";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faWhatsapp } from "@fortawesome/free-brands-svg-icons";
+import { ChevronUp } from "lucide-react";
+
 config.autoAddCss = false;
 
 const dmSerif = DM_Serif_Text({
@@ -20,6 +24,9 @@ const { title, description, sections } = await getMetadata();
 const data = await getHomepage();
 
 const socials = sections?.[0].socials || [];
+const whatsapp = socials.find(
+  (social) => social.label.toLowerCase() === "whatsapp",
+);
 const locationData = data?.sections?.[3] as LocationSection;
 
 export const metadata: Metadata = {
@@ -45,7 +52,25 @@ export default function RootLayout({
 
       <body className={`${dmSerif.className} antialiased`}>
         <Header title={title} />
-        <main>{children}</main>
+
+        <main>
+          {children}
+          <a
+            href={whatsapp?.href}
+            className="fixed bottom-4 right-4 bg-green-500 text-white h-13 w-13 rounded-full shadow-lg hover:bg-green-600 transition-colors flex items-center justify-center z-50"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <FontAwesomeIcon icon={faWhatsapp} size="2x" className="m-auto" />
+          </a>
+          <a
+            href="#"
+            className="fixed bottom-40 rounded-sm bg-red right-0 p-2 text-white h-12 w-12 shadow-lg bg-black/30 hover:bg-gray-600 transition-colors flex items-center justify-center z-50 cursor-pointer"
+          >
+            <ChevronUp width={154} />
+          </a>
+        </main>
+
         <Footer title={title} socials={socials} location={locationData} />
       </body>
     </html>

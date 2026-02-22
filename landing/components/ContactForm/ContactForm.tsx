@@ -43,10 +43,7 @@ const formSchema = z.object({
     .string()
     .nonempty("El apellido es obligatorio.")
     .max(50, "El apellido debe tener como máximo 50 caracteres."),
-  phone: z
-    .string()
-    .nonempty("El teléfono es obligatorio.")
-    .min(7, "El teléfono debe tener al menos 7 caracteres."),
+  phone: z.string(),
   email: z
     .string()
     .email("El correo electrónico no es válido.")
@@ -56,8 +53,8 @@ const formSchema = z.object({
     .nonempty("El mensaje es obligatorio.")
     .min(10, "El mensaje debe tener al menos 10 caracteres.")
     .max(500, "El mensaje debe tener como máximo 500 caracteres."),
-  time: z.array(z.string()).optional(),
-  day: z.array(z.string()).optional(),
+  // time: z.array(z.string()).optional(),
+  // day: z.array(z.string()).optional(),
 });
 
 export function ContactForm() {
@@ -75,8 +72,8 @@ export function ContactForm() {
       phone: "",
       email: "",
       message: "",
-      time: [],
-      day: [],
+      // time: [],
+      // day: [],
     },
   });
 
@@ -121,8 +118,7 @@ export function ContactForm() {
             </FieldDescription>
 
             <FieldGroup>
-              {/* Name and Lastname */}
-              <div className="md:flex gap-3">
+              <div className="md:flex gap-5">
                 <Controller
                   name="name"
                   control={form.control}
@@ -146,17 +142,15 @@ export function ContactForm() {
                 />
 
                 <Controller
-                  name="lastname"
+                  name="phone"
                   control={form.control}
                   render={({ field, fieldState }) => (
                     <Field data-invalid={fieldState.invalid}>
-                      <FieldLabel htmlFor="lastname">Apellidos</FieldLabel>
-
+                      <FieldLabel htmlFor="phone">Teléfono</FieldLabel>
                       <Input
                         {...field}
-                        id="lastname"
+                        id="phone"
                         aria-invalid={fieldState.invalid}
-                        required
                         autoComplete="off"
                       />
 
@@ -170,27 +164,6 @@ export function ContactForm() {
 
               {/* Phone and Email */}
               <div className="md:flex gap-3">
-                <Controller
-                  name="phone"
-                  control={form.control}
-                  render={({ field, fieldState }) => (
-                    <Field data-invalid={fieldState.invalid} className="mb-6">
-                      <FieldLabel htmlFor="phone">Teléfono</FieldLabel>
-                      <Input
-                        {...field}
-                        id="phone"
-                        aria-invalid={fieldState.invalid}
-                        required
-                        autoComplete="off"
-                      />
-
-                      {fieldState.invalid && (
-                        <FieldError errors={[fieldState.error]} />
-                      )}
-                    </Field>
-                  )}
-                />
-
                 <Controller
                   name="email"
                   control={form.control}
@@ -215,7 +188,7 @@ export function ContactForm() {
               </div>
 
               {/* Availability */}
-              <div className="flex gap-3">
+              {/* <div className="flex gap-3">
                 <FieldGroup className="flex-1 gap-3">
                   <p> Horarios </p>
                   <Controller
@@ -285,7 +258,7 @@ export function ContactForm() {
                     )}
                   />
                 </FieldGroup>
-              </div>
+              </div> */}
             </FieldGroup>
           </FieldSet>
 
