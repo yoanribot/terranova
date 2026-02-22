@@ -41,7 +41,7 @@ export default async function Home() {
 
       <MapWrapper locationData={locationData} />
 
-      <div id="contact" className="w-full my-10 py-10 max-w-3xl m-auto ">
+      <div id="contact" className="w-full md:my-10 md:py-10 max-w-3xl m-auto ">
         <ContactForm />
       </div>
 

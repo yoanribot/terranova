@@ -49,7 +49,7 @@ export default async function DynamicPage({
         <img
           src="/section-divider-wave.svg"
           alt="Section Divider"
-          className="w-full absolute bottom-0 h-30"
+          className="w-full absolute bottom-0 h-15 sm:h-30"
         />
       </div>
 
@@ -68,11 +68,11 @@ export default async function DynamicPage({
       </div>
 
       <div className="bg-gray-600">
-        <div className="max-w-[1200px] m-auto flex mt-20 gap-20 py-20">
-          <div className="flex-3 text-black">
+        <div className="max-w-[1200px] m-auto flex flex-col sm:flex-row sm:mt-20 gap-20 sm:py-20">
+          <div className="sm:flex-3 text-black">
             <ContactForm />
           </div>
-          <div className="flex-2">
+          <div className="sm:flex-2 p-10">
             <ul>
               <li className="">
                 <label className="text-xl">

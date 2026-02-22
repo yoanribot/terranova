@@ -16,14 +16,13 @@ interface CarouselProps {
 }
 
 const Carousel: React.FC<CarouselProps> = ({ images }) => {
-  console.log({ images });
-
   if (!images || images.length === 0) return null;
 
   return (
-    <div className="relative w-full max-h-[500px] mx-auto mb-10">
+    <div className="relative w-full h-[50vh] sm:h-[500px] mx-auto mb-10">
       <Swiper
-        // effect={"fade"}
+        effect={"fade"}
+        speed={700}
         slidesPerView={1}
         spaceBetween={30}
         loop={true}
@@ -31,18 +30,17 @@ const Carousel: React.FC<CarouselProps> = ({ images }) => {
           dynamicBullets: true,
         }}
         autoplay={{
-          delay: 5000,
+          delay: 10000,
           disableOnInteraction: false,
         }}
-        // centeredSlides={true}
-        navigation={true}
+        navigation={false}
         modules={[EffectFade, Autoplay, Pagination, Navigation]}
-        className="mySwiper"
+        className="mySwiper h-full"
       >
         {images.map((image, index) => (
           <SwiperSlide key={index}>
             <img
-              className="object-contain w-full h-[500px]"
+              className="object-contain w-full h-full sm:max-h-[500px] bg-black"
               src={getStrapiMedia(image.url)}
               alt={image.alt || `Slide ${index + 1}`}
             />

@@ -26,7 +26,7 @@ const HeroBanner = (data: Hero) => {
           <h1 className="font-bold text-4xl sm:text-6xl max-w-3xl mt-16 mb-6 ">
             {heading}
           </h1>
-          <h3 className="font-bold text-1xl sm:text-2xl  max-w-3xl mb-6">
+          <h3 className="font-bold text-xl sm:text-2xl  max-w-3xl mb-6">
             {subHeading}
           </h3>
           <p className="max-w-3xl mb-6">{text}</p>
