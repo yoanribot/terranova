@@ -1,9 +1,7 @@
-import { getBlogBySlug, getBlogs } from "@/lib/strapi";
-import styles from "./termns.module.css";
-import { getStrapiMedia } from "@/lib/utils";
-import { RichTextRenderer } from "@/components/shared/BlockRender/RichText";
+import { getBlogBySlug, getBlogs, getHomepage } from "@/lib/strapi";
 import { RichTextDocument } from "@/types/RichText";
-import { BlogData } from "@/types/data";
+import { BlogData, LocationSection } from "@/types/data";
+import DynamicPage from "@/components/DynamicPage/DynamicPage";
 
 type DynamicPageProps = {
   params: { slug: string };
@@ -12,28 +10,28 @@ type DynamicPageProps = {
 export default async function Page({ params }: DynamicPageProps) {
   const { slug } = await params;
   const data = await getBlogBySlug(slug);
+  const homeData = await getHomepage();
+  const locationData = homeData?.sections?.[3] as LocationSection;
+  const { address, description, phoneMain, phoneSecondary, schedules } =
+    locationData || {};
 
   if (!data?.[0]) {
     return <div>No se encontraron datos para el servicio solicitado.</div>;
   }
 
   const { title, content, backgroundImage } = data[0] || {};
-  const bgImage = getStrapiMedia(backgroundImage?.url);
 
   return (
-    <section className={styles.pageContent}>
-      <div
-        style={{ backgroundImage: `url(${bgImage})` }}
-        className="h-96 p-2 bg-cover bg-center flex items-center justify-center xs:mb-20"
-      >
-        <h1 className="text-6xl text-center my-32">{title}</h1>
-      </div>
-
-      <div className="mb-20 p-6">
-        {/* <BlockRendererClient content={content} /> */}
-        <RichTextRenderer content={content as RichTextDocument} />
-      </div>
-    </section>
+    <DynamicPage
+      title={title}
+      content={content as RichTextDocument}
+      backgroundImage={backgroundImage}
+      address={address}
+      description={description}
+      phoneMain={phoneMain}
+      phoneSecondary={phoneSecondary}
+      schedules={schedules}
+    />
   );
 }
 

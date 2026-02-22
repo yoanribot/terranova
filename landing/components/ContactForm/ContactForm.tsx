@@ -104,7 +104,7 @@ export function ContactForm() {
     <form
       onSubmit={form.handleSubmit(onSubmit)}
       noValidate
-      className=" bg-white shadow-md px-5 md:px-20 py-10 md:rounded-lg"
+      className=" bg-white shadow-md px-5 md:px-10 py-10 md:rounded-lg"
     >
       <FieldGroup>
         <FieldSet>
@@ -276,7 +276,7 @@ export function ContactForm() {
                     required
                     aria-invalid={fieldState.invalid}
                     placeholder="Comentanos cual seria el proposito de la cita"
-                    className="resize-none h-50"
+                    className="resize-none h-30"
                   />
                   {fieldState.invalid && (
                     <FieldError errors={[fieldState.error]} />
@@ -287,11 +287,12 @@ export function ContactForm() {
           </FieldGroup>
         </FieldSet>
 
-        <Field orientation="horizontal">
+        <Field orientation="horizontal" className="justify-center">
           <Button
             type="submit"
+            size={"lg"}
             disabled={status === "sending"}
-            className="cursor-pointer"
+            className="cursor-pointer w-40 h-12"
           >
             <Send className="mr-2" />
             {status === "sending" ? "Enviando" : "Enviar"}

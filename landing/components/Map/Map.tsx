@@ -32,28 +32,40 @@ const Map = ({
 
         <div className="flex-2">
           <ul>
-            <li className="mt-4">
-              <strong>Direccion:</strong> {address}
+            <li className="">
+              <label className="text-xl">
+                <strong>Direccion:</strong> {address}
+              </label>
             </li>
             <li className="mt-4">
-              <strong>Informacion extra:</strong> {description}
+              <label className="text-xl">
+                <strong>Informacion extra:</strong> {description}
+              </label>
             </li>
             <li className="mt-4">
-              <strong>Telefono:</strong> {phoneMain}
+              <label className="text-xl">
+                <strong>Telefono:</strong> {phoneMain}
+              </label>
             </li>
             <li className="mt-4">
-              <strong>Telefono secundario:</strong> {phoneSecondary}
+              <label className="text-xl">
+                <strong>Telefono secundario:</strong> {phoneSecondary}
+              </label>
             </li>
             <li className="mt-4">
-              <strong>Horario de apertura:</strong>
+              <label className="text-xl">
+                <strong>Horario de apertura:</strong>
+              </label>
             </li>
             <ul>
               {schedules?.map((slot) => (
                 <li key={slot.day} className="mb-0.5">
-                  <span className="">{slot.day}:</span>{" "}
-                  {slot.availability ?? (
-                    <span className="text-orange-500"> Cerrado </span>
-                  )}
+                  <span className="text-lg">{slot.day}:</span>
+                  <span className="text-lg ml-2">
+                    {slot.availability ?? (
+                      <span className="text-orange-500"> Cerrado </span>
+                    )}
+                  </span>
                 </li>
               ))}
             </ul>
