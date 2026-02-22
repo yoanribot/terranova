@@ -25,10 +25,12 @@ const AboutUs = ({ title, text, image }: AboutUsProps) => {
             />
           )}
         </div>
-        <RichTextRenderer
-          content={text as RichTextDocument}
-          className="flex-5 p-3 text-balance"
-        />
+
+        <div className="flex-5 p-3 text-balance">
+          <h2 className="text-6xl mb-4"> Dedicados a tu salud dental</h2>
+
+          <RichTextRenderer content={text as RichTextDocument} />
+        </div>
       </div>
     </section>
   );

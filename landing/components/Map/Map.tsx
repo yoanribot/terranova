@@ -30,9 +30,7 @@ const Map = ({
           ></iframe>
         </div>
 
-        <div className="flex-1">
-          <h2 className="text-2xl">Informacion: </h2>
-
+        <div className="flex-2">
           <ul>
             <li className="mt-4">
               <strong>Direccion:</strong> {address}
@@ -51,10 +49,10 @@ const Map = ({
             </li>
             <ul>
               {schedules?.map((slot) => (
-                <li key={slot.day}>
-                  <span className="font-semibold">{slot.day}:</span>{" "}
+                <li key={slot.day} className="mb-0.5">
+                  <span className="">{slot.day}:</span>{" "}
                   {slot.availability ?? (
-                    <span className="text-orange-500"> Cerrado</span>
+                    <span className="text-orange-500"> Cerrado </span>
                   )}
                 </li>
               ))}
