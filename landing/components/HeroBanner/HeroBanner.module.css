@@ -13,7 +13,7 @@
   padding-top: 70px;
 
   @media (min-width: 640px) {
-    min-height: 80vh;
+    min-height: 85vh;
     background-position: 100% 75%;
   }
 }

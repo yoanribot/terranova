@@ -287,7 +287,21 @@ export function ContactForm() {
           </FieldGroup>
         </FieldSet>
 
-        <Field orientation="horizontal" className="justify-center">
+        <Field orientation="horizontal" className="justify-center flex-col">
+          <div>
+            {status === "success" && (
+              <p className="text-md text-green-700" role="status">
+                Mensaje enviado correctamente, nos pondremos en contacto contigo
+                pronto!
+              </p>
+            )}
+            {status === "error" && (
+              <p className="text-md text-red-700" role="alert">
+                Lo sentimos. No se pudo enviar el mensaje. Intentalo de
+                nuevamente.
+              </p>
+            )}
+          </div>
           <Button
             type="submit"
             size={"lg"}
@@ -297,16 +311,6 @@ export function ContactForm() {
             <Send className="mr-2" />
             {status === "sending" ? "Enviando" : "Enviar"}
           </Button>
-          {status === "success" && (
-            <p className="text-sm text-green-700" role="status">
-              Mensaje enviado correctamente.
-            </p>
-          )}
-          {status === "error" && (
-            <p className="text-sm text-red-700" role="alert">
-              No se pudo enviar el mensaje. Intentalo de nuevo.
-            </p>
-          )}
         </Field>
       </FieldGroup>
     </form>

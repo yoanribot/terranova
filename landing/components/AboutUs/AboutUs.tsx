@@ -12,8 +12,8 @@ type AboutUsProps = {
 
 const AboutUs = ({ title, text, image }: AboutUsProps) => {
   return (
-    <section id="about-us" className={sharedStyles.container}>
-      <SectionTitle title={title} />
+    <section id="about-us" className={`${sharedStyles.container}`}>
+      <SectionTitle title={title} withMarginTop={false} />
 
       <div className="flex gap-12 justify-center">
         <div className="flex-3 h-100 hidden sm:block">

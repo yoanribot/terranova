@@ -8,6 +8,7 @@ import { Hero } from "@/types/data";
 import { getStrapiMedia } from "@/lib/utils";
 import { useRouter } from "next/navigation";
 import { Calendar } from "lucide-react";
+import HeaderDivider from "../HeaderDivider/HeaderDivider";
 
 const HeroBanner = (data: Hero) => {
   const router = useRouter();
@@ -18,7 +19,7 @@ const HeroBanner = (data: Hero) => {
 
   return (
     <section
-      className={clsx(styles.heroBannerRoot)}
+      className={clsx(styles.heroBannerRoot, "relative")}
       style={{ backgroundImage: `url(${backgroundImage})` }}
     >
       <div className={sharedStyles.container}>
@@ -34,16 +35,17 @@ const HeroBanner = (data: Hero) => {
           <div>
             {label && (
               <Button
-                className="mt-10 cursor-pointer transition-all duration-300 hover:scale-105 hover:-translate-y-1 hover:brightness-110"
+                className="text-md mt-10 w-[200] rounded-4xl h-12 cursor-pointer transition-all duration-300 hover:scale-105 hover:-translate-y-1 hover:brightness-110"
                 onClick={() => router.push(href)}
               >
-                <Calendar className="mr-1" />
+                <Calendar width={22} height={22} className="mr-1 size-" />
                 {label}
               </Button>
             )}
           </div>
         </div>
       </div>
+      <HeaderDivider color="#8bb47f" />
     </section>
   );
 };

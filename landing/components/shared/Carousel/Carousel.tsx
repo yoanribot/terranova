@@ -8,7 +8,7 @@ import "swiper/css";
 import "swiper/css/effect-fade";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
-import "./Carousel.module.css";
+import "./Carousel.css";
 import { getStrapiMedia } from "@/lib/utils";
 
 interface CarouselProps {
@@ -27,13 +27,13 @@ const Carousel: React.FC<CarouselProps> = ({ images }) => {
         spaceBetween={30}
         loop={true}
         pagination={{
-          dynamicBullets: true,
+          clickable: true,
         }}
         autoplay={{
           delay: 10000,
           disableOnInteraction: false,
         }}
-        navigation={false}
+        navigation={true}
         modules={[EffectFade, Autoplay, Pagination, Navigation]}
         className="mySwiper h-full"
       >

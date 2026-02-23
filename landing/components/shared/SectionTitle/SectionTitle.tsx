@@ -1,6 +1,18 @@
-const SectionTitle = ({ title }: { title: string }) => {
+import { clsx } from "clsx";
+
+const SectionTitle = ({
+  title,
+  withMarginTop = true,
+}: {
+  title: string;
+  withMarginTop?: boolean;
+}) => {
   return (
-    <div className="flex flex-col gap-3 text-center mt-15 mb-15 ">
+    <div
+      className={clsx("flex flex-col gap-3 text-center mb-10", {
+        "mt-20": withMarginTop,
+      })}
+    >
       <h2 className="text-4xl">{title}</h2>
     </div>
   );

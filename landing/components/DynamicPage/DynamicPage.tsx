@@ -6,6 +6,7 @@ import Carousel from "@/components/shared/Carousel/Carousel";
 import { RichTextDocument } from "@/types/RichText";
 import { BlogData } from "@/types/data";
 import { ContactForm } from "@/components/ContactForm/ContactForm";
+import BlockRendererClient from "../shared/BlockRender/BlockRendererClient";
 
 type DynamicPageProps = {
   title: string;
@@ -55,8 +56,8 @@ export default async function DynamicPage({
 
       <div className={styles.pageContent}>
         <div className="p-6">
-          {/* <BlockRendererClient content={content} /> */}
-          <RichTextRenderer content={content as RichTextDocument} />
+          <BlockRendererClient content={content} />
+          {/* <RichTextRenderer content={content as RichTextDocument} /> */}
         </div>
 
         {images && images.length > 0 && (
