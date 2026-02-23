@@ -4,7 +4,6 @@ import { Button } from "@/components/ui/button";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { Controller, useForm } from "react-hook-form";
 import { useState } from "react";
-import { Checkbox } from "@/components/ui/checkbox";
 import { z } from "zod";
 import { Send } from "lucide-react";
 

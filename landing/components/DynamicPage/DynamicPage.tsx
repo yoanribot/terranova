@@ -69,36 +69,36 @@ export default async function DynamicPage({
       </div>
 
       <div className="bg-gray-600">
-        <div className="max-w-[1200px] m-auto flex flex-col sm:flex-row sm:mt-20 gap-20 sm:py-20">
+        <div className="max-w-[1200px] m-auto flex flex-col sm:flex-row sm:mt-20 sm:gap-20 sm:py-20">
           <div className="sm:flex-3 text-black">
             <ContactForm />
           </div>
           <div className="sm:flex-2 p-10">
             <ul>
               <li className="">
-                <label className="text-xl">
-                  <strong>Direccion:</strong> {address}
-                </label>
+                <p className="text-md sm:text-xl">
+                  <span>Direccion:</span> {address}
+                </p>
               </li>
               <li className="mt-4">
-                <label className="text-xl">
-                  <strong>Informacion extra:</strong> {description}
-                </label>
+                <p className="text-md sm:text-xl">
+                  <span>Informacion extra:</span> {description}
+                </p>
               </li>
               <li className="mt-4">
-                <label className="text-xl">
-                  <strong>Telefono:</strong> {phoneMain}
-                </label>
+                <p className="text-md sm:text-xl">
+                  <span>Telefono:</span> {phoneMain}
+                </p>
               </li>
               <li className="mt-4">
-                <label className="text-xl">
-                  <strong>Telefono secundario:</strong> {phoneSecondary}
-                </label>
+                <p className="text-md sm:text-xl">
+                  <span>Telefono secundario:</span> {phoneSecondary}
+                </p>
               </li>
               <li className="mt-4">
-                <label className="text-xl">
-                  <strong>Horario de apertura:</strong>
-                </label>
+                <p className="text-md sm:text-xl">
+                  <span>Horario de apertura:</span>
+                </p>
               </li>
               <ul>
                 {schedules?.map((slot) => (

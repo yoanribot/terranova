@@ -1,6 +1,6 @@
 .content {
   @media (min-width: 640px) {
-    margin-top: 70px;
+    margin-top: 100px;
     width: 40vw;
     max-width: 500px;
   }
@@ -14,7 +14,7 @@
 
   @media (min-width: 640px) {
     min-height: 85vh;
-    background-position: 100% 75%;
+    background-position: 100% 0%;
   }
 }
 

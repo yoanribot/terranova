@@ -1,4 +1,5 @@
 import sharedStyles from "@/app/shared.module.css";
+import styles from "./AboutUs.module.css";
 import SectionTitle from "../shared/SectionTitle/SectionTitle";
 import { getStrapiMedia } from "@/lib/utils";
 import { RichTextRenderer } from "../shared/BlockRender/RichText";
@@ -12,24 +13,32 @@ type AboutUsProps = {
 
 const AboutUs = ({ title, text, image }: AboutUsProps) => {
   return (
-    <section id="about-us" className={`${sharedStyles.container}`}>
-      <SectionTitle title={title} withMarginTop={false} />
-
-      <div className="flex gap-12 justify-center">
-        <div className="flex-3 h-100 hidden sm:block">
-          {image && (
-            <img
-              src={getStrapiMedia(image.url)}
-              alt={image.alternativeText || title}
-              className="h-full object-cover"
-            />
-          )}
+    <section id="about-us" className="relative">
+      <div className={styles.header}>
+        <div className={sharedStyles.container}>
+          <SectionTitle
+            title={title}
+            subtitle="Un equipo dedicado a la salud de su sonrisa"
+            withMarginTop={false}
+          />
         </div>
+      </div>
 
-        <div className="flex-5 p-3 text-balance">
-          <h2 className="text-6xl mb-4"> Dedicados a tu salud dental</h2>
+      <div className={`${sharedStyles.container}`}>
+        <div className={`flex gap-20 justify-center p-10`}>
+          <div className="flex-3 hidden sm:block">
+            {image && (
+              <img
+                src={getStrapiMedia(image.url)}
+                alt={image.alternativeText || title}
+                className="w-full h-full object-cover max-h-130 rounded-lg shadow-lg"
+              />
+            )}
+          </div>
 
-          <RichTextRenderer content={text as RichTextDocument} />
+          <div className="flex-5 p-3 text-balance m-auto">
+            <RichTextRenderer content={text as RichTextDocument} />
+          </div>
         </div>
       </div>
     </section>

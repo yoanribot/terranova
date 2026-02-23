@@ -30,7 +30,7 @@ const BlockRenderer: React.FC<{ node: BlockNode }> = ({ node }) => {
   switch (node.type) {
     case "paragraph":
       return (
-        <p className="mb-4 text-lg leading-relaxed text-gray-700">
+        <p className="mb-4 text-lg leading-relaxed text-black-700">
           {node.children.map((child, i) => (
             <InlineRenderer key={i} node={child} />
           ))}
@@ -40,12 +40,12 @@ const BlockRenderer: React.FC<{ node: BlockNode }> = ({ node }) => {
     case "heading": {
       const Tag = `h${node.level}` as keyof JSX.IntrinsicElements;
       const headingClasses = [
-        "text-3xl font-bold mt-8 mb-4 text-gray-900", // h1
-        "text-2xl font-semibold mt-6 mb-3 text-gray-900", // h2
-        "text-xl font-semibold mt-4 mb-2 text-gray-900", // h3
-        "text-lg font-semibold mt-3 mb-2 text-gray-900", // h4
-        "text-base font-semibold mt-2 mb-1 text-gray-900", // h5
-        "text-base font-medium mt-2 mb-1 text-gray-900", // h6
+        "text-3xl font-bold mt-8 mb-4 text-black-900", // h1
+        "text-2xl font-semibold mt-6 mb-3 text-black-900", // h2
+        "text-xl font-semibold mt-4 mb-2 text-black-900", // h3
+        "text-lg font-semibold mt-3 mb-2 text-black-900", // h4
+        "text-base font-semibold mt-2 mb-1 text-black-900", // h5
+        "text-base font-medium mt-2 mb-1 text-black-900", // h6
       ];
       const className =
         headingClasses[(node.level ?? 1) - 1] || headingClasses[0];
@@ -93,12 +93,12 @@ const InlineRenderer: React.FC<{ node: InlineNode }> = ({ node }) => {
 
   if (node.bold) {
     content = (
-      <strong className="font-semibold text-gray-900">{content}</strong>
+      <strong className="font-semibold text-black-900">{content}</strong>
     );
   }
 
   if (node.italic) {
-    content = <em className="italic text-gray-800">{content}</em>;
+    content = <em className="italic text-black-800">{content}</em>;
   }
 
   if (node.underline) {

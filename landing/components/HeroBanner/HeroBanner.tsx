@@ -24,15 +24,15 @@ const HeroBanner = (data: Hero) => {
     >
       <div className={sharedStyles.container}>
         <div className={clsx(styles.content)}>
-          <h1 className="font-bold text-4xl sm:text-6xl max-w-3xl mt-16 mb-6 ">
+          <h1
+            className={`poiretOne font-bold text-4xl sm:text-[80px] max-w-3xl mt-16 mb-6`}
+          >
             {heading}
           </h1>
-          <h3 className="font-bold text-xl sm:text-2xl  max-w-3xl mb-6">
-            {subHeading}
-          </h3>
+          <h3 className="text-xl sm:text-2xl  max-w-3xl mb-6">{subHeading}</h3>
           <p className="max-w-3xl mb-6">{text}</p>
 
-          <div>
+          <div className="flex justify-self-center">
             {label && (
               <Button
                 className="text-md mt-10 w-[200] rounded-4xl h-12 cursor-pointer transition-all duration-300 hover:scale-105 hover:-translate-y-1 hover:brightness-110"
@@ -45,7 +45,8 @@ const HeroBanner = (data: Hero) => {
           </div>
         </div>
       </div>
-      <HeaderDivider color="#8bb47f" />
+
+      <HeaderDivider colorStart="#ddd8cb" colorEnd="#f8f5f5" />
     </section>
   );
 };
