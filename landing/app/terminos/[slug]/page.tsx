@@ -15,7 +15,7 @@ export default async function Page({ params }: DynamicPageProps) {
   const { address, description, phoneMain, phoneSecondary, schedules } =
     locationData || {};
 
-  if (!data?.[0]) {
+  if (!data || !data[0] || !data?.[0]) {
     return <div>No se encontraron datos para el servicio solicitado.</div>;
   }
 
