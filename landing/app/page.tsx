@@ -15,12 +15,17 @@ import { ContactForm } from "@/components/ContactForm/ContactForm";
 
 export default async function Home() {
   const data = await getHomepage();
+  const sections = data?.sections || [];
 
-  const heroData = data?.sections?.[0] as Hero;
-  const aboutUsData = data?.sections?.[1] as AboutUsData;
-  const servicesData = data?.sections?.[2] as ServiceSection;
-  const locationData = data?.sections?.[3] as LocationSection;
-  const teamData = data?.sections?.[4] as TeamSection;
+  const heroData = (sections[0] as Hero | undefined) || ({} as Hero);
+  const aboutUsData =
+    (sections[1] as AboutUsData | undefined) || ({} as AboutUsData);
+  const servicesData =
+    (sections[2] as ServiceSection | undefined) || ({} as ServiceSection);
+  const locationData =
+    (sections[3] as LocationSection | undefined) || ({} as LocationSection);
+  const teamData =
+    (sections[4] as TeamSection | undefined) || ({} as TeamSection);
 
   return (
     <>
