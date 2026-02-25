@@ -21,18 +21,32 @@ const dmSerif = DM_Serif_Text({
   weight: ["400"],
 });
 
-const { title, description, sections } = await getMetadata();
+const metadataResponse = await getMetadata();
 const data = await getHomepage();
 
-const socials = sections?.[0].socials || [];
+const title = metadataResponse?.title || "Terra Nova";
+const description = metadataResponse?.description || "Bienvenidos a Terra Nova";
+const sections = metadataResponse?.sections || [];
+const socials = sections?.[0]?.socials || [];
 const whatsapp = socials.find(
-  (social) => social.label.toLowerCase() === "whatsapp",
+  (social) => social?.label?.toLowerCase() === "whatsapp",
 );
-const locationData = data?.sections?.[3] as LocationSection;
+const locationData = (data?.sections?.[3] as LocationSection | undefined) || {
+  title: "",
+  description: "",
+  phoneMain: "",
+  address: "",
+  email: "",
+  location: {
+    latitude: "",
+    longitude: "",
+  },
+  schedules: [],
+};
 
 export const metadata: Metadata = {
-  title: title || "Terra Nova",
-  description: description || "Bienvenidos a Terra Nova",
+  title,
+  description,
 };
 
 export default function RootLayout({
