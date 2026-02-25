@@ -1,4 +1,3 @@
-import sharedStyles from "@/app/shared.module.css";
 import SectionTitle from "../shared/SectionTitle/SectionTitle";
 import Card from "../shared/Card/Card";
 import { Service } from "@/types/data";
@@ -11,7 +10,7 @@ const OurServices = ({
   services: Service[];
 }) => {
   return (
-    <section id="services" className={sharedStyles.container}>
+    <section id="services" className="container">
       <SectionTitle title={title} />
 
       <section className="flex gap-6 flex-wrap justify-center">

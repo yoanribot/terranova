@@ -4,7 +4,6 @@ import { Button } from "@/components/ui/button";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { Controller, useForm } from "react-hook-form";
 import { useState } from "react";
-import { Checkbox } from "@/components/ui/checkbox";
 import { z } from "zod";
 import { Send } from "lucide-react";
 
@@ -43,10 +42,7 @@ const formSchema = z.object({
     .string()
     .nonempty("El apellido es obligatorio.")
     .max(50, "El apellido debe tener como máximo 50 caracteres."),
-  phone: z
-    .string()
-    .nonempty("El teléfono es obligatorio.")
-    .min(7, "El teléfono debe tener al menos 7 caracteres."),
+  phone: z.string(),
   email: z
     .string()
     .email("El correo electrónico no es válido.")
@@ -56,8 +52,8 @@ const formSchema = z.object({
     .nonempty("El mensaje es obligatorio.")
     .min(10, "El mensaje debe tener al menos 10 caracteres.")
     .max(500, "El mensaje debe tener como máximo 500 caracteres."),
-  time: z.array(z.string()).optional(),
-  day: z.array(z.string()).optional(),
+  // time: z.array(z.string()).optional(),
+  // day: z.array(z.string()).optional(),
 });
 
 export function ContactForm() {
@@ -75,8 +71,8 @@ export function ContactForm() {
       phone: "",
       email: "",
       message: "",
-      time: [],
-      day: [],
+      // time: [],
+      // day: [],
     },
   });
 
@@ -104,118 +100,94 @@ export function ContactForm() {
     }
   }
   return (
-    <div id="contact" className="w-full my-10 py-10">
-      <form
-        onSubmit={form.handleSubmit(onSubmit)}
-        noValidate
-        className="w-full  bg-white max-w-3xl m-auto shadow-md px-5 md:px-20 py-10 md:rounded-lg"
-      >
-        <FieldGroup>
-          <FieldSet>
-            <FieldLegend>
-              <h4 className="text-2xl">Formulario de contacto</h4>
-            </FieldLegend>
-            <FieldDescription>
-              Escribenos un mensaje y nos pondremos en contacto contigo lo antes
-              posible.
-            </FieldDescription>
+    <form
+      onSubmit={form.handleSubmit(onSubmit)}
+      noValidate
+      className=" bg-white shadow-md px-5 md:px-10 py-10 rounded-lg"
+    >
+      <FieldGroup>
+        <FieldSet>
+          <FieldLegend className="flex justify-center items-center">
+            <h4 className="text-2xl">Formulario de contacto</h4>
+            <Send className="ml-2" />
+          </FieldLegend>
+          <FieldDescription>
+            Escribenos un mensaje y nos pondremos en contacto contigo lo antes
+            posible.
+          </FieldDescription>
 
-            <FieldGroup>
-              {/* Name and Lastname */}
-              <div className="md:flex gap-3">
-                <Controller
-                  name="name"
-                  control={form.control}
-                  render={({ field, fieldState }) => (
-                    <Field data-invalid={fieldState.invalid}>
-                      <FieldLabel htmlFor="name">Nombre</FieldLabel>
+          <FieldGroup>
+            <div className="md:flex gap-5">
+              <Controller
+                name="name"
+                control={form.control}
+                render={({ field, fieldState }) => (
+                  <Field data-invalid={fieldState.invalid}>
+                    <FieldLabel htmlFor="name">Nombre</FieldLabel>
 
-                      <Input
-                        {...field}
-                        id="name"
-                        aria-invalid={fieldState.invalid}
-                        required
-                        autoComplete="off"
-                      />
+                    <Input
+                      {...field}
+                      id="name"
+                      aria-invalid={fieldState.invalid}
+                      required
+                      autoComplete="off"
+                    />
 
-                      {fieldState.invalid && (
-                        <FieldError errors={[fieldState.error]} />
-                      )}
-                    </Field>
-                  )}
-                />
+                    {fieldState.invalid && (
+                      <FieldError errors={[fieldState.error]} />
+                    )}
+                  </Field>
+                )}
+              />
 
-                <Controller
-                  name="lastname"
-                  control={form.control}
-                  render={({ field, fieldState }) => (
-                    <Field data-invalid={fieldState.invalid}>
-                      <FieldLabel htmlFor="lastname">Apellidos</FieldLabel>
+              <Controller
+                name="phone"
+                control={form.control}
+                render={({ field, fieldState }) => (
+                  <Field data-invalid={fieldState.invalid}>
+                    <FieldLabel htmlFor="phone">Teléfono</FieldLabel>
+                    <Input
+                      {...field}
+                      id="phone"
+                      aria-invalid={fieldState.invalid}
+                      autoComplete="off"
+                    />
 
-                      <Input
-                        {...field}
-                        id="lastname"
-                        aria-invalid={fieldState.invalid}
-                        required
-                        autoComplete="off"
-                      />
+                    {fieldState.invalid && (
+                      <FieldError errors={[fieldState.error]} />
+                    )}
+                  </Field>
+                )}
+              />
+            </div>
 
-                      {fieldState.invalid && (
-                        <FieldError errors={[fieldState.error]} />
-                      )}
-                    </Field>
-                  )}
-                />
-              </div>
+            {/* Phone and Email */}
+            <div className="md:flex gap-3">
+              <Controller
+                name="email"
+                control={form.control}
+                render={({ field, fieldState }) => (
+                  <Field data-invalid={fieldState.invalid}>
+                    <FieldLabel htmlFor="email">Email</FieldLabel>
+                    <Input
+                      {...field}
+                      id="email"
+                      aria-invalid={fieldState.invalid}
+                      placeholder="example@example.com"
+                      required
+                      type="email"
+                    />
 
-              {/* Phone and Email */}
-              <div className="md:flex gap-3">
-                <Controller
-                  name="phone"
-                  control={form.control}
-                  render={({ field, fieldState }) => (
-                    <Field data-invalid={fieldState.invalid} className="mb-6">
-                      <FieldLabel htmlFor="phone">Teléfono</FieldLabel>
-                      <Input
-                        {...field}
-                        id="phone"
-                        aria-invalid={fieldState.invalid}
-                        required
-                        autoComplete="off"
-                      />
+                    {fieldState.invalid && (
+                      <FieldError errors={[fieldState.error]} />
+                    )}
+                  </Field>
+                )}
+              />
+            </div>
 
-                      {fieldState.invalid && (
-                        <FieldError errors={[fieldState.error]} />
-                      )}
-                    </Field>
-                  )}
-                />
-
-                <Controller
-                  name="email"
-                  control={form.control}
-                  render={({ field, fieldState }) => (
-                    <Field data-invalid={fieldState.invalid}>
-                      <FieldLabel htmlFor="email">Email</FieldLabel>
-                      <Input
-                        {...field}
-                        id="email"
-                        aria-invalid={fieldState.invalid}
-                        placeholder="example@example.com"
-                        required
-                        type="email"
-                      />
-
-                      {fieldState.invalid && (
-                        <FieldError errors={[fieldState.error]} />
-                      )}
-                    </Field>
-                  )}
-                />
-              </div>
-
-              {/* Availability */}
-              <div className="flex gap-3">
+            {/* Availability */}
+            {/* <div className="flex gap-3">
                 <FieldGroup className="flex-1 gap-3">
                   <p> Horarios </p>
                   <Controller
@@ -285,53 +257,61 @@ export function ContactForm() {
                     )}
                   />
                 </FieldGroup>
-              </div>
-            </FieldGroup>
-          </FieldSet>
+              </div> */}
+          </FieldGroup>
+        </FieldSet>
 
-          <FieldSet>
-            <FieldGroup>
-              <Controller
-                name="message"
-                control={form.control}
-                render={({ field, fieldState }) => (
-                  <Field data-invalid={fieldState.invalid}>
-                    <FieldLabel htmlFor="message">Contenido</FieldLabel>
-                    <Textarea
-                      {...field}
-                      id="message"
-                      required
-                      aria-invalid={fieldState.invalid}
-                      placeholder="Comentanos cual seria el proposito de la cita"
-                      className="resize-none h-50"
-                    />
-                    {fieldState.invalid && (
-                      <FieldError errors={[fieldState.error]} />
-                    )}
-                  </Field>
-                )}
-              />
-            </FieldGroup>
-          </FieldSet>
+        <FieldSet>
+          <FieldGroup>
+            <Controller
+              name="message"
+              control={form.control}
+              render={({ field, fieldState }) => (
+                <Field data-invalid={fieldState.invalid}>
+                  <FieldLabel htmlFor="message">Contenido</FieldLabel>
+                  <Textarea
+                    {...field}
+                    id="message"
+                    required
+                    aria-invalid={fieldState.invalid}
+                    placeholder="Comentanos cual seria el proposito de la cita"
+                    className="resize-none h-30"
+                  />
+                  {fieldState.invalid && (
+                    <FieldError errors={[fieldState.error]} />
+                  )}
+                </Field>
+              )}
+            />
+          </FieldGroup>
+        </FieldSet>
 
-          <Field orientation="horizontal">
-            <Button type="submit" disabled={status === "sending"}>
-              <Send className="mr-2" />
-              {status === "sending" ? "Enviando" : "Enviar"}
-            </Button>
+        <Field orientation="horizontal" className="justify-center flex-col">
+          <div>
             {status === "success" && (
-              <p className="text-sm text-green-700" role="status">
-                Mensaje enviado correctamente.
+              <p className="text-md text-green-700" role="status">
+                Mensaje enviado correctamente, nos pondremos en contacto contigo
+                pronto!
               </p>
             )}
             {status === "error" && (
-              <p className="text-sm text-red-700" role="alert">
-                No se pudo enviar el mensaje. Intentalo de nuevo.
+              <p className="text-md text-red-700" role="alert">
+                Lo sentimos. No se pudo enviar el mensaje. Intentalo de
+                nuevamente.
               </p>
             )}
-          </Field>
-        </FieldGroup>
-      </form>
-    </div>
+          </div>
+          <Button
+            type="submit"
+            size={"lg"}
+            disabled={status === "sending"}
+            className="cursor-pointer w-40 h-12"
+          >
+            <Send className="mr-2" />
+            {status === "sending" ? "Enviando" : "Enviar"}
+          </Button>
+        </Field>
+      </FieldGroup>
+    </form>
   );
 }

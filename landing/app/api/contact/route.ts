@@ -91,8 +91,6 @@ export async function POST(request: NextRequest) {
 
   try {
     await transportSendInBlue.sendMail(mail);
-    console.log("Contact sent");
-    console.log("Mail content:", mail);
 
     return NextResponse.json({ status: "Message Sent" });
   } catch (error) {

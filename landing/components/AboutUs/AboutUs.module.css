@@ -1,9 +1,5 @@
-.text {
-  /* Add your styles here */
-}
-
-.imageWrapper {
-  margin-top: 2rem;
-  display: flex;
-  justify-content: center;
+.header {
+  background: linear-gradient(to right, #f8f5f5 0%, #ddd8cb 100%);
+  padding-bottom: 20px;
+  padding-top: 20px;
 }

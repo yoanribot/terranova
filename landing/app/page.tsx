@@ -15,22 +15,29 @@ import { ContactForm } from "@/components/ContactForm/ContactForm";
 
 export default async function Home() {
   const data = await getHomepage();
+  const sections = data?.sections || [];
 
-  const heroData = data?.sections?.[0] as Hero;
-  const aboutUsData = data?.sections?.[1] as AboutUsData;
-  const servicesData = data?.sections?.[2] as ServiceSection;
-  const locationData = data?.sections?.[3] as LocationSection;
-  const teamData = data?.sections?.[4] as TeamSection;
+  const heroData = (sections[0] as Hero | undefined) || ({} as Hero);
+  const aboutUsData =
+    (sections[1] as AboutUsData | undefined) || ({} as AboutUsData);
+  const servicesData =
+    (sections[2] as ServiceSection | undefined) || ({} as ServiceSection);
+  const locationData =
+    (sections[3] as LocationSection | undefined) || ({} as LocationSection);
+  const teamData =
+    (sections[4] as TeamSection | undefined) || ({} as TeamSection);
 
   return (
     <>
       <HeroBanner {...heroData} />
 
-      <AboutUs
-        title={aboutUsData?.title}
-        text={aboutUsData?.text}
-        image={aboutUsData?.image}
-      />
+      <div className="w-full bg-[#708f67]">
+        <AboutUs
+          title={aboutUsData?.title}
+          text={aboutUsData?.text}
+          image={aboutUsData?.image}
+        />
+      </div>
 
       <OurServices
         title={servicesData?.title}
@@ -41,7 +48,11 @@ export default async function Home() {
 
       <MapWrapper locationData={locationData} />
 
-      <ContactForm />
+      <div className="w-full bg-[#708f67]">
+        <div id="contact" className="w-full p-4 md:py-12 max-w-3xl m-auto">
+          <ContactForm />
+        </div>
+      </div>
 
       {/* <Testimonials />*/}
     </>

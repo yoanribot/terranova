@@ -1,4 +1,3 @@
-import sharedStyles from "@/app/shared.module.css";
 import SectionTitle from "../shared/SectionTitle/SectionTitle";
 import styles from "./Map.module.css";
 import { LocationSection } from "@/types/data";
@@ -14,7 +13,7 @@ const Map = ({
   schedules,
 }: MapSectionProps) => {
   return (
-    <section className={sharedStyles.container}>
+    <section className="container">
       <SectionTitle title={title} />
 
       <section className="flex flex-col md:flex-row gap-12 mb-10">
@@ -30,32 +29,42 @@ const Map = ({
           ></iframe>
         </div>
 
-        <div className="flex-1">
-          <h2 className="text-2xl">Informacion: </h2>
-
+        <div className="flex-2">
           <ul>
-            <li className="mt-4">
-              <strong>Direccion:</strong> {address}
+            <li className="">
+              <p className="text-md sm:text-xl">
+                <strong>Direccion:</strong> {address}
+              </p>
             </li>
             <li className="mt-4">
-              <strong>Informacion extra:</strong> {description}
+              <p className="text-md text-black sm:text-xl">
+                <strong>Informacion extra:</strong> {description}
+              </p>
             </li>
             <li className="mt-4">
-              <strong>Telefono:</strong> {phoneMain}
+              <p className="text-md text-black sm:text-xl">
+                <strong>Telefono:</strong> {phoneMain}
+              </p>
             </li>
             <li className="mt-4">
-              <strong>Telefono secundario:</strong> {phoneSecondary}
+              <p className="text-md text-black sm:text-xl">
+                <strong>Telefono secundario:</strong> {phoneSecondary}
+              </p>
             </li>
             <li className="mt-4">
-              <strong>Horario de apertura:</strong>
+              <p className="text-md text-black sm:text-xl">
+                <strong>Horario de apertura:</strong>
+              </p>
             </li>
             <ul>
               {schedules?.map((slot) => (
-                <li key={slot.day}>
-                  <span className="font-semibold">{slot.day}:</span>{" "}
-                  {slot.availability ?? (
-                    <span className="text-orange-500"> Cerrado</span>
-                  )}
+                <li key={slot.day} className="mb-0.5">
+                  <span className="text-lg">{slot.day}:</span>
+                  <span className="text-lg ml-2">
+                    {slot.availability ?? (
+                      <span className="text-orange-500"> Cerrado </span>
+                    )}
+                  </span>
                 </li>
               ))}
             </ul>

@@ -1,0 +1,9 @@
+.container {
+  max-width: 1500px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+.textHighlight {
+  color: var(--color-light-green);
+}
