@@ -133,10 +133,12 @@ export default async function DynamicPage({
 
 export async function generateStaticParams() {
   const blogs = await getBlogs();
-  const filteredBlogs = blogs.filter(
-    (blog): blog is BlogData & { slug: string } =>
-      Boolean((blog as { slug?: string } | null)?.slug),
-  );
+  const filteredBlogs = Array.isArray(blogs)
+    ? blogs.filter(
+        (blog): blog is BlogData & { slug: string } =>
+          Boolean((blog as { slug?: string } | null)?.slug),
+      )
+    : [];
 
   return filteredBlogs.map((blog) => ({
     slug: blog.slug,
