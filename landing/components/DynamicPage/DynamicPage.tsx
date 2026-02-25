@@ -68,51 +68,53 @@ export default async function DynamicPage({
         )}
       </div>
 
-      <div className="bg-gray-600">
-        <div className="max-w-[1200px] m-auto flex flex-col sm:flex-row sm:mt-20 sm:gap-20 sm:py-20">
-          <div className="sm:flex-3 text-black">
-            <ContactForm />
-          </div>
-          <div className="sm:flex-2 p-10">
-            <ul>
-              <li className="">
-                <p className="text-md sm:text-xl">
-                  <span>Direccion:</span> {address}
-                </p>
-              </li>
-              <li className="mt-4">
-                <p className="text-md sm:text-xl">
-                  <span>Informacion extra:</span> {description}
-                </p>
-              </li>
-              <li className="mt-4">
-                <p className="text-md sm:text-xl">
-                  <span>Telefono:</span> {phoneMain}
-                </p>
-              </li>
-              <li className="mt-4">
-                <p className="text-md sm:text-xl">
-                  <span>Telefono secundario:</span> {phoneSecondary}
-                </p>
-              </li>
-              <li className="mt-4">
-                <p className="text-md sm:text-xl">
-                  <span>Horario de apertura:</span>
-                </p>
-              </li>
+      <div className="bg-[#708f67]">
+        <div className="container">
+          <div className="flex flex-col sm:flex-row gap-0 lg:gap-10 sm:py-20">
+            <div className="sm:flex-3 text-black">
+              <ContactForm />
+            </div>
+            <div className="sm:flex-2 p-10 sm:py-0">
               <ul>
-                {schedules?.map((slot) => (
-                  <li key={slot.day} className="mb-0.5">
-                    <span className="text-lg">{slot.day}:</span>
-                    <span className="text-lg ml-2">
-                      {slot.availability ?? (
-                        <span className="text-orange-500"> Cerrado </span>
-                      )}
-                    </span>
-                  </li>
-                ))}
+                <li className="">
+                  <p className="text-md text-white sm:text-xl">
+                    <span>Direccion:</span> {address}
+                  </p>
+                </li>
+                <li className="mt-4">
+                  <p className="text-md text-white sm:text-xl">
+                    <span>Informacion extra:</span> {description}
+                  </p>
+                </li>
+                <li className="mt-4">
+                  <p className="text-md text-white sm:text-xl">
+                    <span>Telefono:</span> {phoneMain}
+                  </p>
+                </li>
+                <li className="mt-4">
+                  <p className="text-md text-white sm:text-xl">
+                    <span>Telefono secundario:</span> {phoneSecondary}
+                  </p>
+                </li>
+                <li className="mt-4">
+                  <p className="text-md text-white sm:text-xl">
+                    <span>Horario de apertura:</span>
+                  </p>
+                </li>
+                <ul>
+                  {schedules?.map((slot) => (
+                    <li key={slot.day} className="mb-0.5">
+                      <span className="text-lg text-white">{slot.day}:</span>
+                      <span className="text-lg text-white ml-2">
+                        {slot.availability ?? (
+                          <span className="text-orange-500"> Cerrado </span>
+                        )}
+                      </span>
+                    </li>
+                  ))}
+                </ul>
               </ul>
-            </ul>
+            </div>
           </div>
         </div>
         <iframe

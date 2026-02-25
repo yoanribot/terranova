@@ -1,4 +1,3 @@
-import sharedStyles from "@/app/shared.module.css";
 import styles from "./AboutUs.module.css";
 import SectionTitle from "../shared/SectionTitle/SectionTitle";
 import { getStrapiMedia } from "@/lib/utils";
@@ -15,7 +14,7 @@ const AboutUs = ({ title, text, image }: AboutUsProps) => {
   return (
     <section id="about-us" className="relative">
       <div className={styles.header}>
-        <div className={sharedStyles.container}>
+        <div className="container">
           <SectionTitle
             title={title}
             subtitle="Un equipo dedicado a la salud de su sonrisa"
@@ -24,9 +23,9 @@ const AboutUs = ({ title, text, image }: AboutUsProps) => {
         </div>
       </div>
 
-      <div className={`${sharedStyles.container}`}>
-        <div className={`flex gap-20 justify-center p-10`}>
-          <div className="flex-3 hidden sm:block">
+      <div className="container">
+        <div className={`flex gap-10 xl:gap-20 justify-center sm:p-10`}>
+          <div className="flex-3 hidden lg:block">
             {image && (
               <img
                 src={getStrapiMedia(image.url)}
@@ -36,7 +35,7 @@ const AboutUs = ({ title, text, image }: AboutUsProps) => {
             )}
           </div>
 
-          <div className="flex-5 p-3 text-balance m-auto">
+          <div className="flex-5 p-3 text-balance m-auto text-6xl">
             <RichTextRenderer content={text as RichTextDocument} />
           </div>
         </div>

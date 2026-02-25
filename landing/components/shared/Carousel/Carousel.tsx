@@ -19,7 +19,7 @@ const Carousel: React.FC<CarouselProps> = ({ images }) => {
   if (!images || images.length === 0) return null;
 
   return (
-    <div className="relative w-full h-[50vh] sm:h-[500px] mx-auto mb-10">
+    <div className="relative max-w-[900px] w-full h-[50vh] sm:h-[500px] mx-auto mb-15">
       <Swiper
         effect={"fade"}
         speed={700}

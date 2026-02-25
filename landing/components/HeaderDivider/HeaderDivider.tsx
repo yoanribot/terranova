@@ -5,8 +5,6 @@ const HeaderDivider = ({
   colorStart?: string;
   colorEnd?: string;
 }) => {
-  console.log({ colorStart, colorEnd });
-
   return (
     <svg
       width="100%"

@@ -103,7 +103,7 @@ export function ContactForm() {
     <form
       onSubmit={form.handleSubmit(onSubmit)}
       noValidate
-      className=" bg-white shadow-md px-5 md:px-10 py-10 md:rounded-lg"
+      className=" bg-white shadow-md px-5 md:px-10 py-10 rounded-lg"
     >
       <FieldGroup>
         <FieldSet>

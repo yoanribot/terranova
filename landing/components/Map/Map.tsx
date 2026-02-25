@@ -1,4 +1,3 @@
-import sharedStyles from "@/app/shared.module.css";
 import SectionTitle from "../shared/SectionTitle/SectionTitle";
 import styles from "./Map.module.css";
 import { LocationSection } from "@/types/data";
@@ -14,7 +13,7 @@ const Map = ({
   schedules,
 }: MapSectionProps) => {
   return (
-    <section className={sharedStyles.container}>
+    <section className="container">
       <SectionTitle title={title} />
 
       <section className="flex flex-col md:flex-row gap-12 mb-10">
@@ -33,29 +32,29 @@ const Map = ({
         <div className="flex-2">
           <ul>
             <li className="">
-              <label className="text-xl">
+              <p className="text-md sm:text-xl">
                 <strong>Direccion:</strong> {address}
-              </label>
+              </p>
             </li>
             <li className="mt-4">
-              <label className="text-xl">
+              <p className="text-md text-black sm:text-xl">
                 <strong>Informacion extra:</strong> {description}
-              </label>
+              </p>
             </li>
             <li className="mt-4">
-              <label className="text-xl">
+              <p className="text-md text-black sm:text-xl">
                 <strong>Telefono:</strong> {phoneMain}
-              </label>
+              </p>
             </li>
             <li className="mt-4">
-              <label className="text-xl">
+              <p className="text-md text-black sm:text-xl">
                 <strong>Telefono secundario:</strong> {phoneSecondary}
-              </label>
+              </p>
             </li>
             <li className="mt-4">
-              <label className="text-xl">
+              <p className="text-md text-black sm:text-xl">
                 <strong>Horario de apertura:</strong>
-              </label>
+              </p>
             </li>
             <ul>
               {schedules?.map((slot) => (

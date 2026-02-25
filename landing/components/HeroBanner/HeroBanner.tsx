@@ -2,7 +2,6 @@
 
 import clsx from "clsx";
 import styles from "./HeroBanner.module.css";
-import sharedStyles from "@/app/shared.module.css";
 import { Button } from "../ui/button";
 import { Hero } from "@/types/data";
 import { getStrapiMedia } from "@/lib/utils";
@@ -22,7 +21,7 @@ const HeroBanner = (data: Hero) => {
       className={clsx(styles.heroBannerRoot, "relative")}
       style={{ backgroundImage: `url(${backgroundImage})` }}
     >
-      <div className={sharedStyles.container}>
+      <div className="container">
         <div className={clsx(styles.content)}>
           <h1
             className={`poiretOne font-bold text-4xl sm:text-[80px] max-w-3xl mt-16 mb-6`}

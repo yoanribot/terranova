@@ -26,7 +26,7 @@ export default async function Home() {
     <>
       <HeroBanner {...heroData} />
 
-      <div className="w-full bg-[#8bb47f]">
+      <div className="w-full bg-[#708f67]">
         <AboutUs
           title={aboutUsData?.title}
           text={aboutUsData?.text}
@@ -43,8 +43,8 @@ export default async function Home() {
 
       <MapWrapper locationData={locationData} />
 
-      <div className="w-full bg-[#8bb47f]">
-        <div id="contact" className="w-full md:py-12 max-w-3xl m-auto">
+      <div className="w-full bg-[#708f67]">
+        <div id="contact" className="w-full p-4 md:py-12 max-w-3xl m-auto">
           <ContactForm />
         </div>
       </div>

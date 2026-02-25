@@ -1,4 +1,5 @@
 import "./globals.css";
+import "./shared.css";
 
 import type { Metadata } from "next";
 import { DM_Serif_Text } from "next/font/google";
