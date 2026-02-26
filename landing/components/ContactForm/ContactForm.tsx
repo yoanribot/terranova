@@ -19,32 +19,13 @@ import {
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 
-const days = [
-  { label: "Lunes", value: "01" },
-  { label: "Martes", value: "02" },
-  { label: "Miércoles", value: "03" },
-  { label: "Jueves", value: "04" },
-  { label: "Viernes", value: "05" },
-  { label: "Sábado", value: "06" },
-];
-
-const time = [
-  { label: "Mañana", value: "morning" },
-  { label: "Tarde", value: "afternoon" },
-];
-
 const formSchema = z.object({
   name: z
     .string()
     .nonempty("El nombre es obligatorio.")
     .max(32, "El nombre debe tener como máximo 32 caracteres."),
-  lastname: z
-    .string()
-    .nonempty("El apellido es obligatorio.")
-    .max(50, "El apellido debe tener como máximo 50 caracteres."),
   phone: z.string(),
   email: z
-    .string()
     .email("El correo electrónico no es válido.")
     .max(100, "El correo electrónico debe tener como máximo 100 caracteres."),
   message: z
@@ -52,8 +33,6 @@ const formSchema = z.object({
     .nonempty("El mensaje es obligatorio.")
     .min(10, "El mensaje debe tener al menos 10 caracteres.")
     .max(500, "El mensaje debe tener como máximo 500 caracteres."),
-  // time: z.array(z.string()).optional(),
-  // day: z.array(z.string()).optional(),
 });
 
 export function ContactForm() {
@@ -67,17 +46,18 @@ export function ContactForm() {
     reValidateMode: "onChange",
     defaultValues: {
       name: "",
-      lastname: "",
       phone: "",
       email: "",
       message: "",
-      // time: [],
-      // day: [],
     },
   });
 
+  console.log({ status });
+
   async function onSubmit(data: z.infer<typeof formSchema>) {
     setStatus("sending");
+
+    console.log("onSubmit", { data });
 
     try {
       const response = await fetch("/api/contact", {
@@ -185,79 +165,6 @@ export function ContactForm() {
                 )}
               />
             </div>
-
-            {/* Availability */}
-            {/* <div className="flex gap-3">
-                <FieldGroup className="flex-1 gap-3">
-                  <p> Horarios </p>
-                  <Controller
-                    name="time"
-                    control={form.control}
-                    render={({ field }) => (
-                      <Field orientation="horizontal">
-                        <ul>
-                          {time.map((item) => (
-                            <li key={item.value} className="flex gap-2 mb-1">
-                              <Checkbox
-                                id={item.value}
-                                checked={field.value?.includes(item.label)}
-                                onCheckedChange={(checked) => {
-                                  const current = field.value ?? [];
-                                  const next = checked
-                                    ? [...current, item.label]
-                                    : current.filter(
-                                        (value) => value !== item.label,
-                                      );
-                                  field.onChange(next);
-                                }}
-                                className="self-center w-6 h-6"
-                              />
-                              <FieldLabel htmlFor={item.value}>
-                                {item.label}
-                              </FieldLabel>
-                            </li>
-                          ))}
-                        </ul>
-                      </Field>
-                    )}
-                  />
-                </FieldGroup>
-
-                <FieldGroup className="flex-1 gap-3">
-                  <p> Dias </p>
-                  <Controller
-                    name="day"
-                    control={form.control}
-                    render={({ field }) => (
-                      <Field orientation="horizontal">
-                        <ul>
-                          {days.map((item) => (
-                            <li key={item.value} className="flex gap-2 mb-1">
-                              <Checkbox
-                                id={item.value}
-                                checked={field.value?.includes(item.label)}
-                                onCheckedChange={(checked) => {
-                                  const current = field.value ?? [];
-                                  const next = checked
-                                    ? [...current, item.label]
-                                    : current.filter(
-                                        (value) => value !== item.label,
-                                      );
-                                  field.onChange(next);
-                                }}
-                                className="self-center w-6 h-6"
-                              />
-                              <FieldLabel htmlFor={item.value}>
-                                {item.label}
-                              </FieldLabel>
-                            </li>
-                          ))}
-                        </ul>
-                      </Field>
-                    )}
-                  />
-                </FieldGroup>
-              </div> */}
           </FieldGroup>
         </FieldSet>
 
