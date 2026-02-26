@@ -112,7 +112,7 @@ export function ContactForm() {
             <Send className="ml-2" />
           </FieldLegend>
           <FieldDescription>
-            Escribenos un mensaje y nos pondremos en contacto contigo lo antes
+            Escribenos un mensaje y nos pondremos en contacto con usted lo antes
             posible.
           </FieldDescription>
 
