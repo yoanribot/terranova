@@ -24,8 +24,9 @@ const dmSerif = DM_Serif_Text({
 const metadataResponse = await getMetadata();
 const data = await getHomepage();
 
-const title = metadataResponse?.title || "Terra Nova";
-const description = metadataResponse?.description || "Bienvenidos a Terra Nova";
+const title = metadataResponse?.title || "Terranova Clinica dental";
+const description =
+  metadataResponse?.description || "Bienvenidos a Terranova Clinica dental";
 const sections = metadataResponse?.sections || [];
 const socials = sections?.[0]?.socials || [];
 const whatsapp = socials.find(
