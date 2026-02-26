@@ -21,10 +21,10 @@ const HeroBanner = (data: Hero) => {
       className={clsx(styles.heroBannerRoot, "relative")}
       style={{ backgroundImage: `url(${backgroundImage})` }}
     >
-      <div className="container">
+      <div className="container flex h-full">
         <div className={clsx(styles.content)}>
           <h1
-            className={`poiretOne font-bold text-4xl sm:text-[80px] max-w-3xl mt-16 mb-6`}
+            className={`poiretOne font-bold text-4xl sm:text-[80px] max-w-3xl xl:mt-18 mb-6`}
           >
             {heading}
           </h1>

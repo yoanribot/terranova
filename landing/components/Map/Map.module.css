@@ -1,6 +1,4 @@
 .mapContainer {
-  height: 50vh;
-  overflow: hidden;
   flex: 3;
   border-radius: 5px;
 }
