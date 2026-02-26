@@ -196,9 +196,9 @@ export function ContactForm() {
         <Field orientation="horizontal" className="justify-center flex-col">
           <div>
             {status === "success" && (
-              <p className="text-md text-green-700" role="status">
-                Mensaje enviado correctamente, nos pondremos en contacto contigo
-                pronto!
+              <p className="text-md text-center text-green-700" role="status">
+                Mensaje enviado correctamente, nos pondremos en contacto con
+                usted lo antes posible. ¡Gracias por escribirnos!
               </p>
             )}
             {status === "error" && (

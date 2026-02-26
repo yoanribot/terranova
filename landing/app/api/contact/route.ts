@@ -16,7 +16,6 @@ const transportSendInBlue = nodemailer.createTransport({
 
 const contactSchema = z.object({
   name: z.string().min(1).max(32),
-  lastname: z.string().min(1).max(50),
   phone: z.string().min(7).max(40),
   email: z.string().email().max(100),
   message: z.string().min(10).max(500),
@@ -53,7 +52,7 @@ export async function POST(request: NextRequest) {
     );
   }
 
-  const { name, lastname, phone, email, message, time, day } = parsed.data;
+  const { name, phone, email, message, time, day } = parsed.data;
   const fromAddress = email;
   const recipients = splitEmails(
     process.env.CONTACT_EMAIL || DEFAULT_RECIPIENTS,
@@ -67,7 +66,6 @@ export async function POST(request: NextRequest) {
   }
 
   const safeName = escapeHtml(name);
-  const safeLastname = escapeHtml(lastname);
   const safePhone = escapeHtml(phone);
   const safeEmail = escapeHtml(email);
   const safeMessage = escapeHtml(message).replace(/\n/g, "<br />");
@@ -78,9 +76,9 @@ export async function POST(request: NextRequest) {
     from: recipients[0], // Use the first recipient as the "from" address for better deliverability
     to: recipients,
     subject: "WEB Terranova - Nuevo mensaje de contacto",
-    text: `Name: ${name} ${lastname}\nEmail: ${email}\nPhone: ${phone}\nHorarios: ${time?.join(", ") ?? "No indicado"}\nDias: ${day?.join(", ") ?? "No indicado"}\nMessage: ${message}`,
+    text: `Name: ${name}\nEmail: ${email}\nPhone: ${phone}\nHorarios: ${time?.join(", ") ?? "No indicado"}\nDias: ${day?.join(", ") ?? "No indicado"}\nMessage: ${message}`,
     html: `
-      <p>Name: ${safeName} ${safeLastname}</p>
+      <p>Name: ${safeName}</p>
       <p>Email: ${safeEmail}</p>
       <p>Phone: ${safePhone}</p>
       <p>Horarios: ${safeTime}</p>
