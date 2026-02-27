@@ -8,12 +8,13 @@ import Footer from "@/components/Footer/Footer";
 
 import { config } from "@fortawesome/fontawesome-svg-core";
 import "@fortawesome/fontawesome-svg-core/styles.css";
-import { getHomepage, getMetadata } from "@/lib/strapi";
+import { getMetadata } from "@/lib/strapi";
 import { LocationSection } from "@/types/data";
 import GoogleAnalytics from "@/components/GoogleAnalytics/GoogleAnalytics";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faWhatsapp } from "@fortawesome/free-brands-svg-icons";
 import { ChevronUp } from "lucide-react";
+import { generateSEOMetadata, viewport } from "@/app/generateSEOMetadata";
 
 config.autoAddCss = false;
 
@@ -22,17 +23,16 @@ const dmSerif = DM_Serif_Text({
 });
 
 const metadataResponse = await getMetadata();
-const data = await getHomepage();
-
 const title = metadataResponse?.title || "Terranova Clinica dental";
-const description =
-  metadataResponse?.description || "Bienvenidos a Terranova Clinica dental";
+
 const sections = metadataResponse?.sections || [];
 const socials = sections?.[0]?.socials || [];
 const whatsapp = socials.find(
   (social) => social?.label?.toLowerCase() === "whatsapp",
 );
-const locationData = (data?.sections?.[3] as LocationSection | undefined) || {
+const locationData = (metadataResponse?.sections?.[1] as
+  | LocationSection
+  | undefined) || {
   title: "",
   description: "",
   phoneMain: "",
@@ -44,11 +44,9 @@ const locationData = (data?.sections?.[3] as LocationSection | undefined) || {
   },
   schedules: [],
 };
+export { viewport };
 
-export const metadata: Metadata = {
-  title,
-  description,
-};
+export const metadata: Metadata = generateSEOMetadata(metadataResponse);
 
 export default function RootLayout({
   children,

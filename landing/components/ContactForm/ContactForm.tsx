@@ -52,12 +52,8 @@ export function ContactForm() {
     },
   });
 
-  console.log({ status });
-
   async function onSubmit(data: z.infer<typeof formSchema>) {
     setStatus("sending");
-
-    console.log("onSubmit", { data });
 
     try {
       const response = await fetch("/api/contact", {
