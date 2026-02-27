@@ -1,10 +1,10 @@
 import { BlocksContent } from "@strapi/blocks-react-renderer";
 import { RichTextDocument } from "./RichText";
 
-export type Metadata = {
+export type MetadataResponse = {
   title: string;
   description: string;
-  sections: Array<SocialSection>;
+  sections: [SocialSection, LocationSection];
 };
 
 export type HomepageData = {

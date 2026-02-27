@@ -1,4 +1,4 @@
-import { BlogData, HomepageData, Metadata } from "@/types/data";
+import { BlogData, HomepageData, MetadataResponse } from "@/types/data";
 import qs from "qs";
 
 const STRAPI_BASE_URL =
@@ -11,6 +11,12 @@ const METADATA = {
         "layout.socials": {
           populate: {
             socials: { populate: true },
+          },
+        },
+        "layout.location": {
+          populate: {
+            schedules: { populate: true },
+            location: { populate: true },
           },
         },
       },
@@ -87,13 +93,13 @@ const QUERY_HOME_PAGE = {
   },
 };
 
-export async function getMetadata(): Promise<Metadata> {
+export const getMetadata = async (): Promise<MetadataResponse> => {
   const query = qs.stringify(METADATA);
 
   const response = await getStrapiData(`/api/home-page?${query}`);
 
   return response?.data;
-}
+};
 
 export async function getHomepage(): Promise<HomepageData> {
   const query = qs.stringify(QUERY_HOME_PAGE);
