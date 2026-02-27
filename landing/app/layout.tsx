@@ -26,11 +26,11 @@ const metadataResponse = await getMetadata();
 const title = metadataResponse?.title || "Terranova Clinica dental";
 
 const sections = metadataResponse?.sections || [];
-const socials = sections?.[0]?.socials || [];
+const socials = sections?.[1]?.socials || [];
 const whatsapp = socials.find(
   (social) => social?.label?.toLowerCase() === "whatsapp",
 );
-const locationData = (metadataResponse?.sections?.[1] as
+const locationData = (metadataResponse?.sections?.[0] as
   | LocationSection
   | undefined) || {
   title: "",

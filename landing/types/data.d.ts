@@ -4,7 +4,7 @@ import { RichTextDocument } from "./RichText";
 export type MetadataResponse = {
   title: string;
   description: string;
-  sections: [SocialSection, LocationSection];
+  sections: [LocationSection, SocialSection];
 };
 
 export type HomepageData = {
