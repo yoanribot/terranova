@@ -81,13 +81,18 @@ export default function RootLayout({
             target="_blank"
             rel="noopener noreferrer"
           >
-            <FontAwesomeIcon icon={faWhatsapp} size="2x" className="m-auto" />
+            <FontAwesomeIcon
+              name="Whatsapp boton"
+              icon={faWhatsapp}
+              size="2x"
+              className="m-auto"
+            />
           </a>
           <a
             href="#"
             className="fixed bottom-40 rounded-sm bg-red right-0 p-2 text-white h-12 w-12 shadow-lg bg-black/30 hover:bg-gray-600 transition-colors flex items-center justify-center z-50 cursor-pointer"
           >
-            <ChevronUp width={154} />
+            <ChevronUp name="scroll-to-top" width={154} />
           </a>
         </main>
 
