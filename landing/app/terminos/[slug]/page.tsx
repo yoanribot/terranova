@@ -40,9 +40,11 @@ export const dynamic = "force-static";
 export async function generateStaticParams() {
   const blogs = await getBlogs();
 
-  const paths = blogs.map((blog) => ({
-    slug: blog.slug,
-  }));
+  const paths = (blogs ?? [])
+    .filter((blog) => !!blog && typeof blog.slug === "string" && blog.slug)
+    .map((blog) => ({
+      slug: blog.slug,
+    }));
 
   return paths;
 }

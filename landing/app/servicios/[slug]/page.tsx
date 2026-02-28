@@ -39,9 +39,11 @@ export default async function Page({ params }: DynamicPageProps) {
 export const dynamic = "force-static";
 
 export async function generateStaticParams() {
-  const blogs = await getBlogs();
+  const blogs = (await getBlogs()) || [];
 
-  return blogs.map((blog) => ({
-    slug: blog.slug,
-  }));
+  return blogs
+    .filter((blog) => !!blog && typeof blog.slug === "string" && blog.slug)
+    .map((blog) => ({
+      slug: blog.slug as string,
+    }));
 }
