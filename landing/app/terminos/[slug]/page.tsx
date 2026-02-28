@@ -1,6 +1,6 @@
 import { getBlogBySlug, getBlogs, getHomepage } from "@/lib/strapi";
 import { RichTextDocument } from "@/types/RichText";
-import { BlogData, LocationSection } from "@/types/data";
+import { LocationSection } from "@/types/data";
 import DynamicPage from "@/components/DynamicPage/DynamicPage";
 
 type DynamicPageProps = {
@@ -35,14 +35,16 @@ export default async function Page({ params }: DynamicPageProps) {
   );
 }
 
+export const dynamic = "force-static";
+
 export async function generateStaticParams() {
   const blogs = await getBlogs();
-  const filteredBlogs =
-    blogs.filter((blog): blog is BlogData & { slug: string } =>
-      Boolean((blog as { slug?: string } | null)?.slug),
-    ) ?? [];
 
-  return filteredBlogs.map((blog) => ({
-    slug: blog.slug,
-  }));
+  const paths = (blogs ?? [])
+    .filter((blog) => !!blog && typeof blog.slug === "string" && blog.slug)
+    .map((blog) => ({
+      slug: blog.slug,
+    }));
+
+  return paths;
 }

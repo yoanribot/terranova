@@ -36,16 +36,14 @@ export default async function Page({ params }: DynamicPageProps) {
   );
 }
 
-export async function generateStaticParams() {
-  const blogs = await getBlogs();
-  const filteredBlogs = Array.isArray(blogs)
-    ? blogs.filter(
-        (blog): blog is BlogData & { slug: string } =>
-          Boolean((blog as { slug?: string } | null)?.slug),
-      )
-    : [];
+export const dynamic = "force-static";
 
-  return filteredBlogs.map((blog) => ({
-    slug: blog.slug,
-  }));
+export async function generateStaticParams() {
+  const blogs = (await getBlogs()) || [];
+
+  return blogs
+    .filter((blog) => !!blog && typeof blog.slug === "string" && blog.slug)
+    .map((blog) => ({
+      slug: blog.slug as string,
+    }));
 }
