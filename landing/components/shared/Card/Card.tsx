@@ -1,4 +1,4 @@
-import { getStrapiMedia } from "@/lib/utils";
+import { getLocalMedia } from "@/lib/utils";
 import styles from "./Card.module.css";
 import { Badge } from "@/components/ui/badge";
 
@@ -31,7 +31,7 @@ const Card = (props: CardProps) => {
     <div className={`${styles.card} ${slug ? "h-full" : ""}`}>
       <div className={styles.imageWrapper}>
         <img
-          src={getStrapiMedia(imagePath)}
+          src={getLocalMedia(imagePath)}
           alt={alt || title}
           className={styles.image}
         />

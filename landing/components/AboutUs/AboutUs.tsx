@@ -1,6 +1,6 @@
 import styles from "./AboutUs.module.css";
 import SectionTitle from "../shared/SectionTitle/SectionTitle";
-import { getStrapiMedia } from "@/lib/utils";
+import { getLocalMedia } from "@/lib/utils";
 import { RichTextRenderer } from "../shared/BlockRender/RichText";
 import { RichTextDocument } from "@/types/RichText";
 
@@ -28,7 +28,7 @@ const AboutUs = ({ title, text, image }: AboutUsProps) => {
           <div className="flex-3 hidden lg:block">
             {image && (
               <img
-                src={getStrapiMedia(image.url)}
+                src={getLocalMedia(image.url)}
                 alt={image.alternativeText || title}
                 className="w-full h-full object-cover max-h-130 rounded-lg shadow-lg"
               />

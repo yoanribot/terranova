@@ -1,71 +1,26 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Terranova landing
 
-## Getting Started
+This is a standalone Next.js site. Its published site content is stored locally:
 
-First, run the development server:
+- `content/site.json` contains the homepage, services, legal pages, and rich-text blocks.
+- `public/content/media/` contains every media asset referenced by that content.
+- `lib/content.ts` is the app's local content access layer.
+
+## Getting started
+
+From this directory, install dependencies and start the site:
 
 ```bash
-cd dashboard
-```
-
-```bash
-npm run dev
-# or
-yarn dev
-# or
+pnpm install
 pnpm dev
-# or
-bun dev
 ```
 
-After server (dashboard) is running, run the client dev using:
+Open [http://localhost:3000](http://localhost:3000).
+
+## Validate a production build
 
 ```bash
-cd landing
+pnpm build
 ```
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
-
-Open [http://localhost:3000](http://localhost:3000) to see client side.
-
-Open [http://localhost:1337/](http://localhost:1337/) to see the strapi dashboard
-
-## Development
-
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Deploy
-
-Strapi content transfer
-
-- Create a transfer token from you project dashboard EX: https://genuine-friends-a5c147ac89.strapiapp.com/admin/settings/transfer-tokens/2
-
-```bash
-cd dashboard
-pnpm strapi transfer
-```
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+All service and legal pages are statically generated from the local content snapshot. No CMS process, API URL, or separate local project is required to run or deploy the site.
