@@ -16,7 +16,7 @@
           "is_external": 1
         },
         "image": {
-          "url": "/content/media/hero_banner_dd42a36fae.png",
+          "url": "/content/media/hero_banner_dd42a36fae.webp",
           "alternativeText": "hero-banner.png",
           "sourceUrl": "/uploads/hero_banner_dd42a36fae.png"
         }
@@ -63,7 +63,7 @@
           }
         ],
         "image": {
-          "url": "/content/media/about_us_724b4a9ce5.jpg",
+          "url": "/content/media/about_us_724b4a9ce5.webp",
           "alternativeText": "about_us.jpg",
           "sourceUrl": "/uploads/about_us_724b4a9ce5.jpg"
         }
@@ -78,7 +78,7 @@
             "title": "Cirugía Oral e Implantología",
             "text": "Recupera tu sonrisa y funcionalidad con nuestros implantes dentales de alta calidad.",
             "image": {
-              "url": "/content/media/Foto_Implantes_01e6128ee1.jpg",
+              "url": "/content/media/Foto_Implantes_01e6128ee1.webp",
               "alternativeText": "Foto Implantes.jpg",
               "sourceUrl": "/uploads/Foto_Implantes_01e6128ee1.jpg"
             }
@@ -89,7 +89,7 @@
             "title": "Endodoncia",
             "text": "Salva tu diente natural y elimina el dolor con nuestro tratamiento de endodoncia.",
             "image": {
-              "url": "/content/media/Foto_Endo_f6039421d2.png",
+              "url": "/content/media/Foto_Endo_f6039421d2.webp",
               "alternativeText": "Foto Endo.png",
               "sourceUrl": "/uploads/Foto_Endo_f6039421d2.png"
             }
@@ -100,7 +100,7 @@
             "title": "Periodoncia",
             "text": "Protege la salud de tus encías con nuestros tratamientos especializados en periodoncia.",
             "image": {
-              "url": "/content/media/Foto_Periodoncia_e8143ab427.png",
+              "url": "/content/media/Foto_Periodoncia_e8143ab427.webp",
               "alternativeText": "Foto Periodoncia.png",
               "sourceUrl": "/uploads/Foto_Periodoncia_e8143ab427.png"
             }
@@ -111,7 +111,7 @@
             "title": "Carillas Dentales",
             "text": "Obtén una sonrisa perfecta y natural con nuestras carillas dentales personalizadas.",
             "image": {
-              "url": "/content/media/Diseno_sin_titulo_9_a4e8892bba.png",
+              "url": "/content/media/Diseno_sin_titulo_9_a4e8892bba.webp",
               "alternativeText": "Diseño sin título (9).png",
               "sourceUrl": "/uploads/Diseno_sin_titulo_9_a4e8892bba.png"
             }
@@ -122,7 +122,7 @@
             "title": "Blanqueamientos",
             "text": "Deslumbra con una sonrisa más blanca y brillante gracias a nuestro blanqueamiento dental.",
             "image": {
-              "url": "/content/media/woman_whitening_teeth_dentistry_with_special_equipment_dd403b867b.jpg",
+              "url": "/content/media/woman_whitening_teeth_dentistry_with_special_equipment_dd403b867b.webp",
               "alternativeText": "woman-whitening-teeth-dentistry-with-special-equipment.jpg",
               "sourceUrl": "/uploads/woman_whitening_teeth_dentistry_with_special_equipment_dd403b867b.jpg"
             }
@@ -133,7 +133,7 @@
             "title": "Estética Facial",
             "text": "El ácido hialurónico favorece la regeneración tisular de encías y mucosa bucal",
             "image": {
-              "url": "/content/media/close_up_woman_getting_lip_filler_clinic_aac5bdd067.jpg",
+              "url": "/content/media/close_up_woman_getting_lip_filler_clinic_aac5bdd067.webp",
               "alternativeText": "close-up-woman-getting-lip-filler-clinic.jpg",
               "sourceUrl": "/uploads/close_up_woman_getting_lip_filler_clinic_aac5bdd067.jpg"
             }
@@ -144,7 +144,7 @@
             "title": "Ortodoncia Invisible",
             "text": "Alinea tus dientes de manera discreta con nuestra ortodoncia invisible.",
             "image": {
-              "url": "/content/media/Foto_Ort_Invisible_051f80e315.png",
+              "url": "/content/media/Foto_Ort_Invisible_051f80e315.webp",
               "alternativeText": "Foto Ort Invisible.png",
               "sourceUrl": "/uploads/Foto_Ort_Invisible_051f80e315.png"
             }
@@ -155,7 +155,7 @@
             "title": "Ortodoncia Fija",
             "text": "Corrige tus dientes y mejora tu mordida con nuestras soluciones de ortodoncia.",
             "image": {
-              "url": "/content/media/Foto_Ort_Fija_b20a13a924.png",
+              "url": "/content/media/Foto_Ort_Fija_b20a13a924.webp",
               "alternativeText": "Foto Ort Fija.png",
               "sourceUrl": "/uploads/Foto_Ort_Fija_b20a13a924.png"
             }
@@ -166,7 +166,7 @@
             "title": "Odontopediatría",
             "text": "Cuidamos de la salud dental de los más pequeños de la casa para prevenir problemas futuros.",
             "image": {
-              "url": "/content/media/dental_plate_expansion_jaw_child_plate_heaven_there_is_enough_room_molars_happy_girl_holding_orthodontic_plate_her_hands_e3735c4033.jpg",
+              "url": "/content/media/dental_plate_expansion_jaw_child_plate_heaven_there_is_enough_room_molars_happy_girl_holding_orthodontic_plate_her_hands_e3735c4033.webp",
               "alternativeText": "dental-plate-expansion-jaw-child-plate-heaven-there-is-enough-room-molars-happy-girl-holding-orthodontic-plate-her-hands.jpg",
               "sourceUrl": "/uploads/dental_plate_expansion_jaw_child_plate_heaven_there_is_enough_room_molars_happy_girl_holding_orthodontic_plate_her_hands_e3735c4033.jpg"
             }
@@ -177,7 +177,7 @@
             "title": "Protesis",
             "text": "Soluciones protésicas avanzadas para mejorar tu movilidad y calidad de vida",
             "image": {
-              "url": "/content/media/Foto_protesis_4bbc7c1957.jpg",
+              "url": "/content/media/Foto_protesis_4bbc7c1957.webp",
               "alternativeText": "Foto protesis.jpg",
               "sourceUrl": "/uploads/Foto_protesis_4bbc7c1957.jpg"
             }
@@ -188,7 +188,7 @@
             "title": "Bruxismo",
             "text": "Ofrecemos un abordaje especializado para el diagnóstico y tratamiento de los trastornos de la Articulación Temporomandibular (ATM) y el bruxismo.",
             "image": {
-              "url": "/content/media/Foto_Bruxismo_4f47cad15c.png",
+              "url": "/content/media/Foto_Bruxismo_4f47cad15c.webp",
               "alternativeText": "Foto Bruxismo.png",
               "sourceUrl": "/uploads/Foto_Bruxismo_4f47cad15c.png"
             }
@@ -199,7 +199,7 @@
             "title": "Aseguradoras Dentales",
             "text": "Trabajamos con diferentes aseguradoras y mutuas dentales",
             "image": {
-              "url": "/content/media/Diseno_sin_titulo_7_1f200daece.png",
+              "url": "/content/media/Diseno_sin_titulo_7_1f200daece.webp",
               "alternativeText": "Diseño sin título (7).png",
               "sourceUrl": "/uploads/Diseno_sin_titulo_7_1f200daece.png"
             }
@@ -873,7 +873,7 @@
         }
       ],
       "backgroundImage": {
-        "url": "/content/media/Foto_Banner_Blog_20d3d4ea8f.png",
+        "url": "/content/media/Foto_Banner_Blog_20d3d4ea8f.webp",
         "alternativeText": "Foto Banner Blog.png",
         "sourceUrl": "/uploads/Foto_Banner_Blog_20d3d4ea8f.png"
       },
@@ -1463,7 +1463,7 @@
         }
       ],
       "backgroundImage": {
-        "url": "/content/media/Foto_Banner_Blog_20d3d4ea8f.png",
+        "url": "/content/media/Foto_Banner_Blog_20d3d4ea8f.webp",
         "alternativeText": "Foto Banner Blog.png",
         "sourceUrl": "/uploads/Foto_Banner_Blog_20d3d4ea8f.png"
       },
@@ -2107,7 +2107,7 @@
         }
       ],
       "backgroundImage": {
-        "url": "/content/media/Foto_Banner_Blog_20d3d4ea8f.png",
+        "url": "/content/media/Foto_Banner_Blog_20d3d4ea8f.webp",
         "alternativeText": "Foto Banner Blog.png",
         "sourceUrl": "/uploads/Foto_Banner_Blog_20d3d4ea8f.png"
       },
@@ -2294,7 +2294,7 @@
         }
       ],
       "backgroundImage": {
-        "url": "/content/media/Foto_Banner_Blog_20d3d4ea8f.png",
+        "url": "/content/media/Foto_Banner_Blog_20d3d4ea8f.webp",
         "alternativeText": "Foto Banner Blog.png",
         "sourceUrl": "/uploads/Foto_Banner_Blog_20d3d4ea8f.png"
       },
@@ -2708,7 +2708,7 @@
         }
       ],
       "backgroundImage": {
-        "url": "/content/media/Foto_Banner_Blog_20d3d4ea8f.png",
+        "url": "/content/media/Foto_Banner_Blog_20d3d4ea8f.webp",
         "alternativeText": "Foto Banner Blog.png",
         "sourceUrl": "/uploads/Foto_Banner_Blog_20d3d4ea8f.png"
       },
@@ -3016,7 +3016,7 @@
         }
       ],
       "backgroundImage": {
-        "url": "/content/media/Foto_Banner_Blog_20d3d4ea8f.png",
+        "url": "/content/media/Foto_Banner_Blog_20d3d4ea8f.webp",
         "alternativeText": "Foto Banner Blog.png",
         "sourceUrl": "/uploads/Foto_Banner_Blog_20d3d4ea8f.png"
       },
@@ -3458,7 +3458,7 @@
         }
       ],
       "backgroundImage": {
-        "url": "/content/media/Foto_Banner_Blog_20d3d4ea8f.png",
+        "url": "/content/media/Foto_Banner_Blog_20d3d4ea8f.webp",
         "alternativeText": "Foto Banner Blog.png",
         "sourceUrl": "/uploads/Foto_Banner_Blog_20d3d4ea8f.png"
       },
@@ -3902,7 +3902,7 @@
         }
       ],
       "backgroundImage": {
-        "url": "/content/media/Foto_Banner_Blog_20d3d4ea8f.png",
+        "url": "/content/media/Foto_Banner_Blog_20d3d4ea8f.webp",
         "alternativeText": "Foto Banner Blog.png",
         "sourceUrl": "/uploads/Foto_Banner_Blog_20d3d4ea8f.png"
       },
@@ -4482,7 +4482,7 @@
         }
       ],
       "backgroundImage": {
-        "url": "/content/media/Foto_Banner_Blog_20d3d4ea8f.png",
+        "url": "/content/media/Foto_Banner_Blog_20d3d4ea8f.webp",
         "alternativeText": "Foto Banner Blog.png",
         "sourceUrl": "/uploads/Foto_Banner_Blog_20d3d4ea8f.png"
       },
@@ -5063,7 +5063,7 @@
         }
       ],
       "backgroundImage": {
-        "url": "/content/media/Foto_Banner_Blog_20d3d4ea8f.png",
+        "url": "/content/media/Foto_Banner_Blog_20d3d4ea8f.webp",
         "alternativeText": "Foto Banner Blog.png",
         "sourceUrl": "/uploads/Foto_Banner_Blog_20d3d4ea8f.png"
       },
@@ -5469,7 +5469,7 @@
         }
       ],
       "backgroundImage": {
-        "url": "/content/media/Foto_Banner_Blog_20d3d4ea8f.png",
+        "url": "/content/media/Foto_Banner_Blog_20d3d4ea8f.webp",
         "alternativeText": "Foto Banner Blog.png",
         "sourceUrl": "/uploads/Foto_Banner_Blog_20d3d4ea8f.png"
       },
@@ -6489,7 +6489,7 @@
         }
       ],
       "backgroundImage": {
-        "url": "/content/media/Foto_Banner_Blog_20d3d4ea8f.png",
+        "url": "/content/media/Foto_Banner_Blog_20d3d4ea8f.webp",
         "alternativeText": "Foto Banner Blog.png",
         "sourceUrl": "/uploads/Foto_Banner_Blog_20d3d4ea8f.png"
       },
