@@ -8,13 +8,13 @@ import {
   ServiceSection,
   TeamSection,
 } from "@/types/data";
-import { getHomepage } from "@/lib/strapi";
+import { getHomepage } from "@/lib/content";
 import MapWrapper from "@/components/Map/MapWrapper";
 import AboutUs from "@/components/AboutUs/AboutUs";
 import { ContactForm } from "@/components/ContactForm/ContactForm";
 
-export default async function Home() {
-  const data = await getHomepage();
+export default function Home() {
+  const data = getHomepage();
   const sections = data?.sections || [];
 
   const heroData = (sections[0] as Hero | undefined) || ({} as Hero);

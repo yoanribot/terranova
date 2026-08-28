@@ -1,6 +1,5 @@
-import { getBlogs } from "@/lib/strapi";
 import styles from "./DynamicPage.module.css";
-import { getStrapiMedia } from "@/lib/utils";
+import { getLocalMedia } from "@/lib/utils";
 import { RichTextRenderer } from "@/components/shared/BlockRender/RichText";
 import Carousel from "@/components/shared/Carousel/Carousel";
 import { RichTextDocument } from "@/types/RichText";
@@ -31,7 +30,7 @@ export default async function DynamicPage({
   phoneSecondary,
   schedules,
 }: DynamicPageProps) {
-  const bgImage = getStrapiMedia(backgroundImage?.url);
+  const bgImage = getLocalMedia(backgroundImage?.url);
 
   return (
     <section className="text-white">
@@ -135,15 +134,3 @@ export default async function DynamicPage({
   );
 }
 
-export async function generateStaticParams() {
-  const blogs = await getBlogs();
-  const filteredBlogs = Array.isArray(blogs)
-    ? blogs.filter((blog): blog is BlogData & { slug: string } =>
-        Boolean((blog as { slug?: string } | null)?.slug),
-      )
-    : [];
-
-  return filteredBlogs.map((blog) => ({
-    slug: blog.slug,
-  }));
-}

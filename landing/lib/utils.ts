@@ -43,10 +43,6 @@ export function getSocialIconFromLabel(label: string) {
   }
 }
 
-export function getStrapiMedia(url: string | undefined) {
-  if (!url) return "";
-
-  if (url.startsWith("http")) return url;
-
-  return `${process.env.NEXT_PUBLIC_STRAPI_BASE_URL}${url}`;
+export function getLocalMedia(url: string | undefined) {
+  return url || "";
 }

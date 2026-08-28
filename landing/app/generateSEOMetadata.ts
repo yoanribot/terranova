@@ -23,7 +23,6 @@ export function generateSEOMetadata(
   // const heroBannerData =
   //   (data?.sections?.[0] as Hero | undefined) || ({} as Hero);
   // const { image } = heroBannerData;
-  // const ogImageUrl = getStrapiMedia(image?.url);
   const ogImageUrl = "/assets/terranova_full_logo.png";
 
   const locationData = (metadataResponse?.sections?.[1] as

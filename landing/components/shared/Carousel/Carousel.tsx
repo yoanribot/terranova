@@ -9,7 +9,7 @@ import "swiper/css/effect-fade";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "./Carousel.css";
-import { getStrapiMedia } from "@/lib/utils";
+import { getLocalMedia } from "@/lib/utils";
 
 interface CarouselProps {
   images: { url: string; alt?: string }[];
@@ -41,7 +41,7 @@ const Carousel: React.FC<CarouselProps> = ({ images }) => {
           <SwiperSlide key={index}>
             <img
               className="object-contain w-full h-full sm:max-h-[500px] bg-black"
-              src={getStrapiMedia(image.url)}
+              src={getLocalMedia(image.url)}
               alt={image.alt || `Slide ${index + 1}`}
             />
           </SwiperSlide>

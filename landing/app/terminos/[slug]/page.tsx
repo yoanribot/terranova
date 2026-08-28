@@ -1,4 +1,4 @@
-import { getBlogBySlug, getBlogs, getHomepage } from "@/lib/strapi";
+import { getHomepage, getLegalPageBySlug, getLegalPages } from "@/lib/content";
 import { RichTextDocument } from "@/types/RichText";
 import { LocationSection } from "@/types/data";
 import DynamicPage from "@/components/DynamicPage/DynamicPage";
@@ -9,23 +9,24 @@ type DynamicPageProps = {
 
 export default async function Page({ params }: DynamicPageProps) {
   const { slug } = await params;
-  const data = await getBlogBySlug(slug);
-  const homeData = await getHomepage();
+  const data = getLegalPageBySlug(slug);
+  const homeData = getHomepage();
   const locationData = homeData?.sections?.[3] as LocationSection;
   const { address, description, phoneMain, phoneSecondary, schedules } =
     locationData || {};
 
-  if (!data || !data[0] || !data?.[0]) {
+  if (!data) {
     return <div>No se encontraron datos para el servicio solicitado.</div>;
   }
 
-  const { title, content, backgroundImage } = data[0] || {};
+  const { title, content, backgroundImage, images } = data;
 
   return (
     <DynamicPage
       title={title}
       content={content as RichTextDocument}
       backgroundImage={backgroundImage}
+      images={images}
       address={address}
       description={description}
       phoneMain={phoneMain}
@@ -37,10 +38,8 @@ export default async function Page({ params }: DynamicPageProps) {
 
 export const dynamic = "force-static";
 
-export async function generateStaticParams() {
-  const blogs = await getBlogs();
-
-  const paths = (blogs ?? [])
+export function generateStaticParams() {
+  const paths = getLegalPages()
     .filter((blog) => !!blog && typeof blog.slug === "string" && blog.slug)
     .map((blog) => ({
       slug: blog.slug,
