@@ -4,7 +4,7 @@ import { LocationSection } from "@/types/data";
 import DynamicPage from "@/components/DynamicPage/DynamicPage";
 
 type DynamicPageProps = {
-  params: { slug: string };
+  params: Promise<{ slug: string }>;
 };
 
 export default async function Page({ params }: DynamicPageProps) {

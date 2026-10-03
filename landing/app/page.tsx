@@ -1,12 +1,10 @@
 import HeroBanner from "@/components/HeroBanner/HeroBanner";
 import OurServices from "@/components/OurServices/OurServices";
-import OurTeam from "@/components/OurTeam/OurTeam";
 import {
   AboutUsData,
   Hero,
   LocationSection,
   ServiceSection,
-  TeamSection,
 } from "@/types/data";
 import { getHomepage } from "@/lib/content";
 import MapWrapper from "@/components/Map/MapWrapper";
@@ -24,9 +22,6 @@ export default function Home() {
     (sections[2] as ServiceSection | undefined) || ({} as ServiceSection);
   const locationData =
     (sections[3] as LocationSection | undefined) || ({} as LocationSection);
-  const teamData =
-    (sections[4] as TeamSection | undefined) || ({} as TeamSection);
-
   return (
     <>
       <HeroBanner {...heroData} />

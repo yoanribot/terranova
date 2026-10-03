@@ -17,6 +17,11 @@ pnpm dev
 
 Open [http://localhost:3000](http://localhost:3000).
 
+For production, copy `.env.example` to `.env.local` (or configure the same
+variables in the hosting provider). The site content and media do not require
+Strapi. The contact form additionally requires the Brevo SMTP variables; the
+rest of the site can be rendered without them.
+
 ## Validate a production build
 
 ```bash

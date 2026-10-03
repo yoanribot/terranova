@@ -2,7 +2,6 @@ import "./globals.css";
 import "./shared.css";
 
 import type { Metadata } from "next";
-import { DM_Serif_Text } from "next/font/google";
 import Header from "@/components/Header/Header";
 import Footer from "@/components/Footer/Footer";
 
@@ -17,10 +16,6 @@ import { ChevronUp } from "lucide-react";
 import { generateSEOMetadata, viewport } from "@/app/generateSEOMetadata";
 
 config.autoAddCss = false;
-
-const dmSerif = DM_Serif_Text({
-  weight: ["400"],
-});
 
 const metadataResponse = getMetadata();
 const title = metadataResponse?.title || "Terranova Clinica dental";
@@ -70,7 +65,7 @@ export default function RootLayout({
         />
       </head>
 
-      <body className={`${dmSerif.className} antialiased`}>
+      <body className="font-serif antialiased">
         <Header title={title} />
 
         <main>

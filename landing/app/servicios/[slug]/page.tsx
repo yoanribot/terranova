@@ -1,6 +1,6 @@
 import { getHomepage, getServiceBySlug, getServices } from "@/lib/content";
 import { RichTextDocument } from "@/types/RichText";
-import { BlogData, LocationSection } from "@/types/data";
+import { LocationSection } from "@/types/data";
 import DynamicPage from "@/components/DynamicPage/DynamicPage";
 
 type DynamicPageProps = {

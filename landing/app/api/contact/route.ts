@@ -4,16 +4,6 @@ import { z } from "zod";
 
 export const runtime = "nodejs";
 
-const transportSendInBlue = nodemailer.createTransport({
-  host: "smtp-relay.brevo.com",
-  port: 587,
-  secure: false,
-  auth: {
-    user: process.env.BREVO_SMTP_LOGIN,
-    pass: process.env.BREVO_SMTP_KEY,
-  },
-});
-
 const contactSchema = z.object({
   name: z.string().min(1).max(32),
   phone: z.string().min(7).max(40),
@@ -58,10 +48,13 @@ export async function POST(request: NextRequest) {
     process.env.CONTACT_EMAIL || DEFAULT_RECIPIENTS,
   );
 
-  if (!fromAddress || recipients.length === 0) {
+  const smtpUser = process.env.BREVO_SMTP_LOGIN;
+  const smtpKey = process.env.BREVO_SMTP_KEY;
+
+  if (!fromAddress || recipients.length === 0 || !smtpUser || !smtpKey) {
     return NextResponse.json(
-      { status: "ERROR", error: "Missing mail configuration" },
-      { status: 500 },
+      { status: "ERROR", error: "Contact service is not configured" },
+      { status: 503 },
     );
   }
 
@@ -88,6 +81,16 @@ export async function POST(request: NextRequest) {
   };
 
   try {
+    const transportSendInBlue = nodemailer.createTransport({
+      host: "smtp-relay.brevo.com",
+      port: 587,
+      secure: false,
+      auth: {
+        user: smtpUser,
+        pass: smtpKey,
+      },
+    });
+
     await transportSendInBlue.sendMail(mail);
 
     return NextResponse.json({ status: "Message Sent" });

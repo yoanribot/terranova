@@ -1,4 +1,3 @@
-import { BlocksContent } from "@strapi/blocks-react-renderer";
 import { RichTextDocument } from "./RichText";
 
 export type MetadataResponse = {
@@ -14,7 +13,7 @@ export type HomepageData = {
 export type BlogData = {
   slug: string;
   title: string;
-  content: BlocksContent;
+  content: RichTextDocument;
   backgroundImage?: {
     url: string;
     alternativeText?: string;
