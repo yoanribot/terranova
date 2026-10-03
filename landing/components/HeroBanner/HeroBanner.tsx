@@ -4,7 +4,7 @@ import clsx from "clsx";
 import styles from "./HeroBanner.module.css";
 import { Button } from "../ui/button";
 import { Hero } from "@/types/data";
-import { getStrapiMedia } from "@/lib/utils";
+import { getLocalMedia } from "@/lib/utils";
 import { useRouter } from "next/navigation";
 import { Calendar } from "lucide-react";
 import HeaderDivider from "../HeaderDivider/HeaderDivider";
@@ -14,7 +14,7 @@ const HeroBanner = (data: Hero) => {
   const { heading, subHeading, text, link, image } = data;
   const { label, href } = link || {};
 
-  const backgroundImage = getStrapiMedia(image?.url);
+  const backgroundImage = getLocalMedia(image?.url);
 
   return (
     <section

@@ -1,10 +1,7 @@
-import { getBlogs } from "@/lib/strapi";
 import styles from "./DynamicPage.module.css";
-import { getStrapiMedia } from "@/lib/utils";
-import { RichTextRenderer } from "@/components/shared/BlockRender/RichText";
+import { getLocalMedia } from "@/lib/utils";
 import Carousel from "@/components/shared/Carousel/Carousel";
 import { RichTextDocument } from "@/types/RichText";
-import { BlogData } from "@/types/data";
 import { ContactForm } from "@/components/ContactForm/ContactForm";
 import BlockRendererClient from "../shared/BlockRender/BlockRendererClient";
 
@@ -31,7 +28,7 @@ export default async function DynamicPage({
   phoneSecondary,
   schedules,
 }: DynamicPageProps) {
-  const bgImage = getStrapiMedia(backgroundImage?.url);
+  const bgImage = getLocalMedia(backgroundImage?.url);
 
   return (
     <section className="text-white">
@@ -57,7 +54,6 @@ export default async function DynamicPage({
       <div className={styles.pageContent}>
         <div className="p-6">
           <BlockRendererClient content={content} />
-          {/* <RichTextRenderer content={content as RichTextDocument} /> */}
         </div>
 
         {images && images.length > 0 && (
@@ -135,15 +131,3 @@ export default async function DynamicPage({
   );
 }
 
-export async function generateStaticParams() {
-  const blogs = await getBlogs();
-  const filteredBlogs = Array.isArray(blogs)
-    ? blogs.filter((blog): blog is BlogData & { slug: string } =>
-        Boolean((blog as { slug?: string } | null)?.slug),
-      )
-    : [];
-
-  return filteredBlogs.map((blog) => ({
-    slug: blog.slug,
-  }));
-}

@@ -17,16 +17,16 @@ export function generateSEOMetadata(
   const description =
     metadataResponse?.description || "Bienvenidos a Terranova Clinica dental";
   const metadataBase = new URL(
-    process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000",
+    process.env.NEXT_PUBLIC_SITE_URL ||
+      "https://www.terranovaclinicadental.es",
   );
 
   // const heroBannerData =
   //   (data?.sections?.[0] as Hero | undefined) || ({} as Hero);
   // const { image } = heroBannerData;
-  // const ogImageUrl = getStrapiMedia(image?.url);
   const ogImageUrl = "/assets/terranova_full_logo.png";
 
-  const locationData = (metadataResponse?.sections?.[1] as
+  const locationData = (metadataResponse?.sections?.[0] as
     | LocationSection
     | undefined) || {
     title: "",

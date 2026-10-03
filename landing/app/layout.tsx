@@ -2,13 +2,12 @@ import "./globals.css";
 import "./shared.css";
 
 import type { Metadata } from "next";
-import { DM_Serif_Text } from "next/font/google";
 import Header from "@/components/Header/Header";
 import Footer from "@/components/Footer/Footer";
 
 import { config } from "@fortawesome/fontawesome-svg-core";
 import "@fortawesome/fontawesome-svg-core/styles.css";
-import { getMetadata } from "@/lib/strapi";
+import { getMetadata } from "@/lib/content";
 import { LocationSection } from "@/types/data";
 import GoogleAnalytics from "@/components/GoogleAnalytics/GoogleAnalytics";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -18,11 +17,7 @@ import { generateSEOMetadata, viewport } from "@/app/generateSEOMetadata";
 
 config.autoAddCss = false;
 
-const dmSerif = DM_Serif_Text({
-  weight: ["400"],
-});
-
-const metadataResponse = await getMetadata();
+const metadataResponse = getMetadata();
 const title = metadataResponse?.title || "Terranova Clinica dental";
 
 const sections = metadataResponse?.sections || [];
@@ -70,7 +65,7 @@ export default function RootLayout({
         />
       </head>
 
-      <body className={`${dmSerif.className} antialiased`}>
+      <body className="font-serif antialiased">
         <Header title={title} />
 
         <main>

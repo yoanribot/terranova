@@ -1,95 +1,79 @@
 "use client";
 
-import {
-  BlocksRenderer,
-  type BlocksContent,
-} from "@strapi/blocks-react-renderer";
+import React from "react";
+import type { BlockNode, InlineNode, RichTextDocument } from "@/types/RichText";
 
 export default function BlockRendererClient({
   content,
 }: {
-  readonly content: BlocksContent;
+  readonly content: RichTextDocument;
 }) {
   if (!content) return null;
+
   return (
     <div className="text-black">
-      <BlocksRenderer
-        content={content}
-        blocks={{
-          // You can use the default components to set class names...
-          paragraph: ({ children }) => (
-            <p className="mb-4 text-lg leading-relaxed text-black">
-              {children}
-            </p>
-          ),
-          // ...or point to a design system
-          heading: ({ children, level }) => {
-            switch (level) {
-              case 1:
-                return (
-                  <h1 className="text-3xl font-bold mt-8 mb-4 text-black">
-                    {children}
-                  </h1>
-                );
-              case 2:
-                return (
-                  <h2 className="text-2xl font-semibold mt-6 mb-3 text-black">
-                    {children}
-                  </h2>
-                );
-              case 3:
-                return (
-                  <h3 className="text-xl font-semibold mt-5 mb-2 text-black">
-                    {children}
-                  </h3>
-                );
-              case 4:
-                return (
-                  <h4 className="text-lg font-semibold mt-5 mb-2 text-black">
-                    {children}
-                  </h4>
-                );
-              case 5:
-                return (
-                  <h5 className="text-base font-semibold mt-5 mb-2 text-black">
-                    {children}
-                  </h5>
-                );
-              case 6:
-                return (
-                  <h6 className="text-sm font-semibold mt-5 mb-2 text-black">
-                    {children}
-                  </h6>
-                );
-              default:
-                return (
-                  <h1 className="text-3xl font-bold mt-8 mb-4 text-black">
-                    {children}
-                  </h1>
-                );
-            }
-          },
-          list: ({ children, format }) =>
-            format === "ordered" ? (
-              <ol className="list-decimal list-inside pl-6 mb-4">{children}</ol>
-            ) : (
-              <ul className="list-disc list-inside pl-6 mb-1">{children}</ul>
-            ),
-          "list-item": ({ children }) => (
-            <li className="leading-relaxed mb-1">{children}</li>
-          ),
-          // For links, you may want to use the component from your router or framework
-          link: ({ children, url }) => (
-            <a href={url} className="text-blue-500 hover:underline">
-              {children}
-            </a>
-          ),
-        }}
-        modifiers={{
-          bold: ({ children }) => <strong>{children}</strong>,
-          italic: ({ children }) => <span className="italic">{children}</span>,
-        }}
-      />
+      {content.map((node, index) => (
+        <BlockRenderer key={index} node={node} />
+      ))}
     </div>
   );
+}
+
+function BlockRenderer({ node }: { node: BlockNode }) {
+  switch (node.type) {
+    case "paragraph":
+      return (
+        <p className="mb-4 text-lg leading-relaxed text-black">
+          {node.children.map((child, index) => (
+            <InlineRenderer key={index} node={child} />
+          ))}
+        </p>
+      );
+    case "heading": {
+      const Tag = `h${node.level}` as keyof React.JSX.IntrinsicElements;
+      const headingClasses = [
+        "text-3xl font-bold mt-8 mb-4 text-black",
+        "text-2xl font-semibold mt-6 mb-3 text-black",
+        "text-xl font-semibold mt-5 mb-2 text-black",
+        "text-lg font-semibold mt-5 mb-2 text-black",
+        "text-base font-semibold mt-5 mb-2 text-black",
+        "text-sm font-semibold mt-5 mb-2 text-black",
+      ];
+      return (
+        <Tag className={headingClasses[node.level - 1] ?? headingClasses[0]}>
+          {node.children.map((child, index) => (
+            <InlineRenderer key={index} node={child} />
+          ))}
+        </Tag>
+      );
+    }
+    case "list": {
+      const ListTag = node.format === "ordered" ? "ol" : "ul";
+      const listClass =
+        node.format === "ordered"
+          ? "list-decimal list-inside pl-6 mb-4"
+          : "list-disc list-inside pl-6 mb-1";
+      return (
+        <ListTag className={listClass}>
+          {node.children.map((item, index) => (
+            <li key={index} className="leading-relaxed mb-1">
+              {item.children.map((child, childIndex) => (
+                <InlineRenderer key={childIndex} node={child} />
+              ))}
+            </li>
+          ))}
+        </ListTag>
+      );
+    }
+  }
+}
+
+function InlineRenderer({ node }: { node: InlineNode }) {
+  let content: React.ReactNode = node.text;
+
+  if (node.bold) content = <strong>{content}</strong>;
+  if (node.italic) content = <em>{content}</em>;
+  if (node.underline) content = <u>{content}</u>;
+
+  return <>{content}</>;
 }

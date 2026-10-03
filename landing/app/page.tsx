@@ -1,20 +1,18 @@
 import HeroBanner from "@/components/HeroBanner/HeroBanner";
 import OurServices from "@/components/OurServices/OurServices";
-import OurTeam from "@/components/OurTeam/OurTeam";
 import {
   AboutUsData,
   Hero,
   LocationSection,
   ServiceSection,
-  TeamSection,
 } from "@/types/data";
-import { getHomepage } from "@/lib/strapi";
+import { getHomepage } from "@/lib/content";
 import MapWrapper from "@/components/Map/MapWrapper";
 import AboutUs from "@/components/AboutUs/AboutUs";
 import { ContactForm } from "@/components/ContactForm/ContactForm";
 
-export default async function Home() {
-  const data = await getHomepage();
+export default function Home() {
+  const data = getHomepage();
   const sections = data?.sections || [];
 
   const heroData = (sections[0] as Hero | undefined) || ({} as Hero);
@@ -24,9 +22,6 @@ export default async function Home() {
     (sections[2] as ServiceSection | undefined) || ({} as ServiceSection);
   const locationData =
     (sections[3] as LocationSection | undefined) || ({} as LocationSection);
-  const teamData =
-    (sections[4] as TeamSection | undefined) || ({} as TeamSection);
-
   return (
     <>
       <HeroBanner {...heroData} />
