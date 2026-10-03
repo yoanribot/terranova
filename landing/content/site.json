@@ -6774,6 +6774,15 @@
           "type": "paragraph",
           "children": [
             {
+              "text": "Google AdSense y otros proveedores de publicidad pueden recibir información técnica y de navegación para seleccionar, entregar, limitar y medir anuncios. La información se tratará conforme a las preferencias de consentimiento del usuario y a la política de privacidad de Google: https://policies.google.com/privacy.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
               "text": "",
               "type": "text"
             }
@@ -7106,6 +7115,42 @@
           "children": [
             {
               "text": "Puedes consultar la política de privacidad de Google en el siguiente enlace: https://policies.google.com/privacy",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "3.3 Publicidad de Google AdSense",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Este sitio web puede utilizar Google AdSense para mostrar publicidad contextual relacionada con salud, odontología, bienestar y estilo de vida. Google y sus socios pueden utilizar cookies, almacenamiento local, identificadores del dispositivo, información del navegador y datos de uso para mostrar y medir anuncios, de acuerdo con las opciones de consentimiento seleccionadas por el usuario.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "La publicidad personalizada solo se habilitará cuando exista la base legal y el consentimiento requerido. Si el usuario rechaza o retira el consentimiento, Google podrá mostrar anuncios limitados o no mostrar anuncios.",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "El usuario puede aceptar, rechazar o modificar sus preferencias publicitarias desde el mensaje de privacidad de Google o mediante el enlace de configuración de privacidad disponible en el sitio web.",
               "type": "text"
             }
           ]
