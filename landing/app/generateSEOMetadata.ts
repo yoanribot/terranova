@@ -20,6 +20,10 @@ export function generateSEOMetadata(
     process.env.NEXT_PUBLIC_SITE_URL ||
       "https://www.terranovaclinicadental.es",
   );
+  const adsenseClient = process.env.NEXT_PUBLIC_ADSENSE_CLIENT?.trim();
+  const validAdsenseClient = adsenseClient?.match(/^ca-pub-\d{16}$/)
+    ? adsenseClient
+    : undefined;
 
   // const heroBannerData =
   //   (data?.sections?.[0] as Hero | undefined) || ({} as Hero);
@@ -96,6 +100,9 @@ export function generateSEOMetadata(
       apple: "/logo.svg",
     },
     other: {
+      ...(validAdsenseClient
+        ? { "google-adsense-account": validAdsenseClient }
+        : {}),
       ...(geoLatitude && geoLongitude
         ? {
             "geo.region": "ES-MD",

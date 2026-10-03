@@ -10,6 +10,8 @@ import "@fortawesome/fontawesome-svg-core/styles.css";
 import { getMetadata } from "@/lib/content";
 import { LocationSection } from "@/types/data";
 import GoogleAnalytics from "@/components/GoogleAnalytics/GoogleAnalytics";
+import GoogleAdsense from "@/components/GoogleAdsense/GoogleAdsense";
+import GoogleConsentMode from "@/components/GoogleConsentMode/GoogleConsentMode";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faWhatsapp } from "@fortawesome/free-brands-svg-icons";
 import { ChevronUp } from "lucide-react";
@@ -56,6 +58,8 @@ export default function RootLayout({
       )}
 
       <head>
+        <GoogleConsentMode />
+        <GoogleAdsense />
         <link rel="icon" href="/favicon.ico" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" />
