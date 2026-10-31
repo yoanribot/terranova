@@ -7,7 +7,7 @@
 .locationGrid { display: block; }
 .mapPanel { min-width: 0; }
 .mapPanel > figure { height: auto; margin: 0; }
-.mapPanel > figure > iframe { height: 480px; min-height: 0; }
+.mapPanel > figure > :first-child { height: 480px; min-height: 0; }
 .mapPanel figcaption { flex-shrink: 0; }
 .details { min-width: 0; display: grid; grid-template-columns: minmax(0,1fr) minmax(0,1.25fr) minmax(0,.85fr); gap: 2rem; padding-top: 2.25rem; }
 .address { display: flex; align-items: flex-start; gap: .85rem; padding: 0; }
@@ -34,12 +34,12 @@
   .intro { max-width: 52ch; margin: 0; }
   .mapPanel { min-height: 0; }
   .mapPanel > figure { height: auto; }
-  .mapPanel > figure > iframe { height: 340px; min-height: 0; flex: none; }
+  .mapPanel > figure > :first-child { height: 360px; min-height: 0; flex: none; }
   .details { grid-template-columns: minmax(0, 1fr); gap: 1.5rem; padding-top: 1.75rem; }
   .hours { border-inline: 0; border-block: 1px solid #203e3526; padding: 1.5rem 0; }
   .hours dl > div { font-size: .9rem; }
 }
 @media (max-width: 400px) {
-  .mapPanel > figure > iframe { height: 300px; }
+  .mapPanel > figure > :first-child { height: 360px; }
   .hours dl > div { gap: .65rem; font-size: .83rem; }
 }

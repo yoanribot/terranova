@@ -6,6 +6,7 @@ import { getMetadata } from "@/lib/content";
 import { groupLegalContent, legalBlockText, legalDocuments, type LegalDocumentInfo, type LegalSection } from "@/lib/legal-documents";
 import type { RichTextDocument } from "@/types/RichText";
 import styles from "./LegalDocument.module.css";
+import { CookieSettingsButton } from "@/components/CookieConsent/ConsentProvider";
 
 export function LegalIcon({ icon, size = 24 }: { icon: LegalDocumentInfo["icon"]; size?: number }) {
   const Icon = icon === "privacy" ? Shield : icon === "cookies" ? Cookie : FileText;
@@ -50,6 +51,7 @@ export default function LegalDocument({ document, content }: { document: LegalDo
         </aside>
         <article className={styles.article} aria-label={document.title}>
           <div className={styles.articleTop}><span><LegalIcon icon={document.icon} size={16} />{document.label}</span><span>{sections.length} apartados</span></div>
+          {document.slug === "politica-cookies" ? <div className={styles.cookieSettings}><p>Puedes revisar o retirar tu permiso en cualquier momento.</p><CookieSettingsButton /></div> : null}
           {intro.length ? <div className={styles.intro}><BlockRenderer content={intro} /></div> : null}
           {sections.map((section, index) => <section key={section.id} id={section.id} aria-labelledby={`${section.id}-title`} className={styles.section}><div className={styles.sectionTitle}><span aria-hidden="true">{String(index + 1).padStart(2,"0")}</span><h2 id={`${section.id}-title`}>{section.title}</h2></div><SectionContent section={section} /></section>)}
           <a href="#main-content" className={styles.backTop}>Volver al principio <ArrowLeft size={16} aria-hidden="true" /></a>

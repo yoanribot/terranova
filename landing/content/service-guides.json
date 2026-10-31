@@ -1,4 +1,114 @@
 {
+  "cbct-dental": {
+    "description": "CBCT dental 3D y escáner intraoral en Terranova: diferencias, indicaciones, preparación y preguntas para una planificación individualizada.",
+    "intro": "La odontología digital reúne imágenes del interior y registros de la superficie de tu boca. El CBCT y el escáner intraoral aportan información distinta para planificar y comprender tu tratamiento.",
+    "highlights": [
+      {
+        "title": "Anatomía en tres dimensiones",
+        "text": "El CBCT muestra dientes y estructuras óseas cuando hace falta información adicional."
+      },
+      {
+        "title": "Impresiones digitales",
+        "text": "El escáner intraoral registra superficies con luz, sin utilizar rayos X."
+      },
+      {
+        "title": "Criterio antes que tecnología",
+        "text": "La elección depende de la pregunta clínica y de tus necesidades."
+      }
+    ],
+    "steps": [
+      {
+        "title": "Valorar qué información falta",
+        "text": "Se revisan tus antecedentes, la exploración y los estudios disponibles antes de decidir qué registro está indicado."
+      },
+      {
+        "title": "Preparar el registro",
+        "text": "Lleva tus pruebas previas y sigue las indicaciones recibidas. Para el CBCT pueden pedirte retirar joyas, gafas u otros objetos que interfieran."
+      },
+      {
+        "title": "Obtener las imágenes",
+        "text": "En el CBCT, el equipo gira alrededor de tu cabeza y debes permanecer inmóvil. En el escaneado intraoral se desplaza un pequeño dispositivo por la boca."
+      },
+      {
+        "title": "Revisar y explicar los hallazgos",
+        "text": "El profesional interpreta los registros junto con la exploración, te muestra los hallazgos relevantes y explica las opciones. El escaneado no ofrece por sí solo un diagnóstico automático."
+      },
+      {
+        "title": "Organizar tu siguiente cita",
+        "text": "Si hace falta tratamiento, se acuerdan los pasos y se programa una visita posterior para atender lo indicado. Puedes preguntar por alternativas, prioridades y presupuesto antes de decidir."
+      }
+    ],
+    "sections": [
+      {
+        "title": "Comodidad con límites realistas",
+        "text": "El escaneado óptico puede evitar las pastas de impresión y resultar más cómodo en algunos casos. La apertura de boca, el tipo de rehabilitación y la calidad del registro pueden hacer necesaria otra técnica o registros adicionales."
+      },
+      {
+        "title": "Un estudio que necesita interpretación",
+        "text": "La indicación y el análisis profesional siguen siendo esenciales. Pregunta quién revisará todo el volumen del CBCT y si se necesita la valoración de otro profesional. Un modelo de superficies no muestra por sí solo raíces, hueso ni todas las posibles alteraciones."
+      }
+    ],
+    "faq": [
+      {
+        "question": "¿El CBCT y el escáner intraoral son lo mismo?",
+        "answer": "No. El CBCT emplea rayos X para estudiar la anatomía tridimensional. El escáner intraoral utiliza un registro óptico de las superficies visibles. Pueden complementarse, pero uno no reemplaza automáticamente al otro."
+      },
+      {
+        "question": "¿Necesito un CBCT para cualquier tratamiento?",
+        "answer": "No. Solo debe indicarse si aporta información necesaria para tu caso. Una exploración clínica y otras imágenes pueden ser suficientes; pregunta por qué se solicita y qué decisión ayudará a tomar."
+      },
+      {
+        "question": "¿Qué debo avisar antes del CBCT?",
+        "answer": "Informa de un embarazo o de su posibilidad y lleva los estudios previos. Si te cuesta mantener la posición o necesitas alguna adaptación, coméntalo antes para organizar la exploración."
+      },
+      {
+        "question": "¿La impresión digital sustituye siempre a los moldes?",
+        "answer": "No siempre. Puede utilizarse para coronas, prótesis y ciertos tratamientos de ortodoncia, pero la técnica se adapta al trabajo previsto. Solicita una explicación de sus ventajas y limitaciones para tu boca."
+      },
+      {
+        "question": "¿Qué ocurre si las imágenes muestran un problema?",
+        "answer": "El profesional debe valorar el hallazgo y explicarte si necesita atención o más estudio. Si se recomienda tratarlo, se prepara un plan contigo y se organiza la cita correspondiente. La prueba no garantiza que se detecten todos los problemas."
+      }
+    ],
+    "questions": [
+      "¿Qué información aportará cada prueba en mi caso?",
+      "¿Bastan las imágenes que ya tengo u otra técnica?",
+      "¿Qué zona se estudiará y por qué se ha elegido ese campo de visión?",
+      "¿Quién revisará los registros y cómo recibiré las conclusiones?"
+    ],
+    "sources": [
+      {
+        "label": "RadiologyInfo (ACR y RSNA): CBCT dental, preparación y procedimiento",
+        "url": "https://www.radiologyinfo.org/es/info/dentalconect"
+      },
+      {
+        "label": "FDA: indicaciones, radiación y uso justificado del CBCT (en inglés)",
+        "url": "https://www.fda.gov/radiation-emitting-products/medical-x-ray-imaging/dental-cone-beam-computed-tomography"
+      },
+      {
+        "label": "American Dental Association: selección de pruebas de imagen, recomendaciones de 2026 (en inglés)",
+        "url": "https://www.ada.org/about/press-releases/new-recommendations-confirm-dental-x-rays-most-effectively-used-in-moderation"
+      },
+      {
+        "label": "Australian Dental Association: indicación e interpretación del CBCT (en inglés)",
+        "url": "https://www.ada.org.au/policy-statement-6-22-dento-maxillofacial-cone-beam-volumetric-tomography"
+      },
+      {
+        "label": "American Dental Association: usos y límites del escáner intraoral (en inglés)",
+        "url": "https://adanews.ada.org/ada-news/2022/june/digital-dentistry-what-to-know-about-a-few-popular-technologies"
+      },
+      {
+        "label": "FDA: sistemas de impresión óptica para restauraciones dentales (en inglés)",
+        "url": "https://www.fda.gov/medical-devices/guidance-documents-medical-devices-and-radiation-emitting-products/optical-impression-systems-computer-assisted-design-and-manufacturing-cadcam-dental-restorations"
+      }
+    ],
+    "related": [
+      "implantologia-dental",
+      "endodoncia",
+      "protesis",
+      "ortodoncia-invisible"
+    ]
+  },
   "implantologia-dental": {
     "description": "Implantes dentales en Terranova, Madrid: qué valorar antes de la cirugía, riesgos, alternativas y preguntas para un presupuesto completo.",
     "sections": [
@@ -804,65 +914,89 @@
     ]
   },
   "aseguradora": {
-    "intro": "Tener un seguro dental no significa que todos los tratamientos estén incluidos. Antes de tu cita, confirma el cuadro médico, las condiciones de tu póliza y el coste de cada actuación.",
+    "intro": "Trabajamos con las principales aseguradoras y redes dentales. Dinos cuál es tu seguro y te ayudamos a preparar la visita, confirmar la información necesaria y entender los posibles importes a tu cargo.",
     "highlights": [
       {
-        "title": "Tu póliza concreta",
-        "text": "Las condiciones pueden cambiar entre productos de la misma aseguradora."
+        "title": "Tu compañía, a la vista",
+        "text": "Once compañías y redes con sus nombres, logotipos e información oficial."
       },
       {
-        "title": "Confirmación previa",
-        "text": "Comprueba profesional, centro y autorizaciones antes de acudir."
+        "title": "Te ayudamos a orientarte",
+        "text": "Consulta qué confirmar con la entidad antes de acudir o iniciar un tratamiento."
       },
       {
-        "title": "Presupuesto claro",
-        "text": "Distingue prestaciones incluidas, franquicias y tratamientos privados."
+        "title": "El coste, antes de decidir",
+        "text": "Distingue lo incluido, las franquicias y las actuaciones privadas."
       }
     ],
     "steps": [
       {
-        "title": "Consulta a tu aseguradora",
-        "text": "Comprueba que el centro y el profesional están en el cuadro de tu póliza y que la prestación está cubierta."
+        "title": "Cuéntanos qué seguro tienes",
+        "text": "Indica la compañía y el producto contratado al contactar. No hace falta enviar documentos personales ni información médica por el formulario."
       },
       {
-        "title": "Confirma con la clínica",
-        "text": "Indica la compañía y el producto contratado, sin enviar información clínica por canales públicos."
+        "title": "Confirma la información de tu póliza",
+        "text": "Te orientamos sobre cómo comprobar el centro, el profesional y la prestación en el cuadro de tu seguro. Si hay dudas, consulta a la entidad."
       },
       {
-        "title": "Revisa el presupuesto",
-        "text": "Aclara por escrito las cantidades a tu cargo y cualquier autorización antes de aceptar el tratamiento."
+        "title": "Organiza tu primera cita",
+        "text": "Concertamos la visita y te indicamos qué documentación llevar. El profesional realiza la valoración y te explica las necesidades de tu caso."
+      },
+      {
+        "title": "Revisa autorizaciones e importes",
+        "text": "Antes de empezar, confirma con la aseguradora si hace falta autorización. Revisa por escrito las prestaciones previstas y las cantidades a tu cargo."
+      },
+      {
+        "title": "Decide con la información completa",
+        "text": "Pregunta por alternativas, plazos y seguimiento. Si necesitas tiempo para consultar tu póliza o el presupuesto, puedes revisar la propuesta antes de aceptarla."
+      },
+      {
+        "title": "Acuerda el tratamiento y las revisiones",
+        "text": "Cuando hayas decidido y estén resueltos los trámites necesarios, organizamos las citas. Si cambia el plan, pide que se aclaren también los cambios de cobertura y coste."
       }
     ],
     "faq": [
       {
-        "question": "¿Aparecer en una lista de compañías garantiza mi cobertura?",
-        "answer": "No. Depende del producto contratado, la vigencia del acuerdo, el profesional y la prestación. Confírmalo con tu aseguradora y con la clínica."
+        "question": "¿Con qué aseguradoras y redes trabajáis?",
+        "answer": "Trabajamos con ASISA, DKV, Allianz, Santalucía, Línea Directa, Divina Seguros, HNA, MGS Seguros, AFEMEFA, Atlántida y AvantSalud. Consulta con el equipo tu compañía y producto para organizar la comprobación de cobertura."
       },
       {
-        "question": "¿Qué diferencia hay entre una prestación incluida y una franquicia?",
-        "answer": "Una prestación incluida puede no generar un pago adicional según tu póliza. Una franquicia es una cantidad a tu cargo. Pide el detalle aplicable a tu caso."
+        "question": "¿Que aparezca mi compañía significa que todo está cubierto?",
+        "answer": "No. Las prestaciones, los importes y las autorizaciones dependen de la póliza y de la actuación. Confirma el cuadro médico y solicita un presupuesto con el detalle aplicable a tu caso."
       },
       {
-        "question": "¿Puedo conocer el coste antes de empezar?",
-        "answer": "Solicita un presupuesto con las actuaciones previstas y las cantidades que debes pagar. Si el plan cambia tras la valoración, pide que te expliquen la nueva propuesta antes de continuar."
+        "question": "¿Qué información necesito para pedir cita?",
+        "answer": "Empieza por el nombre de tu compañía y del seguro contratado. Te indicaremos qué llevar a la consulta. No envíes el número completo de tu póliza, DNI ni documentación médica por el formulario general."
+      },
+      {
+        "question": "¿La clínica puede aprobar una autorización?",
+        "answer": "La aprobación corresponde a la entidad aseguradora. El equipo puede orientarte sobre qué debes consultar y qué información preparar, pero no sustituye la decisión de tu compañía."
+      },
+      {
+        "question": "¿Qué ocurre si un tratamiento no está incluido?",
+        "answer": "Pide que te expliquen las alternativas y el presupuesto de la actuación. Puedes consultar las opciones de financiación disponibles, que tienen sus propias condiciones y están sujetas a aprobación."
+      },
+      {
+        "question": "¿Y si no encuentro mi seguro en la lista?",
+        "answer": "Contacta con la clínica para consultar tu caso. El listado no sustituye la comprobación de tu producto ni de su cuadro médico; también puedes preguntar por las opciones de atención disponibles."
       }
     ],
-    "description": "Seguros dentales en Terranova: cómo comprobar el cuadro médico, las autorizaciones, las exclusiones y el presupuesto antes de una cita.",
+    "description": "Aseguradoras dentales en Terranova Clinica Dental: compañías y redes colaboradoras, orientación sobre cobertura y pasos para organizar tu visita con seguro.",
     "sections": [
       {
-        "title": "El cuadro médico puede cambiar",
-        "text": "Comprueba el centro y el profesional en el directorio de tu aseguradora. Guarda la confirmación o la autorización y consulta si tiene un plazo de validez."
+        "title": "La cobertura depende del producto",
+        "text": "Las condiciones pueden variar dentro de una misma compañía. Comprueba siempre tu póliza concreta y la prestación prevista; el logotipo no garantiza que todo esté incluido."
       },
       {
-        "title": "Un límite de cobertura no es una indicación clínica",
-        "text": "Que una prestación esté incluida o excluida no determina si la necesitas. Pide primero una explicación del diagnóstico y después revisa cómo se financia cada opción."
+        "title": "La autorización corresponde a la entidad",
+        "text": "Te orientamos sobre el proceso, pero la aseguradora determina si una actuación necesita autorización y si la aprueba. Confirma también los plazos y la validez del documento."
       }
     ],
     "questions": [
-      "¿Mi póliza cubre esta actuación en este centro y con este profesional?",
-      "¿Necesito autorización y quién debe tramitarla?",
-      "¿Qué cantidad pagaré por cada parte del tratamiento?",
-      "¿Qué ocurre con el presupuesto si cambia la propuesta clínica?"
+      "¿Este centro y profesional están incluidos en el cuadro de mi póliza?",
+      "¿La actuación está incluida, tiene franquicia o se abona de forma privada?",
+      "¿Necesito autorización y qué pasos debo seguir para obtenerla?",
+      "¿Qué documentación debo presentar y cuánto pagaré antes de empezar?"
     ],
     "sources": [
       {
@@ -875,9 +1009,200 @@
       }
     ],
     "related": [
+      "financiaciones",
+      "cbct-dental",
       "endodoncia",
-      "protesis",
-      "periodoncia"
+      "protesis"
+    ],
+    "insurers": [
+      {
+        "name": "ASISA",
+        "summary": "ASISA Dental ofrece asistencia bucodental mediante centros propios y concertados. Consulta qué prestaciones incluye tu póliza y qué tratamientos tienen un importe a tu cargo.",
+        "url": "https://www.asisa.es/seguros-dentales/dental",
+        "logo": "/content/media/insurance/asisa-logo.png"
+      },
+      {
+        "name": "DKV",
+        "summary": "DKV comercializa seguros Dentisalud con acceso a una red dental. Las prestaciones incluidas y las tarifas de otros tratamientos dependen de la modalidad contratada.",
+        "url": "https://dkv.es/particulares/seguros-dentales",
+        "logo": "/content/media/insurance/dkv-logo.jpeg"
+      },
+      {
+        "name": "Allianz",
+        "summary": "Allianz ofrece un seguro dental con atención preventiva y otros servicios bucodentales. Revisa el cuadro dental y las condiciones aplicables a cada prestación de tu póliza.",
+        "url": "https://www.allianz.es/seguro-medico/seguro-dental.html",
+        "logo": "/content/media/insurance/allianz-logo.png"
+      },
+      {
+        "name": "Santalucía",
+        "summary": "Salud Dental de Santalucía permite acceder a servicios de prevención y tratamientos mediante su cuadro dental. Consulta las prestaciones incluidas y los precios baremados de tu seguro.",
+        "url": "https://www.santalucia.es/seguros-salud/seguros-dentales",
+        "logo": "/content/media/insurance/santalucia-logo.svg"
+      },
+      {
+        "name": "Línea Directa",
+        "summary": "Línea Directa dispone de seguros de salud y opciones de asistencia dental. Confirma la modalidad contratada, el cuadro de profesionales y los importes de los tratamientos que necesitas.",
+        "url": "https://www.lineadirecta.com/seguros-salud/preguntas-frecuentes.html",
+        "logo": "/content/media/insurance/linea-directa-logo.png"
+      },
+      {
+        "name": "Divina Seguros",
+        "summary": "Su seguro dental combina servicios incluidos y otros tratamientos con tarifas preferentes a través de una red de profesionales. Consulta el detalle de coberturas y franquicias de tu póliza.",
+        "url": "https://seguro.divinaseguros.com/seguro-dental",
+        "logo": "/content/media/insurance/divina-seguros-logo.svg"
+      },
+      {
+        "name": "HNA",
+        "summary": "Su modalidad hna Dental combina prestaciones incluidas y tratamientos a precios concertados dentro de su cuadro dental. Revisa los límites y las franquicias de tu póliza.",
+        "url": "https://www.hna.es/repository/documentacion/hna/pdf/PID-hnaDental.pdf",
+        "logo": "/content/media/insurance/hna.jpg"
+      },
+      {
+        "name": "MGS Seguros",
+        "summary": "MGS Salud Dental permite acudir a profesionales de su cuadro dental. Confirma antes de la visita los servicios incluidos y los importes a tu cargo.",
+        "url": "https://www.mgs.es/wps/mgs-salud-dental/preguntas-frecuentes",
+        "logo": "/content/media/insurance/mgs.png"
+      },
+      {
+        "name": "AFEMEFA",
+        "summary": "Ofrece un seguro dental con red de clínicas concertadas y prestaciones incluidas o con franquicia. Comprueba tu modalidad y el directorio vigente antes de pedir cita.",
+        "url": "https://afemefa.com/seguro-dental/",
+        "logo": "/content/media/insurance/afemefa.png"
+      },
+      {
+        "name": "Atlántida",
+        "summary": "Dispone de una modalidad dental con servicios de odontología y tarifas preferentes para asegurados. Consulta las condiciones de tu contrato y la atención concertada aplicable.",
+        "url": "https://www.atlantida.net/es/seguros/dental/",
+        "logo": "/content/media/insurance/atlantida.webp"
+      },
+      {
+        "name": "AvantSalud",
+        "summary": "Red de servicios de salud y bienestar con acceso a profesionales a precios concertados. Comprueba las condiciones del servicio asociado a tu tarjeta o compañía.",
+        "url": "https://www.avantsalud.es/",
+        "logo": "/content/media/insurance/avantsalud.png",
+        "logoBackground": "#203e35"
+      }
+    ]
+  },
+  "financiaciones": {
+    "description": "Opciones de financiación en Terranova Clinica Dental: hasta 12 meses sin intereses, según condiciones y aprobación de la entidad financiera.",
+    "intro": "Tu sonrisa, a tu ritmo. Consulta las opciones para organizar el pago de tu tratamiento, con una propuesta adaptada a la financiación disponible y sujeta a aprobación.",
+    "highlights": [
+      {
+        "title": "Hasta 12 meses",
+        "text": "Posibilidad de financiar sin intereses, según las condiciones de la operación disponible."
+      },
+      {
+        "title": "Opciones colaboradoras",
+        "text": "Consulta con el equipo las opciones de Pepper Finance, Findirect y Frakmenta."
+      },
+      {
+        "title": "Aprobación individual",
+        "text": "La entidad financiera valora la solicitud y aplica las condiciones de cada operación."
+      }
+    ],
+    "steps": [
+      {
+        "title": "Valoración y presupuesto",
+        "text": "Conoce el tratamiento recomendado y pide un presupuesto detallado. Antes de hablar de financiación, aclara qué incluye la propuesta y qué opciones clínicas tienes."
+      },
+      {
+        "title": "Opciones que encajan con tu caso",
+        "text": "El equipo te explica las alternativas disponibles a través de las entidades colaboradoras. Consulta el importe a financiar, los plazos y la opción de hasta 12 meses sin intereses según condiciones."
+      },
+      {
+        "title": "Solicitud por el canal indicado",
+        "text": "Si quieres continuar, pregunta qué información necesita la entidad y cómo entregarla. Aporta la documentación únicamente por el canal indicado para la solicitud."
+      },
+      {
+        "title": "Valoración de la entidad",
+        "text": "La entidad financiera estudia la solicitud y comunica su decisión. La aprobación depende de su valoración y de las condiciones aplicables a cada operación."
+      },
+      {
+        "title": "Condiciones completas por escrito",
+        "text": "Antes de aceptar, revisa cuotas, fechas, TAE, importe total y posibles comisiones. Pregunta también cómo se gestionarían cambios en el tratamiento o una cancelación según el contrato."
+      },
+      {
+        "title": "Formalización y calendario de pagos",
+        "text": "Si la financiación está aprobada y decides aceptarla, sigue el proceso de formalización indicado por la entidad. Conserva el contrato y el calendario para organizar las cuotas acordadas."
+      }
+    ],
+    "sections": [
+      {
+        "title": "Una oferta concreta para tu presupuesto",
+        "text": "Las entidades ofrecen productos diferentes y las condiciones pueden variar entre operaciones. El equipo te confirmará qué opción está disponible para tu tratamiento y la entidad facilitará las condiciones de la propuesta."
+      },
+      {
+        "title": "Qué revisar en tu propuesta",
+        "text": "Reúne el presupuesto del tratamiento, el importe financiado, el calendario de cuotas y el coste total. Pide que te expliquen la TAE y cualquier comisión antes de aceptar, incluso al consultar una opción sin intereses."
+      }
+    ],
+    "faq": [
+      {
+        "question": "¿Puedo financiar hasta 12 meses sin intereses?",
+        "answer": "Puedes consultar esta opción en la clínica. Está sujeta a las condiciones de la financiación disponible y a la aprobación de la entidad financiera para tu operación."
+      },
+      {
+        "question": "¿Con qué entidades puedo consultar opciones?",
+        "answer": "La clínica pone a tu disposición opciones a través de Pepper Finance, Findirect y Frakmenta. El equipo te explicará cuáles están disponibles para la operación que quieres valorar."
+      },
+      {
+        "question": "¿Quién aprueba la financiación?",
+        "answer": "La aprobación corresponde a la entidad financiera. Consultar una opción o presentar una solicitud no garantiza que la operación sea aprobada."
+      },
+      {
+        "question": "¿Qué conviene revisar antes de aceptar?",
+        "answer": "Solicita las condiciones por escrito: importe financiado, cuotas, calendario de pagos, TAE, coste total y posibles comisiones. Revisa también cómo se tramitan los cambios o la cancelación conforme al contrato."
+      },
+      {
+        "question": "¿Qué documentación necesito?",
+        "answer": "Depende de la entidad y de la operación. Pregunta al equipo por el procedimiento y aporta los documentos únicamente a través del canal indicado para la solicitud."
+      }
+    ],
+    "questions": [
+      "¿Qué opciones de financiación están disponibles para mi presupuesto?",
+      "¿Cuál es la TAE y el importe total que pagaré?",
+      "¿Qué cuotas, fechas y posibles comisiones incluye la propuesta?",
+      "¿Qué condiciones se aplican si cambia el tratamiento o quiero cancelar la financiación?"
+    ],
+    "sources": [
+      {
+        "label": "Pepper Finance: información para clientes sobre el pago a plazos",
+        "url": "https://pepperfinance.es/como-funciona/"
+      },
+      {
+        "label": "Findirect: financiación para clientes",
+        "url": "https://www.findirect.es/financiacion-clientes/"
+      },
+      {
+        "label": "Frakmenta by Findirect: información sobre el pago fraccionado",
+        "url": "https://www.findirect.es/frakmenta/"
+      }
+    ],
+    "related": [
+      "aseguradora",
+      "implantologia-dental",
+      "protesis"
+    ],
+    "partners": [
+      {
+        "name": "Pepper Finance",
+        "summary": "Ofrece soluciones de pago aplazado en comercios físicos y online, con gestión digital de la financiación. Consulta con el equipo la opción disponible para tu tratamiento.",
+        "url": "https://pepperfinance.es/como-funciona/",
+        "logo": "/content/media/financing/pepper-logo.svg"
+      },
+      {
+        "name": "Findirect",
+        "summary": "Entidad financiera especializada en financiación al consumo y soluciones de pago en el punto de venta. La propuesta se concreta según la operación y su valoración.",
+        "url": "https://www.findirect.es/financiacion-clientes/",
+        "logo": "/content/media/financing/findirect-logo.svg"
+      },
+      {
+        "name": "Frakmenta by Findirect",
+        "summary": "Solución de pago fraccionado de Findirect que permite organizar cuotas mediante tarjeta. Su disponibilidad y sus condiciones dependen de la propuesta concreta.",
+        "url": "https://www.findirect.es/frakmenta/",
+        "logo": "/content/media/financing/frakmenta-logo.png"
+      }
     ]
   }
 }

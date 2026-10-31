@@ -3,6 +3,7 @@ import { getHomepage } from "@/lib/content";
 import type { ServiceSection } from "@/types/data";
 
 export type GuideBlock = { title: string; text: string };
+export type ServicePartner = { name: string; summary: string; url: string; logo: string; logoBackground?: string };
 export type ServiceGuideData = {
   description: string;
   intro?: string;
@@ -13,6 +14,8 @@ export type ServiceGuideData = {
   questions: string[];
   sources: { label: string; url: string }[];
   related: string[];
+  partners?: ServicePartner[];
+  insurers?: ServicePartner[];
 };
 
 const serviceGuides: Record<string, ServiceGuideData> = guides;

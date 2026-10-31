@@ -1,0 +1,31 @@
+.section { margin-block: 0 3.5rem; scroll-margin-top: 7rem; color: #203e35; }
+.heading { display: grid; grid-template-columns: minmax(0,1fr) minmax(0,1fr); gap: 2.5rem; align-items: center; padding: 2.5rem; background: #203e35; color: #fffdf8; border-radius: 12px; margin-bottom: 1.5rem; }
+.eyebrow { display: flex; gap: .55rem; align-items: center; font-size: .7rem; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; color: #cfddc1; margin-bottom: 1rem; }
+.eyebrow svg { flex-shrink: 0; }
+.heading h2 { font-family: var(--font-heading); font-size: clamp(2rem,3.7vw,3rem); font-weight: 400; line-height: 1.15; letter-spacing: -.025em; }
+.heading > div > p:not(.eyebrow) { color: #f0f3e9; font-size: 1rem; line-height: 1.85; }
+.heading .note { font-size: .85rem !important; color: #cfddc8 !important; margin-top: 1rem; }
+.grid { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 1.25rem; }
+.card { display: flex; flex-direction: column; min-width: 0; padding: 1.5rem; background: #fffdf8; border: 1px solid #cbd6c2; border-radius: 10px; }
+.logo { min-height: 94px; display: flex; align-items: center; border-bottom: 1px solid #dce3d3; padding: .75rem 0 1.25rem; margin-bottom: 1.1rem; }
+.logo img { width: min(190px,100%); height: 60px; object-fit: contain; object-position: left center; }
+.logo[style] { padding-inline: 1rem; border-radius: 6px; }
+.card h3 { font-family: var(--font-body); font-size: 1.05rem; font-weight: 700; line-height: 1.5; margin: 0 0 .6rem; }
+.card > p { font-size: .93rem; line-height: 1.8; color: #53614f; margin-bottom: 1.2rem; }
+.card > a { display: inline-flex; align-items: center; gap: .6rem; min-height: 44px; margin-top: auto; font-size: .8rem; text-decoration: underline; text-underline-offset: .3em; }
+.card > a svg { flex-shrink: 0; }
+.card > a:hover { text-decoration-thickness: 2px; }
+.helpCard { background: #e9eddf; justify-content: center; border-color: #becdaf; }
+.helpCard > svg { margin-bottom: 1rem; color: #4d6b43; }
+.helpCard > a { margin-top: .25rem; }
+.section a:focus-visible { outline: 3px solid #4e7045; outline-offset: 4px; }
+@media(max-width: 960px) { .grid { grid-template-columns: repeat(2,minmax(0,1fr)); } .heading { padding: 2rem; gap: 1.5rem; } }
+@media(max-width: 600px) {
+  .section { margin-bottom: 2.5rem; }
+  .heading { grid-template-columns: minmax(0,1fr); padding: 1.5rem; gap: 1.25rem; }
+  .heading h2 { font-size: 2.15rem; }
+  .heading > div > p:not(.eyebrow) { font-size: .95rem; }
+  .grid { grid-template-columns: minmax(0,1fr); gap: 1rem; }
+  .card { padding: 1.3rem; }
+  .logo { min-height: 85px; margin-bottom: 1rem; }
+}

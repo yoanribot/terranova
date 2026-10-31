@@ -9,7 +9,7 @@ export default function HeroBanner({ image }: Hero) {
   const phone = getMetadata().sections[0].phoneMain;
   return (
     <section className={styles.hero} aria-labelledby="home-title">
-      <Image src={image?.url || "/content/media/hero_banner_dd42a36fae.webp"} alt="" fill priority sizes="100vw" className={styles.image} />
+      <Image src={image?.url || "/content/media/terranova-clinica-dental-oficina.webp"} alt="" fill priority sizes="100vw" className={styles.image} />
       <div className={styles.overlay} aria-hidden="true" />
       <div className={styles.copy}>
         <p className={styles.eyebrow}><span aria-hidden="true" />Terranova Clinica Dental</p>

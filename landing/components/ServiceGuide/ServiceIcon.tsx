@@ -6,12 +6,15 @@ import {
   Layers,
   Moon,
   ScanFace,
+  ScanLine,
   Smile,
   Sparkles,
   Target,
+  WalletCards,
 } from "lucide-react";
 
 const icons = {
+  "cbct-dental": ScanLine,
   "implantologia-dental": Layers,
   endodoncia: Target,
   periodoncia: HeartPulse,
@@ -24,6 +27,7 @@ const icons = {
   protesis: Layers,
   bruxismo: Moon,
   aseguradora: ClipboardList,
+  financiaciones: WalletCards,
 };
 
 export default function ServiceIcon({ slug, size = 24 }: { slug: string; size?: number }) {

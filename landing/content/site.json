@@ -16,9 +16,9 @@
           "is_external": 1
         },
         "image": {
-          "url": "/content/media/hero_banner_dd42a36fae.webp",
-          "alternativeText": "hero-banner.png",
-          "sourceUrl": "/uploads/hero_banner_dd42a36fae.png"
+          "url": "/content/media/terranova-clinica-dental-oficina.webp",
+          "alternativeText": "Recepción y sala de espera de Terranova Clinica Dental",
+          "sourceUrl": "/content/media/terranova-clinica-dental-oficina.webp"
         }
       },
       {
@@ -194,14 +194,36 @@
             }
           },
           {
+            "id": 37,
+            "slug": "cbct-dental",
+            "title": "CBCT y escáner intraoral",
+            "text": "Conoce cómo se complementan la imagen dental 3D y el escaneado óptico, para qué se utilizan y cuándo están indicados.",
+            "image": {
+              "url": "/content/media/cbct-dental-radiografia.webp",
+              "alternativeText": "Paciente colocado en un equipo de radiografía dental",
+              "sourceUrl": "https://dentalworld.com.ph/wp-content/uploads/2025/08/dental-xray-compressed.jpg.webp"
+            }
+          },
+          {
             "id": 35,
             "slug": "aseguradora",
-            "title": "Aseguradoras Dentales",
-            "text": "Trabajamos con diferentes aseguradoras y mutuas dentales",
+            "title": "Aseguradoras dentales",
+            "text": "Consulta las compañías y redes con las que trabajamos y cómo preparar tu visita con seguro.",
             "image": {
-              "url": "/content/media/Diseno_sin_titulo_7_1f200daece.webp",
-              "alternativeText": "Diseño sin título (7).png",
-              "sourceUrl": "/uploads/Diseno_sin_titulo_7_1f200daece.png"
+              "url": "/content/media/terranova-aseguradoras.jpeg",
+              "alternativeText": "Información de las compañías y redes dentales con las que trabaja Terranova Clinica Dental",
+              "sourceUrl": "/content/media/terranova-aseguradoras.jpeg"
+            }
+          },
+          {
+            "id": 38,
+            "slug": "financiaciones",
+            "title": "Financiaciones",
+            "text": "Consulta las opciones de financiación de tu tratamiento: hasta 12 meses sin intereses, según las condiciones disponibles y la aprobación de la entidad financiera.",
+            "image": {
+              "url": "/content/media/terranova-clinica-dental-oficina.webp",
+              "alternativeText": "Recepción de Terranova Clinica Dental",
+              "sourceUrl": "/content/media/terranova-clinica-dental-oficina.webp"
             }
           }
         ]
@@ -278,6 +300,173 @@
     ]
   },
   "blogs": [
+    {
+      "slug": "cbct-dental",
+      "title": "CBCT dental 3D y escáner intraoral",
+      "content": [
+        {
+          "type": "heading",
+          "level": 2,
+          "children": [
+            {
+              "type": "text",
+              "text": "Dos herramientas digitales, información diferente"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "type": "text",
+              "text": "En Terranova Clinica Dental combinamos imagen tridimensional y escaneado intraoral para estudiar cada caso y explicar las opciones de tratamiento con claridad. Son herramientas complementarias: cada una registra una parte distinta de la boca."
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "children": [
+            {
+              "type": "text",
+              "text": "CBCT o TAC dental 3D: estudiar la anatomía"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "type": "text",
+              "text": "El CBCT es una tomografía computarizada de haz cónico. Utiliza rayos X para reconstruir imágenes en tres dimensiones de los dientes, los maxilares y otras estructuras de la región maxilofacial. A diferencia de una radiografía plana, permite estudiar la zona desde distintos ángulos."
+            }
+          ]
+        },
+        {
+          "type": "list",
+          "format": "unordered",
+          "children": [
+            {
+              "type": "list-item",
+              "children": [
+                {
+                  "type": "text",
+                  "text": "Implantes: valorar las dimensiones del hueso y su relación con estructuras anatómicas próximas."
+                }
+              ]
+            },
+            {
+              "type": "list-item",
+              "children": [
+                {
+                  "type": "text",
+                  "text": "Cirugía oral: estudiar dientes retenidos y la anatomía de la zona antes de una intervención."
+                }
+              ]
+            },
+            {
+              "type": "list-item",
+              "children": [
+                {
+                  "type": "text",
+                  "text": "Endodoncia y otros casos complejos: obtener información adicional cuando las imágenes habituales no resuelven la duda clínica."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "children": [
+            {
+              "type": "text",
+              "text": "Una exploración indicada para tu caso"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "type": "text",
+              "text": "El CBCT no se realiza de forma rutinaria a todas las personas. El profesional debe valorar la exploración clínica y las imágenes previas, justificar la prueba y elegir el campo de visión adecuado. Utiliza radiación ionizante y puede suponer una exposición mayor que una radiografía dental convencional; la dosis depende del estudio y del equipo."
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "type": "text",
+              "text": "Antes de la prueba, comunica si estás embarazada o crees que podrías estarlo y aporta las imágenes anteriores para evitar repeticiones innecesarias. En niños y adolescentes se requiere especial atención a la justificación y al ajuste de la exploración."
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "children": [
+            {
+              "type": "text",
+              "text": "Escáner intraoral: una impresión digital de tu boca"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "type": "text",
+              "text": "El escáner intraoral obtiene un modelo de la superficie de los dientes y las encías mediante un registro óptico, sin rayos X. Puede sustituir las pastas de impresión cuando el tipo de trabajo y la situación clínica lo permiten."
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "type": "text",
+              "text": "Estos registros ayudan a planificar coronas, prótesis, rehabilitaciones y determinados tratamientos de ortodoncia. También permiten mostrarte la forma de tus dientes y la mordida de manera visual. No sustituyen al CBCT cuando se necesita estudiar el hueso o las estructuras internas."
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "children": [
+            {
+              "type": "text",
+              "text": "De los registros a tu próxima cita"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "type": "text",
+              "text": "Cuando está indicado, combinar ambas técnicas permite relacionar la información de las superficies dentales con la anatomía ósea. El resultado debe interpretarse junto con la exploración clínica: disponer de más imágenes no garantiza por sí solo un diagnóstico ni un resultado concreto."
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "type": "text",
+              "text": "Después del escaneado, el profesional interpreta los registros y valora si hay hallazgos que requieren atención. Te explica qué significan, qué opciones existen y qué pasos recomienda. Si necesitas tratamiento, se organiza una cita posterior según el plan acordado; realizar una prueba no implica tratarte ese mismo día."
+            }
+          ]
+        }
+      ],
+      "backgroundImage": {
+        "url": "/content/media/cbct-dental-radiografia.webp",
+        "alternativeText": "Paciente colocado en un equipo de radiografía dental",
+        "sourceUrl": "https://dentalworld.com.ph/wp-content/uploads/2025/08/dental-xray-compressed.jpg.webp"
+      },
+      "images": []
+    },
     {
       "slug": "implantologia-dental",
       "title": "Implantes dentales",
@@ -724,7 +913,7 @@
     },
     {
       "slug": "aseguradora",
-      "title": "Seguros y cobertura dental",
+      "title": "Aseguradoras dentales",
       "content": [
         {
           "type": "heading",
@@ -732,7 +921,7 @@
           "children": [
             {
               "type": "text",
-              "text": "Qué debes comprobar en tu póliza"
+              "text": "Tu seguro, con una explicación clara"
             }
           ]
         },
@@ -741,7 +930,7 @@
           "children": [
             {
               "type": "text",
-              "text": "Los seguros dentales pueden incluir determinadas prestaciones, precios concertados o condiciones específicas. El nombre de la compañía no basta para saber qué está cubierto."
+              "text": "En Terranova Clinica Dental trabajamos con ASISA, DKV, Allianz, Santalucía, Línea Directa, Divina Seguros, HNA, MGS Seguros, AFEMEFA, Atlántida y AvantSalud. Si tienes un seguro dental, consúltanos: te ayudamos a identificar qué información necesitas para aprovechar las prestaciones de tu póliza."
             }
           ]
         },
@@ -750,7 +939,7 @@
           "children": [
             {
               "type": "text",
-              "text": "La cobertura también puede depender del profesional, del centro, de una autorización previa o de los límites del contrato."
+              "text": "No necesitas conocer todos los detalles de tu contrato para pedir orientación. Empieza por el nombre de tu compañía y el producto que tienes contratado. La confirmación de cobertura, autorizaciones e importes se realiza según las condiciones de tu seguro y la actuación prevista."
             }
           ]
         },
@@ -760,7 +949,7 @@
           "children": [
             {
               "type": "text",
-              "text": "Una lista práctica antes de reservar"
+              "text": "Qué conviene tener a mano"
             }
           ]
         },
@@ -773,7 +962,7 @@
               "children": [
                 {
                   "type": "text",
-                  "text": "Nombre exacto de la compañía y del producto contratado."
+                  "text": "El nombre de la compañía y del seguro o producto contratado."
                 }
               ]
             },
@@ -782,7 +971,7 @@
               "children": [
                 {
                   "type": "text",
-                  "text": "Vigencia de la póliza y presencia del centro en el cuadro médico."
+                  "text": "La tarjeta de asegurado y la documentación que te indiquen para presentar en la cita."
                 }
               ]
             },
@@ -791,18 +980,18 @@
               "children": [
                 {
                   "type": "text",
-                  "text": "Prestaciones incluidas, exclusiones y cantidades a tu cargo."
+                  "text": "Las autorizaciones que ya tengas y las dudas que quieras resolver sobre tu cobertura."
                 }
               ]
-            },
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "children": [
             {
-              "type": "list-item",
-              "children": [
-                {
-                  "type": "text",
-                  "text": "Documentación y autorizaciones necesarias para la cita."
-                }
-              ]
+              "type": "text",
+              "text": "No envíes fotografías de tu tarjeta, el número completo de tu póliza, DNI ni documentación médica a través del formulario general. Te indicaremos cómo aportar la información necesaria por el canal adecuado."
             }
           ]
         },
@@ -812,7 +1001,7 @@
           "children": [
             {
               "type": "text",
-              "text": "Compañías anunciadas por la clínica"
+              "text": "Qué puede significar que una prestación esté cubierta"
             }
           ]
         },
@@ -821,7 +1010,7 @@
           "children": [
             {
               "type": "text",
-              "text": "La información de la clínica menciona Fiatc, HNA, Clinicum Seguros, Atlántida Médica, Allianz, Divina Pastora, Santa Lucía, ASISA Dental, AvantSalud, AFEMEFA, MGS, Línea Directa, ASSSA Seguros, ARAG, Agrupació AMCI, Santa Lucía Dental y Divina Seguros."
+              "text": "Según el producto, puede haber actuaciones incluidas, precios concertados o importes a tu cargo. Una franquicia es una cantidad que paga el asegurado conforme a su póliza. El mismo nombre de compañía puede corresponder a productos con condiciones distintas."
             }
           ]
         },
@@ -830,7 +1019,7 @@
           "children": [
             {
               "type": "text",
-              "text": "Esta relación no certifica que un acuerdo siga vigente ni que tu tratamiento esté incluido. Confirma tu caso con la compañía y la clínica antes de reservar."
+              "text": "Antes de aceptar el tratamiento, pide un presupuesto que distinga las prestaciones incluidas, las cantidades que debes abonar y las actuaciones privadas. Consulta también si necesitas autorización, si existe algún límite o si las pruebas y revisiones tienen condiciones específicas."
             }
           ]
         },
@@ -840,7 +1029,7 @@
           "children": [
             {
               "type": "text",
-              "text": "Un presupuesto que puedas entender"
+              "text": "Primero tu valoración; después, las opciones"
             }
           ]
         },
@@ -849,7 +1038,7 @@
           "children": [
             {
               "type": "text",
-              "text": "Pide que se separen las prestaciones cubiertas, los importes con franquicia y las actuaciones privadas. Comprueba también si las revisiones, las pruebas o las reparaciones se facturan aparte."
+              "text": "El profesional valora tu salud bucodental y te explica qué actuaciones están indicadas. La cobertura del seguro y las condiciones económicas se revisan por separado: que una actuación esté incluida no significa que la necesites, ni que una exclusión cambie la valoración clínica."
             }
           ]
         },
@@ -858,15 +1047,159 @@
           "children": [
             {
               "type": "text",
-              "text": "Si necesitas tiempo para revisar la propuesta o consultar a tu aseguradora, solicítalo. La decisión clínica y las condiciones económicas deben explicarse por separado."
+              "text": "Si tu propuesta necesita autorización, te orientamos sobre qué debes confirmar con la entidad y qué información conviene preparar. La aprobación y los plazos dependen de la aseguradora; consultar o pedir cita no sustituye esa confirmación."
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "children": [
+            {
+              "type": "text",
+              "text": "Si tu seguro no aparece o necesitas otras opciones"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "type": "text",
+              "text": "Pregúntanos antes de descartar tu visita. Podemos orientarte sobre cómo comprobar tu compañía o consultar un presupuesto para las actuaciones que no estén incluidas. También puedes conocer las opciones de financiación disponibles, sujetas a las condiciones y aprobación de la entidad financiera."
             }
           ]
         }
       ],
       "backgroundImage": {
-        "url": "/content/media/Foto_Banner_Blog_20d3d4ea8f.webp",
-        "alternativeText": "Foto Banner Blog.png",
-        "sourceUrl": "/uploads/Foto_Banner_Blog_20d3d4ea8f.png"
+        "url": "/content/media/terranova-aseguradoras.jpeg",
+        "alternativeText": "Información de las compañías y redes dentales con las que trabaja Terranova Clinica Dental",
+        "sourceUrl": "/content/media/terranova-aseguradoras.jpeg"
+      },
+      "images": []
+    },
+    {
+      "slug": "financiaciones",
+      "title": "Financiaciones",
+      "content": [
+        {
+          "type": "heading",
+          "level": 2,
+          "children": [
+            {
+              "type": "text",
+              "text": "Cuidar de tu sonrisa, con opciones de pago"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "type": "text",
+              "text": "En Terranova Clínica Dental queremos que cuidar de tu sonrisa sea más fácil. Por eso, ponemos a tu disposición diferentes opciones de financiación a través de entidades colaboradoras como Pepper Finance, Findirect y Frakmenta."
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "children": [
+            {
+              "type": "text",
+              "text": "Hasta 12 meses sin intereses, según condiciones"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "type": "text",
+              "text": "Puedes financiar tus tratamientos dentales hasta en 12 meses sin intereses, según las condiciones de la financiación disponible y la aprobación de la entidad financiera."
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "type": "text",
+              "text": "Así podrás organizar el pago de tu tratamiento en cómodas cuotas y acceder a la atención odontológica que necesitas con mayor tranquilidad."
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "children": [
+            {
+              "type": "text",
+              "text": "Entidades y soluciones colaboradoras"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "type": "text",
+              "text": "Pepper Finance y Findirect ofrecen soluciones para organizar el pago de compras y servicios. Frakmenta es una solución de pago fraccionado de Findirect. Consulta con el equipo qué alternativa está disponible para tu presupuesto y pide las condiciones de esa propuesta concreta."
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "children": [
+            {
+              "type": "text",
+              "text": "Tu sonrisa, a tu ritmo"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "type": "text",
+              "text": "Consulta con nuestro equipo las opciones de financiación disponibles y encuentra la alternativa que mejor se adapte a ti."
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "children": [
+            {
+              "type": "text",
+              "text": "Una propuesta que puedas entender"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "type": "text",
+              "text": "Antes de decidir, solicita el presupuesto del tratamiento y las condiciones concretas de financiación. Revisa el importe de las cuotas, el calendario de pagos, la TAE, el coste total y las posibles comisiones de la operación."
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "type": "text",
+              "text": "La financiación está sujeta a la aprobación de la entidad financiera y a las condiciones aplicables a cada operación."
+            }
+          ]
+        }
+      ],
+      "backgroundImage": {
+        "url": "/content/media/terranova-clinica-dental-oficina.webp",
+        "alternativeText": "Recepción de Terranova Clinica Dental",
+        "sourceUrl": "/content/media/terranova-clinica-dental-oficina.webp"
       },
       "images": []
     },
@@ -2085,7 +2418,7 @@
           "type": "paragraph",
           "children": [
             {
-              "text": "Este sitio web puede utilizar cookies técnicas (pequeños archivos de información que el servidor envía al ordenador de quien accede a la página) para llevar a cabo determinadas funciones que son consideradas imprescindibles para el correcto funcionamiento y visualización del sitio. Las cookies utilizadas tienen, en todo caso, carácter temporal, con la única finalidad de hacer más eficaz la navegación, y desaparecen al terminar la sesión del usuario. En ningún caso, estas cookies proporcionan por sí mismas datos de carácter personal y no se utilizarán para la recogida de los mismos.",
+              "text": "Este sitio web utiliza almacenamiento local para recordar tus preferencias de privacidad durante 180 días. Los servicios opcionales de análisis, mapas y publicidad solo se cargan con los permisos correspondientes. Puedes consultar las finalidades, proveedores y opciones de gestión en la política de cookies.",
               "type": "text"
             }
           ]
@@ -2094,7 +2427,7 @@
           "type": "paragraph",
           "children": [
             {
-              "text": "Mediante el uso de cookies también es posible que el servidor donde se encuentra la web reconozca el navegador utilizado por el usuario con la finalidad de que la navegación sea más sencilla, permitiendo, por ejemplo, el acceso de los usuarios que se hayan registrado previamente a las áreas, servicios, promociones o concursos reservados exclusivamente a ellos sin tener que registrarse en cada visita. También se pueden utilizar para medir la audiencia, parámetros de tráfico, controlar el progreso y número de entradas, etc., siendo en estos casos cookies prescindibles técnicamente, pero beneficiosas para el usuario. Este sitio web no instalará cookies prescindibles sin el consentimiento previo del usuario.",
+              "text": "Puedes aceptar, rechazar o configurar las categorías opcionales desde el banner y cambiar tu elección mediante «Configurar cookies», al pie de cualquier página. Seguir navegando no equivale a aceptar. El rechazo no impide consultar los contenidos ni contactar con la clínica.",
               "type": "text"
             }
           ]
@@ -2482,8 +2815,8 @@
           "type": "paragraph",
           "children": [
             {
-              "text": "En el sitio web www.terranovaclinicadental.es",
-              "type": "text"
+              "type": "text",
+              "text": "En www.terranovaclinicadental.es utilizamos almacenamiento local para recordar tu elección de privacidad. Los servicios opcionales solo se cargan cuando das tu permiso."
             }
           ]
         },
@@ -2491,8 +2824,8 @@
           "type": "paragraph",
           "children": [
             {
-              "text": " utilizamos cookies con la finalidad de garantizar el correcto funcionamiento de la página, mejorar la experiencia del usuario y analizar el tráfico web, conforme a lo establecido en el Reglamento (UE) 2016/679 (RGPD) y la Ley 34/2002 (LSSI-CE).",
-              "type": "text"
+              "type": "text",
+              "text": "Puedes aceptar, rechazar o configurar las opciones sin que tu decisión te impida consultar los contenidos, la dirección o los datos de contacto de la clínica."
             }
           ]
         },
@@ -2500,8 +2833,8 @@
           "type": "paragraph",
           "children": [
             {
-              "text": "A continuación, te explicamos qué son las cookies, cuáles utilizamos y cómo puedes configurarlas.",
-              "type": "text"
+              "type": "text",
+              "text": "1. ¿Qué son las cookies y el almacenamiento local?"
             }
           ]
         },
@@ -2509,17 +2842,8 @@
           "type": "paragraph",
           "children": [
             {
-              "text": "1. ¿Qué son las cookies?",
-              "type": "text"
-            }
-          ]
-        },
-        {
-          "type": "paragraph",
-          "children": [
-            {
-              "text": "Las cookies son pequeños archivos de texto que se descargan en el dispositivo del usuario (ordenador, tablet o teléfono móvil) cuando visita una página web. Permiten almacenar y recuperar información sobre la navegación realizada y pueden utilizarse para reconocer al usuario.",
-              "type": "text"
+              "type": "text",
+              "text": "Las cookies son pequeños archivos que un sitio guarda en tu navegador. El almacenamiento local permite guardar información en ese mismo navegador sin enviarla automáticamente al servidor en cada visita. Ambos pueden utilizarse para recordar preferencias o para otros fines; por eso distinguimos los servicios necesarios de los opcionales."
             }
           ]
         },
@@ -2563,8 +2887,8 @@
           "type": "paragraph",
           "children": [
             {
-              "text": "Teléfono: 913 20 12 21",
-              "type": "text"
+              "type": "text",
+              "text": "Teléfono: 913 20 12 21"
             }
           ]
         },
@@ -2572,8 +2896,8 @@
           "type": "paragraph",
           "children": [
             {
-              "text": "3. Tipos de cookies utilizadas",
-              "type": "text"
+              "type": "text",
+              "text": "3. Almacenamiento y servicios utilizados"
             }
           ]
         },
@@ -2581,8 +2905,8 @@
           "type": "paragraph",
           "children": [
             {
-              "text": "3.1 Cookies técnicas o necesarias",
-              "type": "text"
+              "type": "text",
+              "text": "3.1 Preferencias necesarias"
             }
           ]
         },
@@ -2590,8 +2914,8 @@
           "type": "paragraph",
           "children": [
             {
-              "text": "Son aquellas imprescindibles para el funcionamiento del sitio web y permiten al usuario la navegación y la utilización de las diferentes opciones o servicios que ofrece la página.",
-              "type": "text"
+              "type": "text",
+              "text": "La clave terranova.consent.v1 del almacenamiento local guarda las categorías que has elegido, la versión de esas preferencias y las fechas de elección y caducidad. Se conserva durante 180 días y no se utiliza para analizar tu navegación ni mostrar publicidad. No guardamos aquí el contenido del formulario ni datos de salud."
             }
           ]
         },
@@ -2599,8 +2923,8 @@
           "type": "paragraph",
           "children": [
             {
-              "text": "Estas cookies no requieren el consentimiento del usuario.",
-              "type": "text"
+              "type": "text",
+              "text": "Si tu navegador impide guardar la elección, la aplicamos durante la visita y los servicios opcionales permanecen bloqueados en ausencia de un permiso válido. Podemos guardar un rechazo en el almacenamiento de sesión, con la clave terranova.consent.session-denial, para evitar recuperar una autorización anterior que no se haya podido actualizar."
             }
           ]
         },
@@ -2608,8 +2932,8 @@
           "type": "paragraph",
           "children": [
             {
-              "text": "3.2 Cookies de análisis",
-              "type": "text"
+              "type": "text",
+              "text": "3.2 Análisis de visitas con Google Analytics"
             }
           ]
         },
@@ -2617,8 +2941,8 @@
           "type": "paragraph",
           "children": [
             {
-              "text": "Este sitio web utiliza cookies de análisis proporcionadas por:",
-              "type": "text"
+              "type": "text",
+              "text": "Cuando Google Analytics está configurado y aceptas la categoría «Análisis», se carga su código para medir las visitas y el uso del sitio. Antes de tu permiso no se carga este servicio ni se envían solicitudes de medición de Analytics, tampoco con fines de medición sin cookies."
             }
           ]
         },
@@ -2626,8 +2950,8 @@
           "type": "paragraph",
           "children": [
             {
-              "text": "Google Analytics",
-              "type": "text"
+              "type": "text",
+              "text": "Analytics puede crear cookies propias como _ga y _ga_<identificador>, que distinguen navegadores y sesiones. La configuración de esta web limita su duración a 180 días y no renueva ese plazo en cada visita. Se desactivan las señales de Google y las señales de personalización publicitaria de Analytics."
             }
           ]
         },
@@ -2635,8 +2959,8 @@
           "type": "paragraph",
           "children": [
             {
-              "text": "Google Analytics es un servicio de analítica web prestado por Google LLC que permite cuantificar el número de usuarios y realizar la medición y análisis estadístico del uso que los usuarios hacen del sitio web.",
-              "type": "text"
+              "type": "text",
+              "text": "3.3 Mapas de Google"
             }
           ]
         },
@@ -2644,98 +2968,8 @@
           "type": "paragraph",
           "children": [
             {
-              "text": "La información recogida puede incluir:",
-              "type": "text"
-            }
-          ]
-        },
-        {
-          "type": "list",
-          "format": "unordered",
-          "children": [
-            {
-              "type": "list-item",
-              "children": [
-                {
-                  "text": "Dirección IP (anonimizada)",
-                  "type": "text"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "type": "list",
-          "format": "unordered",
-          "children": [
-            {
-              "type": "list-item",
-              "children": [
-                {
-                  "text": "Tipo de dispositivo",
-                  "type": "text"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "type": "list",
-          "format": "unordered",
-          "children": [
-            {
-              "type": "list-item",
-              "children": [
-                {
-                  "text": "Navegador utilizado",
-                  "type": "text"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "type": "list",
-          "format": "unordered",
-          "children": [
-            {
-              "type": "list-item",
-              "children": [
-                {
-                  "text": "Páginas visitadas",
-                  "type": "text"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "type": "list",
-          "format": "unordered",
-          "children": [
-            {
-              "type": "list-item",
-              "children": [
-                {
-                  "text": "Duración de la visita",
-                  "type": "text"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "type": "list",
-          "format": "unordered",
-          "children": [
-            {
-              "type": "list-item",
-              "children": [
-                {
-                  "text": "Origen del tráfico",
-                  "type": "text"
-                }
-              ]
+              "type": "text",
+              "text": "El mapa interactivo de Google Maps está bloqueado hasta que aceptas la categoría «Mapas de Google» o pulsas «Permitir Google Maps». Este último botón autoriza únicamente los mapas: no activa el análisis de visitas ni la publicidad."
             }
           ]
         },
@@ -2743,8 +2977,8 @@
           "type": "paragraph",
           "children": [
             {
-              "text": "Estos datos se utilizan exclusivamente con fines estadísticos y para mejorar los servicios ofrecidos por Terra Nova Clínica Dental.",
-              "type": "text"
+              "type": "text",
+              "text": "Al cargar el mapa, Google recibe información técnica, incluida tu dirección IP, y puede utilizar sus propias cookies y tecnologías de almacenamiento. Esta categoría también permite cargar imágenes de perfil de reseñas de Google cuando estén disponibles; sin permiso se muestran iniciales locales. Su funcionamiento y conservación dependen de Google y de las preferencias de tu navegador o cuenta. El enlace «Cómo llegar» abre Google Maps fuera de esta web, bajo las condiciones de ese servicio."
             }
           ]
         },
@@ -2752,8 +2986,8 @@
           "type": "paragraph",
           "children": [
             {
-              "text": "Las cookies de análisis solo se instalarán en el dispositivo del usuario si este presta su consentimiento expreso a través del banner de configuración de cookies.",
-              "type": "text"
+              "type": "text",
+              "text": "3.4 Publicidad de Google AdSense"
             }
           ]
         },
@@ -2761,8 +2995,8 @@
           "type": "paragraph",
           "children": [
             {
-              "text": "Puedes consultar la política de privacidad de Google en el siguiente enlace: https://policies.google.com/privacy",
-              "type": "text"
+              "type": "text",
+              "text": "Google AdSense solo puede cargarse cuando la publicidad está habilitada en el sitio, das permiso para esa categoría y la integración de una plataforma de consentimiento certificada comunica las autorizaciones necesarias. El banner de esta web no sustituye el mensaje de privacidad de esa plataforma. Si no están presentes esos permisos, no cargamos el código de AdSense."
             }
           ]
         },
@@ -2770,8 +3004,8 @@
           "type": "paragraph",
           "children": [
             {
-              "text": "3.3 Publicidad de Google AdSense",
-              "type": "text"
+              "type": "text",
+              "text": "Google y sus socios pueden utilizar cookies e identificadores para seleccionar, mostrar y medir anuncios. Las opciones de publicidad de Google también se gestionan en el mensaje de privacidad de su plataforma cuando esté disponible."
             }
           ]
         },
@@ -2779,8 +3013,8 @@
           "type": "paragraph",
           "children": [
             {
-              "text": "Este sitio web puede utilizar Google AdSense para mostrar publicidad contextual relacionada con salud, odontología, bienestar y estilo de vida. Google y sus socios pueden utilizar cookies, almacenamiento local, identificadores del dispositivo, información del navegador y datos de uso para mostrar y medir anuncios, de acuerdo con las opciones de consentimiento seleccionadas por el usuario.",
-              "type": "text"
+              "type": "text",
+              "text": "4. Cómo aceptar, rechazar o cambiar tu elección"
             }
           ]
         },
@@ -2788,8 +3022,8 @@
           "type": "paragraph",
           "children": [
             {
-              "text": "La publicidad personalizada solo se habilitará cuando exista la base legal y el consentimiento requerido. Si el usuario rechaza o retira el consentimiento, Google podrá mostrar anuncios limitados o no mostrar anuncios.",
-              "type": "text"
+              "type": "text",
+              "text": "En el banner puedes pulsar «Aceptar todas», «Rechazar opcionales» o «Configurar». Las categorías opcionales están desactivadas inicialmente. Desplazarte por la página, seguir navegando o cerrar la configuración sin guardar no equivale a aceptar."
             }
           ]
         },
@@ -2797,8 +3031,8 @@
           "type": "paragraph",
           "children": [
             {
-              "text": "El usuario puede aceptar, rechazar o modificar sus preferencias publicitarias desde el mensaje de privacidad de Google o mediante el enlace de configuración de privacidad disponible en el sitio web.",
-              "type": "text"
+              "type": "text",
+              "text": "Puedes abrir «Configurar cookies» al pie de cualquier página y en esta política para guardar una selección diferente o rechazar todos los servicios opcionales. La retirada se aplica a los servicios de esta web y elimina las cookies propias de seguimiento que sean accesibles desde el navegador. Cuando hace falta detener una biblioteca de seguimiento ya cargada, se vuelve a cargar la página."
             }
           ]
         },
@@ -2806,8 +3040,8 @@
           "type": "paragraph",
           "children": [
             {
-              "text": "4. Base legal para el uso de cookies",
-              "type": "text"
+              "type": "text",
+              "text": "No podemos borrar desde este dominio las cookies que pertenezcan a dominios de terceros ni deshacer datos enviados mientras tu permiso estaba activo. Puedes gestionar esas cookies y datos desde tu navegador y las herramientas del proveedor."
             }
           ]
         },
@@ -2815,8 +3049,8 @@
           "type": "paragraph",
           "children": [
             {
-              "text": "La base legal para el uso de cookies de análisis es el consentimiento del usuario, que se obtiene mediante el sistema de aceptación habilitado al acceder al sitio web.",
-              "type": "text"
+              "type": "text",
+              "text": "5. Duración de tu elección"
             }
           ]
         },
@@ -2824,8 +3058,8 @@
           "type": "paragraph",
           "children": [
             {
-              "text": "El usuario puede retirar su consentimiento en cualquier momento.",
-              "type": "text"
+              "type": "text",
+              "text": "Recordamos tu elección durante 180 días en este navegador. Leerla en una visita posterior no amplía el plazo. Al caducar, eliminarse o cambiar la versión de las preferencias, los servicios opcionales vuelven a estar bloqueados y se solicita una nueva elección."
             }
           ]
         },
@@ -2833,8 +3067,8 @@
           "type": "paragraph",
           "children": [
             {
-              "text": "5. Conservación de los datos",
-              "type": "text"
+              "type": "text",
+              "text": "6. Información de Google y opciones del navegador"
             }
           ]
         },
@@ -2842,8 +3076,8 @@
           "type": "paragraph",
           "children": [
             {
-              "text": "Los datos obtenidos a través de las cookies se conservarán durante el tiempo necesario para cumplir la finalidad para la que fueron recogidos o hasta que el usuario solicite su supresión, de conformidad con la normativa aplicable.",
-              "type": "text"
+              "type": "text",
+              "text": "Los servicios de Google pueden tratar datos fuera de tu país. Puedes consultar su información sobre el tratamiento de datos, conservación y transferencias internacionales en https://policies.google.com/privacy y sobre sus cookies en https://policies.google.com/technologies/cookies."
             }
           ]
         },
@@ -2851,8 +3085,8 @@
           "type": "paragraph",
           "children": [
             {
-              "text": "6. Gestión y configuración de cookies",
-              "type": "text"
+              "type": "text",
+              "text": "También puedes permitir, bloquear o eliminar cookies y datos de sitios desde las opciones de privacidad de tu navegador. Al borrar las preferencias de esta web, el banner volverá a aparecer."
             }
           ]
         },
@@ -2860,8 +3094,8 @@
           "type": "paragraph",
           "children": [
             {
-              "text": "El usuario puede aceptar, rechazar o configurar el uso de cookies a través del banner habilitado en el sitio web.",
-              "type": "text"
+              "type": "text",
+              "text": "7. Cambios en esta política"
             }
           ]
         },
@@ -2869,35 +3103,8 @@
           "type": "paragraph",
           "children": [
             {
-              "text": "Asimismo, puede permitir, bloquear o eliminar las cookies instaladas en su dispositivo mediante la configuración de las opciones del navegador utilizado.",
-              "type": "text"
-            }
-          ]
-        },
-        {
-          "type": "paragraph",
-          "children": [
-            {
-              "text": "La desactivación de determinadas cookies puede afectar al correcto funcionamiento del sitio web.",
-              "type": "text"
-            }
-          ]
-        },
-        {
-          "type": "paragraph",
-          "children": [
-            {
-              "text": "7. Actualización de la Política de Cookies",
-              "type": "text"
-            }
-          ]
-        },
-        {
-          "type": "paragraph",
-          "children": [
-            {
-              "text": "La presente Política de Cookies puede modificarse en función de cambios legislativos, técnicos o de los servicios ofrecidos en el sitio web. Se recomienda revisar periódicamente esta política.",
-              "type": "text"
+              "type": "text",
+              "text": "Esta política debe actualizarse si cambian los servicios o sus finalidades. Si cambian las finalidades para las que se solicita permiso, se pedirá una nueva elección antes de activar los servicios afectados."
             }
           ]
         }

@@ -20,8 +20,8 @@
 @media (max-width: 1000px) { .hero { min-height: 620px; } .overlay { background: linear-gradient(90deg,rgba(18,49,37,.94),rgba(18,49,37,.76) 46%,rgba(18,49,37,.16)); } .copy h1 { font-size: 4.2rem; } }
 @media (max-width: 600px) {
   .hero { min-height: 710px; align-items: flex-end; }
-  .image { height: 440px !important; object-position: 86% center; }
-  .overlay { background: linear-gradient(180deg,rgba(18,49,37,.1) 0%,rgba(18,49,37,.3) 23%,rgba(18,49,37,.89) 47%,#123125 65%); }
+  .image { height: 440px !important; object-position: 62% center; }
+  .overlay { background: linear-gradient(180deg,rgba(18,49,37,.1) 0%,rgba(18,49,37,.68) 23%,rgba(18,49,37,.89) 47%,#123125 65%); }
   .copy { width: calc(100% - 2.5rem); padding-block: 7rem 2.5rem; }
   .eyebrow { font-size: .65rem; letter-spacing: .1em; margin-bottom: 1.35rem; }
   .copy h1 { font-size: clamp(2.8rem,11vw,4rem); line-height: 1.06; }

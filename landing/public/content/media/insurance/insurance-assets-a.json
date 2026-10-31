@@ -1,0 +1,55 @@
+{
+  "retrievedAt": "2026-10-31",
+  "assets": [
+    {
+      "file": "asisa-logo.png",
+      "page": "https://www.asisa.es/marca",
+      "source": "https://www.asisa.es/etc.clientlibs/wasisa/clientlibs/clientlib-site/resources/fonts/asisa.woff?fjhu9j",
+      "method": "Exact official header vector glyph U+EC42 rendered through its original loaded asisa font, in the header's computed brand color #1c4a8d; transparent 1490x304 PNG. No redrawing, generation or visual alteration.",
+      "format": "png",
+      "width": 1490,
+      "height": 304
+    },
+    {
+      "file": "dkv-logo.jpeg",
+      "page": "https://dkv.es/particulares/seguros-dentales",
+      "source": "https://dkv.es/themes/custom/dkvproducto_theme/logo-mobile.jpeg",
+      "format": "jpeg",
+      "width": 282,
+      "height": 120
+    },
+    {
+      "file": "allianz-logo.png",
+      "page": "https://prensa.allianz.es/folders/logos-945e-6fae7.html",
+      "source": "https://storage.googleapis.com/endurance-apps-liip/media/cache/theming_channel_logo_boilerplate_grid_fs/6a3ce89838531f8be7059425",
+      "format": "png",
+      "width": 1614,
+      "height": 400
+    },
+    {
+      "file": "santalucia-logo.svg",
+      "page": "https://www.santalucia.es/seguros-salud/seguros-dentales",
+      "source": "https://www.santalucia.es/imagenes_slw4/1574961670860/sl-logo.svg",
+      "method": "Original SVG fetched by the ordinary browser session from the official page; checked for active content and visually verified.",
+      "format": "svg",
+      "width": 144,
+      "height": 32
+    },
+    {
+      "file": "linea-directa-logo.png",
+      "page": "https://www.lineadirecta.com/seguros-salud/preguntas-frecuentes.html",
+      "source": "https://www.lineadirecta.com/o/lda-webcomercial-theme/images/logonuevo/logo_header_lda.png",
+      "format": "png",
+      "width": 332,
+      "height": 112
+    },
+    {
+      "file": "divina-seguros-logo.svg",
+      "page": "https://seguro.divinaseguros.com/seguro-dental",
+      "source": "https://seguro.divinaseguros.com/assets/img/logo.svg",
+      "format": "svg",
+      "width": 375,
+      "height": 65
+    }
+  ]
+}

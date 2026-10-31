@@ -1,0 +1,68 @@
+{
+  "checkedAt": "2026-10-31",
+  "scope": "Logotipos y resúmenes de las cinco entidades del lote B. La relación con la clínica ha sido facilitada por el usuario; no se infiere la cobertura de una póliza concreta.",
+  "assets": [
+    {
+      "name": "HNA",
+      "file": "/content/media/insurance/hna.jpg",
+      "sourceUrl": "https://www.hna.es/repository/documentacion/hna/pdf/PID-hnaDental.pdf",
+      "sourcePage": "https://www.hna.es/particulares/productos-salud",
+      "width": 68,
+      "height": 68,
+      "format": "jpeg",
+      "method": "Imagen JPEG original Image12 extraída sin alteración de la primera página del documento oficial de información de hna Dental.",
+      "notes": "Marca completa hna en blanco sobre cuadrado magenta. El PNG de la cabecera oficial no contenía el nombre; se descartó. Mantener proporciones y una altura de hasta 60 píxeles."
+    },
+    {
+      "name": "MGS Seguros",
+      "file": "/content/media/insurance/mgs.png",
+      "sourceUrl": "https://mgs.avantsalud.es/images/logo-mgs.png",
+      "sourcePage": "https://mgs.avantsalud.es/login",
+      "officialLinkSource": "https://www.mgs.es/wps/mgs-salud-dental/preguntas-frecuentes",
+      "width": 425,
+      "height": 177,
+      "format": "png",
+      "method": "Descarga sin modificar del portal de salud MGS, enlazado por la web oficial de MGS.",
+      "notes": "Logotipo completo MGS Seguros, azul y naranja, fondo transparente."
+    },
+    {
+      "name": "AFEMEFA",
+      "file": "/content/media/insurance/afemefa.png",
+      "sourceUrl": "https://afemefa.com/wp-content/uploads/2014/11/logo-100-afemefa.png",
+      "sourcePage": "https://afemefa.com/seguro-dental/",
+      "width": 172,
+      "height": 90,
+      "format": "png",
+      "method": "Descarga sin modificar del logotipo utilizado en la página oficial de seguro dental.",
+      "notes": "Marca AFEMEFA con la leyenda 100 años, tal como se publica en la web oficial. Mantener proporciones; no superar su tamaño original. Un SVG detectado en la página pertenecía a Cookiebot y fue descartado."
+    },
+    {
+      "name": "Atlántida",
+      "file": "/content/media/insurance/atlantida.webp",
+      "sourceUrl": "https://www.atlantida.net/wp-content/uploads/2026/03/Logo-Assegurances-AZ-optimized.webp",
+      "sourcePage": "https://www.atlantida.net/es/seguros/dental/",
+      "width": 1151,
+      "height": 350,
+      "format": "webp",
+      "method": "Descarga sin modificar del logotipo de la cabecera oficial.",
+      "notes": "Marca Atlàntida Assegurances azul y verde, fondo transparente."
+    },
+    {
+      "name": "AvantSalud",
+      "file": "/content/media/insurance/avantsalud.png",
+      "sourceUrl": "https://www.avantsalud.es/repository/images/avantsalud/logosempresa/logo-avantsalud.png",
+      "sourcePage": "https://www.avantsalud.es/",
+      "width": 188,
+      "height": 48,
+      "format": "png",
+      "method": "Descarga sin modificar de la marca del portal oficial.",
+      "logoBackground": "#203e35",
+      "notes": "Marca blanca sobre transparencia: necesita fondo oscuro para ser legible. Es una plataforma/red de servicios de hna Servicios Corporativos; no se presenta como entidad aseguradora.",
+      "typeSources": [
+        "https://www.avantsalud.es/otros/informacion-legal",
+        "https://www.avantsalud.es/profesionales/ventajas",
+        "https://serviciosvida.avantsalud.es/informacion/que-es-Avantsalud"
+      ]
+    }
+  ]
+}
