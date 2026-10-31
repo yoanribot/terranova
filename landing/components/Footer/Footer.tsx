@@ -8,6 +8,7 @@ import {
 import { Link, LocationSection } from "@/types/data";
 import { getSocialIconFromLabel } from "@/lib/utils";
 import Logo from "../Logo";
+import PageLink from "@/components/PageLink";
 
 type Props = {
   title: string;
@@ -39,6 +40,9 @@ const Footer = ({ title, socials, location }: Props) => {
             </h3>
 
             <ul className={styles.footerList}>
+              <li className={styles.footerListItem}><PageLink href="/pacientes" className={styles.footerLink}>Prepara tu visita</PageLink></li>
+              <li className={styles.footerListItem}><PageLink href="/informacion-editorial" className={styles.footerLink}>Responsabilidad y fuentes del contenido</PageLink></li>
+              <li className={styles.footerListItem}><PageLink href="/servicios" className={styles.footerLink}>Todos los tratamientos</PageLink></li>
               {termsConditionsLinks.map(({ label, slug }, index) => (
                 <li key={index} className={styles.footerListItem}>
                   <a href={`/terminos/${slug}`} className={styles.footerLink}>

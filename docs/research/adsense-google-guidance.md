@@ -1,0 +1,33 @@
+# Google AdSense low-value-content guidance
+
+Research date: 2026-10-28. Scope: official Google policy/help and Search Central documentation. This establishes the assessment criteria; it does not identify Google's private review signals or prove which page caused this rejection. Community answers and numeric approval recipes are excluded.
+
+## Explicit policy requirements
+
+- **Inventory value:** Google-served ads cannot appear on empty, low-value, unfinished, or primarily behavioral/navigation screens; copied/embedded material needs added value. Ads and paid promotion cannot outweigh publisher content. Google also forbids misleading publisher/creator representations, harmful health claims, health-information-based personalized targeting, and passing personally identifiable information to Google. A privacy notice must explain actual Google-related data use. These are obligations, not suggestions. [Google Publisher Policies](https://support.google.com/adsense/answer/10502938?hl=en)
+- **Search spam compliance:** Publisher Policies explicitly incorporate Search spam policies for ad-bearing screens. Scaled content abuse means generating many low-value pages primarily to manipulate rankings, regardless of production method. Rewriting, translating, stitching sources, or adding citations alone does not establish original value. Similar city-targeted funnel pages can also constitute doorway abuse. This is not a categorical prohibition on AI assistance. [Search spam policies](https://developers.google.com/search/docs/essentials/spam-policies)
+- **European personalized advertising:** Google's current publisher guidance requires a Google-certified, TCF-integrated CMP to serve personalized ads in the EEA, UK, and Switzerland. The current English page distinguishes personalized-ad eligibility from non-personalized/limited ads; certification is not a guarantee of legal compliance. Consent Mode defaults or a custom cookie banner do not establish Google CMP certification. [Google CMP requirements](https://support.google.com/adsense/answer/13554116?hl=en)
+
+## Google readiness and quality guidance
+
+- **AdSense readiness:** Original, relevant content and clear, working navigation matter. Visitors should understand the site and find what they need; specialist knowledge and original contributions distinguish a page from externally sourced material. Comments are an optional improvement suggestion, not an approval requirement. [Make sure your site's pages are ready](https://support.google.com/adsense/answer/7299563?hl=en)
+- **Disapproval remediation:** Google may review every page, not just the submitted URL. Its guidance calls for complete, launched pages containing meaningful text and original value, and warns against ad code on automatically generated or near-empty pages. Broken navigation, access restrictions, and unfinished pages are listed problems. Make corrections before confirming resolution in AdSense. [Your AdSense account wasn't approved](https://support.google.com/adsense/answer/81904?hl=en)
+- **People-first content:** Search guidance recommends original effort, accurate information, clear sources, truthful authorship, relevant expertise, and satisfying the intended reader. Health topics receive stronger trust scrutiny. Fabricated names, credentials, or author headshots undermine trust. Functional tools can count as main content. Google has no preferred word count; artificial date changes do not create freshness. These are Search quality guidance, not a measurable AdSense approval checklist. [Creating helpful, reliable, people-first content](https://developers.google.com/search/docs/fundamentals/creating-helpful-content)
+- **Ad UX:** Keep content accessible and distinguish ads from navigation and other actions. Do not put ads where users could confuse them with downloads or menu links. Responsive units and a clean layout are recommended. [Ad placement best practices](https://support.google.com/adsense/answer/1282097?hl=en)
+
+## Practical implications for this dental clinic
+
+The following are implementation judgments based on the guidance, not additional Google rules:
+
+1. Review the public site as a patient journey: clinic identity, services, professional team, appointment contact, useful patient information, and working cross-links. A handful of generic service descriptions plus promotional claims is unlikely to establish distinctive patient value by itself.
+2. Provide useful, specific patient guidance: what a consultation involves, questions patients can ask, how treatment decisions are made, limitations and alternatives, and how to contact the actual clinic. Clinicians must validate medical statements and any emergency/aftercare advice before publication.
+3. Publish only truthful, verified professional identity and review details. Provide fields for clinician name, credentials, review date, and sources, but do not fill them with invented authority. A general disclaimer is not a substitute for accurate medical content.
+4. Remove empty placeholder destinations and keep ads off form-only, confirmation, error, legal, or other thin utility screens as a conservative inventory policy. Rich service/editorial pages still require individual assessment; route names and word counts cannot determine quality alone.
+5. Use meaningful updates and a real editorial process. Expanding templated copy across treatments or city names would risk amplifying the problem. Add original clinic evidence only when verified: actual staff/process details, owned images, and useful answers to real patient questions.
+6. Configure consent and advertising according to the real implementation. Keep clinical contact data out of advertising/analytics payloads and do not construct health-based audiences.
+
+## What code cannot establish
+
+Code can improve navigation, content structure, ad eligibility, disclosure support, and testability. It cannot verify the clinic's qualifications, create genuine clinical review, manufacture original clinical experience or user interest, establish a web track record, or determine Google's final decision. Those require the clinic's real input and ongoing operations. Traffic measurements and Search Console can supply evidence about use and discovery; they do not substitute for content quality.
+
+The reviewed official pages provide no universal numeric minimum for visits, articles, words, or waiting days that guarantees acceptance. Do not turn informal forum suggestions into requirements. Follow any review restriction/date shown in the actual AdSense account, and request review only after the production site reflects the improvements. Approval remains Google's decision.

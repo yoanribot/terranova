@@ -1,12 +1,13 @@
 "use client";
 
-import Link from "next/link";
+import Link from "@/components/PageLink";
 import { useState, useEffect } from "react";
 import styles from "./Header.module.css";
 import clsx from "clsx";
 
 const navigationLinks = [
-  { id: "services", href: "/#services", label: "Tratamientos" },
+  { id: "services", href: "/servicios", label: "Tratamientos" },
+  { id: "patients", href: "/pacientes", label: "Antes de tu visita" },
   // { id: "team", href: "/#team", label: "Nuestro Equipo" },
   { id: "map", href: "/#map", label: "Nuestra Ubicación" },
   { id: "contact", href: "/#contact", label: "Contacto" },
@@ -35,7 +36,7 @@ const Header = ({ title }: { title?: string }) => {
             className={clsx(styles.logo, { [styles.logoScrolled]: isScrolled })}
           >
             <img src="/logo.svg" className="h-8" alt="Logo" />
-            <h1 className={styles.logoText}>{title || "Terranova"}</h1>
+            <span className={styles.logoText}>{title || "Terranova"}</span>
           </Link>
 
           {/* Desktop Navigation */}
@@ -51,7 +52,9 @@ const Header = ({ title }: { title?: string }) => {
           <button
             onClick={() => setIsOpen(!isOpen)}
             className={styles.menuButton}
-            aria-label="Toggle menu"
+            aria-label={isOpen ? "Cerrar menú" : "Abrir menú"}
+            aria-expanded={isOpen}
+            aria-controls="mobile-navigation"
           >
             <span
               className={`${styles.menuLine} ${
@@ -77,9 +80,9 @@ const Header = ({ title }: { title?: string }) => {
             isOpen ? styles.mobileNavOpen : ""
           }`}
         >
-          <nav className={styles.mobileNav}>
+          <nav id="mobile-navigation" className={styles.mobileNav} inert={!isOpen}>
             {navigationLinks.map((link) => (
-              <Link key={link.id} href={link.href} className={styles.navLink}>
+              <Link key={link.id} href={link.href} className={styles.navLink} onClick={() => setIsOpen(false)}>
                 {link.label}
               </Link>
             ))}

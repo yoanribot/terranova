@@ -2,10 +2,22 @@ import { getHomepage, getServiceBySlug, getServices } from "@/lib/content";
 import { RichTextDocument } from "@/types/RichText";
 import { LocationSection } from "@/types/data";
 import DynamicPage from "@/components/DynamicPage/DynamicPage";
+import { notFound } from "next/navigation";
+import { generatePageMetadata } from "@/app/generateSEOMetadata";
+import ServiceGuide from "@/components/ServiceGuide/ServiceGuide";
+import { getServiceGuide } from "@/lib/service-guides";
 
 type DynamicPageProps = {
   params: Promise<{ slug: string }>;
 };
+
+export async function generateMetadata({ params }: DynamicPageProps) {
+  const { slug } = await params;
+  const page = getServiceBySlug(slug);
+  if (!page) notFound();
+  const guide = getServiceGuide(slug);
+  return generatePageMetadata(page.title, guide?.description || "Consulta las aseguradoras anunciadas por Terranova y prepara las preguntas sobre cobertura, autorizaciones y presupuesto antes de tu cita.", `/servicios/${slug}`);
+}
 
 export default async function Page({ params }: DynamicPageProps) {
   const { slug } = await params;
@@ -16,7 +28,7 @@ export default async function Page({ params }: DynamicPageProps) {
     locationData || {};
 
   if (!data) {
-    return <div>No se encontraron datos para el servicio solicitado.</div>;
+    notFound();
   }
 
   const { title, content, backgroundImage, images } = data;
@@ -32,7 +44,10 @@ export default async function Page({ params }: DynamicPageProps) {
       phoneMain={phoneMain}
       phoneSecondary={phoneSecondary}
       schedules={schedules}
-    />
+      parent={{ href: "/servicios", label: "Tratamientos" }}
+    >
+      <ServiceGuide slug={slug} />
+    </DynamicPage>
   );
 }
 

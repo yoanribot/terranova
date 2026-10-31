@@ -10,6 +10,7 @@ import { getHomepage } from "@/lib/content";
 import MapWrapper from "@/components/Map/MapWrapper";
 import AboutUs from "@/components/AboutUs/AboutUs";
 import { ContactForm } from "@/components/ContactForm/ContactForm";
+import Link from "@/components/PageLink";
 
 export default function Home() {
   const data = getHomepage();
@@ -38,6 +39,11 @@ export default function Home() {
         title={servicesData?.title}
         services={servicesData?.services}
       />
+
+      <section className="patient-home-promo">
+        <div><p className="patient-eyebrow">Antes de tu visita</p><h2>Ven con tus preguntas.<br />Decide con información.</h2></div>
+        <div><p>Prepara una primera consulta, revisa qué preguntar sobre un presupuesto o comprueba tu seguro dental. Crea una lista de pasos y llévala contigo, en papel o en tu móvil.</p><Link href="/pacientes">Preparar mi visita <span aria-hidden="true">→</span></Link></div>
+      </section>
 
       {/* <OurTeam title={teamData?.title} members={teamData?.members} /> */}
 

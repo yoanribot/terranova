@@ -2,10 +2,19 @@ import { getHomepage, getLegalPageBySlug, getLegalPages } from "@/lib/content";
 import { RichTextDocument } from "@/types/RichText";
 import { LocationSection } from "@/types/data";
 import DynamicPage from "@/components/DynamicPage/DynamicPage";
+import { notFound } from "next/navigation";
+import { generatePageMetadata } from "@/app/generateSEOMetadata";
 
 type DynamicPageProps = {
   params: Promise<{ slug: string }>;
 };
+
+export async function generateMetadata({ params }: DynamicPageProps) {
+  const { slug } = await params;
+  const page = getLegalPageBySlug(slug);
+  if (!page) notFound();
+  return generatePageMetadata(page.title, `${page.title} de Terranova Clínica Dental: información del titular y condiciones aplicables al uso de este sitio.`, `/terminos/${slug}`);
+}
 
 export default async function Page({ params }: DynamicPageProps) {
   const { slug } = await params;
@@ -16,7 +25,7 @@ export default async function Page({ params }: DynamicPageProps) {
     locationData || {};
 
   if (!data) {
-    return <div>No se encontraron datos para el servicio solicitado.</div>;
+    notFound();
   }
 
   const { title, content, backgroundImage, images } = data;

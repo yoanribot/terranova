@@ -1,5 +1,3 @@
-"use client";
-
 import React from "react";
 import type { BlockNode, InlineNode, RichTextDocument } from "@/types/RichText";
 
@@ -30,7 +28,7 @@ function BlockRenderer({ node }: { node: BlockNode }) {
         </p>
       );
     case "heading": {
-      const Tag = `h${node.level}` as keyof React.JSX.IntrinsicElements;
+      const Tag = `h${Math.max(2, node.level)}` as keyof React.JSX.IntrinsicElements;
       const headingClasses = [
         "text-3xl font-bold mt-8 mb-4 text-black",
         "text-2xl font-semibold mt-6 mb-3 text-black",

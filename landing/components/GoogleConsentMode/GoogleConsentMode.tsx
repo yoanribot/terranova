@@ -7,7 +7,9 @@ import Script from "next/script";
  */
 export default function GoogleConsentMode() {
   return (
-    <Script id="google-consent-mode" strategy="afterInteractive">
+    // This component is rendered only by app/layout.tsx (the App Router root layout).
+    // eslint-disable-next-line @next/next/no-before-interactive-script-outside-document
+    <Script id="google-consent-mode" strategy="beforeInteractive">
       {`window.dataLayer = window.dataLayer || [];
 function gtag(){dataLayer.push(arguments);}
 gtag('consent', 'default', {

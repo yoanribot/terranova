@@ -7,6 +7,8 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint",
+    "test:site": "node scripts/verify-site.mjs",
+    "test:ads": "node --test scripts/ad-eligibility.test.mjs",
     "optimize:media": "node scripts/optimize-media.cjs"
   },
   "dependencies": {

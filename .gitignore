@@ -1,2 +1,4 @@
 .env
 node_modules
+# Local audit captures, browser evidence, previews and generated QA output.
+artifacts

@@ -1,0 +1,883 @@
+{
+  "implantologia-dental": {
+    "description": "Implantes dentales en Terranova, Madrid: qué valorar antes de la cirugía, riesgos, alternativas y preguntas para un presupuesto completo.",
+    "sections": [
+      {
+        "title": "Antes de decidir: implante, puente o prótesis removible",
+        "text": "Un implante requiere cirugía y no es adecuado para todas las personas. Pide que te expliquen las alternativas para el espacio que falta, cómo afecta cada opción a los dientes vecinos y qué mantenimiento necesita. La salud general, el tabaco y la cicatrización influyen en la planificación."
+      },
+      {
+        "title": "Riesgos y tiempos que conviene conocer",
+        "text": "Pueden producirse infecciones, lesiones de estructuras próximas o pérdida del implante. La integración puede requerir meses; una prótesis provisional no equivale al resultado definitivo. No existe una duración garantizada para todos los pacientes."
+      }
+    ],
+    "questions": [
+      "¿Qué pruebas justifican la indicación y necesito regeneración ósea?",
+      "¿El presupuesto distingue cirugía, implante, pilar, provisional y corona definitiva?",
+      "¿Qué marca y modelo se utilizarán, y cómo conservaré esos datos?",
+      "¿Qué revisiones y mantenimiento necesitaré, y qué coste tienen?"
+    ],
+    "sources": [
+      {
+        "label": "FDA: implantes dentales, recomendaciones y riesgos (en inglés)",
+        "url": "https://www.fda.gov/medical-devices/dental-devices/dental-implants-what-you-should-know"
+      }
+    ],
+    "related": [
+      "protesis",
+      "periodoncia"
+    ],
+    "intro": "Recuperar un diente requiere pensar en la masticación, la estética y los cuidados futuros. Conoce qué partes tiene un implante y qué conviene valorar antes de decidir.",
+    "highlights": [
+      {
+        "title": "Una raíz artificial",
+        "text": "El implante se coloca en el hueso y sostiene una corona o una prótesis."
+      },
+      {
+        "title": "Plan a medida",
+        "text": "La salud de las encías, el hueso y tu estado general influyen en la elección."
+      },
+      {
+        "title": "Cuidados continuos",
+        "text": "La limpieza y las revisiones siguen siendo necesarias después del tratamiento."
+      }
+    ],
+    "steps": [
+      {
+        "title": "Valoración inicial",
+        "text": "Comenta tus antecedentes y las opciones para el espacio que falta. El profesional indicará las pruebas necesarias."
+      },
+      {
+        "title": "Plan y presupuesto",
+        "text": "Aclara si necesitas actuaciones previas y qué incluyen el implante, la prótesis provisional y la definitiva."
+      },
+      {
+        "title": "Cirugía y cicatrización",
+        "text": "La colocación y el tiempo de espera se adaptan al caso. La integración en el hueso puede requerir meses."
+      },
+      {
+        "title": "Prótesis y mantenimiento",
+        "text": "Se comprueba la adaptación de la prótesis y se acuerdan la higiene y las revisiones."
+      }
+    ],
+    "faq": [
+      {
+        "question": "¿Un implante es lo mismo que una corona?",
+        "answer": "No. El implante hace de raíz; la corona es la parte visible con forma de diente. Entre ambos suele haber una pieza de unión llamada pilar."
+      },
+      {
+        "question": "¿Puedo tener un diente fijo el mismo día?",
+        "answer": "Solo en determinados casos. Una prótesis provisional inmediata depende de las condiciones del hueso y de la estabilidad conseguida; no equivale a la prótesis definitiva."
+      },
+      {
+        "question": "¿Cuánto dura un implante?",
+        "answer": "No tiene una duración garantizada. La salud general, el tabaco, la higiene y el mantenimiento pueden influir en su evolución."
+      }
+    ]
+  },
+  "endodoncia": {
+    "description": "Endodoncia en Terranova: conservación del diente, reconstrucción posterior, molestias y preguntas antes de aceptar el tratamiento.",
+    "sections": [
+      {
+        "title": "Conservar el diente requiere valorar su estado completo",
+        "text": "La endodoncia trata el interior del diente, pero la posibilidad de conservarlo también depende de cuánto tejido queda y de su soporte. Si no puede restaurarse, habrá que valorar otras opciones. Pide que el diagnóstico y el pronóstico se expliquen para tu diente concreto."
+      },
+      {
+        "title": "El sellado del conducto y la reconstrucción son pasos distintos",
+        "text": "Puede ser necesaria una restauración definitiva o una corona después de tratar los conductos. Pregunta si están incluidas en el plan. Se utiliza anestesia local, pero puede haber molestias posteriores: solicita instrucciones de seguimiento y un contacto si la evolución no es la esperada."
+      }
+    ],
+    "questions": [
+      "¿Puede restaurarse este diente y cuál es su pronóstico?",
+      "¿Cuántas citas prevé mi caso y qué será provisional?",
+      "¿El precio incluye la reconstrucción o la corona si fuera necesaria?",
+      "¿Cuándo se comprobará la evolución y a quién llamo si empeoro?"
+    ],
+    "sources": [
+      {
+        "label": "NHS: tratamiento de conductos y recuperación (en inglés)",
+        "url": "https://www.nhs.uk/tests-and-treatments/root-canal-treatment/"
+      }
+    ],
+    "related": [
+      "protesis",
+      "implantologia-dental"
+    ],
+    "intro": "La endodoncia trata el interior de un diente cuando la pulpa está dañada o infectada. El objetivo es conservarlo siempre que pueda repararse y funcionar adecuadamente.",
+    "highlights": [
+      {
+        "title": "Tratar el interior",
+        "text": "Se limpian y sellan los conductos de la raíz."
+      },
+      {
+        "title": "Conservar con criterio",
+        "text": "El pronóstico depende también de la estructura y del soporte del diente."
+      },
+      {
+        "title": "Terminar la reparación",
+        "text": "Puede hacer falta una reconstrucción o una corona después."
+      }
+    ],
+    "steps": [
+      {
+        "title": "Explorar el diente",
+        "text": "Se valoran tus síntomas, el estado del diente y las pruebas que estén indicadas."
+      },
+      {
+        "title": "Limpiar y sellar",
+        "text": "El tratamiento de los conductos puede requerir varias citas y un cierre provisional entre ellas."
+      },
+      {
+        "title": "Reconstruir y revisar",
+        "text": "Se planifica la restauración definitiva y el seguimiento de la evolución."
+      }
+    ],
+    "faq": [
+      {
+        "question": "¿Siempre duele un diente que necesita endodoncia?",
+        "answer": "No siempre. Los síntomas y las pruebas deben valorarse juntos; no puedes saber qué tratamiento necesitas solo por la intensidad del dolor."
+      },
+      {
+        "question": "¿Se utiliza anestesia?",
+        "answer": "Habitualmente se emplea anestesia local. Puedes notar molestias después; pide instrucciones para tu caso y consulta si empeoran o no evolucionan como te indicaron."
+      },
+      {
+        "question": "¿La endodoncia incluye la corona?",
+        "answer": "No necesariamente. El tratamiento de los conductos y la reparación de la parte visible son actuaciones distintas: confirma qué incluye el presupuesto."
+      }
+    ]
+  },
+  "periodoncia": {
+    "description": "Salud de las encías en Terranova: diferencias entre limpieza y tratamiento periodontal, evaluación y mantenimiento a largo plazo.",
+    "sections": [
+      {
+        "title": "Una limpieza y un tratamiento periodontal no son equivalentes",
+        "text": "La evaluación de las encías puede incluir medición de bolsas, movilidad dental y radiografías si están indicadas. Estos datos permiten distinguir inflamación superficial de una afectación del soporte del diente y decidir qué tratamiento necesita cada zona."
+      },
+      {
+        "title": "El mantenimiento forma parte del tratamiento",
+        "text": "El objetivo es controlar la enfermedad, con cuidados diarios y seguimiento profesional. El tabaco y enfermedades como la diabetes pueden influir en la respuesta. La frecuencia de revisión debe ajustarse al riesgo individual; no se puede prometer recuperar todo el soporte perdido."
+      }
+    ],
+    "questions": [
+      "¿Cuál es mi diagnóstico y qué zonas están afectadas?",
+      "¿Necesito limpieza superficial, tratamiento bajo la encía u otra intervención?",
+      "¿Cómo mediremos la respuesta al tratamiento?",
+      "¿Qué mantenimiento se recomienda y se presupuesta por separado?"
+    ],
+    "sources": [
+      {
+        "label": "NIDCR: enfermedad de las encías, diagnóstico y tratamiento",
+        "url": "https://www.nidcr.nih.gov/espanol/temas-de-salud/la-enfermedad-de-las-encias"
+      }
+    ],
+    "related": [
+      "implantologia-dental",
+      "protesis"
+    ],
+    "intro": "Las encías y el hueso ayudan a sostener los dientes. La periodoncia permite valorar ese soporte y tratar los problemas que lo afectan.",
+    "highlights": [
+      {
+        "title": "Reconocer señales",
+        "text": "Sangrado, inflamación o movilidad merecen una valoración."
+      },
+      {
+        "title": "Medir antes de tratar",
+        "text": "La exploración ayuda a distinguir inflamación y pérdida de soporte."
+      },
+      {
+        "title": "Mantener el control",
+        "text": "La higiene diaria y el seguimiento forman parte del tratamiento."
+      }
+    ],
+    "steps": [
+      {
+        "title": "Revisar las encías",
+        "text": "Se exploran el sangrado, las bolsas alrededor del diente y otros signos que orientan el diagnóstico."
+      },
+      {
+        "title": "Tratar las zonas afectadas",
+        "text": "La limpieza y las intervenciones indicadas dependen del alcance del problema."
+      },
+      {
+        "title": "Comprobar la respuesta",
+        "text": "Se revisa la evolución y se adapta la pauta de cuidados y mantenimiento."
+      }
+    ],
+    "faq": [
+      {
+        "question": "¿El sangrado al cepillar es normal?",
+        "answer": "Es un motivo para consultar. Puede relacionarse con inflamación y debe valorarse; no conviene dejar de limpiar la zona sin pedir indicaciones."
+      },
+      {
+        "question": "¿Una limpieza habitual trata cualquier problema de encías?",
+        "answer": "No. Puede ser necesario limpiar por debajo de la encía u otra intervención. El diagnóstico determina qué necesita cada zona."
+      },
+      {
+        "question": "¿Si ya no sangra, puedo dejar las revisiones?",
+        "answer": "La mejora de un síntoma no sustituye la valoración del soporte del diente. Acuerda con el profesional cuándo revisar y cómo comprobar que el problema está controlado."
+      }
+    ]
+  },
+  "carillas-dentales": {
+    "description": "Carillas dentales en Terranova: preparación del diente, alternativas y cuestiones sobre reparación y mantenimiento antes de decidir.",
+    "sections": [
+      {
+        "title": "Pregunta cuánto diente habría que preparar",
+        "text": "Algunas carillas requieren retirar una parte de la superficie dental. Antes de aceptar, pide que te indiquen si la preparación será irreversible y si existe una opción más conservadora para tu objetivo. No todas las personas son candidatas a carillas sin tallado."
+      },
+      {
+        "title": "Compara el plan completo, no solo el aspecto inicial",
+        "text": "Consulta qué material se propone, qué dientes se tratarían y cómo se resolvería una reparación o sustitución. Si tu objetivo es cambiar el color o la posición, pregunta si el blanqueamiento o la ortodoncia serían alternativas a estudiar, sin asumir que son intercambiables."
+      }
+    ],
+    "questions": [
+      "¿Qué parte del cambio requiere tallado y qué parte puede conseguirse de otra forma?",
+      "¿Qué limitaciones tendrá la simulación estética respecto al resultado real?",
+      "¿Cómo se presupuestan las reparaciones y futuras sustituciones?"
+    ],
+    "sources": [
+      {
+        "label": "NHS: carillas y otras opciones de tratamiento dental (en inglés)",
+        "url": "https://www.nhs.uk/live-well/healthy-teeth-and-gums/dental-treatments/"
+      }
+    ],
+    "related": [
+      "blanqueamiento",
+      "ortodoncia-invisible"
+    ],
+    "intro": "Las carillas modifican la superficie visible de algunos dientes para cambiar su aspecto. Antes de elegirlas, conviene entender cuánto diente se prepara y qué mantenimiento necesitarán.",
+    "highlights": [
+      {
+        "title": "Un cambio concreto",
+        "text": "Pueden modificar la forma, el color o pequeñas irregularidades."
+      },
+      {
+        "title": "Distintos materiales",
+        "text": "El composite y la cerámica tienen cuidados y posibilidades de reparación diferentes."
+      },
+      {
+        "title": "Decidir con perspectiva",
+        "text": "Hay que valorar alternativas y posibles sustituciones futuras."
+      }
+    ],
+    "steps": [
+      {
+        "title": "Definir el objetivo",
+        "text": "Explica qué te gustaría cambiar y qué aspectos deseas conservar de tu sonrisa."
+      },
+      {
+        "title": "Comparar opciones",
+        "text": "Se valora si convienen carillas, otra intervención o no tratar. Pregunta si habría que retirar esmalte."
+      },
+      {
+        "title": "Planificar y colocar",
+        "text": "El procedimiento depende del material y de la preparación necesaria. Revisa el alcance de las pruebas estéticas."
+      },
+      {
+        "title": "Cuidar y revisar",
+        "text": "Aprende cómo limpiar las carillas y qué hacer ante una fractura o un desprendimiento."
+      }
+    ],
+    "faq": [
+      {
+        "question": "¿Todas las carillas se colocan sin tallar?",
+        "answer": "No. Algunas requieren preparar la superficie dental. La posibilidad de no tallar depende de la posición del diente y del cambio que se busca."
+      },
+      {
+        "question": "¿Es mejor el composite o la cerámica?",
+        "answer": "No hay una opción mejor para todas las bocas. Compara la preparación necesaria, la reparación, el mantenimiento y el coste del plan completo."
+      },
+      {
+        "question": "¿Una simulación muestra exactamente el resultado final?",
+        "answer": "Sirve para conversar sobre el objetivo, pero tiene límites. Pide que te expliquen qué aspectos pueden variar y cómo se toman las decisiones antes de la colocación definitiva."
+      }
+    ]
+  },
+  "blanqueamiento": {
+    "description": "Blanqueamiento dental en Terranova: qué dientes puede aclarar, sensibilidad y límites cuando existen coronas o restauraciones.",
+    "sections": [
+      {
+        "title": "Las restauraciones no cambian de color como el diente natural",
+        "text": "El blanqueamiento aclara los dientes naturales; no aclara coronas, implantes ni prótesis. Si hay restauraciones visibles, pregunta cómo podría quedar la diferencia de tono antes de empezar. Primero debe valorarse la salud de dientes y encías."
+      },
+      {
+        "title": "Sensibilidad y resultados variables",
+        "text": "Puede aparecer sensibilidad dental o irritación de las encías. Pide indicaciones sobre qué hacer si ocurre, en lugar de modificar por tu cuenta el tiempo o la cantidad de producto. El resultado no es permanente ni puede prometerse un tono idéntico para todas las personas."
+      }
+    ],
+    "questions": [
+      "¿Qué manchas pueden responder y cuáles tienen otra causa?",
+      "¿Cómo se coordina el color con mis empastes o coronas?",
+      "¿Qué seguimiento incluye el tratamiento si aparece sensibilidad?"
+    ],
+    "sources": [
+      {
+        "label": "NHS: blanqueamiento, limitaciones y efectos secundarios (en inglés)",
+        "url": "https://www.nhs.uk/tests-and-treatments/teeth-whitening/"
+      }
+    ],
+    "related": [
+      "carillas-dentales"
+    ],
+    "intro": "El blanqueamiento puede aclarar el color de los dientes naturales. Una revisión previa ayuda a saber si es adecuado para tu boca y qué cambios son realistas.",
+    "highlights": [
+      {
+        "title": "Dientes naturales",
+        "text": "Las coronas y las prótesis no se aclaran como el esmalte."
+      },
+      {
+        "title": "Sensibilidad posible",
+        "text": "Pueden aparecer molestias o irritación durante el tratamiento."
+      },
+      {
+        "title": "Resultado variable",
+        "text": "El tono final y su duración dependen de cada caso."
+      }
+    ],
+    "steps": [
+      {
+        "title": "Revisar la boca",
+        "text": "Se comprueban dientes, encías y restauraciones, y se comenta el origen de las manchas."
+      },
+      {
+        "title": "Elegir la pauta",
+        "text": "El profesional explica el método, la protección de las encías y las instrucciones de uso."
+      },
+      {
+        "title": "Valorar el resultado",
+        "text": "Se revisan el tono, las posibles molestias y los cuidados posteriores."
+      }
+    ],
+    "faq": [
+      {
+        "question": "¿Blanquea empastes, coronas o carillas?",
+        "answer": "No se aclaran de la misma forma que los dientes naturales. Si se ven al sonreír, conviene planificar la posible diferencia de color antes de comenzar."
+      },
+      {
+        "question": "¿Puede causar sensibilidad?",
+        "answer": "Sí. También puede irritar las encías. Si aparece una molestia que te preocupa, consulta y evita cambiar por tu cuenta el tiempo de uso o la cantidad de producto."
+      },
+      {
+        "question": "¿El resultado es permanente?",
+        "answer": "No. El color puede volver a cambiar con el tiempo. Los hábitos y la respuesta de cada diente influyen; no puede prometerse un tono o una duración idénticos para todas las personas."
+      }
+    ]
+  },
+  "estetica-facial": {
+    "description": "Información antes de un tratamiento de estética facial: profesional responsable, producto, riesgos y seguimiento que conviene confirmar.",
+    "sections": [
+      {
+        "title": "Una intervención estética también tiene riesgos",
+        "text": "Los rellenos inyectables pueden provocar dolor, hematomas o inflamación. Existen complicaciones poco frecuentes pero graves, como obstrucción vascular, daño de tejidos o alteraciones visuales. Un resultado natural o el uso de ácido hialurónico no significa ausencia de riesgos."
+      },
+      {
+        "title": "Comprueba profesional, producto e indicación",
+        "text": "Antes de reservar, confirma quién realizará el procedimiento, su capacitación, el producto concreto y si la indicación está autorizada en España. Pide información sobre alternativas, duración esperada, posibles complicaciones y seguimiento. La fuente estadounidense enlazada explica riesgos generales; no acredita la autorización local de un producto o profesional."
+      }
+    ],
+    "questions": [
+      "¿Quién realiza el procedimiento y cómo puedo comprobar su cualificación?",
+      "¿Qué producto se utilizará y recibiré sus datos de trazabilidad?",
+      "¿Cómo contactaré con el profesional ante una complicación?",
+      "¿Qué costes adicionales puede tener una revisión o corrección?"
+    ],
+    "sources": [
+      {
+        "label": "FDA: información y riesgos de los rellenos dérmicos",
+        "url": "https://www.fda.gov/medical-devices/aesthetic-cosmetic-devices/rellenos-dermicos-rellenos-de-tejidos-blandos"
+      }
+    ],
+    "related": [
+      "carillas-dentales"
+    ],
+    "intro": "Un tratamiento estético facial también es una decisión sanitaria. Conoce el objetivo, el producto y los riesgos antes de valorar una intervención con rellenos.",
+    "highlights": [
+      {
+        "title": "Objetivo compartido",
+        "text": "Explica qué cambio buscas y qué resultado no deseas."
+      },
+      {
+        "title": "Profesional y producto",
+        "text": "Confirma la cualificación y la trazabilidad del material."
+      },
+      {
+        "title": "Riesgos y seguimiento",
+        "text": "Pide instrucciones por escrito y un contacto para incidencias."
+      }
+    ],
+    "steps": [
+      {
+        "title": "Conversación y valoración",
+        "text": "Comenta tus expectativas, antecedentes y tratamientos previos, aunque se hayan realizado en otro centro."
+      },
+      {
+        "title": "Información y decisión",
+        "text": "Revisa el producto, la zona, las alternativas, los riesgos y el presupuesto. Puedes decidir no intervenir."
+      },
+      {
+        "title": "Procedimiento y seguimiento",
+        "text": "Si sigues adelante, solicita los datos del producto, las indicaciones posteriores y la revisión prevista."
+      }
+    ],
+    "faq": [
+      {
+        "question": "¿El ácido hialurónico es un tratamiento sin riesgos?",
+        "answer": "No. Puede causar dolor, inflamación o hematomas, y existen complicaciones poco frecuentes pero graves. Que el material sea reabsorbible no elimina esos riesgos."
+      },
+      {
+        "question": "¿Qué datos debería recibir sobre el producto?",
+        "answer": "Pregunta por el nombre comercial, el lote y su uso previsto. Confirma la indicación aplicable en España y conserva la documentación que te entregue el profesional."
+      },
+      {
+        "question": "¿Cuánto tiempo dura el efecto?",
+        "answer": "Varía según el material, la zona y la respuesta individual. Aclara la duración orientativa y qué implica repetir, corregir o retirar el tratamiento antes de decidir."
+      }
+    ]
+  },
+  "ortodoncia-invisible": {
+    "description": "Alineadores en Terranova: preguntas sobre indicación, compromiso de uso, revisiones, refinamientos y retención al terminar.",
+    "sections": [
+      {
+        "title": "La elección del aparato necesita un diagnóstico",
+        "text": "Los alineadores y los brackets no son soluciones automáticamente equivalentes. Pide que se explique por qué se propone una opción para tu mordida, qué movimientos se buscan y qué límites tiene el plan. Una simulación digital ayuda a explicar objetivos, pero no es una garantía del resultado."
+      },
+      {
+        "title": "Define qué incluye el seguimiento",
+        "text": "Antes de empezar, deja por escrito las revisiones previstas, cómo se gestionan los alineadores perdidos y si los ajustes del plan o refinamientos están incluidos. Pregunta también por los retenedores y las revisiones posteriores; terminar la fase de movimiento no significa terminar el mantenimiento."
+      }
+    ],
+    "questions": [
+      "¿Qué ventajas y límites tiene este sistema para mi caso frente a brackets?",
+      "¿Qué compromiso de uso y qué controles se esperan de mí?",
+      "¿Qué ocurre si hacen falta más alineadores de los previstos?",
+      "¿El presupuesto incluye retenedores, reposiciones y seguimiento posterior?"
+    ],
+    "sources": [
+      {
+        "label": "NHS: evaluación de ortodoncia y retención (en inglés)",
+        "url": "https://www.nhs.uk/tests-and-treatments/braces/"
+      },
+      {
+        "label": "FDA: alineadores dentales, seguimiento y limitaciones (en inglés)",
+        "url": "https://www.fda.gov/medical-devices/dental-devices/clear-dental-aligners"
+      }
+    ],
+    "related": [
+      "ortodoncia-fija",
+      "periodoncia"
+    ],
+    "intro": "Los alineadores transparentes mueven los dientes de forma progresiva y pueden retirarse. Su elección requiere un diagnóstico y un compromiso de uso y revisiones.",
+    "highlights": [
+      {
+        "title": "Aparato removible",
+        "text": "Se retira siguiendo las instrucciones para comer y limpiar."
+      },
+      {
+        "title": "Uso constante",
+        "text": "El tiempo diario indicado es parte del tratamiento."
+      },
+      {
+        "title": "Control profesional",
+        "text": "Las revisiones permiten comprobar cómo responde la boca."
+      }
+    ],
+    "steps": [
+      {
+        "title": "Estudiar la mordida",
+        "text": "Se valoran dientes, encías, antecedentes y las pruebas necesarias para definir los objetivos."
+      },
+      {
+        "title": "Planificar los movimientos",
+        "text": "Se explica la propuesta, sus límites y la comparación con otras opciones de ortodoncia."
+      },
+      {
+        "title": "Usar y revisar",
+        "text": "Se sigue la secuencia indicada y se comprueba el progreso en las citas acordadas."
+      },
+      {
+        "title": "Mantener la posición",
+        "text": "Al terminar, se define la retención y el seguimiento para cuidar el resultado."
+      }
+    ],
+    "faq": [
+      {
+        "question": "¿Los alineadores sirven para cualquier mordida?",
+        "answer": "No. Algunos movimientos o problemas complejos pueden necesitar brackets u otras actuaciones. El diagnóstico determina las posibilidades."
+      },
+      {
+        "question": "¿Puedo usarlos solo por la noche?",
+        "answer": "Debes seguir la pauta del profesional. Un uso menor del indicado puede impedir que los dientes avancen como se había planificado."
+      },
+      {
+        "question": "¿Qué pasa si necesito más alineadores?",
+        "answer": "Puede ser necesario revisar el plan. Antes de empezar, pregunta cómo se gestionan los refinamientos, las reposiciones y los posibles costes adicionales."
+      }
+    ]
+  },
+  "ortodoncia-fija": {
+    "description": "Brackets en Terranova: higiene durante el tratamiento, incidencias, revisiones y retención que debes conocer antes de empezar.",
+    "sections": [
+      {
+        "title": "La higiene necesita adaptarse al aparato",
+        "text": "Los brackets requieren limpiar alrededor de los elementos del aparato y mantener las revisiones dentales. Los alimentos muy duros o pegajosos pueden romperlo. Solicita una demostración de higiene y un contacto para incidencias, en lugar de intentar reparar el aparato en casa."
+      },
+      {
+        "title": "Ten en cuenta la fase posterior a los brackets",
+        "text": "Tras retirar el aparato se utilizan retenedores para ayudar a mantener la posición de los dientes. La pauta la determina el profesional. Pregunta qué revisiones, reparaciones del aparato y reposiciones de retenedores se incluyen en el presupuesto."
+      }
+    ],
+    "questions": [
+      "¿Qué objetivos se han definido para mi mordida?",
+      "¿Qué hago si se despega un bracket o un arco causa molestias?",
+      "¿Qué cambios en la higiene y alimentación necesito aprender?",
+      "¿Qué incluye la fase de retención?"
+    ],
+    "sources": [
+      {
+        "label": "NHS: cuidados con brackets y retenedores (en inglés)",
+        "url": "https://www.nhs.uk/tests-and-treatments/braces/"
+      }
+    ],
+    "related": [
+      "ortodoncia-invisible",
+      "odontopediatria"
+    ],
+    "intro": "Los brackets se fijan a los dientes y permiten aplicar movimientos planificados. El tratamiento combina controles profesionales, cuidados diarios y una fase de retención.",
+    "highlights": [
+      {
+        "title": "Movimiento planificado",
+        "text": "El aparato se ajusta según los objetivos de cada mordida."
+      },
+      {
+        "title": "Higiene adaptada",
+        "text": "Hay que limpiar alrededor de brackets, arcos y espacios entre dientes."
+      },
+      {
+        "title": "Retención final",
+        "text": "Tras retirarlo, se acuerda cómo mantener la posición dental."
+      }
+    ],
+    "steps": [
+      {
+        "title": "Estudio y objetivos",
+        "text": "Se valora la salud de la boca y se explica qué cambios se proponen y por qué."
+      },
+      {
+        "title": "Colocación y aprendizaje",
+        "text": "Además de colocar el aparato, es importante aprender a limpiarlo y cuidarlo."
+      },
+      {
+        "title": "Ajustes y seguimiento",
+        "text": "Las revisiones permiten comprobar el movimiento y resolver incidencias."
+      },
+      {
+        "title": "Retirada y retención",
+        "text": "Se indican los retenedores y las revisiones posteriores que necesita tu caso."
+      }
+    ],
+    "faq": [
+      {
+        "question": "¿Solo se pueden llevar brackets en la adolescencia?",
+        "answer": "No. También pueden plantearse en adultos. La salud de dientes y encías y el diagnóstico son más importantes que una edad aislada."
+      },
+      {
+        "question": "¿Es normal notar molestias después de un ajuste?",
+        "answer": "Puede haber sensibilidad o roce. Pide indicaciones individualizadas y consulta si el dolor persiste o hay una pieza que lesiona la boca."
+      },
+      {
+        "question": "¿Qué hago si se despega un bracket?",
+        "answer": "Contacta con tu profesional para saber cómo actuar y cuándo revisar. No intentes pegarlo, cortar piezas o reparar el aparato por tu cuenta."
+      }
+    ]
+  },
+  "odontopediatria": {
+    "description": "Visitas dentales infantiles en Terranova: preparación familiar y preguntas sobre prevención, higiene y revisiones del menor.",
+    "sections": [
+      {
+        "title": "Una primera visita también sirve para aprender",
+        "text": "La primera visita puede ayudar al niño a familiarizarse con la consulta y a la familia a resolver dudas de prevención. El NHS aconseja acudir al aparecer los primeros dientes o antes de los doce meses. La frecuencia posterior debe acordarse con el dentista."
+      },
+      {
+        "title": "Pide una demostración adaptada a su edad",
+        "text": "Pregunta cómo ayudar en el cepillado, qué dentífrico utilizar y qué cantidad corresponde a la edad. Una explicación práctica con el niño y su acompañante permite comprobar que la técnica se ha entendido. Trae las dudas de la familia para comentarlas en consulta."
+      }
+    ],
+    "questions": [
+      "¿Qué debe practicar en casa y qué ayuda necesita del adulto?",
+      "¿Qué medidas preventivas están indicadas para su riesgo de caries?",
+      "¿Cuándo conviene volver y qué cambios debemos comentar antes?"
+    ],
+    "sources": [
+      {
+        "label": "NHS: cuidado de los dientes infantiles y primeras visitas (en inglés)",
+        "url": "https://www.nhs.uk/live-well/healthy-teeth-and-gums/taking-care-of-childrens-teeth/"
+      }
+    ],
+    "related": [
+      "ortodoncia-fija"
+    ],
+    "intro": "Las visitas infantiles ayudan a cuidar los dientes y a aprender hábitos en familia. La atención se adapta a la edad, a las necesidades del menor y a su forma de vivir la consulta.",
+    "highlights": [
+      {
+        "title": "Empezar pronto",
+        "text": "Los primeros dientes también necesitan cuidados y valoración."
+      },
+      {
+        "title": "Aprender en familia",
+        "text": "La rutina se construye con ayuda de la persona adulta."
+      },
+      {
+        "title": "Prevenir con criterio",
+        "text": "Las revisiones y las medidas preventivas se adaptan al riesgo."
+      }
+    ],
+    "steps": [
+      {
+        "title": "Preparar la visita",
+        "text": "Comenta la edad, las dudas de la familia y si ha habido alguna experiencia dental difícil."
+      },
+      {
+        "title": "Conocer y explorar",
+        "text": "El menor se familiariza con la consulta y se revisa la boca de forma adaptada."
+      },
+      {
+        "title": "Acordar una rutina",
+        "text": "Se explican los cuidados en casa y la siguiente revisión según sus necesidades."
+      }
+    ],
+    "faq": [
+      {
+        "question": "¿Cuándo conviene hacer la primera visita?",
+        "answer": "Puede hacerse al aparecer los primeros dientes y durante el primer año. Ayuda a resolver dudas de cuidado y a familiarizar al menor con la consulta."
+      },
+      {
+        "question": "¿Importan las caries en los dientes de leche?",
+        "answer": "Sí. Los dientes temporales también participan en la masticación y necesitan atención. Una lesión debe valorarse aunque el diente vaya a cambiar más adelante."
+      },
+      {
+        "question": "¿Qué pasa si mi hijo tiene miedo?",
+        "answer": "Cuéntalo al pedir la cita. Puede ayudar explicar la visita con palabras sencillas y positivas, sin prometer que no sentirá nada ni usarla como amenaza."
+      }
+    ]
+  },
+  "protesis": {
+    "description": "Prótesis dentales en Terranova: compara opciones fijas y removibles y prepara preguntas sobre adaptación, higiene y mantenimiento.",
+    "sections": [
+      {
+        "title": "Distingue qué se apoya en dientes, encía o implantes",
+        "text": "No todas las prótesis se sujetan de la misma manera. Pide que te muestren qué estructuras soportarán la tuya y si podrás retirarla. Los puentes y los implantes son otras opciones para ciertos casos; la elección requiere valorar la boca y las necesidades individuales."
+      },
+      {
+        "title": "La adaptación y los ajustes también cuentan",
+        "text": "Una prótesis removible puede requerir un periodo de adaptación para comer y hablar. Si se coloca tras extracciones, los cambios durante la cicatrización pueden hacer necesarios ajustes. Antes de aceptar el presupuesto, aclara las revisiones incluidas y cómo se resolverán las molestias de ajuste."
+      }
+    ],
+    "questions": [
+      "¿Qué opciones tengo y por qué se recomienda esta?",
+      "¿La propuesta es provisional o definitiva?",
+      "¿Cómo se limpia y cómo aprenderé a colocarla y retirarla?",
+      "¿Qué ajustes, reparaciones y revisiones se presupuestan aparte?"
+    ],
+    "sources": [
+      {
+        "label": "NHS: prótesis removibles, alternativas y adaptación (en inglés)",
+        "url": "https://www.nhs.uk/tests-and-treatments/dentures/"
+      }
+    ],
+    "related": [
+      "implantologia-dental"
+    ],
+    "intro": "Una prótesis sustituye uno o varios dientes y puede ayudar a comer, hablar y sonreír. La elección depende del apoyo disponible, de tus necesidades y de los cuidados que podrás mantener.",
+    "highlights": [
+      {
+        "title": "Fija o removible",
+        "text": "Algunas prótesis se retiran para limpiarlas y otras permanecen en la boca."
+      },
+      {
+        "title": "Apoyos diferentes",
+        "text": "Pueden sujetarse en dientes, encías o implantes."
+      },
+      {
+        "title": "Adaptación y ajustes",
+        "text": "El seguimiento ayuda a revisar comodidad, función y limpieza."
+      }
+    ],
+    "steps": [
+      {
+        "title": "Valorar las opciones",
+        "text": "Se revisa la boca y se comparan alternativas según los dientes ausentes y los apoyos disponibles."
+      },
+      {
+        "title": "Tomar registros y probar",
+        "text": "Se planifica la prótesis y se comprueba su forma y ajuste en las citas necesarias."
+      },
+      {
+        "title": "Adaptar y mantener",
+        "text": "Aprende a usarla, limpiarla y reconocer cuándo necesita una revisión."
+      }
+    ],
+    "faq": [
+      {
+        "question": "¿Una prótesis removible sirve para todos los dientes ausentes?",
+        "answer": "Existen opciones parciales y completas. La indicación depende del estado de la boca; conviene compararla con las alternativas fijas cuando sean posibles."
+      },
+      {
+        "question": "¿Es normal necesitar un tiempo de adaptación?",
+        "answer": "Sí, comer o hablar puede resultar distinto al principio. Pide instrucciones y consulta si produce dolor, se mueve o no permite funcionar como te indicaron."
+      },
+      {
+        "question": "¿Puedo ajustar una prótesis que me molesta?",
+        "answer": "No la recortes ni la pegues por tu cuenta. El ajuste debe revisarlo un profesional para evitar daños y comprobar por qué ha cambiado."
+      }
+    ]
+  },
+  "bruxismo": {
+    "description": "Bruxismo y dolor mandibular: diferencias, límites de las férulas y preguntas sobre opciones conservadoras antes de decidir un tratamiento.",
+    "sections": [
+      {
+        "title": "No todo chasquido necesita tratamiento",
+        "text": "Los ruidos articulares sin dolor son frecuentes y, por sí solos, no implican que haya que intervenir. Explica en consulta qué molestias notas, cuándo aparecen y si limitan la apertura o la masticación. El diagnóstico requiere valorar otras posibles causas del dolor."
+      },
+      {
+        "title": "Qué preguntar antes de una intervención irreversible",
+        "text": "Solicita una explicación de las opciones conservadoras, la evidencia disponible y los riesgos antes de modificar dientes o mordida. Para los trastornos temporomandibulares, NIDCR desaconseja los tratamientos oclusales como el tallado dental: no han demostrado ayudar y pueden empeorar el problema."
+      }
+    ],
+    "questions": [
+      "¿El diagnóstico distingue desgaste dental, bruxismo y dolor articular?",
+      "¿Qué objetivo tendría una férula y cómo se comprobará su respuesta?",
+      "¿La propuesta cambia de forma permanente los dientes o la mordida?",
+      "¿Qué alternativas conservadoras y opciones de segunda opinión tengo?"
+    ],
+    "sources": [
+      {
+        "label": "NIDCR: trastornos temporomandibulares y opciones de tratamiento",
+        "url": "https://www.nidcr.nih.gov/espanol/temas-de-salud/los-trastornos-temporomandibulares"
+      }
+    ],
+    "related": [
+      "protesis"
+    ],
+    "intro": "Apretar los dientes, notar desgaste y tener dolor de mandíbula no son lo mismo. Una valoración ayuda a distinguirlos y a decidir qué cuidados pueden tener sentido en tu caso.",
+    "highlights": [
+      {
+        "title": "Distinguir el problema",
+        "text": "El desgaste, el apretamiento y el dolor necesitan valorarse por separado."
+      },
+      {
+        "title": "Objetivos realistas",
+        "text": "Una férula puede proteger dientes, pero no garantiza aliviar todo dolor."
+      },
+      {
+        "title": "Priorizar la prudencia",
+        "text": "Los cambios permanentes de dientes o mordida requieren especial atención."
+      }
+    ],
+    "steps": [
+      {
+        "title": "Describir lo que notas",
+        "text": "Anota cuándo aparecen las molestias, qué las cambia y si afectan a comer o abrir la boca."
+      },
+      {
+        "title": "Valorar las posibles causas",
+        "text": "La exploración ayuda a diferenciar problemas dentales, musculares y articulares."
+      },
+      {
+        "title": "Acordar y revisar",
+        "text": "Se explican las opciones conservadoras, el objetivo de cada medida y cómo se evaluará su respuesta."
+      }
+    ],
+    "faq": [
+      {
+        "question": "¿Un chasquido significa que necesito tratamiento?",
+        "answer": "No por sí solo. Los ruidos sin dolor son frecuentes. Comenta si se acompañan de dolor, bloqueo o limitación para que se valore el conjunto."
+      },
+      {
+        "question": "¿Una férula elimina el bruxismo?",
+        "answer": "No puede prometerse. Puede proponerse para proteger dientes u otros objetivos concretos; pregunta qué se espera conseguir y cómo se comprobará."
+      },
+      {
+        "question": "¿Conviene tallar los dientes para tratar el dolor de la ATM?",
+        "answer": "No debe presentarse como una solución rutinaria. La evidencia no respalda los tratamientos que modifican permanentemente la mordida para tratar los trastornos temporomandibulares y pueden empeorarlos."
+      }
+    ]
+  },
+  "aseguradora": {
+    "intro": "Tener un seguro dental no significa que todos los tratamientos estén incluidos. Antes de tu cita, confirma el cuadro médico, las condiciones de tu póliza y el coste de cada actuación.",
+    "highlights": [
+      {
+        "title": "Tu póliza concreta",
+        "text": "Las condiciones pueden cambiar entre productos de la misma aseguradora."
+      },
+      {
+        "title": "Confirmación previa",
+        "text": "Comprueba profesional, centro y autorizaciones antes de acudir."
+      },
+      {
+        "title": "Presupuesto claro",
+        "text": "Distingue prestaciones incluidas, franquicias y tratamientos privados."
+      }
+    ],
+    "steps": [
+      {
+        "title": "Consulta a tu aseguradora",
+        "text": "Comprueba que el centro y el profesional están en el cuadro de tu póliza y que la prestación está cubierta."
+      },
+      {
+        "title": "Confirma con la clínica",
+        "text": "Indica la compañía y el producto contratado, sin enviar información clínica por canales públicos."
+      },
+      {
+        "title": "Revisa el presupuesto",
+        "text": "Aclara por escrito las cantidades a tu cargo y cualquier autorización antes de aceptar el tratamiento."
+      }
+    ],
+    "faq": [
+      {
+        "question": "¿Aparecer en una lista de compañías garantiza mi cobertura?",
+        "answer": "No. Depende del producto contratado, la vigencia del acuerdo, el profesional y la prestación. Confírmalo con tu aseguradora y con la clínica."
+      },
+      {
+        "question": "¿Qué diferencia hay entre una prestación incluida y una franquicia?",
+        "answer": "Una prestación incluida puede no generar un pago adicional según tu póliza. Una franquicia es una cantidad a tu cargo. Pide el detalle aplicable a tu caso."
+      },
+      {
+        "question": "¿Puedo conocer el coste antes de empezar?",
+        "answer": "Solicita un presupuesto con las actuaciones previstas y las cantidades que debes pagar. Si el plan cambia tras la valoración, pide que te expliquen la nueva propuesta antes de continuar."
+      }
+    ],
+    "description": "Seguros dentales en Terranova: cómo comprobar el cuadro médico, las autorizaciones, las exclusiones y el presupuesto antes de una cita.",
+    "sections": [
+      {
+        "title": "El cuadro médico puede cambiar",
+        "text": "Comprueba el centro y el profesional en el directorio de tu aseguradora. Guarda la confirmación o la autorización y consulta si tiene un plazo de validez."
+      },
+      {
+        "title": "Un límite de cobertura no es una indicación clínica",
+        "text": "Que una prestación esté incluida o excluida no determina si la necesitas. Pide primero una explicación del diagnóstico y después revisa cómo se financia cada opción."
+      }
+    ],
+    "questions": [
+      "¿Mi póliza cubre esta actuación en este centro y con este profesional?",
+      "¿Necesito autorización y quién debe tramitarla?",
+      "¿Qué cantidad pagaré por cada parte del tratamiento?",
+      "¿Qué ocurre con el presupuesto si cambia la propuesta clínica?"
+    ],
+    "sources": [
+      {
+        "label": "Comunidad de Madrid: qué revisar en una póliza de seguro",
+        "url": "https://www.comunidad.madrid/consumo/otros-tipos-seguros-debe-saber"
+      },
+      {
+        "label": "Ministerio de Consumo: qué es una franquicia",
+        "url": "https://www.dsca.gob.es/es/consumo/preguntas-frecuentes/que-es-franquicia-seguro"
+      }
+    ],
+    "related": [
+      "endodoncia",
+      "protesis",
+      "periodoncia"
+    ]
+  }
+}

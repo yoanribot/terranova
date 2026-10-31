@@ -7,7 +7,7 @@ import Footer from "@/components/Footer/Footer";
 
 import { config } from "@fortawesome/fontawesome-svg-core";
 import "@fortawesome/fontawesome-svg-core/styles.css";
-import { getMetadata } from "@/lib/content";
+import { getMetadata, getServices } from "@/lib/content";
 import { LocationSection } from "@/types/data";
 import GoogleAnalytics from "@/components/GoogleAnalytics/GoogleAnalytics";
 import GoogleAdsense from "@/components/GoogleAdsense/GoogleAdsense";
@@ -52,14 +52,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="es">
-      {/* GOOGLE ANALYTICS */}
-      {process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS && (
-        <GoogleAnalytics ga_id={process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS} />
-      )}
-
       <head>
         <GoogleConsentMode />
-        <GoogleAdsense />
+        <GoogleAdsense eligiblePaths={["/", ...getServices().filter(page => page.slug !== "aseguradora").map(page => `/servicios/${page.slug}`)]} />
         <link rel="icon" href="/favicon.ico" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" />
@@ -70,6 +65,9 @@ export default function RootLayout({
       </head>
 
       <body className="font-serif antialiased">
+        {process.env.NEXT_PUBLIC_GOOGLE_CMP_READY === "true" && process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS && (
+          <GoogleAnalytics ga_id={process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS} />
+        )}
         <Header title={title} />
 
         <main>
@@ -79,6 +77,7 @@ export default function RootLayout({
             className="fixed bottom-4 right-4 bg-green-500 text-white h-13 w-13 rounded-full shadow-lg hover:bg-green-600 transition-colors flex items-center justify-center z-50"
             target="_blank"
             rel="noopener noreferrer"
+            aria-label="Contactar con Terranova por WhatsApp"
           >
             <FontAwesomeIcon
               name="Whatsapp boton"
@@ -89,6 +88,7 @@ export default function RootLayout({
           </a>
           <a
             href="#"
+            aria-label="Volver al principio"
             className="fixed bottom-40 rounded-sm bg-red right-0 p-2 text-white h-12 w-12 shadow-lg bg-black/30 hover:bg-gray-600 transition-colors flex items-center justify-center z-50 cursor-pointer"
           >
             <ChevronUp name="scroll-to-top" width={154} />

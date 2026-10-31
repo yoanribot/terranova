@@ -1,14 +1,16 @@
+"use client";
+
 import Script from "next/script";
+import { usePathname } from "next/navigation";
+import { canLoadAds } from "@/lib/ad-eligibility.mjs";
 
 const ADSENSE_SCRIPT_URL =
   "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js";
-const ADSENSE_CLIENT_PATTERN = /^ca-pub-\d{16}$/;
 
-export default function GoogleAdsense() {
+export default function GoogleAdsense({ eligiblePaths }: { eligiblePaths: string[] }) {
+  const pathname = usePathname();
   const client = process.env.NEXT_PUBLIC_ADSENSE_CLIENT?.trim();
-  const enabled = process.env.NEXT_PUBLIC_ADSENSE_ENABLED === "true";
-
-  if (!enabled || !client || !ADSENSE_CLIENT_PATTERN.test(client)) return null;
+  if (!canLoadAds({ enabled: process.env.NEXT_PUBLIC_ADSENSE_ENABLED, cmpReady: process.env.NEXT_PUBLIC_GOOGLE_CMP_READY, client, pathname, eligiblePaths })) return null;
 
   return (
     <Script

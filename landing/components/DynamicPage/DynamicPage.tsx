@@ -4,6 +4,7 @@ import Carousel from "@/components/shared/Carousel/Carousel";
 import { RichTextDocument } from "@/types/RichText";
 import { ContactForm } from "@/components/ContactForm/ContactForm";
 import BlockRendererClient from "../shared/BlockRender/BlockRendererClient";
+import Link from "@/components/PageLink";
 
 type DynamicPageProps = {
   title: string;
@@ -15,6 +16,8 @@ type DynamicPageProps = {
   phoneMain?: string;
   phoneSecondary?: string;
   schedules?: { day: string; availability?: string }[];
+  children?: React.ReactNode;
+  parent?: { href: string; label: string };
 };
 
 export default async function DynamicPage({
@@ -27,6 +30,8 @@ export default async function DynamicPage({
   phoneMain,
   phoneSecondary,
   schedules,
+  children,
+  parent,
 }: DynamicPageProps) {
   const bgImage = getLocalMedia(backgroundImage?.url);
 
@@ -38,10 +43,10 @@ export default async function DynamicPage({
         }}
         className="h-[60vh] p-2 bg-cover bg-center flex items-center justify-center xs:mb-20 text-white relative"
       >
-        <h1 className="text-6xl text-center my-32">{title}</h1>
+        <h1 className="text-4xl sm:text-6xl text-center my-32">{title}</h1>
         {/* <img
           src="/section-divider-x.svg"
-          alt="Section Divider"
+          alt=""
           className="w-full absolute bottom-0 h-30"
         /> */}
         <img
@@ -52,9 +57,15 @@ export default async function DynamicPage({
       </div>
 
       <div className={styles.pageContent}>
-        <div className="p-6">
+        <article className="p-6">
+          <nav aria-label="Ruta de navegación" className="text-black mb-6 flex flex-wrap gap-2">
+            <Link href="/" className="underline">Inicio</Link>
+            {parent && <><span aria-hidden="true">/</span><Link href={parent.href} className="underline">{parent.label}</Link></>}
+            <span aria-hidden="true">/</span><span aria-current="page">{title}</span>
+          </nav>
           <BlockRendererClient content={content} />
-        </div>
+          {children}
+        </article>
 
         {images && images.length > 0 && (
           <section>

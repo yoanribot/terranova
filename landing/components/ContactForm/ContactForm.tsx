@@ -6,6 +6,7 @@ import { Controller, useForm } from "react-hook-form";
 import { useState } from "react";
 import { z } from "zod";
 import { Send } from "lucide-react";
+import PageLink from "@/components/PageLink";
 
 import {
   Field,
@@ -91,6 +92,7 @@ export function ContactForm() {
             Escribenos un mensaje y nos pondremos en contacto con usted lo antes
             posible.
           </FieldDescription>
+          <p className="text-sm text-gray-700">Usa este formulario para consultas de organización o citas. No envíes datos médicos, radiografías ni documentos personales. Este canal no atiende urgencias.</p>
 
           <FieldGroup>
             <div className="md:flex gap-5">
@@ -177,7 +179,7 @@ export function ContactForm() {
                     id="message"
                     required
                     aria-invalid={fieldState.invalid}
-                    placeholder="Comentanos cual seria el proposito de la cita"
+                    placeholder="Indica tu consulta sobre citas o disponibilidad, sin incluir información médica"
                     className="resize-none h-30"
                   />
                   {fieldState.invalid && (
@@ -189,6 +191,7 @@ export function ContactForm() {
           </FieldGroup>
         </FieldSet>
 
+        <p className="text-sm text-gray-700">MG Dental Partners S.L. tratará los datos para responder a tu solicitud. Consulta la <PageLink href="/terminos/politica-privacidad" className="underline">política de privacidad</PageLink> para conocer la información sobre el tratamiento y cómo ejercer tus derechos.</p>
         <Field orientation="horizontal" className="justify-center flex-col">
           <div>
             {status === "success" && (
