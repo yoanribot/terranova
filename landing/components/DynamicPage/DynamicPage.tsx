@@ -8,6 +8,8 @@ import Link from "@/components/PageLink";
 import ServiceIcon from "@/components/ServiceGuide/ServiceIcon";
 import { getServiceArtwork, getServiceGuide } from "@/lib/service-guides";
 import ClinicMap from "@/components/Map/ClinicMap";
+import { isPracticalService } from "@/lib/service-categories";
+import InsurancePartners from "@/components/ServiceGuide/InsurancePartners";
 
 type DynamicPageProps = {
   title: string;
@@ -33,6 +35,9 @@ export default function DynamicPage({
   const heroImage = artwork?.url || backgroundImage?.url;
   const telephone = phoneMain?.replace(/[^+\d]/g, "");
   const isService = Boolean(serviceSlug);
+  const practical = isPracticalService(serviceSlug);
+  const isImaging = serviceSlug === "cbct-dental";
+  const primaryLabel = serviceSlug === "financiaciones" ? "Consultar financiación" : serviceSlug === "aseguradora" ? "Consultar mi seguro" : isImaging ? "Pedir una valoración" : practical ? "Consultar opciones" : "Consultar mi caso";
 
   return (
     <div className={styles.page}>
@@ -45,22 +50,22 @@ export default function DynamicPage({
 
         <header className={isService ? styles.hero : styles.legalHero}>
           <div className={styles.heroCopy}>
-            <p className={styles.eyebrow}>{isService ? "Tu salud, con información clara" : "Información de Terranova"}</p>
+            <p className={styles.eyebrow}>{practical ? "Organiza tu visita, con información clara" : isService ? "Tu salud, con información clara" : "Información de Terranova"}</p>
             {serviceSlug ? <span className={styles.treatmentMark}><ServiceIcon slug={serviceSlug} size={28} /></span> : null}
             <h1>{title}</h1>
             {guide ? <p className={styles.lead}>{guide.intro || guide.description}</p> : null}
             {isService ? <div className={styles.heroActions}>
-              <a href="#consulta" className={styles.primaryAction}>Consultar mi caso <ArrowRight size={18} aria-hidden="true" /></a>
-              <a href="#informacion" className={styles.textAction}>Entender el tratamiento <ArrowDown size={17} aria-hidden="true" /></a>
+              <a href="#consulta" className={styles.primaryAction}>{primaryLabel} <ArrowRight size={18} aria-hidden="true" /></a>
+              <a href="#informacion" className={styles.textAction}>{practical ? "Ver la información" : isImaging ? "Conocer las pruebas" : "Entender el tratamiento"} <ArrowDown size={17} aria-hidden="true" /></a>
             </div> : null}
           </div>
           {isService && heroImage ? <figure className={styles.heroVisual}>
-            <Image src={heroImage} alt="" fill priority sizes="(min-width: 1240px) 550px, (max-width: 760px) calc(100vw - 36px), 48vw" className={styles.heroImage} />
-            <figcaption><span className={styles.captionDot} />Imagen orientativa del tratamiento</figcaption>
+            <Image src={heroImage} alt="" fill priority sizes="(min-width: 1240px) 550px, (max-width: 760px) calc(100vw - 36px), 48vw" className={`${styles.heroImage} ${serviceSlug === "aseguradora" ? styles.insurancePoster : ""}`} />
+            <figcaption><span className={styles.captionDot} />{serviceSlug === "aseguradora" ? "Compañías y redes con las que trabajamos" : serviceSlug === "financiaciones" ? "Terranova Clinica Dental" : isImaging ? "Imagen orientativa de radiografía dental" : "Imagen orientativa del tratamiento"}</figcaption>
           </figure> : null}
         </header>
 
-        {guide?.highlights?.length ? <section aria-label="El tratamiento de un vistazo" className={styles.highlights}>
+        {guide?.highlights?.length ? <section aria-label={practical ? "La información de un vistazo" : isImaging ? "Las pruebas de un vistazo" : "El tratamiento de un vistazo"} className={styles.highlights}>
           {guide.highlights.map((item, index) => {
             const Icon = [SearchCheck, Info, HeartHandshake][index % 3];
             return <div key={item.title} className={styles.highlight}><span className={styles.highlightIcon}><Icon size={23} aria-hidden="true" strokeWidth={1.7} /></span><div><h2>{item.title}</h2><p>{item.text}</p></div></div>;
@@ -69,11 +74,13 @@ export default function DynamicPage({
 
         {isService ? <nav aria-label="Contenido de esta página" className={styles.contentsNav}>
           <span>En esta página</span><a href="#informacion">Lo esencial</a>
+          {guide?.insurers?.length ? <a href="#aseguradoras-listado">Compañías y redes</a> : null}
           {guide?.steps?.length ? <a href="#paso-a-paso">Paso a paso</a> : null}
           {guide ? <a href="#antes-de-decidir">Antes de decidir</a> : null}
           {guide?.faq?.length ? <a href="#preguntas-frecuentes">Dudas frecuentes</a> : null}
         </nav> : null}
 
+        {guide?.insurers?.length ? <InsurancePartners partners={guide.insurers} /> : null}
         <article className={isService ? styles.article : styles.legalArticle}>
           <div id="informacion" className={styles.reading}>
             {isService ? <p className={styles.eyebrow}>Lo esencial, sin complicaciones</p> : null}
@@ -88,7 +95,7 @@ export default function DynamicPage({
       {isService ? <section id="consulta" className={styles.contact} aria-labelledby="consulta-heading">
         <header className={styles.contactHeading}>
           <div><p className={styles.eyebrow}>El siguiente paso</p>
-            <h2 id="consulta-heading">Tu caso merece<br />una conversación.</h2>
+            <h2 id="consulta-heading">{serviceSlug === "aseguradora" ? <>Te ayudamos a<br />preparar tu visita.</> : <>Tu caso merece<br />una conversación.</>}</h2>
           </div>
           <p className={styles.contactIntro}>Cuéntanos qué necesitas para organizar tu visita. Puedes escribirnos, llamarnos o consultar cómo llegar a la clínica.</p>
         </header>
@@ -105,7 +112,7 @@ export default function DynamicPage({
             {schedules?.length ? <details className={styles.hours}><summary><Clock3 size={19} aria-hidden="true" />Consultar horarios</summary><dl>{schedules.map(slot => <div key={slot.day}><dt>{slot.day}</dt><dd>{slot.availability || "Cerrado"}</dd></div>)}</dl></details> : null}
             </div>
           </div>
-          <ContactForm />
+          <ContactForm financing={serviceSlug === "financiaciones"} insurance={serviceSlug === "aseguradora"} />
         </div>
       </section> : null}
       {!isService ? <div className={styles.legalMap}><ClinicMap /></div> : null}

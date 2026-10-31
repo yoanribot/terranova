@@ -1,5 +1,6 @@
 ﻿import "./globals.css";
 import "./shared.css";
+import "./fonts.css";
 import type { Metadata } from "next";
 import Header from "@/components/Header/Header";
 import Footer from "@/components/Footer/Footer";
@@ -10,6 +11,8 @@ import { LocationSection } from "@/types/data";
 import GoogleAnalytics from "@/components/GoogleAnalytics/GoogleAnalytics";
 import GoogleAdsense from "@/components/GoogleAdsense/GoogleAdsense";
 import GoogleConsentMode from "@/components/GoogleConsentMode/GoogleConsentMode";
+import ConsentProvider from "@/components/CookieConsent/ConsentProvider";
+import { isPracticalService } from "@/lib/service-categories";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faWhatsapp } from "@fortawesome/free-brands-svg-icons";
 import { generateSEOMetadata, viewport } from "@/app/generateSEOMetadata";
@@ -32,21 +35,20 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
     <html lang="es">
       <head>
         <GoogleConsentMode />
-        <GoogleAdsense eligiblePaths={["/", ...getServices().filter(page => page.slug !== "aseguradora").map(page => `/servicios/${page.slug}`)]} />
         <link rel="icon" href="/favicon.ico" />
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet" />
       </head>
       <body className="antialiased" id="page-top">
+        <ConsentProvider gaId={process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS?.trim() || ""} advertisingAvailable={process.env.NEXT_PUBLIC_ADSENSE_ENABLED === "true" && process.env.NEXT_PUBLIC_GOOGLE_CMP_READY === "true" && /^ca-pub-\d{16}$/.test(process.env.NEXT_PUBLIC_ADSENSE_CLIENT?.trim() || "")}>
         <a href="#main-content" className="skip-link">Saltar al contenido</a>
-        {process.env.NEXT_PUBLIC_GOOGLE_CMP_READY === "true" && process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS ? <GoogleAnalytics ga_id={process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS} /> : null}
+        {process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS ? <GoogleAnalytics ga_id={process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS} /> : null}
+        <GoogleAdsense eligiblePaths={["/", ...getServices().filter(page => !isPracticalService(page.slug)).map(page => `/servicios/${page.slug}`)]} />
         <Header title={title} />
         <main id="main-content" tabIndex={-1}>
           {children}
           {whatsapp?.href ? <a href={whatsapp.href} className="whatsapp-contact no-print" target="_blank" rel="noopener noreferrer" aria-label="Contactar con Terranova por WhatsApp, se abre en otra pestaña"><FontAwesomeIcon icon={faWhatsapp} aria-hidden="true" /><span>WhatsApp</span></a> : null}
         </main>
         <Footer title={title} socials={socials} location={locationData} />
+        </ConsentProvider>
       </body>
     </html>
   );

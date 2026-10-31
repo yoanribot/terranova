@@ -10,10 +10,12 @@ import styles from "@/components/ServiceGuide/ServiceIndex.module.css";
 export const metadata = generatePageMetadata("Tratamientos e información para decidir", "Conoce los tratamientos de Terranova: explicaciones sencillas, pasos, cuidados, alternativas y preguntas para preparar tu visita dental en Madrid.", "/servicios");
 
 const groups = [
+  { id: "diagnostico", title: "Diagnóstico y odontología digital", description: "Conoce qué aportan la imagen 3D y los registros digitales a la planificación de tu caso.", slugs: ["cbct-dental"] },
   { id: "cuidar", title: "Cuidar y conservar", description: "Entiende qué ocurre en tu boca y qué opciones tienes para cuidarla.", slugs: ["endodoncia", "periodoncia", "bruxismo"] },
   { id: "recuperar", title: "Recuperar dientes", description: "Compara las formas de sustituir dientes y el mantenimiento que necesitan.", slugs: ["implantologia-dental", "protesis"] },
   { id: "sonrisa", title: "Alineación y estética", description: "Conoce los cambios posibles, sus límites y qué debes valorar antes de decidir.", slugs: ["ortodoncia-invisible", "ortodoncia-fija", "carillas-dentales", "blanqueamiento", "estetica-facial"] },
-  { id: "familia", title: "Familia y planificación", description: "Prepara las visitas de los más pequeños y resuelve dudas sobre tu cobertura.", slugs: ["odontopediatria", "aseguradora"] },
+  { id: "familia", title: "Cuidado en familia", description: "Prepara las visitas de los más pequeños y sus hábitos de salud bucodental.", slugs: ["odontopediatria"] },
+  { id: "seguros-financiacion", title: "Seguros y financiación", description: "Consulta tu cobertura y las opciones disponibles para organizar el pago de tu tratamiento.", slugs: ["aseguradora", "financiaciones"] },
 ];
 
 export default function ServicesPage() {

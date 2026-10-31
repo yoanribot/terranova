@@ -88,6 +88,9 @@
   --foreground: oklch(0.145 0 0);
 }
 
+html:has(dialog[open]) { overflow: hidden; }
+body:has([data-cookie-banner]) .whatsapp-contact { visibility: hidden; }
+
 .dark {
   --background: oklch(0.145 0 0);
   --foreground: oklch(0.985 0 0);

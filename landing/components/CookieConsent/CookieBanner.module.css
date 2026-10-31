@@ -1,0 +1,52 @@
+.banner { position: fixed; z-index: 90; inset: auto 1.5rem 1.5rem; max-width: 1180px; margin-inline: auto; display: grid; grid-template-columns: minmax(0,1fr) minmax(270px,.65fr); gap: 2rem; align-items: center; padding: 1.5rem 1.75rem; border: 1px solid #b7c7ae; border-radius: 12px; background: #fffdf8; color: #203e35; box-shadow: 0 8px 48px #152b3133; max-height: calc(100svh - 2rem); overflow-y: auto; }
+.bannerCopy { display: flex; align-items: start; gap: 1rem; min-width: 0; }
+.icon { display: grid; place-items: center; flex-shrink: 0; width: 48px; height: 48px; border-radius: 12px; background: #e8edde; color: #45623e; }
+.banner h2 { font-family: var(--font-heading); font-size: 1.65rem; line-height: 1.2; font-weight: 400; margin: 0 0 .65rem; }
+.banner p { font-size: .85rem; line-height: 1.8; color: #4d5e50; margin: 0; }
+.links { display: flex; align-items: center; flex-wrap: wrap; gap: .25rem 1rem; margin-top: .5rem; }
+.links a { display: inline-flex; align-items: center; min-height: 36px; font-size: .78rem; text-decoration: underline; text-underline-offset: .25em; }
+.bannerActions, .dialogActions { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: .65rem; }
+.bannerActions button, .dialogActions button { display: inline-flex; align-items: center; justify-content: center; gap: .55rem; min-height: 48px; border: 1px solid #203e35; border-radius: 5px; padding: .75rem .8rem; background: #203e35; color: #fff; font-size: .8rem; font-weight: 600; line-height: 1.5; cursor: pointer; }
+.bannerActions button:hover, .dialogActions button:hover { background: #345747; }
+.bannerActions .configure, .dialogActions .configure { grid-column: 1 / -1; background: transparent; color: #203e35; }
+.bannerActions .configure:hover, .dialogActions .configure:hover { background: #e8edde; }
+.dialog { position: fixed; inset: 0; width: min(660px,calc(100% - 2rem)); max-height: calc(100svh - 3rem); padding: 0; margin: auto; border: 1px solid #c3cfb9; border-radius: 14px; background: #fffdf8; color: #203e35; overflow-y: auto; overscroll-behavior: contain; box-shadow: 0 24px 80px #122d3640; }
+.dialog::backdrop { background: #112f27b3; }
+.dialogHeader { display: flex; align-items: center; justify-content: space-between; padding: 1.5rem 1.75rem 0; }
+.close { display: grid; place-items: center; width: 44px; height: 44px; border: 1px solid #cad5c1; border-radius: 50%; cursor: pointer; }
+.close:hover { background: #e8edde; }
+.dialogIntro { padding: 1.25rem 1.75rem 1.5rem; }
+.eyebrow { font-size: .68rem; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; color: #526b48; margin-bottom: .7rem; }
+.dialogIntro h2 { font-family: var(--font-heading); font-size: clamp(1.9rem,5vw,2.5rem); line-height: 1.12; font-weight: 400; margin: 0 0 .8rem; }
+.dialogIntro > p:last-child, .category p, .moreInfo p { font-size: .88rem; line-height: 1.8; color: #4d5e50; }
+.categories { padding-inline: 1.75rem; }
+.category { padding-block: 1.25rem; border-top: 1px solid #d7dfce; }
+.categoryHeading { display: flex; align-items: center; justify-content: space-between; gap: .75rem; margin-bottom: .65rem; }
+.categoryHeading :is(h3,label) { display: flex; align-items: center; gap: .65rem; font-family: var(--font-body); font-size: .95rem; font-weight: 700; line-height: 1.5; }
+.categoryHeading label { cursor: pointer; }
+.categoryHeading svg { flex-shrink: 0; }
+.always { font-size: .7rem; font-weight: 600; white-space: nowrap; color: #4c6744; background: #e8edde; border-radius: 5px; padding: .4rem .65rem; }
+.categoryHeading input { appearance: none; flex-shrink: 0; position: relative; width: 52px; height: 32px; border: 1px solid #6d7d65; border-radius: 20px; background: #e4e8df; cursor: pointer; }
+.categoryHeading input::before { content: ""; position: absolute; width: 22px; height: 22px; top: 4px; left: 4px; border-radius: 50%; background: #52634c; }
+.categoryHeading input:checked { background: #203e35; border-color: #203e35; }
+.categoryHeading input:checked::before { left: 24px; background: #fff; }
+.moreInfo { padding: .5rem 1.75rem 1.5rem; }
+.moreInfo .links { gap: .2rem 1rem; }
+.dialogActions { position: sticky; bottom: 0; padding: 1rem 1.75rem 1.5rem; background: #fffdf8; border-top: 1px solid #d7dfce; }
+:is(.banner,.dialog) :is(a,button,input):focus-visible { outline: 3px solid #4e7045; outline-offset: 4px; }
+@media (max-width: 760px) {
+  .banner { inset: auto 1rem 1rem; grid-template-columns: minmax(0,1fr); gap: 1rem; padding: 1.25rem; }
+  .bannerCopy { gap: .75rem; }
+  .bannerCopy > .icon { width: 36px; height: 36px; border-radius: 9px; }
+  .bannerCopy > .icon svg { width: 21px; }
+  .banner h2 { font-size: 1.5rem; }
+  .bannerActions button, .dialogActions button { font-size: .76rem; padding-inline: .55rem; }
+  .dialogHeader { padding: 1.25rem 1.25rem 0; }
+  .dialogIntro { padding: 1.25rem; }
+  .categories { padding-inline: 1.25rem; }
+  .moreInfo { padding: .5rem 1.25rem 1.25rem; }
+  .dialogActions { padding: 1rem 1.25rem 1.25rem; }
+}
+@media (max-width: 360px) { .bannerCopy > .icon { display: none; } .categoryHeading :is(h3,label) { font-size: .84rem; gap: .4rem; } .always { font-size: .63rem; padding-inline: .4rem; } }
+@media print { .banner, .dialog { display: none !important; } }
+@media (forced-colors: active) { .categoryHeading input { appearance: auto; } }

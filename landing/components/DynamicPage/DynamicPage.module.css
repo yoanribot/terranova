@@ -17,6 +17,9 @@
 .textAction { display: inline-flex; align-items: center; justify-content: center; gap: .5rem; min-height: 44px; font-size: .83rem; text-decoration: underline; text-underline-offset: .35em; }
 .heroVisual { min-width: 0; position: relative; height: clamp(320px, 37vw, 440px); overflow: hidden; border-radius: 12px 12px 80px 12px; background: #fff; margin: 0; }
 .heroImage { object-fit: cover; }
+.insurancePoster { object-fit: contain; background: #f7f5ef; }
+.heroVisual:has(.insurancePoster) { aspect-ratio: 16 / 9; height: auto; border-radius: 10px; border: 1px solid #d7dfce; }
+.heroVisual:has(.insurancePoster) figcaption { display: none; }
 .heroVisual figcaption { display: flex; align-items: center; gap: .5rem; position: absolute; bottom: 1rem; left: 1rem; right: 1rem; width: fit-content; max-width: calc(100% - 2rem); padding: .6rem .85rem; background: rgba(247,245,239,.95); border-radius: 6px; font-size: .66rem; color: #405344; line-height: 1.5; }
 .captionDot { width: 6px; height: 6px; border-radius: 50%; flex: 0 0 auto; background: #65815c; }
 .highlights { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); border: 1px solid #d9dfd1; border-radius: 10px; background: #fffdf8; }
@@ -55,7 +58,7 @@
 .contactInner > form { min-width: 0; }
 .contactLocation { min-width: 0; display: flex; flex-direction: column; gap: 1.5rem; color: #203e35; }
 .contactLocation > figure { flex: 1; display: flex; flex-direction: column; margin: 0; border: 1px solid #d1dac9; border-radius: 12px; }
-.contactLocation > figure > iframe { flex: 1; height: auto; min-height: 340px; }
+.contactLocation > figure > :first-child { flex: 1; height: auto; min-height: 360px; }
 .contactLocation figcaption { flex-shrink: 0; border-bottom: 1px solid #d3dccb; padding-inline: 1.5rem; }
 .locationDetails { flex-shrink: 0; padding: 1.5rem; background: #f7f5ef; border: 1px solid #d1dac9; border-radius: 12px; }
 .contactInner > form { border-radius: 12px; }
@@ -106,7 +109,7 @@
   .contactHeading h2 { font-size: 2.35rem; }
   .contactLocation > figure { flex: none; }
   .contactLocation { gap: 1.25rem; }
-  .contactLocation > figure > iframe { height: 300px; min-height: 0; flex: none; }
+  .contactLocation > figure > :first-child { height: 360px; min-height: 0; flex: none; }
   .contactLocation figcaption, .locationDetails { padding-inline: 1.2rem; }
 }
 @media(prefers-reduced-motion: reduce) { .page { scroll-behavior: auto; } }

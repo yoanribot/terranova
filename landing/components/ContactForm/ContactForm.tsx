@@ -16,7 +16,7 @@ const formSchema = z.object({
 });
 type ContactData = z.infer<typeof formSchema>;
 
-export function ContactForm() {
+export function ContactForm({ financing = false, insurance = false }: { financing?: boolean; insurance?: boolean }) {
   const id = useId();
   const [status, setStatus] = useState<"idle" | "sending" | "success" | "error">("idle");
   const { register, handleSubmit, reset, formState: { errors } } = useForm<ContactData>({
@@ -39,14 +39,14 @@ export function ContactForm() {
   return (
     <form onSubmit={handleSubmit(onSubmit)} noValidate className={styles.form} aria-labelledby={id + "-title"} aria-busy={status === "sending"}>
       <h3 id={id + "-title"}>Cuéntanos cómo podemos ayudarte.</h3>
-      <p className={styles.intro}>Para pedir cita o resolver dudas de organización. Los campos marcados con * son obligatorios.</p>
-      <div className={styles.notice} id={id + "-notice"}><Info size={19} aria-hidden="true" /><p>No incluyas información médica, radiografías ni documentos personales. Este formulario no atiende urgencias.</p></div>
+      <p className={styles.intro}>{financing ? "Para consultar las opciones de financiación disponibles. Este formulario no es una solicitud de crédito. Los campos marcados con * son obligatorios." : insurance ? "Indica el nombre de tu compañía y qué necesitas consultar para organizar tu visita. Los campos marcados con * son obligatorios." : "Para pedir cita o resolver dudas de organización. Los campos marcados con * son obligatorios."}</p>
+      <div className={styles.notice} id={id + "-notice"}><Info size={19} aria-hidden="true" /><p>{financing ? "No envíes DNI, nóminas, datos bancarios ni información médica. La entidad te indicará cómo aportar la documentación por su canal de solicitud." : insurance ? "No envíes el número completo de tu póliza, DNI, documentos del seguro ni información médica. Te indicaremos cómo aportar lo necesario para la cita." : "No incluyas información médica, radiografías ni documentos personales. Este formulario no atiende urgencias."}</p></div>
       <div className={styles.row}>
         <div className={styles.field}><label htmlFor={id + "-name"}>Nombre *</label><input {...register("name")} id={id + "-name"} required autoComplete="given-name" maxLength={32} aria-invalid={Boolean(errors.name)} aria-describedby={errors.name ? id + "-name-error" : undefined} />{errors.name ? <p id={id + "-name-error"} className={styles.error}>{errors.name.message}</p> : null}</div>
         <div className={styles.field}><label htmlFor={id + "-phone"}>Teléfono <span>(opcional)</span></label><input {...register("phone")} id={id + "-phone"} type="tel" autoComplete="tel" inputMode="tel" maxLength={30} /></div>
       </div>
       <div className={styles.field}><label htmlFor={id + "-email"}>Correo electrónico *</label><input {...register("email")} id={id + "-email"} required type="email" autoComplete="email" maxLength={100} placeholder="tu@correo.es" aria-invalid={Boolean(errors.email)} aria-describedby={errors.email ? id + "-email-error" : undefined} />{errors.email ? <p id={id + "-email-error"} className={styles.error}>{errors.email.message}</p> : null}</div>
-      <div className={styles.field}><label htmlFor={id + "-message"}>Tu mensaje *</label><textarea {...register("message")} id={id + "-message"} required rows={4} maxLength={500} placeholder="Por ejemplo: me gustaría consultar la disponibilidad para una primera visita." aria-invalid={Boolean(errors.message)} aria-describedby={id + "-notice" + (errors.message ? " " + id + "-message-error" : "")} />{errors.message ? <p id={id + "-message-error"} className={styles.error}>{errors.message.message}</p> : null}</div>
+      <div className={styles.field}><label htmlFor={id + "-message"}>Tu mensaje *</label><textarea {...register("message")} id={id + "-message"} required rows={4} maxLength={500} placeholder={financing ? "Por ejemplo: me gustaría conocer las opciones de financiación para mi tratamiento." : insurance ? "Me gustaría confirmar mi cobertura y organizar una visita con mi seguro dental." : "Por ejemplo: me gustaría consultar la disponibilidad para una primera visita."} aria-invalid={Boolean(errors.message)} aria-describedby={id + "-notice" + (errors.message ? " " + id + "-message-error" : "")} />{errors.message ? <p id={id + "-message-error"} className={styles.error}>{errors.message.message}</p> : null}</div>
       <PageLink href="/terminos/politica-privacidad" className={styles.privacy}>Política de privacidad</PageLink>
       <div className={styles.status} aria-live="polite">{status === "success" ? <p>Hemos recibido tu mensaje. Contactaremos contigo para responder a tu consulta. El envío no confirma una cita.</p> : null}{status === "error" ? <p role="alert" className={styles.error}>No se ha podido enviar el mensaje. Inténtalo de nuevo o llama a la clínica.</p> : null}</div>
       <button type="submit" disabled={status === "sending"} className={styles.submit}>{status === "sending" ? <>Enviando… <LoaderCircle size={18} className={styles.spinner} aria-hidden="true" /></> : <>Enviar mi consulta <ArrowUpRight size={18} aria-hidden="true" /></>}</button>

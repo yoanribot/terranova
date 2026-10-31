@@ -8,6 +8,7 @@ import { ContactForm } from "@/components/ContactForm/ContactForm";
 import Link from "@/components/PageLink";
 import { ArrowUpRight, ClipboardList, Printer, CircleCheck, Phone } from "lucide-react";
 import styles from "./Home.module.css";
+import GoogleReviews from "@/components/GoogleReviews/GoogleReviews";
 
 export default function Home() {
   const sections = getHomepage()?.sections || [];
@@ -29,6 +30,7 @@ export default function Home() {
           <li><Printer aria-hidden="true" /><div><h3>Lleva tu lista a la consulta</h3><p>Consúltala en el móvil, descárgala o imprímela para conversar con el profesional.</p></div><span aria-hidden="true">03</span></li>
         </ol>
       </section>
+      <GoogleReviews />
       <MapWrapper locationData={location} />
       <section id="contact" className={styles.contact} aria-labelledby="contact-title">
         <div className={styles.contactInner}>

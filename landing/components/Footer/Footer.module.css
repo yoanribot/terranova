@@ -16,8 +16,9 @@
 .socials a:hover { background: #ffffff1a; }
 .socials svg { height: 17px; width: 17px; }
 .bottom { display: flex; justify-content: space-between; align-items: center; gap: 1rem; border-top: 1px solid #e0e9d633; padding-top: 1.25rem; color: #cbd7c5; font-size: .75rem; }
-.bottom nav { display: flex; gap: 1.5rem; }
-.bottom a { display: inline-flex; align-items: center; min-height: 44px; }
-.bottom a:hover { text-decoration: underline; }
+.bottom nav { display: flex; flex-wrap: wrap; gap: .25rem 1.25rem; }
+.bottom :is(a,button) { display: inline-flex; align-items: center; min-height: 44px; text-align: left; }
+.bottom button { font: inherit; color: inherit; cursor: pointer; text-decoration: underline; text-underline-offset: .25em; }
+.bottom :is(a,button):hover { text-decoration: underline; }
 @media(max-width: 900px) { .top { grid-template-columns: 1fr 1fr; gap: 2.5rem; } .brand { grid-column: 1 / -1; } .brand > p { max-width: 430px; } .bottom { display: block; } .bottom nav { margin-top: .6rem; } }
 @media(max-width: 600px) { .footer { padding: 3rem 1.25rem 1.5rem; } .top { grid-template-columns: 1fr; gap: 2rem; } .brand { grid-column: auto; } .top h2 { margin-bottom: .6rem; } .bottom { font-size: .75rem; } }
