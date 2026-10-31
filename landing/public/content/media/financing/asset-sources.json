@@ -1,0 +1,20 @@
+{
+  "retrievedAt": "2026-10-31T12:53:19.487Z",
+  "assets": [
+    {
+      "file": "pepper-logo.svg",
+      "source": "https://developer.pepperfinance.es/assets/LogoPepper-DXiGWV9l.svg",
+      "page": "https://developer.pepperfinance.es/plugin/prestashop/configuration"
+    },
+    {
+      "file": "findirect-logo.svg",
+      "source": "https://www.findirect.es/wp-content/uploads/2021/11/logo-findirect.svg",
+      "page": "https://www.findirect.es/frakmenta/"
+    },
+    {
+      "file": "frakmenta-logo.png",
+      "source": "https://www.findirect.es/wp-content/uploads/2026/07/frakmenta-logo-original-2026-768x295.png",
+      "page": "https://www.findirect.es/frakmenta/"
+    }
+  ]
+}

@@ -15,6 +15,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   return [
     { url: new URL("/", siteUrl).toString() },
+    ...["/pacientes", "/informacion-editorial", "/servicios", "/terminos"].map(path => ({ url: new URL(path, siteUrl).toString() })),
     ...services,
     ...legalPages,
   ];

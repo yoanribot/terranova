@@ -1,0 +1,32 @@
+Fuentes alojadas localmente para Terranova Clinica Dental
+
+Estos archivos WOFF2 son copias sin modificar de las fuentes oficiales que
+servía la hoja de estilos de Google Fonts utilizada anteriormente por la web.
+Los subconjuntos latino y latino ampliado cubren el contenido en español.
+Manrope es una fuente variable y se utiliza con pesos entre 400 y 700.
+
+Hoja de estilos original:
+https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Manrope:wght@400;500;600;700&display=swap
+
+Confirmación del intervalo variable de Manrope:
+https://fonts.googleapis.com/css2?family=Manrope:wght@400..700&display=swap
+
+DM Serif Display, normal, peso 400:
+dm-serif-display-latin.woff2
+https://fonts.gstatic.com/s/dmserifdisplay/v17/-nFnOHM81r4j6k0gjAW3mujVU2B2G_Bx0g.woff2
+dm-serif-display-latin-ext.woff2
+https://fonts.gstatic.com/s/dmserifdisplay/v17/-nFnOHM81r4j6k0gjAW3mujVU2B2G_5x0ujy.woff2
+Licencia: DM-Serif-Display-OFL.txt
+https://raw.githubusercontent.com/google/fonts/main/ofl/dmserifdisplay/OFL.txt
+
+Manrope, normal, variable:
+manrope-latin-variable.woff2
+https://fonts.gstatic.com/s/manrope/v23/xn7gYHE41ni1AdIRggexSg.woff2
+manrope-latin-ext-variable.woff2
+https://fonts.gstatic.com/s/manrope/v23/xn7gYHE41ni1AdIRggmxSuXd.woff2
+Licencia: Manrope-OFL.txt
+https://raw.githubusercontent.com/google/fonts/main/ofl/manrope/OFL.txt
+
+Las licencias SIL Open Font License se distribuyen sin modificar junto a las
+fuentes. Las referencias anteriores documentan la procedencia; el navegador
+carga únicamente los archivos locales indicados en app/fonts.css.

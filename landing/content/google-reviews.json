@@ -1,0 +1,79 @@
+{
+  "name": "Terranova Clinica Dental",
+  "mapsUrl": "https://www.google.com/maps?cid=3031432366192763350&hl=es",
+  "provenance": "Información facilitada por la clínica. Las fechas y los enlaces individuales se incorporan cuando se proporcionan; los datos pendientes se conservan en null.",
+  "reviews": [
+    {
+      "id": "ana-laura-sanchez-galban",
+      "author": "Ana Laura Sanchez Galban",
+      "rating": 5,
+      "text": "Excelente servicio y atención. Todo el equipo fue muy profesional, amable y atento desde el primer momento. Me hicieron sentir muy cómoda y explicaron cada procedimiento con claridad y paciencia. Las instalaciones están impecables y se nota la calidad y el cuidado en cada detalle. Quedé muy satisfecha con el resultado y sin duda recomiendo esta clínica dental en Madrid a cualquiera que busque confianza y profesionalidad.",
+      "publishedAt": "2026-05-07",
+      "dateLabel": null,
+      "reviewUrl": "https://share.google/XInYzIJo9mytOt60c"
+    },
+    {
+      "id": "arminda-mengana-rodriguez",
+      "author": "Arminda Mengana Rodríguez",
+      "rating": 5,
+      "text": "Recomiendo al 100% el tratamiento de regeneración ósea. Llegué con poco hueso para poder colocar implantes y pensé que no tendría solución. El equipo evaluó mi caso y me explicaron claramente las opciones. Hoy estoy en proceso de tener mis implantes, gracias a la regeneración. Muy profesional todo el equipo",
+      "publishedAt": "2026-01-17",
+      "dateLabel": null,
+      "reviewUrl": "https://maps.app.goo.gl/HxyejPZFagdG7FPF7"
+    },
+    {
+      "id": "hansel-abreu",
+      "author": "Hansel Abreu",
+      "rating": 5,
+      "text": "Me realizaron una regeneración con hueso y membrana antes de colocar un implante dental y fue totalmente indolora. El trato es muy cercano, te transmiten mucha confianza. Actualmente estoy sin dolor y recuperándome. Nos vemos en 6 meses. Gracias",
+      "publishedAt": "2026-01-26",
+      "dateLabel": null,
+      "reviewUrl": "https://share.google/sEBDJkCb8AxKJyc3K"
+    },
+    {
+      "id": "luis-ern",
+      "author": "Luis Ern",
+      "rating": 5,
+      "text": "Carillas de porcelana de gran calidad y acabado natural. Perfectísimo. Mil gracias",
+      "publishedAt": "2026-02-15",
+      "dateLabel": null,
+      "reviewUrl": "https://share.google/XbhPxUeFGf7v9VYym"
+    },
+    {
+      "id": "denis-lopez",
+      "author": "Denis Lopez",
+      "rating": 5,
+      "text": "¡Excelente experiencia! Llegue por una recomendación de un familiar que se atendió y desde que entras, el trato del personal es impecable y te hacen sentir muy tranquilo y seguro. El doctor Jorge explica todo con muchísima paciencia y detalle, lo cual se agradece un montón, muy profesional. Las instalaciones son modernas y están impecables. Sin duda, mi clínica de confianza a partir de ahora. 100% recomendados",
+      "publishedAt": "2026-03-16",
+      "dateLabel": null,
+      "reviewUrl": "https://share.google/Sy9fbVkYXYqOtAaG0"
+    },
+    {
+      "id": "mariana-brugueras",
+      "author": "Mariana Brugueras",
+      "rating": 5,
+      "text": "Una experiencia excelente. Desde el primer momento recibí un trato muy profesional, cercano y amable. El dentista me explicó cada paso del tratamiento con claridad, resolvió todas mis dudas y me hizo sentir muy cómoda durante todo el proceso. Las instalaciones están impecables y el equipo transmite mucha confianza. Estoy muy satisfecha con el resultado y sin duda volveré para mis próximas revisiones. Lo recomiendo al 100 %",
+      "publishedAt": "2026-07-03",
+      "dateLabel": null,
+      "reviewUrl": "https://share.google/Em00hei1nURhvt9EA"
+    },
+    {
+      "id": "tamara-martin-novillo",
+      "author": "TAMARA MARTIN NOVILLO",
+      "rating": 5,
+      "text": "Yo soy muy delicada con el dentista porque encontrar una clínica que te de confianza y tranquilidad que te vayan a cuidar con cariño y buen trato tu higiene bucal es difícil. Está clínica son un conjunto de profesionales increíbles que saben tratar a los pacientes con la delicadeza y calidad que se merece. Ir al dentista con ellos es muy agradable y hasta se le coge el gusto porque los miedos que a todos nos surgen por no saber si serán buenos o no, con ellos desaparecen. Recomendable 100%",
+      "publishedAt": "2026-03-28",
+      "dateLabel": null,
+      "reviewUrl": "https://share.google/015krpFi9IWgOysd8"
+    },
+    {
+      "id": "laura-lopez",
+      "author": "Laura Lopez",
+      "rating": 5,
+      "text": "La verdad q los recomiendo al 100% estaba con un dolor de muelas horrible, me dieron cita en el momento cuando les comenté la urgencia de mi situación y me buscaron un hueco en su agenda y me hicieron una endodoncia la verdad q la experiencia fue la mejor sin dolor ni siquiera el pinchazo de la anestesia les estoy muy agradecida la verdad muy recomendable",
+      "publishedAt": "2026-06-30",
+      "dateLabel": null,
+      "reviewUrl": "https://share.google/yAwpxKFJ48BOj1RrG"
+    }
+  ]
+}

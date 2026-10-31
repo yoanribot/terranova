@@ -1,9 +1,15 @@
+import Image from "next/image";
+import { ArrowDown, ArrowRight, ChevronRight, Clock3, HeartHandshake, MapPin, Phone, SearchCheck, Info } from "lucide-react";
 import styles from "./DynamicPage.module.css";
-import { getLocalMedia } from "@/lib/utils";
-import Carousel from "@/components/shared/Carousel/Carousel";
 import { RichTextDocument } from "@/types/RichText";
 import { ContactForm } from "@/components/ContactForm/ContactForm";
 import BlockRendererClient from "../shared/BlockRender/BlockRendererClient";
+import Link from "@/components/PageLink";
+import ServiceIcon from "@/components/ServiceGuide/ServiceIcon";
+import { getServiceArtwork, getServiceGuide } from "@/lib/service-guides";
+import ClinicMap from "@/components/Map/ClinicMap";
+import { isPracticalService } from "@/lib/service-categories";
+import InsurancePartners from "@/components/ServiceGuide/InsurancePartners";
 
 type DynamicPageProps = {
   title: string;
@@ -15,119 +21,101 @@ type DynamicPageProps = {
   phoneMain?: string;
   phoneSecondary?: string;
   schedules?: { day: string; availability?: string }[];
+  children?: React.ReactNode;
+  parent?: { href: string; label: string };
+  serviceSlug?: string;
 };
 
-export default async function DynamicPage({
-  title,
-  content,
-  backgroundImage,
-  images,
-  address,
-  description,
-  phoneMain,
-  phoneSecondary,
-  schedules,
+export default function DynamicPage({
+  title, content, backgroundImage, images, address, description,
+  phoneMain, phoneSecondary, schedules, children, parent, serviceSlug,
 }: DynamicPageProps) {
-  const bgImage = getLocalMedia(backgroundImage?.url);
+  const guide = serviceSlug ? getServiceGuide(serviceSlug) : undefined;
+  const artwork = serviceSlug ? getServiceArtwork(serviceSlug) : undefined;
+  const heroImage = artwork?.url || backgroundImage?.url;
+  const telephone = phoneMain?.replace(/[^+\d]/g, "");
+  const isService = Boolean(serviceSlug);
+  const practical = isPracticalService(serviceSlug);
+  const isImaging = serviceSlug === "cbct-dental";
+  const primaryLabel = serviceSlug === "financiaciones" ? "Consultar financiación" : serviceSlug === "aseguradora" ? "Consultar mi seguro" : isImaging ? "Pedir una valoración" : practical ? "Consultar opciones" : "Consultar mi caso";
 
   return (
-    <section className="text-white">
-      <div
-        style={{
-          backgroundImage: `linear-gradient( 180deg, rgba(0,0,0,0.61) 0%, rgba(0,0,0,0.29) 100% ), url(${bgImage})`,
-        }}
-        className="h-[60vh] p-2 bg-cover bg-center flex items-center justify-center xs:mb-20 text-white relative"
-      >
-        <h1 className="text-6xl text-center my-32">{title}</h1>
-        {/* <img
-          src="/section-divider-x.svg"
-          alt="Section Divider"
-          className="w-full absolute bottom-0 h-30"
-        /> */}
-        <img
-          src="/section-divider-wave.svg"
-          alt="Section Divider"
-          className="w-full absolute bottom-0 h-15 sm:h-30"
-        />
+    <div className={styles.page}>
+      <div className={styles.shell}>
+        <nav aria-label="Ruta de navegación" className={styles.breadcrumb}>
+          <Link href="/">Inicio</Link><ChevronRight size={14} aria-hidden="true" />
+          {parent ? <><Link href={parent.href}>{parent.label}</Link><ChevronRight size={14} aria-hidden="true" /></> : null}
+          <span aria-current="page">{title}</span>
+        </nav>
+
+        <header className={isService ? styles.hero : styles.legalHero}>
+          <div className={styles.heroCopy}>
+            <p className={styles.eyebrow}>{practical ? "Organiza tu visita, con información clara" : isService ? "Tu salud, con información clara" : "Información de Terranova"}</p>
+            {serviceSlug ? <span className={styles.treatmentMark}><ServiceIcon slug={serviceSlug} size={28} /></span> : null}
+            <h1>{title}</h1>
+            {guide ? <p className={styles.lead}>{guide.intro || guide.description}</p> : null}
+            {isService ? <div className={styles.heroActions}>
+              <a href="#consulta" className={styles.primaryAction}>{primaryLabel} <ArrowRight size={18} aria-hidden="true" /></a>
+              <a href="#informacion" className={styles.textAction}>{practical ? "Ver la información" : isImaging ? "Conocer las pruebas" : "Entender el tratamiento"} <ArrowDown size={17} aria-hidden="true" /></a>
+            </div> : null}
+          </div>
+          {isService && heroImage ? <figure className={styles.heroVisual}>
+            <Image src={heroImage} alt="" fill priority sizes="(min-width: 1240px) 550px, (max-width: 760px) calc(100vw - 36px), 48vw" className={`${styles.heroImage} ${serviceSlug === "aseguradora" ? styles.insurancePoster : ""}`} />
+            <figcaption><span className={styles.captionDot} />{serviceSlug === "aseguradora" ? "Compañías y redes con las que trabajamos" : serviceSlug === "financiaciones" ? "Terranova Clinica Dental" : isImaging ? "Imagen orientativa de radiografía dental" : "Imagen orientativa del tratamiento"}</figcaption>
+          </figure> : null}
+        </header>
+
+        {guide?.highlights?.length ? <section aria-label={practical ? "La información de un vistazo" : isImaging ? "Las pruebas de un vistazo" : "El tratamiento de un vistazo"} className={styles.highlights}>
+          {guide.highlights.map((item, index) => {
+            const Icon = [SearchCheck, Info, HeartHandshake][index % 3];
+            return <div key={item.title} className={styles.highlight}><span className={styles.highlightIcon}><Icon size={23} aria-hidden="true" strokeWidth={1.7} /></span><div><h2>{item.title}</h2><p>{item.text}</p></div></div>;
+          })}
+        </section> : null}
+
+        {isService ? <nav aria-label="Contenido de esta página" className={styles.contentsNav}>
+          <span>En esta página</span><a href="#informacion">Lo esencial</a>
+          {guide?.insurers?.length ? <a href="#aseguradoras-listado">Compañías y redes</a> : null}
+          {guide?.steps?.length ? <a href="#paso-a-paso">Paso a paso</a> : null}
+          {guide ? <a href="#antes-de-decidir">Antes de decidir</a> : null}
+          {guide?.faq?.length ? <a href="#preguntas-frecuentes">Dudas frecuentes</a> : null}
+        </nav> : null}
+
+        {guide?.insurers?.length ? <InsurancePartners partners={guide.insurers} /> : null}
+        <article className={isService ? styles.article : styles.legalArticle}>
+          <div id="informacion" className={styles.reading}>
+            {isService ? <p className={styles.eyebrow}>Lo esencial, sin complicaciones</p> : null}
+            <BlockRendererClient content={content} />
+          </div>
+          {children}
+        </article>
+
+        {images?.length ? <section className={styles.gallery} aria-label="Imágenes orientativas del tratamiento">{images.map((image, index) => <figure key={image.url}><Image src={image.url} alt={image.alternativeText || `Imagen orientativa ${index + 1} de ${title.toLowerCase()}`} width={960} height={640} sizes="(max-width: 760px) 100vw, 50vw" /><figcaption>{image.alternativeText || title}</figcaption></figure>)}</section> : null}
       </div>
 
-      <div className={styles.pageContent}>
-        <div className="p-6">
-          <BlockRendererClient content={content} />
-        </div>
-
-        {images && images.length > 0 && (
-          <section>
-            <h3 className="text-xl mb-6 text-center">Imagenes relacionadas:</h3>
-            <Carousel images={images} />
-          </section>
-        )}
-      </div>
-
-      <div className="bg-[#708f67]">
-        <div className="container">
-          <div className="flex flex-col sm:flex-row gap-0 lg:gap-10 sm:py-20">
-            <div className="sm:flex-3 text-black">
-              <ContactForm />
-            </div>
-            <div className="sm:flex-2 p-10 sm:py-0">
-              <ul>
-                <li className="">
-                  <p className="text-md text-white sm:text-xl">
-                    <span>Direccion:</span> {address}
-                  </p>
-                </li>
-                <li className="mt-4">
-                  <p className="text-md text-white sm:text-xl">
-                    <span>Informacion extra:</span> {description}
-                  </p>
-                </li>
-                <li className="mt-4">
-                  <p className="text-md text-white sm:text-xl">
-                    <span>Telefono:</span> {phoneMain}
-                  </p>
-                </li>
-                <li className="mt-4">
-                  <p className="text-md text-white sm:text-xl">
-                    <span>Telefono secundario:</span> {phoneSecondary}
-                  </p>
-                </li>
-                <li className="mt-4">
-                  <p className="text-md text-white sm:text-xl">
-                    <span>Horario de apertura:</span>
-                  </p>
-                </li>
-                <li>
-                  <ul>
-                    {schedules?.map((slot) => (
-                      <li key={slot.day} className="mb-0.5">
-                        <span className="text-lg text-white">{slot.day}:</span>
-                        <span className="text-lg text-white ml-2">
-                          {slot.availability ?? (
-                            <span className="text-orange-500"> Cerrado </span>
-                          )}
-                        </span>
-                      </li>
-                    ))}
-                  </ul>
-                </li>
-              </ul>
+      {isService ? <section id="consulta" className={styles.contact} aria-labelledby="consulta-heading">
+        <header className={styles.contactHeading}>
+          <div><p className={styles.eyebrow}>El siguiente paso</p>
+            <h2 id="consulta-heading">{serviceSlug === "aseguradora" ? <>Te ayudamos a<br />preparar tu visita.</> : <>Tu caso merece<br />una conversación.</>}</h2>
+          </div>
+          <p className={styles.contactIntro}>Cuéntanos qué necesitas para organizar tu visita. Puedes escribirnos, llamarnos o consultar cómo llegar a la clínica.</p>
+        </header>
+        <div className={styles.contactInner}>
+          <div className={styles.contactLocation}>
+            <ClinicMap />
+            <div className={styles.locationDetails}>
+            <h3>Terranova Clinica Dental</h3>
+            <ul className={styles.contactDetails}>
+              {address ? <li><MapPin size={21} aria-hidden="true" /><span>{address}<small>{description}</small></span></li> : null}
+              {phoneMain ? <li><Phone size={21} aria-hidden="true" /><a href={`tel:${telephone}`}>{phoneMain}</a></li> : null}
+              {phoneSecondary ? <li><Phone size={21} aria-hidden="true" /><a href={`tel:${phoneSecondary.replace(/[^+\d]/g, "")}`}>{phoneSecondary}</a></li> : null}
+            </ul>
+            {schedules?.length ? <details className={styles.hours}><summary><Clock3 size={19} aria-hidden="true" />Consultar horarios</summary><dl>{schedules.map(slot => <div key={slot.day}><dt>{slot.day}</dt><dd>{slot.availability || "Cerrado"}</dd></div>)}</dl></details> : null}
             </div>
           </div>
+          <ContactForm financing={serviceSlug === "financiaciones"} insurance={serviceSlug === "aseguradora"} />
         </div>
-        <iframe
-          name="Ubicacion Google Maps"
-          title="Ubicacion Google Maps"
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1518.1917175293722!2d-3.6161087017516556!3d40.44464964424175!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd422fa5bf86a4dd%3A0x28c23634ca08de3f!2sC.%20Alcal%C3%A1%2C%20573%2C%20San%20Blas-Canillejas%2C%2028022%20Madrid%2C%20Spain!5e0!3m2!1sen!2sfr!4v1771016881177!5m2!1sen!2sfr"
-          width="100%"
-          height="500"
-          style={{ border: 0 }}
-          allowFullScreen={true}
-          loading="lazy"
-          referrerPolicy="no-referrer-when-downgrade"
-        ></iframe>
-      </div>
-    </section>
+      </section> : null}
+      {!isService ? <div className={styles.legalMap}><ClinicMap /></div> : null}
+    </div>
   );
 }
-

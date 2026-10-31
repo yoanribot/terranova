@@ -1,39 +1,31 @@
-import { getHomepage, getLegalPageBySlug, getLegalPages } from "@/lib/content";
-import { RichTextDocument } from "@/types/RichText";
-import { LocationSection } from "@/types/data";
-import DynamicPage from "@/components/DynamicPage/DynamicPage";
+import { getLegalPageBySlug, getLegalPages } from "@/lib/content";
+import { getLegalDocumentInfo } from "@/lib/legal-documents";
+import LegalDocument from "@/components/LegalDocument/LegalDocument";
+import { notFound } from "next/navigation";
+import { generatePageMetadata } from "@/app/generateSEOMetadata";
 
 type DynamicPageProps = {
   params: Promise<{ slug: string }>;
 };
 
+export async function generateMetadata({ params }: DynamicPageProps) {
+  const { slug } = await params;
+  const page = getLegalPageBySlug(slug);
+  const document = getLegalDocumentInfo(slug);
+  if (!page || !document) notFound();
+  return generatePageMetadata(document.title, document.description, `/terminos/${slug}`);
+}
+
 export default async function Page({ params }: DynamicPageProps) {
   const { slug } = await params;
   const data = getLegalPageBySlug(slug);
-  const homeData = getHomepage();
-  const locationData = homeData?.sections?.[3] as LocationSection;
-  const { address, description, phoneMain, phoneSecondary, schedules } =
-    locationData || {};
+  const document = getLegalDocumentInfo(slug);
 
-  if (!data) {
-    return <div>No se encontraron datos para el servicio solicitado.</div>;
+  if (!data || !document) {
+    notFound();
   }
 
-  const { title, content, backgroundImage, images } = data;
-
-  return (
-    <DynamicPage
-      title={title}
-      content={content as RichTextDocument}
-      backgroundImage={backgroundImage}
-      images={images}
-      address={address}
-      description={description}
-      phoneMain={phoneMain}
-      phoneSecondary={phoneSecondary}
-      schedules={schedules}
-    />
-  );
+  return <LegalDocument document={document} content={data.content} />;
 }
 
 export const dynamic = "force-static";

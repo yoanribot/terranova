@@ -1,0 +1,32 @@
+.content {
+  color: inherit;
+  font-family: var(--font-body, "Aptos", "Segoe UI", sans-serif);
+  font-size: 1.0625rem;
+  line-height: 1.8;
+  overflow-wrap: anywhere;
+}
+.content > :first-child { margin-top: 0; }
+.content > :last-child { margin-bottom: 0; }
+.content p { margin: 0 0 1.25rem; }
+.content :is(h2, h3, h4, h5, h6) {
+  color: inherit;
+  font-family: var(--font-heading, Georgia, serif);
+  font-weight: 400;
+  line-height: 1.25;
+  text-wrap: balance;
+  scroll-margin-top: 7rem;
+}
+.content h2 { font-size: clamp(1.7rem, 3vw, 2.2rem); margin: 2.5rem 0 1rem; }
+.content h3 { font-size: clamp(1.3rem, 2.2vw, 1.6rem); margin: 2rem 0 .75rem; }
+.content :is(h4, h5, h6) { font-size: 1.15rem; margin: 1.5rem 0 .75rem; }
+.content :is(ul, ol) { padding-left: 1.35rem; margin: 1rem 0 1.5rem; }
+.content ul { list-style-type: disc; }
+.content ol { list-style-type: decimal; }
+.content li { padding-left: .35rem; margin-bottom: .65rem; }
+.content li::marker { color: var(--color-forest, #233f35); font-weight: 600; }
+.content strong { font-weight: 650; }
+.content a { text-decoration: underline; text-underline-offset: .2em; }
+@media (max-width: 600px) {
+  .content { font-size: 1rem; line-height: 1.75; }
+  .content h2 { margin-top: 2rem; }
+}

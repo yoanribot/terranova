@@ -1,4 +1,4 @@
-@import "tailwindcss";
+﻿@import "tailwindcss";
 @import "tw-animate-css";
 
 @custom-variant dark (&:is(.dark *));
@@ -45,6 +45,13 @@
 }
 
 :root {
+  --color-forest: #203e35;
+  --color-sage: #708f67;
+  --color-paper: #f7f5ef;
+  --color-ink: #243b31;
+  --color-copy-muted: #5b665c;
+  --font-body: "Manrope", Arial, sans-serif;
+  --font-heading: "DM Serif Display", Georgia, serif;
   --color-light-blue: #60a5fa;
   --color-light-green: #708f67;
   --radius: 0.625rem;
@@ -80,6 +87,9 @@
   --background: oklch(1 0 0);
   --foreground: oklch(0.145 0 0);
 }
+
+html:has(dialog[open]) { overflow: hidden; }
+body:has([data-cookie-banner]) .whatsapp-contact { visibility: hidden; }
 
 .dark {
   --background: oklch(0.145 0 0);
@@ -126,7 +136,7 @@
 
 html {
   scroll-behavior: smooth;
-  scroll-padding-top: 30px;
+  scroll-padding-top: 6rem;
 }
 
 .poiretOne {
@@ -134,6 +144,97 @@ html {
 }
 
 body {
-  /* background-color: #e5e3e0; */
-  font-family: "DM Serif Text", Georgia, serif;
+  background: var(--color-paper);
+  color: var(--color-ink);
+  font-family: var(--font-body);
+  line-height: 1.6;
+}
+
+h1, h2, h3, h4, h5, h6 { font-family: var(--font-heading); text-wrap: balance; }
+p, li { overflow-wrap: break-word; }
+button, input, textarea, select { font: inherit; }
+button, a, input, textarea, select, summary { -webkit-tap-highlight-color: #708f6733; }
+::selection { background: #c9d8bc; color: #203e35; }
+:focus-visible { outline: 3px solid #577349; outline-offset: 4px; }
+[id] { scroll-margin-top: 6rem; }
+main:focus { outline: none; }
+.skip-link { position: fixed; top: .75rem; left: 1rem; z-index: 100; transform: translateY(-180%); padding: .8rem 1.2rem; background: #203e35; color: #fff; border-radius: 4px; font-size: .9rem; }
+.skip-link:focus { transform: translateY(0); }
+.whatsapp-contact { position: fixed; right: 1.25rem; bottom: 1.25rem; z-index: 45; display: flex; align-items: center; justify-content: center; gap: .6rem; background: #285d3d; color: #fff; min-height: 52px; padding: .75rem 1.1rem; border: 2px solid #f7f5ef; border-radius: 99px; box-shadow: 0 4px 18px #19372d26; font-size: .75rem; font-weight: 600; }
+.whatsapp-contact svg { width: 22px; height: 22px; }
+.whatsapp-contact:hover { background: #1c4a2e; }
+@media(max-width: 600px) { .whatsapp-contact { width: 50px; height: 50px; padding: 0; right: .9rem; bottom: .9rem; } .whatsapp-contact span { display: none; } }
+@media(prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; } }
+@media print { .skip-link, .no-print { display: none !important; } }
+
+.patient-page {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 4rem 1.5rem 5rem;
+  color: #273c30;
+}
+.patient-page > nav { font-size: .95rem; margin-bottom: 3rem; }
+.patient-page a, .patient-guide a, .patient-home-promo a { text-decoration: underline; text-underline-offset: .2em; }
+.patient-page a:hover, .patient-guide a:hover { color: #466642; }
+.patient-page a:focus-visible, .patient-page button:focus-visible, .patient-page input:focus-visible, .patient-page select:focus-visible { outline: 3px solid #466642; outline-offset: 4px; }
+.patient-eyebrow { text-transform: uppercase; letter-spacing: .13em; font-size: .75rem; font-family: sans-serif; font-weight: 600; color: #466642; margin-bottom: 1rem; }
+.patient-intro { max-width: 850px; margin-bottom: 3.5rem; }
+.patient-page h1 { font-size: clamp(2.4rem, 5.5vw, 4.7rem); line-height: 1.1; letter-spacing: -.035em; font-weight: 400; margin-bottom: 1.5rem; }
+.patient-page h2, .patient-guide h2 { font-size: clamp(1.4rem, 2.5vw, 1.9rem); line-height: 1.25; margin: 1.8rem 0 1rem; font-weight: 400; }
+.patient-page p, .patient-guide p, .patient-guide li { font-size: 1.1rem; line-height: 1.8; margin-bottom: 1rem; }
+.patient-intro > p:last-child { max-width: 650px; font-size: 1.25rem; }
+.patient-reading { max-width: 850px; }
+.patient-reading section { margin-bottom: 2.5rem; }
+.patient-columns { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; margin: 3rem 0; }
+.visit-planner { background: #f4f3ed; border-top: 4px solid #708f67; padding: clamp(1.25rem, 4vw, 3rem); }
+.planner-heading { max-width: 700px; }
+.planner-heading h2 { font-size: clamp(1.7rem, 3vw, 2.5rem); margin-top: 0; }
+.planner-controls { display: flex; flex-wrap: wrap; align-items: end; gap: 1.5rem 2rem; margin: 2rem 0; font-family: sans-serif; font-size: .95rem; }
+.planner-controls > div { flex: 1 1 280px; }
+.planner-controls label { display: block; font-weight: 600; }
+.planner-controls select { display: block; width: 100%; min-height: 48px; margin-top: .75rem; border: 1px solid #889785; background: #fff; padding: .75rem; border-radius: 0; }
+.planner-controls .insurance-choice { display: flex; align-items: center; gap: .75rem; min-height: 48px; flex: 1 1 260px; }
+.visit-planner input[type="checkbox"] { width: 1.25rem; height: 1.25rem; flex-shrink: 0; accent-color: #466642; cursor: pointer; }
+.visit-planner progress { display: block; width: 100%; height: 6px; accent-color: #708f67; margin-bottom: 1.5rem; }
+.visit-planner progress::-webkit-progress-bar { background: #e0e4d9; }
+.visit-planner progress::-webkit-progress-value { background: #708f67; }
+.planner-list { list-style: none; padding: 0; margin: 0; }
+.planner-list li { border-bottom: 1px solid #d9dfd1; }
+.planner-list label { display: flex; align-items: start; gap: 1rem; padding: 1.1rem 0; line-height: 1.65; font-size: 1.1rem; cursor: pointer; }
+.planner-list input { margin-top: .3rem; }
+.planner-list input:checked + span { color: #51604e; text-decoration: line-through; }
+.planner-actions { display: flex; flex-wrap: wrap; gap: .75rem; margin: 2rem 0; font-family: sans-serif; }
+.planner-actions :is(button, a) { padding: .9rem 1.1rem; min-height: 48px; background: #fff; border: 1px solid #81917a; color: #273c30; cursor: pointer; font-size: .9rem; text-decoration: none; text-align: center; }
+.planner-actions button:first-child { background: #365139; border-color: #365139; color: white; }
+.planner-actions :is(button, a):hover { filter: brightness(.95); }
+.planner-print-context { display: none; }
+.patient-page .planner-contact { font-size: 1rem; }
+.patient-guide { border-top: 2px solid #708f67; margin-top: 3rem; padding: 2rem 0 .5rem; color: #273c30; }
+.patient-guide ul { list-style: disc; padding-left: 1.5rem; margin: 1rem 0; }
+.patient-guide li { margin-bottom: .5rem; }
+.patient-sources { background: #f4f3ed; padding: 1.25rem 1.5rem; margin: 2rem 0; }
+.patient-sources h2 { margin-top: 0; }
+.patient-sources p, .patient-sources li { font-size: 1rem; }
+.treatment-index { list-style: none; padding: 0; display: grid; grid-template-columns: 1fr 1fr; column-gap: 3rem; margin-bottom: 3rem; }
+.treatment-index li { padding: 1.5rem 0; border-top: 1px solid #b2bca9; }
+.treatment-index h2 { margin-top: 0; }
+.patient-home-promo { background: #f4f3ed; color: #273c30; display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; padding: 4rem max(1.5rem, calc((100vw - 1120px) / 2)); margin: 3rem 0; }
+.patient-home-promo h2 { font-size: clamp(2rem, 3.5vw, 3.25rem); line-height: 1.2; letter-spacing: -.025em; }
+.patient-home-promo p:not(.patient-eyebrow) { font-size: 1.2rem; line-height: 1.8; margin-bottom: 1.5rem; }
+.patient-home-promo a { font-size: 1.1rem; }
+@media (max-width: 700px) {
+  .patient-page { padding-top: 3rem; }
+  .patient-columns, .treatment-index, .patient-home-promo { grid-template-columns: 1fr; gap: 1.5rem; }
+  .planner-actions { flex-direction: column; }
+}
+@media print {
+  body:has(.visit-planner) header, body:has(.visit-planner) footer, body:has(.visit-planner) main > a,
+  .patient-page:has(.visit-planner) > :not(.visit-planner), .visit-planner .no-print { display: none !important; }
+  .patient-page:has(.visit-planner) { padding: 0; max-width: none; }
+  .visit-planner { background: white; border: 0; padding: 0; color: black; }
+  .visit-planner p, .planner-list label { font-size: 11pt; line-height: 1.4; }
+  .planner-list label { padding: .6rem 0; }
+  .planner-list li { break-inside: avoid; }
+  .planner-print-context { display: block; font-weight: bold; }
+  .planner-heading h2 { font-size: 22pt; }
 }

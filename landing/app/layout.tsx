@@ -1,101 +1,54 @@
-import "./globals.css";
+﻿import "./globals.css";
 import "./shared.css";
-
+import "./fonts.css";
 import type { Metadata } from "next";
 import Header from "@/components/Header/Header";
 import Footer from "@/components/Footer/Footer";
-
 import { config } from "@fortawesome/fontawesome-svg-core";
 import "@fortawesome/fontawesome-svg-core/styles.css";
-import { getMetadata } from "@/lib/content";
+import { getMetadata, getServices } from "@/lib/content";
 import { LocationSection } from "@/types/data";
 import GoogleAnalytics from "@/components/GoogleAnalytics/GoogleAnalytics";
 import GoogleAdsense from "@/components/GoogleAdsense/GoogleAdsense";
 import GoogleConsentMode from "@/components/GoogleConsentMode/GoogleConsentMode";
+import ConsentProvider from "@/components/CookieConsent/ConsentProvider";
+import { isPracticalService } from "@/lib/service-categories";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faWhatsapp } from "@fortawesome/free-brands-svg-icons";
-import { ChevronUp } from "lucide-react";
 import { generateSEOMetadata, viewport } from "@/app/generateSEOMetadata";
 
 config.autoAddCss = false;
-
 const metadataResponse = getMetadata();
-const title = metadataResponse?.title || "Terranova Clinica dental";
-
+const title = metadataResponse?.title || "Terranova Clínica Dental";
 const sections = metadataResponse?.sections || [];
 const socials = sections?.[1]?.socials || [];
-const whatsapp = socials.find(
-  (social) => social?.label?.toLowerCase() === "whatsapp",
-);
-const locationData = (metadataResponse?.sections?.[0] as
-  | LocationSection
-  | undefined) || {
-  title: "",
-  description: "",
-  phoneMain: "",
-  address: "",
-  email: "",
-  location: {
-    latitude: "",
-    longitude: "",
-  },
-  schedules: [],
+const whatsapp = socials.find(social => social?.label?.toLowerCase() === "whatsapp");
+const locationData = (metadataResponse?.sections?.[0] as LocationSection | undefined) || {
+  title: "", description: "", phoneMain: "", address: "", email: "",
+  location: { latitude: "", longitude: "" }, schedules: [],
 };
 export { viewport };
-
 export const metadata: Metadata = generateSEOMetadata(metadataResponse);
 
-export default function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="es">
-      {/* GOOGLE ANALYTICS */}
-      {process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS && (
-        <GoogleAnalytics ga_id={process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS} />
-      )}
-
       <head>
         <GoogleConsentMode />
-        <GoogleAdsense />
         <link rel="icon" href="/favicon.ico" />
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poiret+One&display=swap"
-          rel="stylesheet"
-        />
       </head>
-
-      <body className="font-serif antialiased">
+      <body className="antialiased" id="page-top">
+        <ConsentProvider gaId={process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS?.trim() || ""} advertisingAvailable={process.env.NEXT_PUBLIC_ADSENSE_ENABLED === "true" && process.env.NEXT_PUBLIC_GOOGLE_CMP_READY === "true" && /^ca-pub-\d{16}$/.test(process.env.NEXT_PUBLIC_ADSENSE_CLIENT?.trim() || "")}>
+        <a href="#main-content" className="skip-link">Saltar al contenido</a>
+        {process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS ? <GoogleAnalytics ga_id={process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS} /> : null}
+        <GoogleAdsense eligiblePaths={["/", ...getServices().filter(page => !isPracticalService(page.slug)).map(page => `/servicios/${page.slug}`)]} />
         <Header title={title} />
-
-        <main>
+        <main id="main-content" tabIndex={-1}>
           {children}
-          <a
-            href={whatsapp?.href}
-            className="fixed bottom-4 right-4 bg-green-500 text-white h-13 w-13 rounded-full shadow-lg hover:bg-green-600 transition-colors flex items-center justify-center z-50"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <FontAwesomeIcon
-              name="Whatsapp boton"
-              icon={faWhatsapp}
-              size="2x"
-              className="m-auto"
-            />
-          </a>
-          <a
-            href="#"
-            className="fixed bottom-40 rounded-sm bg-red right-0 p-2 text-white h-12 w-12 shadow-lg bg-black/30 hover:bg-gray-600 transition-colors flex items-center justify-center z-50 cursor-pointer"
-          >
-            <ChevronUp name="scroll-to-top" width={154} />
-          </a>
+          {whatsapp?.href ? <a href={whatsapp.href} className="whatsapp-contact no-print" target="_blank" rel="noopener noreferrer" aria-label="Contactar con Terranova por WhatsApp, se abre en otra pestaña"><FontAwesomeIcon icon={faWhatsapp} aria-hidden="true" /><span>WhatsApp</span></a> : null}
         </main>
-
         <Footer title={title} socials={socials} location={locationData} />
+        </ConsentProvider>
       </body>
     </html>
   );

@@ -5,10 +5,27 @@ import { LocationSection, MetadataResponse } from "@/types/data";
 export const viewport: Viewport = {
   width: "device-width",
   initialScale: 1,
-  maximumScale: 1,
-  userScalable: false,
   themeColor: "#ffffff",
 };
+
+export function generatePageMetadata(title: string, description: string, path: string): Metadata {
+  const pageTitle = `${title} | Terranova Clínica Dental`;
+  return {
+    title: pageTitle,
+    description,
+    alternates: { canonical: path },
+    openGraph: {
+      type: "website",
+      locale: "es_ES",
+      siteName: "Terranova Clínica Dental",
+      title: pageTitle,
+      description,
+      url: path,
+      images: [{ url: "/assets/terranova_full_logo.png", alt: "Terranova Clínica Dental" }],
+    },
+    twitter: { card: "summary_large_image", title: pageTitle, description, images: ["/assets/terranova_full_logo.png"] },
+  };
+}
 
 export function generateSEOMetadata(
   metadataResponse: MetadataResponse | null | undefined,

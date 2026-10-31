@@ -1,7 +1,5 @@
-import styles from "./Testimonials.module.css";
-
 const Testimonials = () => {
-  return <div className={styles.container}>Testimonials</div>;
+  return null;
 };
 
 export default Testimonials;
