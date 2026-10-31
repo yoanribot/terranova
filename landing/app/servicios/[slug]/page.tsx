@@ -36,6 +36,7 @@ export default async function Page({ params }: DynamicPageProps) {
   return (
     <DynamicPage
       title={title}
+      serviceSlug={slug}
       content={content as RichTextDocument}
       backgroundImage={backgroundImage}
       images={images}

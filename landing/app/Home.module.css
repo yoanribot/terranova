@@ -1,0 +1,20 @@
+﻿.preparation { padding: 5.5rem max(2rem,calc((100vw - 1176px)/2)); display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; background: #e4e9dc; color: var(--color-forest); }
+.preparation h2 { font-family: var(--font-heading); font-size: clamp(2.5rem,3.8vw,3.6rem); font-weight: 400; line-height: 1.12; letter-spacing: -.035em; margin-bottom: 1.5rem; }
+.preparationCopy > p:not(:first-child) { font-size: 1rem; line-height: 1.85; color: #4e6250; max-width: 385px; margin-bottom: 1.5rem; }
+.preparationCopy > a { display: inline-flex; align-items: center; gap: 1.25rem; min-height: 48px; border-bottom: 1px solid #708f67; font-size: .9rem; font-weight: 600; }
+.preparationSteps { list-style: none; padding: 0; }
+.preparationSteps li { display: flex; align-items: start; gap: 1rem; padding: 1.5rem 0; border-top: 1px solid #203e352e; }
+.preparationSteps li > svg { width: 23px; height: 23px; flex-shrink: 0; margin-top: .15rem; }
+.preparationSteps h3 { font-family: var(--font-body); font-size: 1rem; font-weight: 700; margin-bottom: .5rem; }
+.preparationSteps p { font-size: 1rem; line-height: 1.8; color: #4e6250; }
+.preparationSteps li > span { font-size: .8rem; color: #425d40; margin-left: auto; padding-left: .5rem; }
+.contact { background: #203e35; padding: 5rem max(2rem,calc((100vw - 1176px)/2)); color: #f7f5ef; }
+.contactInner { display: grid; grid-template-columns: .85fr 1fr; gap: 6rem; align-items: center; }
+.eyebrow { font-size: .7rem; font-weight: 600; letter-spacing: .14em; text-transform: uppercase; color: #c4d4b9; margin-bottom: 1.5rem; }
+.contact h2 { font-family: var(--font-heading); font-size: clamp(3.4rem,5vw,5rem); line-height: 1.03; letter-spacing: -.035em; font-weight: 400; margin-bottom: 1.7rem; }
+.contactCopy > p:not(:first-child) { font-size: 1rem; color: #d3dfcd; line-height: 1.85; max-width: 360px; }
+.contactCopy > a { display: flex; align-items: center; gap: 1rem; font-size: 1.65rem; margin-top: 2rem; }
+.contactCopy > a small { display: block; color: #c4d4b9; font-size: .75rem; margin-bottom: .5rem; }
+.contactNote { font-size: .85rem; line-height: 1.85; padding-top: 1.5rem; border-top: 1px solid #e0e9d633; margin-top: 2rem; color: #d3dfcd; max-width: 360px; }
+@media(max-width: 1000px) { .preparation { gap: 3rem; } .contactInner { gap: 3rem; } }
+@media(max-width: 760px) { .preparation { padding: 3.5rem 1.25rem; grid-template-columns: 1fr; gap: 2rem; } .preparation h2 { font-size: 2.65rem; } .contact { padding: 3.5rem 1.25rem; } .contactInner { grid-template-columns: 1fr; gap: 2.5rem; } .contact h2 { font-size: 3.4rem; } .contactNote { margin-top: 1.5rem; } }

@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { ClipboardCheck, Download, Printer, RotateCcw } from "lucide-react";
 
 const general = [
   { id: "appointment", text: "Confirmar día, hora, motivo y precio de la consulta al pedir cita." },
@@ -54,7 +55,7 @@ export default function VisitPlanner({ phone }: { phone: string }) {
   return (
     <section className="visit-planner" aria-labelledby="planner-title">
       <div className="planner-heading">
-        <p className="patient-eyebrow">Tu lista, paso a paso</p>
+        <p className="patient-eyebrow"><ClipboardCheck size={18} className="inline-block mr-2" aria-hidden="true" />Tu lista, paso a paso</p>
         <h2 id="planner-title">Llega con tus dudas preparadas.</h2>
         <p>No necesitas registrarte. La selección se mantiene solo mientras usas esta página; no se envía ni se guarda en el navegador.</p>
       </div>
@@ -76,9 +77,9 @@ export default function VisitPlanner({ phone }: { phone: string }) {
         {items.map(item => <li key={item.id}><label><input type="checkbox" checked={checked.has(item.id)} onChange={() => toggle(item.id)} /><span>{item.text}</span></label></li>)}
       </ul>
       <div className="planner-actions no-print">
-        <button type="button" onClick={() => window.print()}>Imprimir o guardar como PDF</button>
-        <a href={`data:text/plain;charset=utf-8,${encodeURIComponent(checklistText)}`} download="mi-visita-terranova.txt">Descargar lista en texto</a>
-        <button type="button" onClick={() => setChecked(new Set())}>Desmarcar pasos</button>
+        <button type="button" onClick={() => window.print()}><Printer size={18} className="inline-block mr-2" aria-hidden="true" />Imprimir o guardar como PDF</button>
+        <a href={`data:text/plain;charset=utf-8,${encodeURIComponent(checklistText)}`} download="mi-visita-terranova.txt"><Download size={18} className="inline-block mr-2" aria-hidden="true" />Descargar lista en texto</a>
+        <button type="button" onClick={() => setChecked(new Set())}><RotateCcw size={18} className="inline-block mr-2" aria-hidden="true" />Desmarcar pasos</button>
       </div>
       <p className="planner-contact">Contacto: <a href={`tel:${phone.replace(/\s/g, "")}`}>{phone}</a> · Calle Alcalá, 573 Local, Madrid · Metro Torre Arias (L5).</p>
       <p>Esta lista es una ayuda de organización. No reserva una cita, confirma cobertura ni ofrece un diagnóstico.</p>

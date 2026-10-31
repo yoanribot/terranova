@@ -12,8 +12,8 @@ export default function EditorialPage() {
       <p className="patient-eyebrow">Terranova Clínica Dental</p>
       <h1>Quién publica esta información.</h1>
       <section>
-        <h2>La clínica y el titular del sitio</h2>
-        <p>Este sitio presenta los servicios de Terranova Clínica Dental, en {location.address}. El titular indicado en el <Link href="/terminos/aviso-legal">aviso legal</Link> es MG Dental Partners S.L., NIF B23889603.</p>
+        <h2>La clínica y cómo contactar</h2>
+        <p>Este sitio presenta los servicios de Terranova Clinica Dental, en {location.address}.</p>
         <p>Puedes contactar con la clínica en el <a href={`tel:${location.phoneMain.replace(/\s/g, "")}`}>{location.phoneMain}</a> o en <a href={`mailto:${location.email}`}>{location.email}</a>.</p>
       </section>
       <section>

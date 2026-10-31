@@ -1,4 +1,4 @@
-@import "tailwindcss";
+﻿@import "tailwindcss";
 @import "tw-animate-css";
 
 @custom-variant dark (&:is(.dark *));
@@ -45,6 +45,13 @@
 }
 
 :root {
+  --color-forest: #203e35;
+  --color-sage: #708f67;
+  --color-paper: #f7f5ef;
+  --color-ink: #243b31;
+  --color-copy-muted: #5b665c;
+  --font-body: "Manrope", Arial, sans-serif;
+  --font-heading: "DM Serif Display", Georgia, serif;
   --color-light-blue: #60a5fa;
   --color-light-green: #708f67;
   --radius: 0.625rem;
@@ -126,7 +133,7 @@
 
 html {
   scroll-behavior: smooth;
-  scroll-padding-top: 30px;
+  scroll-padding-top: 6rem;
 }
 
 .poiretOne {
@@ -134,14 +141,33 @@ html {
 }
 
 body {
-  /* background-color: #e5e3e0; */
-  font-family: "DM Serif Text", Georgia, serif;
+  background: var(--color-paper);
+  color: var(--color-ink);
+  font-family: var(--font-body);
+  line-height: 1.6;
 }
+
+h1, h2, h3, h4, h5, h6 { font-family: var(--font-heading); text-wrap: balance; }
+p, li { overflow-wrap: break-word; }
+button, input, textarea, select { font: inherit; }
+button, a, input, textarea, select, summary { -webkit-tap-highlight-color: #708f6733; }
+::selection { background: #c9d8bc; color: #203e35; }
+:focus-visible { outline: 3px solid #577349; outline-offset: 4px; }
+[id] { scroll-margin-top: 6rem; }
+main:focus { outline: none; }
+.skip-link { position: fixed; top: .75rem; left: 1rem; z-index: 100; transform: translateY(-180%); padding: .8rem 1.2rem; background: #203e35; color: #fff; border-radius: 4px; font-size: .9rem; }
+.skip-link:focus { transform: translateY(0); }
+.whatsapp-contact { position: fixed; right: 1.25rem; bottom: 1.25rem; z-index: 45; display: flex; align-items: center; justify-content: center; gap: .6rem; background: #285d3d; color: #fff; min-height: 52px; padding: .75rem 1.1rem; border: 2px solid #f7f5ef; border-radius: 99px; box-shadow: 0 4px 18px #19372d26; font-size: .75rem; font-weight: 600; }
+.whatsapp-contact svg { width: 22px; height: 22px; }
+.whatsapp-contact:hover { background: #1c4a2e; }
+@media(max-width: 600px) { .whatsapp-contact { width: 50px; height: 50px; padding: 0; right: .9rem; bottom: .9rem; } .whatsapp-contact span { display: none; } }
+@media(prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; } }
+@media print { .skip-link, .no-print { display: none !important; } }
 
 .patient-page {
   max-width: 1120px;
   margin: 0 auto;
-  padding: 7rem 1.5rem 5rem;
+  padding: 4rem 1.5rem 5rem;
   color: #273c30;
 }
 .patient-page > nav { font-size: .95rem; margin-bottom: 3rem; }
@@ -194,7 +220,7 @@ body {
 .patient-home-promo p:not(.patient-eyebrow) { font-size: 1.2rem; line-height: 1.8; margin-bottom: 1.5rem; }
 .patient-home-promo a { font-size: 1.1rem; }
 @media (max-width: 700px) {
-  .patient-page { padding-top: 6rem; }
+  .patient-page { padding-top: 3rem; }
   .patient-columns, .treatment-index, .patient-home-promo { grid-template-columns: 1fr; gap: 1.5rem; }
   .planner-actions { flex-direction: column; }
 }

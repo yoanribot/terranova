@@ -19,7 +19,8 @@ const SectionTitle = ({
         <img
           src={"/assets/teeth_black_white.png"}
           className="h-10 inline-block mr-2"
-          alt="tooth icon"
+          alt=""
+          aria-hidden="true"
         />
         {title}
       </h2>

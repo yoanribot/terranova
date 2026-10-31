@@ -1,0 +1,66 @@
+.page { background: var(--color-paper, #f7f5ef); color: var(--color-ink, #263e35); font-family: var(--font-body, sans-serif); padding-bottom: 4rem; }
+.shell { width: min(1180px, calc(100% - 3rem)); margin-inline: auto; }
+.breadcrumb { display: flex; align-items: center; flex-wrap: wrap; gap: .5rem; padding-block: 1.65rem; font-size: .8rem; color: #58675d; }
+.breadcrumb a:hover { text-decoration: underline; }
+.intro { display: grid; grid-template-columns: 1.55fr 1fr; align-items: end; gap: clamp(2rem, 5vw, 5rem); padding-block: 1.5rem 2.5rem; }
+.eyebrow { color: #536f4e; font-size: .72rem; font-weight: 700; text-transform: uppercase; letter-spacing: .14em; margin-bottom: 1rem; }
+.intro h1 { font-family: var(--font-heading, Georgia, serif); color: var(--color-forest, #203e35); font-size: clamp(2.7rem, 5vw, 4.5rem); font-weight: 400; line-height: 1.1; letter-spacing: -.03em; text-wrap: balance; margin-bottom: 1.4rem; }
+.intro h1 span { color: #6e8760; }
+.intro > div > p:last-child { font-size: 1.02rem; line-height: 1.9; max-width: 57ch; color: #596554; }
+.visitCard { display: flex; align-items: flex-start; gap: 1.1rem; padding: 1.6rem; border-radius: 10px; background: #e7eddf; border: 1px solid #d4dfca; text-decoration: none; }
+.visitCard > svg { flex: 0 0 auto; color: #607e54; }
+.visitCard strong { display: block; font-size: 1rem; line-height: 1.5; margin-bottom: .6rem; }
+.visitCard span span { display: block; font-size: .95rem; line-height: 1.8; color: #56664f; }
+.visitCard em { display: inline-flex; align-items: center; gap: .5rem; min-height: 44px; font-style: normal; font-size: .81rem; font-weight: 600; margin-top: .5rem; text-decoration: underline; text-underline-offset: .3em; }
+.visitCard:hover { border-color: #849d74; }
+.categories { display: flex; flex-wrap: wrap; gap: .7rem; border-block: 1px solid #d4ddcc; padding-block: 1.2rem; margin-bottom: .5rem; }
+.categories a { display: inline-flex; align-items: center; gap: .75rem; padding: .5rem 1rem; min-height: 44px; border-radius: 100px; border: 1px solid #d0dbc6; font-size: .8rem; text-decoration: none; }
+.categories a:hover { background: #e8eddf; }
+.group { padding-block: 2.7rem 1rem; scroll-margin-top: 7rem; }
+.groupHeading { display: flex; justify-content: space-between; align-items: flex-end; gap: 2rem; margin-bottom: 1.6rem; }
+.groupHeading h2 { font-family: var(--font-heading, Georgia, serif); font-size: clamp(1.9rem, 3.3vw, 2.5rem); font-weight: 400; line-height: 1.2; letter-spacing: -.025em; color: var(--color-forest, #203e35); }
+.groupHeading p { max-width: 47ch; font-size: .95rem; line-height: 1.8; color: #5a6756; }
+.cards { display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 1.3rem; list-style: none; padding: 0; margin: 0; }
+.cards li { min-width: 0; }
+.card { display: flex; flex-direction: column; height: 100%; border: 1px solid #d6decc; border-radius: 11px; background: #fffdf8; overflow: hidden; text-decoration: none; transition: border-color .2s ease, box-shadow .2s ease; }
+.card:hover { border-color: #8ba07d; box-shadow: 0 5px 18px #203e3508; }
+.image { position: relative; aspect-ratio: 16/10; background: white; overflow: hidden; }
+.image img { object-fit: cover; transition: transform .25s ease; }
+.card:hover .image img { transform: scale(1.025); }
+.cardBody { display: flex; flex-direction: column; align-items: flex-start; flex: 1; padding: 1.5rem; }
+.cardIcon { color: #68855a; margin-bottom: .9rem; }
+.cardBody h3 { font-family: var(--font-heading, Georgia, serif); font-size: 1.7rem; font-weight: 400; line-height: 1.2; letter-spacing: -.015em; margin-bottom: .85rem; }
+.cardBody p { font-size: .95rem; line-height: 1.85; color: #5b6857; margin-bottom: 1.3rem; }
+.cardAction { display: flex; justify-content: space-between; align-items: center; gap: 1rem; width: 100%; padding-top: .8rem; border-top: 1px solid #e1e5d9; font-size: .79rem; font-weight: 600; margin-top: auto; min-height: 44px; }
+.note { display: flex; justify-content: space-between; align-items: center; gap: 2rem; margin-top: 3rem; padding-top: 1.8rem; border-top: 1px solid #d2dcc9; font-size: .9rem; line-height: 1.85; color: #5a6856; }
+.note p { max-width: 76ch; }
+.note a { display: inline-flex; align-items: center; gap: .6rem; min-height: 44px; font-weight: 600; flex: 0 0 auto; text-decoration: underline; text-underline-offset: .3em; }
+.page a:focus-visible { outline: 3px solid #789363; outline-offset: 4px; }
+@media(max-width: 960px) {
+  .intro { grid-template-columns: 1.4fr 1fr; gap: 2rem; }
+  .visitCard { padding: 1.3rem; gap: .8rem; }
+  .cards { grid-template-columns: repeat(2,minmax(0,1fr)); }
+  .groupHeading { align-items: flex-start; }
+  .groupHeading p { max-width: 38ch; }
+}
+@media(max-width: 600px) {
+  .shell { width: calc(100% - 2.25rem); }
+  .breadcrumb { padding-block: 1.2rem; font-size: .74rem; }
+  .intro { grid-template-columns: 1fr; gap: 1.5rem; padding-block: 1rem 1.75rem; }
+  .intro h1 { font-size: clamp(2.5rem, 9vw, 3.3rem); }
+  .intro > div > p:last-child { font-size: .95rem; }
+  .visitCard { padding: 1.25rem; }
+  .categories { gap: .5rem; }
+  .categories a { font-size: .73rem; padding-inline: .8rem; }
+  .group { padding-top: 2.2rem; }
+  .groupHeading { flex-direction: column; gap: .7rem; margin-bottom: 1.2rem; }
+  .groupHeading p { max-width: none; font-size: .95rem; }
+  .cards { grid-template-columns: 1fr; gap: 1rem; }
+  .image { aspect-ratio: 16/9; }
+  .cardBody { padding: 1.3rem; }
+  .cardBody h3 { font-size: 1.65rem; }
+  .cardBody p { font-size: .95rem; }
+  .cardIcon { margin-bottom: .7rem; }
+  .note { flex-direction: column; align-items: flex-start; gap: .6rem; margin-top: 2rem; }
+}
+@media(prefers-reduced-motion: reduce) { .card, .image img { transition: none; } .card:hover .image img { transform: none; } }

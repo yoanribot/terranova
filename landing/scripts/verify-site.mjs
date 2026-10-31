@@ -17,7 +17,7 @@ console.log('PASS Spanish content encoding');
 const base = process.argv[2] || 'http://localhost:3100';
 const canonicalBase = process.env.EXPECTED_SITE_URL || 'https://www.terranovaclinicadental.es';
 const legal = new Set(['aviso-legal', 'politica-privacidad', 'politica-cookies']);
-const paths = ['/', ...site.blogs.map(p => `/${legal.has(p.slug) ? 'terminos' : 'servicios'}/${p.slug}`), '/pacientes', '/informacion-editorial', '/servicios'];
+const paths = ['/', ...site.blogs.map(p => `/${legal.has(p.slug) ? 'terminos' : 'servicios'}/${p.slug}`), '/pacientes', '/informacion-editorial', '/servicios', '/terminos'];
 let failures = 0;
 const titles = new Set();
 const internalLinks = new Set();

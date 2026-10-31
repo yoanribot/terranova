@@ -1,53 +1,26 @@
-"use client";
-
-import clsx from "clsx";
-import styles from "./HeroBanner.module.css";
-import { Button } from "../ui/button";
+﻿import Image from "next/image";
+import Link from "@/components/PageLink";
+import { ArrowDown, ArrowUpRight, MapPin, Phone } from "lucide-react";
 import { Hero } from "@/types/data";
-import { getLocalMedia } from "@/lib/utils";
-import { useRouter } from "next/navigation";
-import { Calendar } from "lucide-react";
-import HeaderDivider from "../HeaderDivider/HeaderDivider";
+import styles from "./HeroBanner.module.css";
+import { getMetadata } from "@/lib/content";
 
-const HeroBanner = (data: Hero) => {
-  const router = useRouter();
-  const { heading, subHeading, text, link, image } = data;
-  const { label, href } = link || {};
-
-  const backgroundImage = getLocalMedia(image?.url);
-
+export default function HeroBanner({ image }: Hero) {
+  const phone = getMetadata().sections[0].phoneMain;
   return (
-    <section
-      className={clsx(styles.heroBannerRoot, "relative")}
-      style={{ backgroundImage: `url(${backgroundImage})` }}
-    >
-      <div className="container flex h-full">
-        <div className={clsx(styles.content)}>
-          <h1
-            className={`poiretOne font-bold text-4xl sm:text-[80px] max-w-3xl xl:mt-18 mb-6`}
-          >
-            {heading}
-          </h1>
-          <h3 className="text-xl sm:text-2xl  max-w-3xl mb-6">{subHeading}</h3>
-          <p className="max-w-3xl mb-6">{text}</p>
-
-          <div className="flex justify-self-center">
-            {label && (
-              <Button
-                className="text-md mt-10 w-[200] rounded-4xl h-12 cursor-pointer transition-all duration-300 hover:scale-105 hover:-translate-y-1 hover:brightness-110"
-                onClick={() => router.push(href)}
-              >
-                <Calendar width={22} height={22} className="mr-1 size-" />
-                {label}
-              </Button>
-            )}
-          </div>
+    <section className={styles.hero} aria-labelledby="home-title">
+      <Image src={image?.url || "/content/media/hero_banner_dd42a36fae.webp"} alt="" fill priority sizes="100vw" className={styles.image} />
+      <div className={styles.overlay} aria-hidden="true" />
+      <div className={styles.copy}>
+        <p className={styles.eyebrow}><span aria-hidden="true" />Terranova Clinica Dental</p>
+        <h1 id="home-title">Tu sonrisa,<br />con el cuidado<br />que merece.</h1>
+        <p className={styles.intro}>Una nueva forma de cuidar tu sonrisa. Entiende tus opciones, resuelve tus dudas y prepara tu visita con información clara.</p>
+        <div className={styles.actions}>
+          <Link href="/#contact" className={styles.primary}>Hablemos de tu visita <ArrowUpRight size={19} aria-hidden="true" /></Link>
+          <Link href="/servicios" className={styles.secondary}>Explora los tratamientos <ArrowDown size={17} aria-hidden="true" /></Link>
         </div>
+        <div className={styles.practical}><span><MapPin size={16} aria-hidden="true" />Calle Alcalá, 573 · Madrid</span><a href={`tel:${phone.replace(/[^+\d]/g, "")}`}><Phone size={16} aria-hidden="true" /><span>{phone}</span></a></div>
       </div>
-
-      <HeaderDivider colorStart="#ddd8cb" colorEnd="#f8f5f5" />
     </section>
   );
-};
-
-export default HeroBanner;
+}

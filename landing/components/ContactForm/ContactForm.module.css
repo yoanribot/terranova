@@ -1,3 +1,24 @@
-.container {
-  /* Add your styles here */
-}
+﻿.form { background: #fff; color: var(--color-forest,#203e35); border: 1px solid #203e351a; border-radius: 6px; padding: clamp(1.5rem,4vw,2.75rem); }
+.form h3 { font-family: var(--font-heading,Georgia,serif); font-size: clamp(1.6rem,2.8vw,2.15rem); line-height: 1.2; font-weight: 400; letter-spacing: -.025em; margin-bottom: .8rem; }
+.intro { color: #5b665c; font-size: .95rem; line-height: 1.8; margin-bottom: 1.25rem; }
+.notice { display: flex; gap: .65rem; padding: .9rem 1rem; background: #f2f4ec; border-radius: 4px; margin-bottom: 1.5rem; }
+.notice svg { flex-shrink: 0; margin-top: .1rem; }
+.notice p { font-size: .85rem; line-height: 1.7; margin: 0; }
+.row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+.field { min-width: 0; margin-bottom: 1.15rem; }
+.field label { display: block; font-size: .9rem; font-weight: 700; margin-bottom: .5rem; }
+.field label span { font-weight: 400; color: #5b665c; }
+.field input, .field textarea { display: block; width: 100%; min-height: 48px; padding: .75rem .85rem; border: 1px solid #9da99c; border-radius: 4px; background: #fff; color: #233f35; font-family: inherit; font-size: 16px; line-height: 1.6; transition: border-color .2s; }
+.field textarea { resize: vertical; min-height: 125px; }
+.field input::placeholder, .field textarea::placeholder { color: #687469; opacity: 1; font-size: .9rem; }
+.field input:focus, .field textarea:focus { border-color: #365947; outline: 2px solid #365947; outline-offset: 2px; }
+.field input[aria-invalid="true"], .field textarea[aria-invalid="true"] { border-color: #a13d30; }
+.error { color: #a13d30; font-size: .85rem; line-height: 1.65; margin-top: .45rem; }
+.privacy { display: inline-block; font-size: .85rem; line-height: 1.8; color: #233f35; text-decoration: underline; text-underline-offset: .2em; }
+.status { font-size: .85rem; line-height: 1.8; margin-top: .85rem; }
+.submit { display: inline-flex; align-items: center; justify-content: center; gap: 1.25rem; background: #203e35; color: #fff; font-size: .85rem; font-weight: 600; border-radius: 4px; min-height: 50px; padding: .85rem 1.35rem; cursor: pointer; margin-top: 1rem; transition: background .2s; }
+.submit:hover { background: #365947; }
+.submit:disabled { cursor: wait; opacity: .7; }
+.spinner { animation: turn 1s linear infinite; }
+@keyframes turn { to { transform: rotate(360deg); } }
+@media(max-width: 500px) { .row { grid-template-columns: 1fr; gap: 0; } .submit { width: 100%; } .form { padding: 1.5rem 1.2rem; } }
